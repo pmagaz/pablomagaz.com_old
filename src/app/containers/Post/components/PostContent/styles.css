@@ -1,0 +1,8 @@
+@import '../../../../styles/base.css';
+
+.postContent {
+  -webkit-animation: fade-in-up 0.2s;
+  animation: fade-in-up 0.2s both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}

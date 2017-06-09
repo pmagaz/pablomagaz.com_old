@@ -5,9 +5,8 @@ import ReactHtmlParser from 'html-react-parser';
 import { getPostUrl, SiteConf } from 'base';
 import PostImage from 'components/PostImage';
 import PostInfo from '../PostInfo';
-import { cleanPost } from '../../../Post/actions';
+import PostTag from '../PostTag';
 import * as styles from './styles.css';
-import store from 'redux';
 
 const propTypes= {
   post: PropTypes.object.isRequired
@@ -19,24 +18,27 @@ const PostSummary = ({ post }) => {
 
   return (
     <div className={ styles.PostSummary } >
+        <PostTag
+          tags={ post.tags }
+        />
       <Link to={ url }>
         <h1> { post.title } </h1>
       </Link>
+      <PostInfo
+        author={ post.author }
+        date={ post.updated_at }
+      />
       <Link to={ url }>
         <PostImage
           src={ imageSrc }
           alt={ post.slug }
-          width="300"
+          width="500"
         />
       </Link>
       <div>
         { ReactHtmlParser(post.summary)}
       </div>
-      <PostInfo
-        author={ post.author }
-        tags={ post.tags }
-        date={ post.updated_at }
-      />
+
     </div>
   );
 };

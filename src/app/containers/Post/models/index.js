@@ -7,10 +7,10 @@ const PostModel = new Record({
   html: '',
   title: '',
   image: '',
-  author: '',
   updated_at: '',
   created_at: '',
   meta_description: '',
+  author: 'Pablo Magaz'
 });
 
 function setInitialState(initialState) {

@@ -4,25 +4,16 @@ import { PropTypes } from 'prop-types';
 import PostDate from 'components/PostDate';
 
 const propTypes= {
-  tags: PropTypes.array.isRequired,
+  author: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired
 };
 
-const PostInfo = ({ tags, date }) => {
-
-  const tagList = tags.map(tag => {
-    return (
-      <span key={ tag.id }> { tag.name } </span>
-    );
-  });
-
-  return (
-    <div>
-      Tags: { tagList } |
-      <PostDate date={ date } />
-    </div>
-  );
-};
+const PostInfo = ({ author, date}) => (
+  <div>
+    { author }
+    <PostDate date={ date } />
+  </div>
+);
 
 PostInfo.propTypes = propTypes;
 

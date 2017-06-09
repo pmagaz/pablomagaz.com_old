@@ -15,11 +15,11 @@ const PostContent = ({ post }) => {
   return (
     <div className={ styles.postContent }>
       <h2>{ post.title }</h2>
+      { post.author }
       <PostDate
         date={ post.created_at }
       />
       { ReactHtmlParser(post.html)}
-      <b>{ post.author }</b>
     </div>
   );
 };

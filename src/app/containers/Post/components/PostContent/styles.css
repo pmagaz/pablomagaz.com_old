@@ -6,3 +6,9 @@
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
+
+span {
+    font-size: .8em;
+    padding-right: 2em;
+    letter-spacing: 0.1em;
+}

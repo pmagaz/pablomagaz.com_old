@@ -1,7 +1,11 @@
+@import '../../styles/base.css';
+
+
+
 .Blog {
-  height: 200px;
   bottom: 0;
   margin: auto;
   max-width: 100%;
   color: #9E9E9E ;
+
 }

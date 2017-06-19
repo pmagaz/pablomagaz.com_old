@@ -31,3 +31,7 @@
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }
+
+.image{
+    width: 100%;
+}

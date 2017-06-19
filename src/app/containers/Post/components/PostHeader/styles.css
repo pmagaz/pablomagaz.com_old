@@ -1,15 +1,12 @@
 @import '../../../../styles/base.css';
 
-header{
-  height: 65vh;
+.postHeader{
   min-height: 160px;
-  position: relative;
-  display: table;
+  display: block;
   width: 100%;
-  height: 40vh;
-  margin-bottom: 5rem;
+  margin-bottom: 2em;
   text-align: center;
-  background: #222 no-repeat center center;
+  background-color: #222;
   background-size: cover;
   overflow: hidden;
   -webkit-animation: fade-in-down 0.3s;

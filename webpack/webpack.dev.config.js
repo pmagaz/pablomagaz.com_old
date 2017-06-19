@@ -24,7 +24,7 @@ export const output = {
 };
 
 export const module = {
-  rules: [
+  rules: common.module.rules.concat([
     {
       test: [/\.jsx?$/],
       include: [/src/],
@@ -58,7 +58,7 @@ export const module = {
         }
       ]
     }
-  ]
+  ])
 };
 
 export const plugins = [

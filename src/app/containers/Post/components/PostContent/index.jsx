@@ -14,8 +14,10 @@ const PostContent = ({ post }) => {
 
   return (
     <div className={ styles.postContent }>
-      <h2>{ post.title }</h2>
-      { post.author }
+      <h1>{ post.title }</h1>
+      <span>
+        { post.author }
+      </span>
       <PostDate
         date={ post.created_at }
       />

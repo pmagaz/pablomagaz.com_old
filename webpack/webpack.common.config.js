@@ -29,6 +29,14 @@ export const entry = {
   ]
 };
 
+export const module = {
+  rules: [
+    { test: /\.json$/, loader: 'json-loader', include: [mainPath] },
+    { test: /\.html/, loader: 'raw-loader', include: [mainPath] },
+    { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+  ]
+};
+
 export const plugins = [
   new ProgressBarPlugin({
     format: `[BASE] ${chalk.blue('i')} Bundling... [:bar] ${chalk.green(':percent')} (:elapsed seconds)`,

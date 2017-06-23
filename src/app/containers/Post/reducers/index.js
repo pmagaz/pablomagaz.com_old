@@ -7,7 +7,7 @@ function postRequest ( state ) { return state; }
 function postError ( state ) { return state; }
 
 function postSuccess ( state, action ) {
-  return state.merge(action.result)
+  return state.merge(action.payload)
         .set('author', 'Pablo Magaz');
 }
 

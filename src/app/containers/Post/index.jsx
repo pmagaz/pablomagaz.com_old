@@ -48,11 +48,9 @@ export class Post extends Component {
       </div>
     );
   }
-
 }
 
 Post.propTypes = propTypes;
-
 
 export default connect(
   (state) => ({ Post: state.Post })

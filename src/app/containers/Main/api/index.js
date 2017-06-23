@@ -8,7 +8,7 @@ export default {
   fetchLogo() {
     return fetch(url)
       .then(req => req.json())
-      .then(data => new MainModel(data));
+      .then(payload => new MainModel(payload));
   }
 
 };

@@ -7,11 +7,11 @@ function blogRequest ( state ) { return state; }
 function blogError ( state ) { return state; }
 
 function blogSuccess ( state, action ) {
-  const pagination = action.result.pagination;
+  const pagination = action.payload.pagination;
   const hasMorePosts = (pagination.page < pagination.pages) ? true : false;
 
   return state
-    .update ('posts', () => state.posts.concat(action.result.list ))
+    .update ('posts', () => state.posts.concat(action.payload.list ))
     .update ('pagination', () => pagination.set('hasMorePosts', hasMorePosts));
 }
 

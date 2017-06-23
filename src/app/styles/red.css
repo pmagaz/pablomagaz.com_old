@@ -1,0 +1,110 @@
+/* Template: Syntac | Author: eriktailor | Version: 1.0 */
+/*--------------------------------------------------------------------- */
+
+/* All / Page Title */
+.page-title span {color: #DD3C26;}
+
+/* All / Top Name Area */
+.nameArea h1 {background: #DD3C26;}
+
+/* All / Active Menu Item */
+.menu .active {background: #DD3C26;}
+
+/*
+.menu .active .bullet {background-image: url("../../img/bullets/menu_bullet_red.png");}
+*/
+.menu .active i {color: #F0F0F0; border-top: 2px solid #e7c2bd;}
+
+/* All / Submenu Items */
+.submenu a:hover, .submenu a.active, .submenu-active span, .submenu-active i {color: #DD3C26;}
+
+/* All / Button Bar Bg */
+.button-bar {background-color: #DD3C26;}
+
+/* All / Button Hover */
+.button:hover {background: #F0F0F0; color: #DD3C26;}
+
+/* All / Social Icons Hover */
+.social-networks a:hover i {color: #DD3C26;}
+
+/* My Profile / Profile Bg */
+#profile {background-color: #DD3C26;}
+
+/* My Profile / Active Profile Tab */
+.profile-tabs .active {background: #DD3C26;}
+
+/* My Profile / Twitter Feed */
+.twitter-sign i {font-size: 57px; color: #DD3C26;}
+
+.twitter a:hover {color: #DD3C26; text-decoration: none;}
+
+/* My Profile / Twitter Feed Date*/
+.tweet span {color: #DD3C26;}
+
+/* Services / Process Part Icon */
+.process-part .icon-box i {color: #DD3C26;}
+
+/* Services / Testimonials Bg */
+#testimonials {background-color: #DD3C26;}
+
+/* Services / Pricing Tables */
+.price-table h3 {background-color: #DD3C26;}
+
+/* Services / Pricing Table Button */
+.price-table .button {color: #DD3C26; border-color: #DD3C26;}
+
+/* Services / Pricing Table Bullet
+.pricing-bullet-bottom {background-image: url('../../img/bullets/portfolio_bullet_red.png');}
+*/
+/* Portfolio / Active Filter */
+.filter .selected i, .filter .selected span {color: #DD3C26;}
+
+/* Portfolio / Title */
+.portfolio-item span {color: #DD3C26;}
+
+/* Portfolio / Item Hover */
+.portfolio-item:hover {background: #DD3C26;}
+
+/* Portfolio / Item Hover Bullet */
+/*
+.overlay .bullet {width: 26px; height: 12px; background-image: url('../../img/bullets/portfolio_bullet_red.png');}
+*/
+/* Resume / Icon Box */
+.resume-icon-box {background: #DD3C26;}
+
+/* Resume / Dates */
+.resume-content-box span {color: #DD3C26;}
+
+/* Resume / Bullets
+.resume-bullet-right {background-image: url('../../img/bullets/resume_bullet_right_red.png');}
+
+.resume-bullet-left {background-image: url('../../img/bullets/resume_bullet_left_red.png');}
+
+.resume-bullet-bottom {background-image: url('../../img/bullets/resume_bullet_bottom_red.png');}
+*/
+/* Blog / Content Title Highlight*/
+.post-preview-content-box span {color: #DD3C26;}
+
+/* Blog / Links */
+#blog a {color: #DD3C26;}
+
+/* Blog / Icon Box */
+.post-icon-box {background: #DD3C26;}
+
+/* Blog / Bullets
+.post-bullet-right {background-image: url('../../img/bullets/resume_bullet_right_red.png');}
+*/
+/* Blog / Tags Hover */
+.sidebar .tags li a:hover {color: #DD3C26 !important;}
+
+/* Resume / Skill Tip */
+.skill-tip {background: #DD3C26;}
+
+/* Resume / Award Header */
+.award-header {background: #DD3C26;}
+
+/* Contact / Form Bg */
+#contact {background-color: #DD3C26;}
+
+/* Contact / Contact Detail Icons */
+.contact-details i {color: #DD3C26;}

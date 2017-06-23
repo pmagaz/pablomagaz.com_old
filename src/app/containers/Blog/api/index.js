@@ -9,9 +9,9 @@ export default {
     if (!page) page = 1;
     return fetch(`${SiteConf.postsApi}&page=${page}`)
     .then(req => req.json())
-    .then( data => ({
-      pagination: new PaginationModel(data.meta.pagination),
-      list: generateListWithSummary(data.posts, PostListModel)
+    .then(payload => ({
+      pagination: new PaginationModel(payload.meta.pagination),
+      list: generateListWithSummary(payload.posts, PostListModel)
     }))
     .catch(err => console.log(err));
   },

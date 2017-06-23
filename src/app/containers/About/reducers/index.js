@@ -7,7 +7,7 @@ function aboutRequest ( state ) { return state; }
 function aboutError ( state ) { return state; }
 
 function aboutSuccess ( state, action ) {
-  return state.update ( 'data', () => action.result );
+  return state.update ( 'data', () => action.payload );
 }
 
 const actionHandlers = {

@@ -1,6 +1,6 @@
 import { Record } from 'immutable';
 
-const PostModel = new Record({
+const PostModel = Record({
   id: -1,
   url: '',
   slug: '',

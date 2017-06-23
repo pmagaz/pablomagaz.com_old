@@ -28,8 +28,10 @@ export class Main extends Component {
     const LogoData = this.props.MainModel;
 
     return (
-      <div className={ styles.Main }>
-        <div>
+      <div id="wrapper">
+        <header id="header">
+        <div className={ styles.nameArea }>
+          <h1>Pablo Magaz</h1>
           <div>
             <div className={ styles.txt }>Examples</div>
 
@@ -49,6 +51,7 @@ export class Main extends Component {
             </div>
           </div>
         </div>
+        </header>
       </div>
     );
   }

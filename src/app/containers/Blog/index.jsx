@@ -52,7 +52,7 @@ export class Blog extends Component {
           { PostList }
         </div>
       </InfiniteScroll>
-      <aside>aaaaa</aside>
+      <aside>aside</aside>
       </div>
     );
   }

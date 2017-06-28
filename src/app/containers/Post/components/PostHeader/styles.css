@@ -1,16 +1,43 @@
 @import '../../../../styles/base.css';
 
 .postHeader{
-  min-height: 160px;
+  background-color: $gray-darker;
+  min-height: 210px;
+      overflow: hidden;
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+
+
+.postHeader,
+.postHeader:before { background: 50% 50% / cover; }
+
+.postHeader::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   display: block;
-  width: 100%;
-  margin-bottom: 2em;
-  text-align: center;
-  background-color: #222;
+  background-color: $gray;
+  background-image: url(https://unsplash.it/4288/2848?image=717);
   background-size: cover;
-  overflow: hidden;
-  -webkit-animation: fade-in-down 0.3s;
-  animation: fade-in-down 0.3s both;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.postHeader * {
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  padding: 1em 0;
 }

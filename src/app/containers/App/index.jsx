@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import styles from './styles.css';
+import LinkButton from 'components/LinkButton';
 
 export class App extends Component {
 
@@ -13,7 +14,12 @@ export class App extends Component {
     return (
       <div className={ styles.app  }>
         
-        <header className={ styles.mainHeader  }>main header</header>
+        <header className={ styles.mainHeader  }>main header
+              <LinkButton
+                location="/blog"
+                value="Blog"
+              />
+        </header>
 
         <main className={ styles.container  }>
 

@@ -1,17 +1,10 @@
+@import "variables/variables.css";
+
 :root {
   --logoWidth: 500px;
   --time: +60px;
 }
-*{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-a{
-    border: none;
-    text-decoration: none;
-    color: inherit;
-}
+
 @-webkit-keyframes fade-in-up {
     0% {
         opacity: 0;
@@ -63,21 +56,41 @@ a{
     }
 }
 
-h1{
-    font-family: "georgia";
-    font-style: italic;
-    margin: 0.1em 0 0.2em;
-}
-body {
-  background-color: #fff;
-  color: #111;
-  font-family: verdana;
-  line-height: 1.5;
-  margin: 0;
-    font-size: 13px; 
+html{
+    height: 100%;
+    overflow: hidden;
 }
 
-@media (min-width: 768px) {
+
+body {
+  background-color: $white;
+  color: $black;
+  font-family: $text-font;
+  line-height: 1.5;
+  font-size: 13px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a{
+    border: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (min-width: $sm) {
   
   body {
     font-size: 14px; 
@@ -85,7 +98,7 @@ body {
 
 }
 
-@media (min-width: 992px) {
+@media (min-width: $md) {
   
   body {
     font-size: 15px;
@@ -93,7 +106,7 @@ body {
 
 }
 
-@media (min-width: 1199px) {
+@media (min-width: $lg) {
   
   body {
     font-size: 16px;

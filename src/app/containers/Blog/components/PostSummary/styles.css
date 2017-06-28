@@ -13,5 +13,5 @@
     overflow: hidden;
     height: 190px;
     display: block;
-    background: #2f2f2f;
+    background-color: $gray-darker;
 }

@@ -7,7 +7,6 @@ import { fetchRequiredActions } from 'base';
 
 import Actions from './actions';
 import Logo from '../../components/Logo';
-import LinkButton from '../../components/LinkButton';
 import styles from './styles.css';
 
 const propTypes = {
@@ -31,12 +30,7 @@ export class Main extends Component {
       <div className={ styles.mainWrapper }>
 
         <section className={ styles.home }>
-                      <div className={ styles.buttons }>
-              <LinkButton
-                location="/blog"
-                value="Blog"
-              />
-            </div>
+
             <div className={ styles.brand }><h1>Pablo Magaz</h1></div>
 
 

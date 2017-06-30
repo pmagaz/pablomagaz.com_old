@@ -44,7 +44,7 @@ section{
     margin-bottom: 10px;
     line-height: 70px;
     text-align: center;
-    font-family: '$display-bold';
+    font-family: 'Montserrat';
     @media (min-width:$sm){
       padding: 40px 0 27px 130px;
       text-align: left;

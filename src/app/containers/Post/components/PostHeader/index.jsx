@@ -15,6 +15,7 @@ const PostHeader = ({ image, title }) => {
 
   return(
     <header className={ styles.postHeader  }></header>
+    
   )
 };
 

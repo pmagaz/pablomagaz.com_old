@@ -25,6 +25,7 @@ export default function main(params) {
     <meta name="twitter:url" content="http://pablomagaz.com/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <link rel="icon" href="assets/images/favicon.ico"/>
+    <link href="http://fonts.gstatic.com/s/montserrat/v10/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2" rel="stylesheet">
     ${ params.vendorScript }
     ${ params.style }
     </head>

@@ -2,18 +2,18 @@ import { createReducer } from 'base';
 import ActionTypes from '../actionTypes';
 import { BlogCollection } from '../models';
 
-function blogRequest ( state ) { return state; }
+const blogRequest = state => state;
 
-function blogError ( state ) { return state; }
+const blogError = state => state;
 
-function blogSuccess ( state, action ) {
+const blogSuccess = (state, action) => {
   const pagination = action.payload.pagination;
   const hasMorePosts = (pagination.page < pagination.pages) ? true : false;
 
   return state
     .update ('posts', () => state.posts.concat(action.payload.list ))
     .update ('pagination', () => pagination.set('hasMorePosts', hasMorePosts));
-}
+};
 
 const actionHandlers = {
   [ActionTypes.BLOG_REQUEST]: blogRequest,

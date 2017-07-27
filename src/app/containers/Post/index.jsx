@@ -37,20 +37,24 @@ export class Post extends Component {
     const postImage = `${SiteConf.ImageUrl}${post.image}`;
 
     return (
-      <div>
-        <PostHeader
-          image={ postImage }
-          title={ post.title }
-        />
-        <PostContent
-          post={ post }
-        />
+      <div className={ styles.mainContent  }>
+        <div className={ styles.post  }>
+          <PostHeader
+            image={ postImage }
+            title={ post.title }
+          />
+          <PostContent
+            post={ post }
+          />
+      </div>
       </div>
     );
   }
+
 }
 
 Post.propTypes = propTypes;
+
 
 export default connect(
   (state) => ({ Post: state.Post })

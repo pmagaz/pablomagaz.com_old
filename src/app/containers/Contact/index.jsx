@@ -36,7 +36,7 @@ export class Contact extends Component {
     props.name = 'Contact';
 
     return (
-      <div className={ styles.Contact  }>
+      <div className={ styles.contact  }>
         <ContactComponent name={ props.name } />
       </div>
     );

@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import  action from '../';
 import ActionTypes from '../../actionTypes';
+import { generateFetchTypes } from 'base';
 
 import LogoAPI from '../../api';
 
@@ -9,7 +10,7 @@ describe('Actions', () => {
     it('Should create action fetchLogo', () => {
       const params = {};
       const expectedAction = {
-        type: ActionTypes.LOGO_REQUEST,
+        types: generateFetchTypes(ActionTypes.LOGO_REQUEST),
         request: LogoAPI.fetchLogo(params)
       };
 

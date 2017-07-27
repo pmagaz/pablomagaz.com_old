@@ -28,7 +28,7 @@ const PostSummary = ({ post }) => {
         author={ post.author }
         date={ post.updated_at }
       />
-      <Link to={ url }>
+      <Link className={ styles.linkImage } to={ url }>
         <PostImage
           src={ imageSrc }
           alt={ post.slug }

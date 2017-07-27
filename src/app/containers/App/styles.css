@@ -1,0 +1,54 @@
+@import 'fonts.css';
+
+.app{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+
+
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $sm) {
+            flex-direction: row;
+
+    }
+}
+
+
+
+
+header.mainHeader{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+footer.container{
+    border-top: 1px solid $gray-ligth;
+    width: 100%;
+    padding: 20px 0;
+    background: $white;
+    justify-content: center;
+    
+    .txt {
+        font-weight: 600;
+        margin: 30px 0;
+        text-align: center;
+
+        img {
+            width: 40px;
+        }
+
+        a {
+            display: block;
+            margin-top: 90px;
+        }
+    }
+}
+

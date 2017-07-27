@@ -8,6 +8,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 import Loading from 'components/Loading';
 import * as Actions from './actions';
 import PostSummary from './components/PostSummary/';
+import * as styles from './styles.css';
 
 export class Blog extends Component {
 
@@ -39,8 +40,9 @@ export class Blog extends Component {
     )
   );
     return (
+      <div className= { styles.Blog } >
       <InfiniteScroll
-        threshold={ 500 }
+        threshold={ 900 }
         loader={ Loading }
         pageStart={ PageStart }
         loadMore={ this.getPosts.bind(this) }
@@ -50,6 +52,8 @@ export class Blog extends Component {
           { PostList }
         </div>
       </InfiniteScroll>
+      <aside>aside</aside>
+      </div>
     );
   }
 }

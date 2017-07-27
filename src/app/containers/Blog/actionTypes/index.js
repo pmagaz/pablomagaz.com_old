@@ -1,6 +1,6 @@
-import { typeBuilder } from 'base';
+import { createActionType } from 'base';
 
-export default typeBuilder([
+export default createActionType([
   'BLOG_REQUEST',
   'BLOG_SUCCESS',
   'BLOG_ERROR',

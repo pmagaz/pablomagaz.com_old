@@ -1,8 +1,9 @@
 import { createLogger } from 'redux-logger';
+import reduxReqMiddleware from 'redux-req-middleware';
 import { createStore, compose, applyMiddleware } from 'redux';
+
 import base from 'base/';
 import rootReducer from '../reducers';
-import requestMiddleware from '../middleware/Request';
 
 function configureStore(history, initialState) {
 
@@ -10,12 +11,12 @@ function configureStore(history, initialState) {
 
   if (base.env === 'development') {
     middleware = applyMiddleware(
-      requestMiddleware,
+      reduxReqMiddleware(),
       createLogger({ level: 'info', collapsed: true }),
     );
   } else {
     middleware = applyMiddleware(
-      requestMiddleware
+      reduxReqMiddleware()
     );
   }
 

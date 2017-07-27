@@ -14,7 +14,7 @@ const PostHeader = ({ image, title }) => {
   };
 
   return(
-    <header style={ style }></header>
+    <div style={style} className={ styles.postHeader}></div>
   )
 };
 

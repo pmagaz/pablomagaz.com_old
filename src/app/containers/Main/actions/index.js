@@ -1,5 +1,3 @@
-import { generateFetchTypes } from 'base';
-
 import LogoAPI from '../api';
 import ActionTypes from '../actionTypes';
 

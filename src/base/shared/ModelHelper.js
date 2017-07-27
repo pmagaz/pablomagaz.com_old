@@ -19,7 +19,7 @@ export function generateList( data, model ) {
 export function generateListWithSummary( data, model ) {
   const arr = data.map((item) => {
     let i = 0;
-    let max = 30;
+    let max = 80;
     const words = item.html.split(' ');
     item.summary = '';
     for (i; i <= max ; i++) {

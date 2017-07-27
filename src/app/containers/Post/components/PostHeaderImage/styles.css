@@ -1,0 +1,50 @@
+@import '../../../../styles/base.css';
+
+.image-loaded {
+  -webkit-animation: fade-in-down 0.3s;
+  animation: fade-in-down 0.3s both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.image{
+    width: 100%;
+  background-color: $gray-darker;
+  min-height: 210px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+
+
+.image,
+.image:before { background: 50% 50% / cover; }
+
+.image::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-color: $gray;
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.image * {
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  padding: 1em 0;
+}

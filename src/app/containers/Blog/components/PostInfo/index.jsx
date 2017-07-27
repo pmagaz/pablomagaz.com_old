@@ -10,7 +10,7 @@ const propTypes= {
 
 const PostInfo = ({ author, date}) => (
   <div>
-    { author }
+    <span>{ author }</span>
     <PostDate date={ date } />
   </div>
 );

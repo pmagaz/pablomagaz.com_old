@@ -7,7 +7,7 @@ function contactRequest ( state ) { return state; }
 function contactError ( state ) { return state; }
 
 function contactSuccess ( state, action ) {
-  return state.update ( 'data', () => action.result );
+  return state.update ( 'data', () => action.payload );
 }
 
 const actionHandlers = {

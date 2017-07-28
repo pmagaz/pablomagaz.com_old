@@ -53,10 +53,12 @@ export const module = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: (loader) => common.postcss
+              plugins: (loader) => common.postcss.concat(
+                require('postcss-clean')()
+              )
             }
           }
-         ]
+        ]
       })
     }
   ])

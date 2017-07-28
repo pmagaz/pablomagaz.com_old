@@ -58,7 +58,6 @@ export const postcss = [
   require('postcss-nested')(),
   require('postcss-reporter')(),
   require('postcss-url')(),
-  require('postcss-clean')()
 ];
 
 export const resolve = {

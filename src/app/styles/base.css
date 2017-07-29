@@ -1,5 +1,5 @@
 @import "variables/variables.css";
-
+$white: #fff;
 :root {
   --logoWidth: 500px;
   --time: +60px;
@@ -60,7 +60,6 @@ html{
     height: 100%;
     overflow: hidden;
 }
-
 
 body {
   background-color: $white;

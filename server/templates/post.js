@@ -28,6 +28,8 @@ export default function post(params) {
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Pablo Magaz" />
     <link rel="icon" href="assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+
     ${ params.vendorScript }
     ${ params.style }
     </head>

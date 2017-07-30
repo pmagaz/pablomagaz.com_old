@@ -1,4 +1,5 @@
 @import "variables/variables.css";
+@import "code.css";
 
 :root {
   --logoWidth: 500px;

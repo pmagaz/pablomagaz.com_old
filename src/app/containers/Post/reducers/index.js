@@ -13,8 +13,10 @@ const postSuccess = (state, action) =>
 const cleanPost = state =>
   state
     .set('id', -1)
+    .set('html', '')
     .set('title', '')
     .set('image', '')
+    .set('author', '')
     .set('created_at', '');
 
 const actionHandlers = {

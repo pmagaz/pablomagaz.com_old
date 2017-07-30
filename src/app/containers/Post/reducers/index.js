@@ -2,24 +2,22 @@ import { createReducer } from 'base';
 import ActionTypes from '../actionTypes';
 import { PostModel } from '../models';
 
-function postRequest ( state ) { return state; }
+const postRequest = state => state;
 
-function postError ( state ) { return state; }
+const postError = state => state;
 
-function postSuccess ( state, action ) {
-  return state.merge(action.payload)
+const postSuccess = (state, action) =>
+  state.merge(action.payload)
         .set('author', 'Pablo Magaz');
-}
 
-function cleanPost ( state ) {
-  return state.merge({
+const cleanPost = state => 
+  state.merge({
     html: '',
     title: '',
     image: '',
     author: '',
     created_at: '',
   });
-}
 
 const actionHandlers = {
   [ActionTypes.POST_REQUEST]: postRequest,

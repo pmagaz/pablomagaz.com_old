@@ -26,6 +26,7 @@ export const entry = {
     'isomorphic-fetch',
     'html-react-parser',
     'react-infinite-scroller',
+    'highlight.js/lib/highlight',
   ]
 };
 
@@ -49,15 +50,21 @@ export const plugins = [
     prettyPrint: true
   }),
   new baseWpPlugins.compileInfoPlugin(),
+  new webpack.ContextReplacementPlugin(
+    /highlight\.js\/lib\/languages$/,
+    new RegExp(`^./(${['javascript'].join('|')})$`),
+  )
 ];
 
 export const postcss = [
   require('postcss-import')({ addDependencyTo: webpack }),
-  require('postcss-cssnext')(),
+  //require('postcss-cssnext')(),
   require('postcss-modules-extract-imports'),
   require('postcss-nested')(),
   require('postcss-reporter')(),
   require('postcss-url')(),
+  require('precss')(),
+  require('postcss-mixins')(),
 ];
 
 export const resolve = {

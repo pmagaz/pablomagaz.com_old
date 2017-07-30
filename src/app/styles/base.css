@@ -1,5 +1,6 @@
 @import "variables/variables.css";
-$white: #fff;
+@import "code.css";
+
 :root {
   --logoWidth: 500px;
   --time: +60px;

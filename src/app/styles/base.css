@@ -55,11 +55,11 @@
 
 html{
     height: 100%;
-    overflow: hidden;
+    background: $bg-back
 }
 
 body {
-  background-color: $white;
+  background-color: $bg-body;
   color: $black;
   font-family: $text-font-light;
   line-height: 1.5;
@@ -67,12 +67,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  -webkit-perspective: 1px;
-  perspective: 1px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden;
+
 }
 
 *{

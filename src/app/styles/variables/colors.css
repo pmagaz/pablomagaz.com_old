@@ -12,3 +12,13 @@ $gray: #d3d3d3;
 $gray-dark: #939393;
 $gray-darker: #545454;
 $black: #151515;
+
+
+/** Main Layout **/
+$bg-back: $gray-darker;
+$bg-body: $white;
+$bg-footer: $bg-all;
+
+$bg-titleBlog: $gray-darker;
+$cl-titleBlog: $white;
+$bg-mainContainer: $bg-body;

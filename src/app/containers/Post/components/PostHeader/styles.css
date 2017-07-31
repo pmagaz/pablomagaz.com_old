@@ -2,7 +2,7 @@
 
 .postHeader {
   background-color: $gray-darker;
-  min-height: 210px;
+  height: 120px;
   overflow: hidden;
   position: relative;
   -webkit-transform-style: inherit;
@@ -12,24 +12,26 @@
   animation: fade-in-down 0.3s both;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 120px;
+  overflow: hidden;
 }
 
 .postHeader::before {
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  background-color: $gray;
   background-size: cover;
-  -webkit-transform-origin: center center 0;
-  -webkit-transform: translateZ(-1px) scale(2);
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
-  min-height: 100vh;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  width: 100%;
+  -webkit-animation: fade-in-down 0.3s;
+  animation: fade-in-down 0.3s both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .postHeader * {

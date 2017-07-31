@@ -13,11 +13,16 @@
     width: 100%;
     margin: auto;
     display: flex;
-    flex-direction: column;
-    @media (min-width: $sm) {
-        flex-direction: row;
-    }
+    z-index: 1;
+    position: relative;
 }
+main.container {
+    margin-bottom: 100px;
+    background: $bg-mainContainer;
+    background: white;
+}
+
+
 
 
 
@@ -25,29 +30,23 @@
 header.mainHeader{
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 2;
 }
 
 footer.container{
     border-top: 1px solid $gray-light;
     width: 100%;
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    height: 100px;
+    background: $bg-footer;
     padding: 20px 0;
-    background: $white;
     justify-content: center;
+    align-items: center;
     
-    .txt {
-        font-weight: 600;
-        margin: 30px 0;
-        text-align: center;
-
-        img {
+    .txt img {
             width: 40px;
-        }
-
-        a {
-            display: block;
-            margin-top: 90px;
-        }
     }
 }
 

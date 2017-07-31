@@ -2,18 +2,18 @@
 
 .postContent {
     background-color: $white;
-  line-height: 1.7;
+    line-height: 1.7;
     padding-bottom: 300px;
-        margin: 32px auto 0;
-            padding: 0 30px 140px;
+    margin: 32px auto 0;
+    padding: 23px 30px 140px;
     max-width: 1224px;
-  position: relative;
-  z-index: 2;
-
-   -webkit-animation: fade-in-up 0.2s;
-  animation: fade-in-up 0.2s both;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+    position: relative;
+    z-index: 2;
+    margin-top: 120px;
+    -webkit-animation: fade-in-up 0.2s;
+    animation: fade-in-up 0.2s both;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 span {

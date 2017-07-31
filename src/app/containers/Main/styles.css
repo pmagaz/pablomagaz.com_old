@@ -32,21 +32,27 @@ section{
     background-color: $primary-color;
     width: 573px;
     font-size: 3em;
-    width: 100%;
+    width: 92%;
     margin: 40px auto 0;
     @media (min-width:$sm){
       width: 573px;
       margin: 133px 0 0 0;
     } 
   h1{
-    color: $white;
-    padding: 30px 0px 15px;
-    margin-bottom: 10px;
-    line-height: 70px;
+    font-family: "Montserrat-Medium";
     text-align: center;
-    font-family: 'Montserrat';
+    color: $white;
+    padding: 22px 0 22px;
+    display: table;
+    line-height: 40px;
+    font-size: 45px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
     @media (min-width:$sm){
-      padding: 40px 0 27px 130px;
+      width: auto;
+      padding: 22px 133px 20px 130px;
       text-align: left;
     }
   }

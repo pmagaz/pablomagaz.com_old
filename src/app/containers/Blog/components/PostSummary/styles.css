@@ -6,6 +6,13 @@
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
   margin-bottom: 50px;
+    a h1{
+      font-family: "$display-regular";
+    }
+}
+
+.PostSummary:first-child{
+  padding-top: 133px;
 }
 
 .linkImage{

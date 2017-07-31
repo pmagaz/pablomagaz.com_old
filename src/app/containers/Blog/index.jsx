@@ -41,7 +41,7 @@ export class Blog extends Component {
   );
     return (
       <div className= { styles.Blog } >
-        EL BLOG ISOMORFICO
+        <h1 className={ styles.titleBlog }>EL BLOG ISOMORFICO</h1>
       <InfiniteScroll
         threshold={ 900 }
         loader={ Loading }
@@ -53,7 +53,6 @@ export class Blog extends Component {
           { PostList }
         </div>
       </InfiniteScroll>
-      <aside>aside</aside>
       </div>
     );
   }

@@ -1,0 +1,29 @@
+
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url("Montserrat-Black.eot");
+  src: url("Montserrat-Black.eot") format("embedded-opentype"), url("Montserrat-Black.woff2") format("woff2"), url("Montserrat-Black.woff") format("woff"), url("Montserrat-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("Montserrat-ExtraBold.eot");
+  src: url("Montserrat-ExtraBold.eot") format("embedded-opentype"), url("Montserrat-ExtraBold.woff2") format("woff2"), url("Montserrat-ExtraBold.woff") format("woff"), url("Montserrat-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("Montserrat-Medium.eot");
+  src: url("Montserrat-Medium.eot") format("embedded-opentype"), url("Montserrat-Medium.woff2") format("woff2"), url("Montserrat-Medium.woff") format("woff"), url("Montserrat-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("Montserrat-Regular.eot");
+  src: url("Montserrat-Regular.eot") format("embedded-opentype"), url("Montserrat-Regular.woff2") format("woff2"), url("Montserrat-Regular.woff") format("woff"), url("Montserrat-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}

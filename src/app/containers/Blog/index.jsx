@@ -7,6 +7,8 @@ import InfiniteScroll from 'react-infinite-scroller';
 
 import Loading from 'components/Loading';
 import * as Actions from './actions';
+import { fetchRequiredActions, SiteConf } from 'base';
+
 import PostSummary from './components/PostSummary/';
 import * as styles from './styles.css';
 
@@ -29,6 +31,12 @@ export class Blog extends Component {
     this.actions.getPosts({ page });
   }
 
+    componentDidMount() {
+    const force = (this.props.Posts.size) ? false : true;
+    fetchRequiredActions(Blog.requiredActions, this.props, 'Posts', force);
+  }
+
+
   render () {
     const Posts = this.props.Posts;
     const PageStart = (Posts.size) ? 1 : 0;
@@ -41,17 +49,9 @@ export class Blog extends Component {
   );
     return (
       <div className= { styles.Blog } >
-      <InfiniteScroll
-        threshold={ 900 }
-        loader={ Loading }
-        pageStart={ PageStart }
-        loadMore={ this.getPosts.bind(this) }
-        hasMore={ this.props.Pagination.hasMorePosts }
-      >
-        <div className="tracks">
+        <div> 
           { PostList }
         </div>
-      </InfiniteScroll>
       <aside>aside</aside>
       </div>
     );

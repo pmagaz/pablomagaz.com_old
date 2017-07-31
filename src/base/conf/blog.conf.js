@@ -3,7 +3,7 @@ import env from '../shared/Env';
 const siteUrl = 'http://www.pablomagaz.com';
 const BaseUrl = 'http://localhost:2368';
 const ImageUrl = BaseUrl;
-const numPosts = 3;
+const numPosts = 10;
 const blogUrl = `${BaseUrl}/blog/`;
 const baseApiUrl = `${BaseUrl}/ghost/api/v0.1/`;
 const postsApiUrl = `${baseApiUrl}posts/`;

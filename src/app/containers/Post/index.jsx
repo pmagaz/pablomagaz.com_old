@@ -30,6 +30,7 @@ export class Post extends Component {
     const post = this.props.Post; 
     const force = (post.id !== -1) ? false : true;
     fetchRequiredActions(Post.requiredActions, this.props, 'Post', force);
+    this.highlightCode();
   }
 
   componentWillUnmount() {
@@ -37,16 +38,15 @@ export class Post extends Component {
   }
 
   highlightCode(){
-    hljs.registerLanguage('javascript', javascript);
-    hljs.initHighlightingOnLoad();
+    setTimeout(function(){
+      hljs.registerLanguage('javascript', javascript);
+      hljs.initHighlighting();
+    }, 300);
   }
-  
 
   render () {
     const post = this.props.Post;
     const postImage = `${SiteConf.ImageUrl}${post.image}`;
-    console.log(22222, post.id);
-
     return (
       <div className={ styles.mainContent  }>
         <div className={ styles.post  }>

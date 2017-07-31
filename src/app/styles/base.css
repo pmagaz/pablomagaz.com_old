@@ -2,11 +2,6 @@
 @import 'fonts.css';
 @import "code.css";
 
-:root {
-  --logoWidth: 500px;
-  --time: +60px;
-}
-
 @-webkit-keyframes fade-in-up {
     0% {
         opacity: 0;

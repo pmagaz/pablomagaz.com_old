@@ -25,6 +25,7 @@ export default function main(params) {
     <meta name="twitter:url" content="http://pablomagaz.com/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <link rel="icon" href="assets/images/favicon.ico"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
     ${ params.vendorScript }
     ${ params.style }
     </head>

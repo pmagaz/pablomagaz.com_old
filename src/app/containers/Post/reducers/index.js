@@ -10,14 +10,14 @@ const postSuccess = (state, action) =>
   state.merge(action.payload)
         .set('author', 'Pablo Magaz');
 
-const cleanPost = state => 
-  state.merge({
-    html: '',
-    title: '',
-    image: '',
-    author: '',
-    created_at: '',
-  });
+const cleanPost = state =>
+  state
+    .set('id', -1)
+    .set('html', '')
+    .set('title', '')
+    .set('image', '')
+    .set('author', '')
+    .set('created_at', '');
 
 const actionHandlers = {
   [ActionTypes.POST_REQUEST]: postRequest,

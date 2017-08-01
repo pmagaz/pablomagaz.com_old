@@ -1,6 +1,6 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
-import { Link } from 'react-router';
+import LinkButton from 'components/LinkButton';
 
 const propTypes= {
   alt: PropTypes.string.isRequired,
@@ -8,13 +8,15 @@ const propTypes= {
   width: PropTypes.number.isRequired
 };
 
-const ReactBaseLogo = ( props ) => (
-
-  <Link to="/main">
-    <img alt={ props.alt } src={ props.src } width={ props.width } />
-  </Link>
+const Logo = ( props ) => (
+  <div>
+    <LinkButton
+      location="/"
+      value="PM Logo"
+  />
+  </div>
 );
 
-ReactBaseLogo.propTypes= propTypes;
+Logo.propTypes= propTypes;
 
-export default ReactBaseLogo;
+export default Logo;

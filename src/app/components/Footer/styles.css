@@ -1,50 +1,26 @@
 @import '../../styles/base.css';
 
-.app{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
 .container {
     width: 100%;
     margin: auto;
-    display: flex;
+    display: block;
     z-index: 1;
     position: relative;
-}
-main.container {
-    margin-bottom: 100px;
-    background: $bg-mainContainer;
-}
-
-header.mainHeader{
+    align-items: center;
     align-items: center;
     position: fixed;
-    right: 0;
-    left: 0;
     width: 100%;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
     height: 50px;
     max-width: 1224px;
     margin: 0 auto;
-    > div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav ul{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: 200px;
-    }
+    right: 0;
+    left: 0;
 }
-
-
 footer.container{
     border-top: 1px solid $gray-light;
     width: 100%;
@@ -60,5 +36,19 @@ footer.container{
     .txt img {
             width: 40px;
     }
-}
 
+        nav ul{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        li{
+            margin: 0 10px;
+        }
+    }
+
+    
+}
+.copyright {
+    display: block;
+    margin-top: 20px;
+}

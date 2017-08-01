@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import styles from './styles.css';
 import LinkButton from 'components/LinkButton';
 import Menu from 'components/Menu';
+import Footer from 'components/Footer';
+import Logo from 'components/Logo';
 
 export class App extends Component {
 
@@ -14,26 +16,18 @@ export class App extends Component {
   render() {
     return (
       <div className={ styles.app  }>
-        
         <header className={ styles.mainHeader  }>
+            <Logo />
             <Menu />
         </header>
-
         <main className={ styles.container  }>
-
             {this.props.children}
-          
         </main>
-
-        <footer className={ styles.container }>
-              <a className={ styles.txt } href="https://github.com/atSistemas/react-base">
-                <img src="assets/images/github.svg" alt="Github" width="40px" />
-              </a>
-        </footer>
+        <Footer />
       </div>
     );
 
   }
 }
 
-export default connect(null)(App);
+export default App;

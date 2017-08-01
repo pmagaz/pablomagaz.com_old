@@ -18,6 +18,7 @@ main.container {
 }
 
 header.mainHeader{
+    align-items: center;
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -30,14 +31,6 @@ header.mainHeader{
     margin: 0 auto;
     right: 0;
     left: 0;
-    nav ul{
-        display: flex;
-        list-style: none;
-        margin: 0;
-        li{
-            margin: 0 10px;
-        }
-    }
 }
 
 

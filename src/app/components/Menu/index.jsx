@@ -1,16 +1,19 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
-import * as styles from './styles.css';
 
+import * as styles from './styles.css';
 import LinkButton from 'components/LinkButton';
+
 const Menu = () => (
-  <div>
-    <LinkButton
-      location="/"
-      value="PM"
-    />
-    <nav className={ styles.navMenu }> 
+  <div className={ styles.navMenu }>
+    <nav> 
       <ul>
+        <li>
+          <LinkButton
+            location="/"
+            value="Home"
+          />
+        </li>
         <li>
           <LinkButton
             location="/blog"

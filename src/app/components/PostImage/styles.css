@@ -1,33 +1,8 @@
 @import '../../styles/base.css';
 
-@-webkit-keyframes fade-in-up {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(+15px);
-        transform: translateY(+16px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-@keyframes fade-in-up {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(+15px);
-        transform: translateY(+15px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
 .image-loaded {
-  -webkit-animation: fade-in-up 0.3s;
-  animation: fade-in-up 0.3s both;
+  -webkit-animation: fade-in-up 0.2s;
+  animation: fade-in-up 0.2s both;
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
 }

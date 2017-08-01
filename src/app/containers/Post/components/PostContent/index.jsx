@@ -13,15 +13,17 @@ const propTypes= {
 const PostContent = ({ post }) => {
 
   return (
-    <div className={ styles.postContent }>
-      <h1>{ post.title }</h1>
-      <span>
-        { post.author }
-      </span>
-      <PostDate
-        date={ post.created_at }
-      />
-      { ReactHtmlParser(post.html)}
+    <div className={ styles.post }>
+      <div className={ styles.postContent }>
+        <h1>{ post.title }</h1>
+        <span>
+          { post.author }
+        </span>
+        <PostDate
+          date={ post.created_at }
+        />
+        { ReactHtmlParser(post.html)}
+      </div>
     </div>
   );
 };

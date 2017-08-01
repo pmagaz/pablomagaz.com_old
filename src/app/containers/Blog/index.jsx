@@ -49,10 +49,12 @@ export class Blog extends Component {
   );
     return (
       <div className= { styles.Blog } >
-        <div> 
-          { PostList }
+        <div className= { styles.BlogContent } >
+          <h1 className={ styles.titleBlog }>EL BLOG ISOMORFICO</h1>
+          <div> 
+            { PostList }
+          </div>
         </div>
-      <aside>aside</aside>
       </div>
     );
   }

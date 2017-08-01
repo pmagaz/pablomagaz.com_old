@@ -1,18 +1,46 @@
 @import '../../styles/base.css';
 
 .Blog {
-    margin: 0 auto;
-    padding-top: 100px;
-    max-width: 1224px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    @media (min-width: $sm){
-      flex-direction: row; 
+    margin-top: 120px;
+    background: $white;
+    .BlogContent{
+      margin: 0 auto;
+      max-width: 1224px;
+      display: inline-block;   
     }
 }
 
+  .titleBlog{
+    font-size: 1em;
+    text-align: center;
+    background: $bg-titleBlog;
+    color: $cl-titleBlog;
+    width: 100%;
+    margin: 0;
+    padding: 50px;
+    left: 0;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    height: 120px;
+
+  -webkit-animation: fade-in-down 0.2s;
+  animation: fade-in-down 0.2s both;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  }
+
+.tracks{
+  padding-top: 138px;
+}
+
 .Blog > div{
-  padding: 0 30px;
+  background: $white;
   @media (min-width: $sm){
     flex: 3;  
   }

@@ -18,16 +18,16 @@ const PostSummary = ({ post }) => {
 
   return (
     <div className={ styles.PostSummary } >
-        <PostTag
-          tags={ post.tags }
-        />
-      <Link to={ url }>
-        <h1> { post.title } </h1>
-      </Link>
       <PostInfo
         author={ post.author }
         date={ post.updated_at }
       />
+      <Link to={ url }>
+        <h1> { post.title } </h1>
+      </Link>
+        <PostTag
+          tags={ post.tags }
+        />
       <Link className={ styles.linkImage } to={ url }>
         <PostImage
           src={ imageSrc }

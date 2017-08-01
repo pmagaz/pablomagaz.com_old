@@ -40,8 +40,9 @@ export class Post extends Component {
   highlightCode(){
     setTimeout(function(){
       hljs.registerLanguage('javascript', javascript);
+      hljs.initHighlighting.called = false;
       hljs.initHighlighting();
-    }, 300);
+    }, 125);
   }
 
   render () {

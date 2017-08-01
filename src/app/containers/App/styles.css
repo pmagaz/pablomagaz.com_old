@@ -1,13 +1,8 @@
-
-
 .app{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
-
-
-
 
 .container {
     width: 100%;
@@ -21,11 +16,6 @@ main.container {
     background: $bg-mainContainer;
     background: white;
 }
-
-
-
-
-
 
 header.mainHeader{
     position: fixed;

@@ -3,6 +3,7 @@ import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import styles from './styles.css';
 import LinkButton from 'components/LinkButton';
+import Menu from 'components/Menu';
 
 export class App extends Component {
 
@@ -15,25 +16,7 @@ export class App extends Component {
       <div className={ styles.app  }>
         
         <header className={ styles.mainHeader  }>
-          <div>
-            PM
-          </div>
-          <nav>
-            <ul>
-              <li>
-                About
-              </li>
-              <li>
-                Contact
-              </li>
-              <li>
-                <LinkButton
-                  location="/blog"
-                  value="Blog"
-                />
-              </li>
-            </ul>
-          </nav>
+            <Menu />
         </header>
 
         <main className={ styles.container  }>

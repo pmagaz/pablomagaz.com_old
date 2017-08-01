@@ -5,8 +5,6 @@ section{
   background: cornsilk;
   border-bottom: 9px solid white;
 }
-
-
 .mainWrapper{
   align-items: center;
   display: flex;
@@ -15,9 +13,6 @@ section{
   justify-content: center;
   width: 100%;
 }
-
-
-
 .home {
   width: 100%;
   align-items: center;
@@ -37,6 +32,10 @@ section{
     font-size: 3em;
     width: 92%;
     margin: 40px auto 0;
+    -webkit-animation: fade-in-down 0.4s;
+    animation: fade-in-down 0.4s both;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
     @media (min-width:$sm){
       width: 573px;
       margin: 133px 0 0 0;

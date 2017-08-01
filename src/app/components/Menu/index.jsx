@@ -1,5 +1,6 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
+import * as styles from './styles.css';
 
 import LinkButton from 'components/LinkButton';
 const Menu = () => (
@@ -8,8 +9,14 @@ const Menu = () => (
       location="/"
       value="PM"
     />
-    <nav>
+    <nav className={ styles.navMenu }> 
       <ul>
+        <li>
+          <LinkButton
+            location="/blog"
+            value="Blog"
+          />
+          </li>
         <li>
          <LinkButton
           location="/#about"
@@ -20,13 +27,10 @@ const Menu = () => (
         <LinkButton
           location="/#contact"
           value="Contact"
-        />
+        />  
         </li>
-        <li>
-          <LinkButton
-            location="/blog"
-            value="Blog"
-          />
+          <li>
+            <a href="https://github.com/pmagaz/pablomagaz.com">Source Code</a>
         </li>
       </ul>
     </nav>

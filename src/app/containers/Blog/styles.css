@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
+    margin-top: 180px;
     background: $white;
     .BlogContent{
       margin: 0 auto;
@@ -14,20 +14,20 @@
 }
 
   .titleBlog{
-    font-size: 1em;
-    text-align: center;
+    font-size: 1,6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $bg-titleBlog;
     color: $cl-titleBlog;
     width: 100%;
     margin: 0;
-    padding: 50px;
     left: 0;
-    height: 120px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: -1;
-    height: 120px;
+    height: 180px;
 
   -webkit-animation: fade-in-down 0.2s;
   animation: fade-in-down 0.2s both;

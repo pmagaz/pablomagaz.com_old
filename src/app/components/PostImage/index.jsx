@@ -40,13 +40,15 @@ export class PostImage extends Component {
     });
 
     return (
-      <img
-        src={ src }
-        alt={ alt }
-        width={ width }
-        className={ imageClass }
-        ref={ (ref) => { this.imageRef = ref;} }
-      />
+      <div className = { styles.imageWrapper } >
+        <img
+          src={ src }
+          alt={ alt }
+          width={ width }
+          className={ imageClass }
+          ref={ (ref) => { this.imageRef = ref;} }
+        />
+      </div>
     );
   }
 

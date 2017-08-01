@@ -22,3 +22,9 @@
     display: block;
     background-color: $gray-darker;
 }
+
+
+.linkImage img{
+  margin-top: -25%;
+}
+

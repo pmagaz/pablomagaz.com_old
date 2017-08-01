@@ -11,9 +11,7 @@ const propTypes = {
 const LinkButton = ( props ) => {
   return (
     <Link className={ styles.LinkButton } to={ props.location }>
-      <button>
         { props.value }
-      </button>
     </Link>
   );
 };

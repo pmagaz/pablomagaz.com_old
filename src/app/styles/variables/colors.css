@@ -1,4 +1,4 @@
-$primary-color: #2475dd;
+$primary-color: #559999;
 
 $secondary-color: #ccc;
 
@@ -10,8 +10,15 @@ $gray-lighter: #ededed;
 $gray-light: #e0e0e0;
 $gray: #d3d3d3;
 $gray-dark: #939393;
-$gray-darker: #545454;
+$gray-darker: #444444;
 $black: #151515;
+
+
+$gtq-medium: $primary-color;
+$mentol:#CCDDCC;
+$slobber:#EEEEDD;
+$red:#FF2255;
+
 
 
 /** Main Layout **/
@@ -19,6 +26,6 @@ $bg-back: $gray-darker;
 $bg-body: $white;
 $bg-footer: $bg-all;
 
-$bg-titleBlog: $gray-darker;
+$bg-titleBlog: $gtq-medium;
 $cl-titleBlog: $white;
 $bg-mainContainer: $bg-body;

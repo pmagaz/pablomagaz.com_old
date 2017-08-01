@@ -14,11 +14,26 @@ export class App extends Component {
     return (
       <div className={ styles.app  }>
         
-        <header className={ styles.mainHeader  }>main header
-              <LinkButton
-                location="/blog"
-                value="Blog"
-              />
+        <header className={ styles.mainHeader  }>
+          <div>
+            PM
+          </div>
+          <nav>
+            <ul>
+              <li>
+                About
+              </li>
+              <li>
+                Contact
+              </li>
+              <li>
+                <LinkButton
+                  location="/blog"
+                  value="Blog"
+                />
+              </li>
+            </ul>
+          </nav>
         </header>
 
         <main className={ styles.container  }>

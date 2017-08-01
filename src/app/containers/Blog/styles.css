@@ -1,11 +1,16 @@
 @import '../../styles/base.css';
 
 .Blog {
-    margin: 0 auto;
-    max-width: 1224px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 120px;
+    background: $white;
+    .BlogContent{
+      margin: 0 auto;
+      max-width: 1224px;
+      display: inline-block;   
+    }
 }
 
   .titleBlog{
@@ -13,8 +18,6 @@
     text-align: center;
     background: $bg-titleBlog;
     color: $cl-titleBlog;
-    position: absolute;
-    z-index: 2;
     width: 100%;
     margin: 0;
     padding: 50px;
@@ -37,7 +40,6 @@
 }
 
 .Blog > div{
-  padding: 0 30px;
   background: $white;
   @media (min-width: $sm){
     flex: 3;  

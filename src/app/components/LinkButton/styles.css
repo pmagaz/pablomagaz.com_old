@@ -1,25 +1,9 @@
 @import '../../styles/base.css';
 
-.LinkButton {
-  &:last-child {
-    margin-left: 30px;
-  }
 
-  button {
-    background: $secondary-color;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    color: $white;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    padding: .5rem 1rem;
-    text-decoration: none;
-  
-    &:hover {
-      background: #3cb0fd;
-      border: 1px solid transparent;
-      text-decoration: none;
-    }
+.LinkButton{
+  cursor: pointer;
+  &.active{
+    color: red;
   }
 }

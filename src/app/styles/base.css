@@ -59,15 +59,15 @@ html{
 }
 
 body {
-  background-color: $bg-body;
-  color: $black;
-  font-family: $text-font-light;
-  line-height: 1.5;
-  font-size: 13px;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-
+    background-color: $bg-body;
+    color: $black;
+    font-family: $text-font-light;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    font-size: 13px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 *{

@@ -23,7 +23,10 @@ section{
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  background-image: url("https://i.ytimg.com/vi/wC9QUljrzNw/maxresdefault.jpg");
+  background-image: url("http://k32.kn3.net/taringa/1/B/6/D/4/B/hegel-21/27B.jpg");
+  background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
 
 }
 
@@ -41,14 +44,14 @@ section{
   h1{
     font-family: "Montserrat-Medium";
     text-align: center;
-    color: $white;
-    padding: 22px 0 22px;
-    display: table;
     line-height: 40px;
     font-size: 45px;
     letter-spacing: -2px;
     text-transform: uppercase;
     font-weight: bold;
+    color: $white;
+    padding: 22px 0 22px;
+    display: table;
     width: 100%;
     @media (min-width:$sm){
       width: auto;

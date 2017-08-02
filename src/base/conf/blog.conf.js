@@ -10,8 +10,8 @@ const postSummarySplitChar = '@@@';
 const blogUrl = `${BaseUrl}/blog/`;
 const baseApiUrl = `${BaseUrl}/ghost/api/v0.1/`;
 const postsApiUrl = `${baseApiUrl}posts/`;
-//const clientSecret = '8628165087ba';
-const clientSecret = '808b87eda50b';
+const clientSecret = '8628165087ba';
+//const clientSecret = '808b87eda50b';
 const postsApi = `${postsApiUrl}?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
 const postApi = `${postsApiUrl}slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}`;
 

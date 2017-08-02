@@ -8,6 +8,8 @@
   margin-bottom: 50px;
     a h1{
       font-family: "$display-regular";
+      font-size: 3em;
+      line-height: 1em;
     }
 }
 
@@ -27,4 +29,3 @@
 .linkImage img{
   margin-top: -25%;
 }
-

@@ -9,12 +9,12 @@ const propTypes= {
 };
 
 const Logo = ( props ) => (
-  <div>
+  
     <LinkButton
       location="/"
       value="PM Logo"
   />
-  </div>
+
 );
 
 Logo.propTypes= propTypes;

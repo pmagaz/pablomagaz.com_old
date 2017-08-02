@@ -12,7 +12,7 @@
     position: relative;
 }
 main.container {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     background: $bg-mainContainer;
     background: white;
 }
@@ -29,8 +29,9 @@ header.mainHeader{
     height: 50px;
     max-width: 1224px;
     margin: 0 auto;
-    right: 0;
-    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -50,4 +51,3 @@ footer.container{
             width: 40px;
     }
 }
-

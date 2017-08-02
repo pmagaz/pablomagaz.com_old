@@ -1,10 +1,7 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
-import hljs from 'highlight.js/lib/highlight';
 import ReactHtmlParser from 'html-react-parser';
-import javascript from 'highlight.js/lib/languages/javascript';
 
-import { fetchRequiredActions, SiteConf } from 'base';
 import PostDate from 'components/PostDate';
 import * as styles from './styles.css';
 
@@ -13,12 +10,6 @@ const propTypes= {
 };
 
 const PostContent = ({ post }) => {
-
-  setTimeout(function(){
-    hljs.initHighlighting.called = false;
-    hljs.registerLanguage('javascript', javascript);
-    hljs.initHighlighting();
-  }, SiteConf.codeHighlightDelay);
 
   return (
     <div className={ styles.post }>

@@ -6,8 +6,7 @@ import LinkButton from 'components/LinkButton';
   
 const Menu = (props) => {
   return (
-  <div className={ styles.navMenu }>
-    <nav> 
+    <nav className={ styles.navMenu }>
       <ul>
         <li>
           <LinkButton
@@ -38,8 +37,7 @@ const Menu = (props) => {
         </li>
       </ul>
     </nav>
-  </div>
-)
+  )
 };
 
 export default Menu;

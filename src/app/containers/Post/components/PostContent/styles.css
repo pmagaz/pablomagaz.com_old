@@ -18,10 +18,11 @@
         animation: fade-in-up 0.3s both;
         -webkit-animation-delay: 0.1s;
         animation-delay: 0.1s;
+        
     }
 }
 
-span {
+.author {
     font-size: .8em;
     padding-right: 2em;
     letter-spacing: 0.1em;

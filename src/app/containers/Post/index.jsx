@@ -8,6 +8,7 @@ import javascript from 'highlight.js/lib/languages/javascript';
 
 import { fetchRequiredActions, SiteConf } from 'base';
 import styles from './styles.css';
+import codeStyle from '../../styles/code.css';
 import * as Actions from './actions';
 import PostHeader from './components/PostHeader';
 import PostContent from './components/PostContent';

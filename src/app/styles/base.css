@@ -1,6 +1,5 @@
-@import "variables/variables.css";
+@import 'variables/variables.css';
 @import 'fonts.css';
-@import "code.css";
 
 @-webkit-keyframes fade-in-up {
     0% {

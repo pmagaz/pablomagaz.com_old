@@ -43,7 +43,7 @@ export class Post extends Component {
       hljs.registerLanguage('javascript', javascript);
       hljs.initHighlighting.called = false;
       hljs.initHighlighting();
-    }, 125);
+    }, 175);
   }
 
   render () {

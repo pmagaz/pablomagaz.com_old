@@ -16,7 +16,7 @@ const PostContent = ({ post }) => {
     <div className={ styles.post }>
       <div className={ styles.postContent }>
         <h1>{ post.title }</h1>
-        <span>
+        <span className={ styles.author } >
           { post.author }
         </span>
         <PostDate

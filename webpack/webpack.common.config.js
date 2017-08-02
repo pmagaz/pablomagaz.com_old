@@ -25,7 +25,7 @@ export const entry = {
     'react-router',
     'isomorphic-fetch',
     'html-react-parser',
-    'react-infinite-scroller',
+    'smoothscroll-polyfill',
     'highlight.js/lib/highlight',
   ]
 };
@@ -58,7 +58,6 @@ export const plugins = [
 
 export const postcss = [
   require('postcss-import')({ addDependencyTo: webpack }),
-  //require('postcss-cssnext')(),
   require('postcss-modules-extract-imports'),
   require('postcss-nested')(),
   require('postcss-reporter')(),

@@ -3,9 +3,9 @@ import { PropTypes } from 'prop-types';
 import LinkButton from 'components/LinkButton';
 
 const propTypes= {
-  alt: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  width: PropTypes.number.isRequired
+  alt: PropTypes.string,
+  src: PropTypes.string,
+  width: PropTypes.number
 };
 
 const Logo = ( props ) => (

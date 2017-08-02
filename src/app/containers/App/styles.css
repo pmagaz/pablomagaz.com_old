@@ -1,5 +1,3 @@
-@import '../../styles/base.css';
-
 .app{
     display: flex;
     min-height: 100vh;
@@ -16,15 +14,17 @@
 main.container {
     margin-bottom: 200px;
     background: $bg-mainContainer;
+    background: white;
 }
 
 header.mainHeader{
     align-items: center;
     position: fixed;
-    right: 0;
-    left: 0;
     width: 100%;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
     height: 50px;
     max-width: 1224px;
@@ -51,4 +51,3 @@ footer.container{
             width: 40px;
     }
 }
-

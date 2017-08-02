@@ -3,8 +3,9 @@ import { PropTypes } from 'prop-types';
 
 import * as styles from './styles.css';
 import LinkButton from 'components/LinkButton';
-
-const Menu = () => (
+  
+const Menu = (props) => {
+  return (
     <nav className={ styles.navMenu }>
       <ul>
         <li>
@@ -15,19 +16,19 @@ const Menu = () => (
         </li>
         <li>
           <LinkButton
-            location="/blog"
-            value="Blog"
+            location="#about"
+            value="About"
           />
           </li>
         <li>
          <LinkButton
-          location="/#about"
-          value="About"
+          location="/blog"
+          value="Blog"
         />
         </li>
         <li>
         <LinkButton
-          location="/#contact"
+          location="#contact"
           value="Contact"
         />  
         </li>
@@ -36,6 +37,7 @@ const Menu = () => (
         </li>
       </ul>
     </nav>
-);
+  )
+};
 
 export default Menu;

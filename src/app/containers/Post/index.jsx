@@ -31,12 +31,21 @@ export class Post extends Component {
     const post = this.props.Post; 
     const force = (post.id !== -1) ? false : true;
     fetchRequiredActions(Post.requiredActions, this.props, 'Post', force);
+    this.highlightCode();
   }
 
   componentWillUnmount() {
     this.actions.cleanPost();
   }
-  
+
+  highlightCode() {
+    setTimeout(function(){
+      hljs.initHighlighting.called = false;
+      hljs.registerLanguage('javascript', javascript);
+      hljs.initHighlighting();
+    }, SiteConf.codeHighlightDelay);
+  }
+
   render () {
     const post = this.props.Post;
     const postImage = `${SiteConf.ImageUrl}${post.image}`;

@@ -3,7 +3,6 @@ import { PropTypes } from 'prop-types';
 import ReactHtmlParser from 'html-react-parser';
 
 import PostDate from 'components/PostDate';
-
 import * as styles from './styles.css';
 
 const propTypes= {
@@ -22,7 +21,7 @@ const PostContent = ({ post }) => {
         <PostDate
           date={ post.created_at }
         />
-        { ReactHtmlParser(post.html)}
+        { ReactHtmlParser(post.html) } 
       </div>
     </div>
   );

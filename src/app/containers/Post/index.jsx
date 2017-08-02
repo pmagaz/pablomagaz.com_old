@@ -38,17 +38,18 @@ export class Post extends Component {
     this.actions.cleanPost();
   }
 
-  highlightCode(){
+  highlightCode() {
     setTimeout(function(){
-      hljs.registerLanguage('javascript', javascript);
       hljs.initHighlighting.called = false;
+      hljs.registerLanguage('javascript', javascript);
       hljs.initHighlighting();
-    }, 175);
+    }, SiteConf.codeHighlightDelay);
   }
 
   render () {
     const post = this.props.Post;
     const postImage = `${SiteConf.ImageUrl}${post.image}`;
+    
     return (
       <div className={ styles.mainContent  }>
         <div className={ styles.post  }>
@@ -56,13 +57,8 @@ export class Post extends Component {
             image={ postImage }
             title={ post.title }
           />
-          <PostContent
-            post={ post }
-          />
-          {/* <PostTag
-            tags={ post.tags }
-          /> */}
-      </div>
+          <PostContent post={ post } />
+        </div>
       </div>
     );
   }

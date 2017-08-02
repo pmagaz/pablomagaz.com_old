@@ -22,7 +22,7 @@ export class Blog extends Component {
     Pagination: PropTypes.instanceOf(Immutable.Record).isRequired,
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.actions = bindActionCreators(Actions, props.dispatch);
   }
@@ -31,11 +31,10 @@ export class Blog extends Component {
     this.actions.getPosts({ page });
   }
 
-    componentDidMount() {
+  componentDidMount() {
     const force = (this.props.Posts.size) ? false : true;
     fetchRequiredActions(Blog.requiredActions, this.props, 'Posts', force);
   }
-
 
   render () {
     const Posts = this.props.Posts;

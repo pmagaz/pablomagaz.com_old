@@ -2,7 +2,7 @@
 export default function main(params) {
 
   const description = 'JavaScript, Webpack';
-  const state = JSON.stringify( params.state );
+
   return `
   <!doctype html>
 	<html lang="utf-8">

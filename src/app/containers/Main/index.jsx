@@ -5,22 +5,17 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { fetchRequiredActions } from 'base';
 
-import Actions from './actions';
 import Logo from '../../components/Logo';
 import styles from './styles.css';
 
 const propTypes = {
   dispatch: PropTypes.func.isRequired,
-  MainModel: PropTypes.instanceOf(Immutable.Record).isRequired
 };
 
 export class Main extends Component {
 
-  static requiredActions = [Actions.getLogo];
-
   constructor (props) {
     super(props);
-    this.actions = bindActionCreators(Actions, props.dispatch);
   }
 
   componentDidMount(){
@@ -35,7 +30,6 @@ export class Main extends Component {
   }
 
   render () {
-
     return (
       <div className={ styles.mainWrapper }>
         <section className={ styles.home }>

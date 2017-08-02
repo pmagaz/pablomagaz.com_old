@@ -1,0 +1,12 @@
+@import '../../../../styles/base.css';
+
+.postTag{
+    font-size: .8em;
+    margin-bottom: .6em;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    background-color: #c8ceff;
+    color: #1d2141;
+    padding-left: 2em;
+    padding: .6em .6em .6em 2em;
+}

@@ -5,6 +5,7 @@ const BaseUrl = 'http://localhost:2368';
 const ImageUrl = BaseUrl;
 const numPosts = 10;
 const postSummaryChars= 46;
+const codeHighlightDelay = 200;
 const postSummarySplitChar = '@@@';
 const blogUrl = `${BaseUrl}/blog/`;
 const baseApiUrl = `${BaseUrl}/ghost/api/v0.1/`;
@@ -37,4 +38,4 @@ export function getPostUrl(slug) {
   return '/blog/' + slug;
 }
 
-export const SiteConf = { siteUrl, BaseUrl, postApi, postsApi, ImageUrl, blogUrl, postSummaryChars, postSummarySplitChar }
+export const SiteConf = { siteUrl, BaseUrl, postApi, postsApi, ImageUrl, blogUrl, postSummaryChars, postSummarySplitChar, codeHighlightDelay };

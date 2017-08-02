@@ -31,24 +31,16 @@ export class Post extends Component {
     const post = this.props.Post; 
     const force = (post.id !== -1) ? false : true;
     fetchRequiredActions(Post.requiredActions, this.props, 'Post', force);
-    this.highlightCode();
   }
 
   componentWillUnmount() {
     this.actions.cleanPost();
   }
-
-  highlightCode(){
-    setTimeout(function(){
-      hljs.registerLanguage('javascript', javascript);
-      hljs.initHighlighting.called = false;
-      hljs.initHighlighting();
-    }, 175);
-  }
-
+  
   render () {
     const post = this.props.Post;
     const postImage = `${SiteConf.ImageUrl}${post.image}`;
+    
     return (
       <div className={ styles.mainContent  }>
         <div className={ styles.post  }>
@@ -56,10 +48,8 @@ export class Post extends Component {
             image={ postImage }
             title={ post.title }
           />
-          <PostContent
-            post={ post }
-          />
-      </div>
+          <PostContent post={ post } />
+        </div>
       </div>
     );
   }

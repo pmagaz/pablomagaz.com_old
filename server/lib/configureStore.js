@@ -3,6 +3,6 @@ import reduxReqMiddleware from 'redux-req-middleware';
 import rootReducer from '../../src/base/reducers/';
 
 export default function configureServerStore() {
-  const configureStore = applyMiddleware( reduxReqMiddleware() )( createStore );
+  const configureStore = applyMiddleware(reduxReqMiddleware())(createStore);
   return configureStore(rootReducer);
 }

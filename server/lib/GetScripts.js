@@ -5,13 +5,13 @@ import * as FileSystem from '../../src/base/shared/FileSystem';
 
 let JsFiles;
 
-if ( env === 'development') {
+if (env === 'development') {
   JsFiles = {
     app: { js: '/app.js' },
     vendor: { js: '/dlls/vendor.dll.js' },
   };
 } else {
-  const assetsManifest = path.resolve( __dirname, '../../dist/webpack-assets.json');
+  const assetsManifest = path.resolve(__dirname, '../../dist/webpack-assets.json');
   JsFiles = JSON.parse(FileSystem.readFile(assetsManifest, 'utf8'));
 }
 

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
-import InfiniteScroll from 'react-infinite-scroller';
 
 import Loading from 'components/Loading';
 import * as Actions from './actions';
@@ -25,10 +24,6 @@ export class Blog extends Component {
   constructor(props) {
     super(props);
     this.actions = bindActionCreators(Actions, props.dispatch);
-  }
-
-  getPosts(page) {
-    this.actions.getPosts({ page });
   }
 
   componentDidMount() {

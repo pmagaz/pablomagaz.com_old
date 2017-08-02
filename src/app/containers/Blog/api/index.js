@@ -5,9 +5,9 @@ import { PostListModel, PaginationModel } from '../models/';
 
 export default {
 
-  fetchPosts(page) {
-    if (!page) page = 1;
-    return fetch(`${SiteConf.postsApi}&page=${page}`)
+  fetchPosts(params) {
+    const query = params ? `&page=${params}` : `&page=1`; 
+    return fetch(`${SiteConf.postsApi}${query}`)
     .then(req => req.json())
     .then(payload => ({
       pagination: new PaginationModel(payload.meta.pagination),

@@ -1,3 +1,5 @@
+@import '../../styles/base.css';
+
 .app{
     display: flex;
     min-height: 100vh;
@@ -14,40 +16,19 @@
 main.container {
     margin-bottom: 200px;
     background: $bg-mainContainer;
-    background: white;
 }
 
 header.mainHeader{
-    align-items: center;
     position: fixed;
     width: 100%;
     z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: $cl-mainHeader;
     height: 50px;
     max-width: 1224px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-footer.container{
-    border-top: 1px solid $gray-light;
-    width: 100%;
-    position: fixed;
-    z-index: -1;
-    bottom: 0;
-    height: 100px;
-    background: $bg-footer;
-    padding: 20px 0;
-    justify-content: center;
-    align-items: center;
-    
-    .txt img {
-            width: 40px;
-    }
+    left: 0;
+    right: 0;
 }

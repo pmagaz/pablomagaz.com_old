@@ -9,7 +9,7 @@
 
 .image{
     width: 100%;
-  background-color: $gray-darker;
+  background-color: $bg-postHeaderImage;
   min-height: 210px;
   overflow: hidden;
   position: relative;
@@ -31,7 +31,7 @@
   right: 0;
   top: 0;
   display: block;
-  background-color: $gray;
+  background-color: $bg-postHeaderImageBefore;
   background-size: cover;
   -webkit-transform-origin: center center 0;
   -webkit-transform: translateZ(-1px) scale(2);

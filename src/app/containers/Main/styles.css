@@ -2,8 +2,6 @@
 
 section{
   min-height: 100vh;
-  background: cornsilk;
-  border-bottom: 9px solid white;
 }
 .mainWrapper{
   align-items: center;
@@ -18,7 +16,7 @@ section{
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  background-image: url("http://k32.kn3.net/taringa/1/B/6/D/4/B/hegel-21/27B.jpg");
+  background-image: url($bg-home);
   background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -27,7 +25,7 @@ section{
 
 
 .brand{
-    background-color: $primary-color;
+    background-color: $bg-homeBrand;
     width: 573px;
     font-size: 3em;
     width: 92%;
@@ -48,7 +46,7 @@ section{
     letter-spacing: -2px;
     text-transform: uppercase;
     font-weight: bold;
-    color: $white;
+    color: $cl-homeBrand;
     padding: 22px 0 22px;
     display: table;
     width: 100%;
@@ -57,5 +55,23 @@ section{
       padding: 22px 133px 20px 130px;
       text-align: left;
     }
+  }
+}
+
+.about{
+  background-color: $bg-about;
+  color: $cl-about;
+}
+
+.contact{
+  background-color: $bg-contact;
+  color: $cl-contact;
+}
+
+.about,
+.contact{
+  .content{
+    margin: 0 auto;
+    max-width: 1224px;
   }
 }

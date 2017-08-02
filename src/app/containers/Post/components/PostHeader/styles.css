@@ -1,7 +1,7 @@
 @import '../../../../styles/base.css';
 
 .postHeader {
-  background-color: $gray-darker;
+  background-color: $bg-postHeader;
   background-position-y: 50%;
   background-size: 100%;
   width: 100%;  

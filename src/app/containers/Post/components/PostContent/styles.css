@@ -1,7 +1,7 @@
 @import '../../../../styles/base.css';
 
 .post{
-    background-color: $white; 
+    background-color: $bg-post; 
     width: 100%;
     display: inline-block;
     margin-top: 180px;
@@ -30,6 +30,7 @@
 
 h1{
     font-family: $display-regular;
+    color: $cl-postContentTilte;
     margin: 0;
     font-size: 3em;
     line-height: 1em;

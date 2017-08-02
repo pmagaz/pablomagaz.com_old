@@ -8,13 +8,18 @@
   margin: 0 30px 50px;
     a h1{
       font-family: "$display-regular";
+      color: $cl-postSumaryTilte;
       font-size: 3em;
       line-height: 1em;
     }
-}
+    .postText{
+      color: $cl-postText;
+    }
 
-.PostSummary:first-child{
-  padding-top: 35px;
+
+  &:first-child{
+    padding-top: 35px;
+  }
 }
 
 .linkImage{
@@ -22,10 +27,8 @@
     overflow: hidden;
     height: 130px;
     display: block;
-    background-color: $gray-darker;
-}
-
-
-.linkImage img{
-  margin-top: -25%;
+    background-color: $bg-linkImage;
+    img{
+      margin-top: -25%;
+    }
 }

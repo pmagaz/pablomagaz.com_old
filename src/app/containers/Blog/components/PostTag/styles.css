@@ -5,8 +5,8 @@
     margin-bottom: .6em;
     letter-spacing: 0.1em;
     display: inline-block;
-    background-color: #c8ceff;
-    color: #1d2141;
+    background-color: $bg-postTag;
+    color: $cl-postTag;
     padding-left: 2em;
     padding: .6em .6em .6em 2em;
 }

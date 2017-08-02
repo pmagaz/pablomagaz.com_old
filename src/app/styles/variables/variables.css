@@ -1,3 +1,5 @@
-@import "colors.css";
-@import "media-queries.css";
-@import "tipography.css";
+@import "general/general.css";
+
+@import "components/components.css";
+
+@import "containers/containers.css";

@@ -24,7 +24,6 @@
 
 }
 .imageWrapper:hover{
-          border: 1px 1px 1px 1px solid #333;
     -ms-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);

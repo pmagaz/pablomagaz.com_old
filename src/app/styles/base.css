@@ -1,5 +1,5 @@
 @import 'variables/variables.css';
-@import 'fonts.css';
+@import "../assets/fonts/fonts.css";
 
 @-webkit-keyframes fade-in-up {
     0% {
@@ -59,7 +59,7 @@ html{
 
 body {
     background-color: $bg-body;
-    color: $black;
+    color: $cl-body;
     font-family: $text-font-light;
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;

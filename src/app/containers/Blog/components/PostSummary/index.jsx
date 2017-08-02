@@ -35,7 +35,7 @@ const PostSummary = ({ post }) => {
           width="500"
         />
       </Link>
-      <div>
+      <div className={ styles.postText }>
         { ReactHtmlParser(post.summary)}
       </div>
 

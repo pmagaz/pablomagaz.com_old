@@ -5,11 +5,10 @@
     display: flex;
     flex-direction: column;
     margin-top: 180px;
-    background: $white;
+    background: $bg-blog;
     .BlogContent{
       margin: 0 auto;
-      max-width: 1224px;
-      display: inline-block;   
+      max-width: 1224px; 
     }
 }
 

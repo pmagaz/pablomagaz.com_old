@@ -3,7 +3,4 @@
 
 .LinkButton{
   cursor: pointer;
-  &.active{
-    color: red;
-  }
 }

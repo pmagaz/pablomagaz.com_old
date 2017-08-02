@@ -2,14 +2,13 @@
 
 
 footer.container{
-    border-top: 1px solid $gray-light;
     width: 100%;
     position: fixed;
     z-index: -1;
     bottom: 0;
     height: 200px;
     background: $bg-footer;
-    color: #fff;
+    color: $cl-footer;
     padding: 20px 0;
     justify-content: center;
     align-items: center;

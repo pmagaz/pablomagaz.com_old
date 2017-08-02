@@ -4,11 +4,14 @@ const siteUrl = 'http://www.pablomagaz.com';
 const BaseUrl = 'http://localhost:2368';
 const ImageUrl = BaseUrl;
 const numPosts = 10;
+const postSummaryChars= 46;
+const codeHighlightDelay = 200;
+const postSummarySplitChar = '@@@';
 const blogUrl = `${BaseUrl}/blog/`;
 const baseApiUrl = `${BaseUrl}/ghost/api/v0.1/`;
 const postsApiUrl = `${baseApiUrl}posts/`;
-const clientSecret = '8628165087ba';
-//const clientSecret = '808b87eda50b';
+//const clientSecret = '8628165087ba';
+const clientSecret = '808b87eda50b';
 const postsApi = `${postsApiUrl}?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
 const postApi = `${postsApiUrl}slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}`;
 
@@ -35,4 +38,4 @@ export function getPostUrl(slug) {
   return '/blog/' + slug;
 }
 
-export const SiteConf = { siteUrl, BaseUrl, postApi, postsApi, ImageUrl, blogUrl };
+export const SiteConf = { siteUrl, BaseUrl, postApi, postsApi, ImageUrl, blogUrl, postSummaryChars, postSummarySplitChar, codeHighlightDelay };

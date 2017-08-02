@@ -1,3 +1,5 @@
+@import 'base.css'; 
+
 :global(.hljs) {
   display: block;
   overflow-x: auto;

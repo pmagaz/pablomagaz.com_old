@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import path from 'path';
 import * as common from './webpack.common.config';
 
 export const cache = true;
@@ -53,7 +52,7 @@ export const module = {
         {
           loader: 'postcss-loader',
           options: {
-            plugins: (loader) => common.postcss
+            plugins: () => common.postcss
           }
         }
       ]

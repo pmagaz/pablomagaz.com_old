@@ -80,6 +80,9 @@ a{
     text-decoration: none;
     color: inherit;
 }
+p {
+    font-size: 1.3em;
+}
 
 @media (min-width: $sm) {
   

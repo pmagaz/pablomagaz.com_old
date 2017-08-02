@@ -5,8 +5,7 @@ import * as styles from './styles.css';
 import LinkButton from 'components/LinkButton';
 
 const Menu = () => (
-  <div className={ styles.navMenu }>
-    <nav> 
+    <nav className={ styles.navMenu }>
       <ul>
         <li>
           <LinkButton
@@ -37,7 +36,6 @@ const Menu = () => (
         </li>
       </ul>
     </nav>
-  </div>
 );
 
 export default Menu;

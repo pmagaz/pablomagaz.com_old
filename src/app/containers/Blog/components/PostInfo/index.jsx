@@ -1,6 +1,6 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
-
+import * as styles from './styles.css';
 import PostDate from 'components/PostDate';
 
 const propTypes= {
@@ -9,7 +9,7 @@ const propTypes= {
 };
 
 const PostInfo = ({ author, date}) => (
-  <div>
+  <div className={ styles.infoWrited }>
     <span>{ author }</span>
     <PostDate date={ date } />
   </div>

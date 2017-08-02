@@ -58,6 +58,9 @@ export class Post extends Component {
           <PostContent
             post={ post }
           />
+          {/* <PostTag
+            tags={ post.tags }
+          /> */}
       </div>
       </div>
     );

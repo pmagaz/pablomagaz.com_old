@@ -1,5 +1,6 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
+import * as styles from './styles.css';
 
 const propTypes= {
   tags: PropTypes.array.isRequired,
@@ -14,7 +15,7 @@ const PostTag = ({ tags }) => {
   });
 
   return (
-    <div>
+    <div className={ styles.postTag }>
       { tagList }
     </div>
   );

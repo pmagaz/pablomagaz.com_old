@@ -1,0 +1,9 @@
+.socialBox{   
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+    svg{
+        width: 60px;
+    }
+}

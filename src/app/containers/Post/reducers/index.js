@@ -8,7 +8,7 @@ const postError = state => state;
 
 const postSuccess = (state, action) =>
   state.merge(action.payload)
-        .set('author', 'Pablo Magaz');
+    .set('author', 'Pablo Magaz');
 
 const cleanPost = state =>
   state

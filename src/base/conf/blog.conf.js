@@ -1,14 +1,20 @@
 import env from '../shared/Env';
 
-const siteUrl = 'http://www.pablomagaz.com';
-const BaseUrl = 'http://localhost:2368';
-const ImageUrl = BaseUrl;
+const Author = 'Pablo Magaz';
+const SiteTitle = Author; 
+const SiteDescription = 'Pablo Magaz personal site';
+const BlogTitle = 'El Blog Isom&oacute;rfico';
+const BlogDescription = 'JavaScript y mas';
+const SiteUrl = 'http://localhost:8000';
+const BlogUrl = `${SiteUrl}/blog`;
+const GhostUrl = 'http://localhost:2368';
+const ImageUrl = GhostUrl;
 const numPosts = 10;
 const postSummaryChars= 46;
 const codeHighlightDelay = 200;
 const postSummarySplitChar = '@@@';
-const blogUrl = `${BaseUrl}/blog/`;
-const baseApiUrl = `${BaseUrl}/ghost/api/v0.1/`;
+const blogUrl = `${GhostUrl}/blog/`;
+const baseApiUrl = `${GhostUrl}/ghost/api/v0.1/`;
 const postsApiUrl = `${baseApiUrl}posts/`;
 //const clientSecret = '8628165087ba';
 const clientSecret = '808b87eda50b';
@@ -38,4 +44,4 @@ export function getPostUrl(slug) {
   return '/blog/' + slug;
 }
 
-export const SiteConf = { siteUrl, BaseUrl, postApi, postsApi, ImageUrl, blogUrl, postSummaryChars, postSummarySplitChar, codeHighlightDelay };
+export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, postApi, postsApi, ImageUrl, blogUrl, postSummaryChars, postSummarySplitChar, codeHighlightDelay };

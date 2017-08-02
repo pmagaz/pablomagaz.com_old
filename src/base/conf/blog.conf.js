@@ -4,6 +4,8 @@ const siteUrl = 'http://www.pablomagaz.com';
 const BaseUrl = 'http://localhost:2368';
 const ImageUrl = BaseUrl;
 const numPosts = 10;
+const postSummaryChars= 46;
+const postSummarySplitChar = '@@@';
 const blogUrl = `${BaseUrl}/blog/`;
 const baseApiUrl = `${BaseUrl}/ghost/api/v0.1/`;
 const postsApiUrl = `${baseApiUrl}posts/`;
@@ -35,4 +37,4 @@ export function getPostUrl(slug) {
   return '/blog/' + slug;
 }
 
-export const SiteConf = { siteUrl, BaseUrl, postApi, postsApi, ImageUrl, blogUrl };
+export const SiteConf = { siteUrl, BaseUrl, postApi, postsApi, ImageUrl, blogUrl, postSummaryChars, postSummarySplitChar }

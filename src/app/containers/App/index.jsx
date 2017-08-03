@@ -21,7 +21,7 @@ export class App extends Component {
             <Menu />
         </header>
         <main className={ styles.container  }>
-            {this.props.children}
+          {this.props.children}
         </main>
         <Footer />
       </div>

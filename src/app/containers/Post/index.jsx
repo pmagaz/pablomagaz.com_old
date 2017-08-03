@@ -7,6 +7,7 @@ import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
 
 import { fetchRequiredActions, SiteConf } from 'base';
+import Loading from 'components/Loading';
 import styles from './styles.css';
 import codeStyle from '../../styles/code.css';
 import * as Actions from './actions';
@@ -21,16 +22,19 @@ const propTypes = {
 export class Post extends Component {
 
   static requiredActions = [Actions.getPost];
-
+  
   constructor (props) {
     super(props);
     this.actions = bindActionCreators(Actions, props.dispatch);
   }
 
+  isLoaded() {
+    return !~this.props.Post.id ? true : false; 
+  }
+
   componentDidMount() {
     const post = this.props.Post; 
-    const force = (post.id !== -1) ? false : true;
-    fetchRequiredActions(Post.requiredActions, this.props, 'Post', force);
+    fetchRequiredActions(Post.requiredActions, this.props, 'Post', this.isLoaded());
     this.highlightCode();
   }
 
@@ -49,7 +53,8 @@ export class Post extends Component {
   render () {
     const post = this.props.Post;
     const postImage = `${ SiteConf.ImageUrl }${ post.image || post.feature_image }`;
-    console.log(3333, postImage); 
+    const content = (this.isLoaded()) ? <Loading /> : <PostContent post={ post } />; 
+    
     return (
       <div className={ styles.mainContent  }>
         <div className={ styles.post  }>
@@ -57,7 +62,7 @@ export class Post extends Component {
             image={ postImage }
             title={ post.title }
           />
-          <PostContent post={ post } />
+          { content }
         </div>
       </div>
     );

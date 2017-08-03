@@ -1,4 +1,5 @@
 import { Record } from 'immutable';
+import { SiteConf } from 'base';
 
 const PostModel = new Record({
   id: -1,
@@ -8,12 +9,12 @@ const PostModel = new Record({
   tags: '',
   title: '',
   image: '',
+  author: '',
   opening: '',
   updated_at: '',
   created_at: '',
   feature_image: '',
   meta_description: '',
-  author: 'Pablo Magaz'
 });
 
 function setInitialState(initialState) {

@@ -14,9 +14,10 @@ const Months = new Array(
 );
 
 export const getDate = date => {
+  if (!date) return null;
   const postDate = new Date(date.substring(0,10));
   const day = postDate.getDate();
   const month = Months[postDate.getMonth()];
   const year = postDate.getFullYear();
   return `${day}-${month}-${year}`;
-}
+};

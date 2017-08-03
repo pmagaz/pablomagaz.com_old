@@ -1,4 +1,5 @@
 import { Record } from 'immutable';
+import { SiteConf } from 'base';
 
 const PostListModel = new Record({
   id: -1,
@@ -12,7 +13,7 @@ const PostListModel = new Record({
   tags: [],
   updated_at: '',
   feature_image: '',
-  author: 'Pablo Magaz'
+  author: SiteConf.Author
 });
 
 export default PostListModel;

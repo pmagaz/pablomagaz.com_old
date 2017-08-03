@@ -7,7 +7,7 @@ const BlogTitle = 'El Blog Isom&oacute;rfico';
 const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
 const postOpeningChars= 46;
-const codeHighlightDelay = 200;
+const codeHighlightDelay = 250;
 const postOpeningSplitChar = '@@@';
 
 let SiteUrl;
@@ -20,9 +20,6 @@ let clientSecret;
 let PostsApi;
 let PostApi;
 
-console.log(11111, env);
-
-//http://localhost:2368/ghost/api/v0.1/posts/slug/creando-components-de-webpack/?client_id=ghost-frontend&client_secret=808b87eda50b
 if (env === 'development') {
   clientSecret = '285ee4eda6c3';
   SiteUrl = 'http://localhost:8000';

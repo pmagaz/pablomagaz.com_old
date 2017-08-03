@@ -1,4 +1,4 @@
-import { createReducer } from 'base';
+import { createReducer, SiteConf } from 'base';
 import ActionTypes from '../actionTypes';
 import { PostModel } from '../models';
 
@@ -13,7 +13,7 @@ const postSuccess = (state, { payload }) => (
     .set('html', payload.html)
     .set('title', payload.title)
     .set('image', payload.image)
-    .set('author', 'Pablo Magaz')
+    .set('author', SiteConf.Author)
     .set('created_at', payload.created_at)
     .set('feature_image', payload.feature_image)
 );

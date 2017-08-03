@@ -13,6 +13,7 @@ const PostContent = ({ post }) => {
 
   return (
     <div className={ styles.post }>
+    POST
       <div className={ styles.postContent }>
         <h1>{ post.title }</h1>
         <span className={ styles.author } >

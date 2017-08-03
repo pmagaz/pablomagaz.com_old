@@ -1,6 +1,23 @@
 @import 'variables/variables.css';
 @import 'fonts.css';
 
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @-webkit-keyframes fade-in-up {
     0% {
         opacity: 0;
@@ -30,8 +47,8 @@
 @-webkit-keyframes fade-in-down {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-11px);
-        transform: translateY(-11px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     100% {
         opacity: 1;

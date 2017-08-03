@@ -27,6 +27,7 @@ const cleanPost = state => (
     .set('image', '')
     .set('author', '')
     .set('created_at', '')
+    .set('feature_image', '')
 );
 
 const actionHandlers = {

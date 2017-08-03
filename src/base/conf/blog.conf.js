@@ -7,7 +7,7 @@ const BlogTitle = 'El Blog Isom&oacute;rfico';
 const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
 const postOpeningChars= 46;
-const codeHighlightDelay = 250;
+const codeHighlightDelay = 300;
 const postOpeningSplitChar = '@@@';
 
 let SiteUrl;

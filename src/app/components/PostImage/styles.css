@@ -1,8 +1,8 @@
 @import '../../styles/base.css';
 
 .image-loaded {
-  -webkit-animation: fade-in-up 0.1s;
-  animation: fade-in-up 0.1s both;
+  -webkit-animation: fade-in 0.1s;
+  animation: fade-in 0.1s both;
   -webkit-animation-delay: 0.0s;
   animation-delay: 0.0s;
 }

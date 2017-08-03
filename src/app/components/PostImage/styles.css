@@ -12,11 +12,10 @@
 }
 
 .imageWrapper {
-
-    display:inline-block;
     width:100%;
     height:120px;
     position: relative;
+    display:inline-block;
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
     -o-transition: all .2s;

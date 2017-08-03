@@ -3,25 +3,21 @@
 
 footer.container{
     width: 100%;
+    height: $mrgt-footer;
+    padding: 20px 0;
     position: fixed;
     z-index: -1;
     bottom: 0;
-    height: 200px;
     background: $bg-footer;
     color: $cl-footer;
-    padding: 20px 0;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
 
     nav{
         max-width: 400px;
         margin: 0 auto;
         ul{
+            margin: 0;
             display: flex;
             list-style: none;
-            margin: 0;
             li{
                 margin: 0 10px;
             }
@@ -29,7 +25,7 @@ footer.container{
     }
     
     .txt img {
-            width: 40px;
+        width: 40px;
     }
   
 }

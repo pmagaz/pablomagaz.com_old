@@ -1,0 +1,4 @@
+@define-mixin mainFit {
+    padding: 0 30px;
+    max-width: 1224px;
+}

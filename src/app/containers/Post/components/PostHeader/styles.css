@@ -1,18 +1,17 @@
 @import '../../../../styles/base.css';
 
 .postHeader {
+  width: 100%; 
+  height: $mrgt-postHeader;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  overflow: hidden;
   background-color: $bg-postHeader;
   background-position-y: 50%;
   background-size: 100%;
-  width: 100%;  
-  height: 180px;
-  position: fixed;
-  top: 0;
-  z-index: -1;
-  overflow: hidden;
   -webkit-transform-style: inherit;
   transform-style: inherit;
-  width: 100%;
   -webkit-animation: fade-in-down 0.2s;
   animation: fade-in-down 0.2s both;
   -webkit-animation-delay: 0.1s;
@@ -20,11 +19,11 @@
 }
 
 .postHeader::before {
-  background-size: cover;
   width: 100%;
-  height: 180px;
+  height: $mrgt-postHeader;
   position: relative;
   overflow: hidden;
+  background-size: cover;
   -webkit-transform-style: inherit;
   transform-style: inherit;
   -webkit-animation: fade-in-down 0.3s;
@@ -34,12 +33,11 @@
 }
 
 .postHeader * {
-  font-weight: normal;
-  letter-spacing: 0.2em;
-  text-align: center;
   margin: 0;
   padding: 1em 0;
-  
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;  
 }
 
 .postHeader > img{

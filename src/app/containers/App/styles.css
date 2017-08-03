@@ -2,33 +2,33 @@
 
 .app{
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
     width: 100%;
     margin: auto;
     display: flex;
-    z-index: 1;
     position: relative;
+    z-index: 1;
 }
 main.container {
-    margin-bottom: 200px;
+    margin-bottom: $mrgb-mainContainer;
     background: $bg-mainContainer;
 }
 
 header.mainHeader{
-    position: fixed;
+    @mixin mainFit;
     width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: fixed;
     z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: $cl-mainHeader;
-    height: 50px;
-    max-width: 1224px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
 }

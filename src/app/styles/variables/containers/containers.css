@@ -2,13 +2,16 @@
 $bg-mainContainer: $bg-body;
 $cl-mainHeader: $white;
 
-
+$mrgb-mainContainer: $parallax-footer;
 
 /** Blog **/
 $bg-blog: $white;
 
 $bg-titleBlog: $primary-color;
 $cl-titleBlog: $white;
+
+$mrgt-blog: $parallax-header;
+$hgt-titleBlog: $parallax-header;
 
 /** Blog/components/ Post Info **/
 $cl-infoWrited: $black;
@@ -39,12 +42,16 @@ $cl-about:$black;
 
 
 /** Post **/
+$mrgt-post: $parallax-header;
+
 /** Post/components/ Post Content **/
 $bg-post: $white;
 $cl-postContentTilte: $bg-back;
 
 /** Post/components/ Post Header **/
 $bg-postHeader: $gray-darker;
+
+$mrgt-postHeader: $parallax-header;
 
 /** Post/components/ Post Header Image **/
 $bg-postHeaderImage: $gray-darker;

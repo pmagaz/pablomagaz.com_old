@@ -1,17 +1,16 @@
 @import '../../../../styles/base.css';
 
 .post{
-    background-color: $bg-post; 
     width: 100%;
     display: inline-block;
-    margin-top: 180px;
+    margin-top: $mrgt-post;
+    background-color: $bg-post; 
 
     .postContent {
+        @mixin mainFit;
         line-height: 1.7;
         padding-bottom: 300px;
-        margin: 32px auto 0;
-        padding: 23px 30px 140px;
-        max-width: 1224px;
+        margin: 50px auto 100px;
         position: relative;
         z-index: 2;
         -webkit-animation: fade-in-up 0.3s;
@@ -23,15 +22,15 @@
 }
 
 .author {
-    font-size: .8em;
     padding-right: 2em;
+    font-size: .8em;
     letter-spacing: 0.1em;
 }
 
 h1{
+    margin: 0;
     font-family: $display-regular;
     color: $cl-postContentTilte;
-    margin: 0;
     font-size: 3em;
     line-height: 1em;
 }

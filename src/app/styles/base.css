@@ -1,4 +1,5 @@
 @import 'variables/variables.css';
+@import 'mixins/mixins.css';
 @import "../assets/fonts/fonts.css";
 
 @-webkit-keyframes fade-in-up {

@@ -3,33 +3,32 @@
 section{
   min-height: 100vh;
 }
+
 .mainWrapper{
-  align-items: center;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
-  width: 100%;
+  align-items: center;
 }
+
 .home {
   width: 100%;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   background-image: url($bg-home);
   background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%;
-
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-
 .brand{
-    background-color: $bg-homeBrand;
-    width: 573px;
-    font-size: 3em;
     width: 92%;
-    margin: 40px auto 0;
+    margin: 40px auto 0;  
+    font-size: 3em;
+    background-color: $bg-homeBrand;
     -webkit-animation: fade-in-down 0.4s;
     animation: fade-in-down 0.4s both;
     -webkit-animation-delay: 0.1s;
@@ -38,7 +37,11 @@ section{
       width: 573px;
       margin: 133px 0 0 0;
     } 
+
   h1{
+    width: 100%;
+    padding: 22px 0 22px;
+    display: table;
     font-family: "Montserrat-Medium";
     text-align: center;
     line-height: 40px;
@@ -47,9 +50,6 @@ section{
     text-transform: uppercase;
     font-weight: bold;
     color: $cl-homeBrand;
-    padding: 22px 0 22px;
-    display: table;
-    width: 100%;
     @media (min-width:$sm){
       width: auto;
       padding: 22px 133px 20px 130px;
@@ -71,7 +71,6 @@ section{
 .about,
 .contact{
   .content{
-    margin: 0 auto;
-    max-width: 1224px;
+    @mixin mainFit; 
   }
 }

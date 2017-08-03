@@ -14,22 +14,22 @@ const Menu = (props) => {
             value="Home"
           />
         </li>
-        <li>
-          <LinkButton
-            location="#about"
-            value="About"
-          />
-          </li>
-        <li>
+         <li>
          <LinkButton
           location="/blog"
           value="Blog"
         />
         </li>
         <li>
+          <LinkButton
+            location="#about"
+            value="Sobre mi"
+          />
+          </li>
+        <li>
         <LinkButton
           location="#contact"
-          value="Contact"
+          value="Contacto"
         />  
         </li>
           <li>

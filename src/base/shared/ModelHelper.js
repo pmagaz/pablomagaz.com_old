@@ -2,56 +2,51 @@ import { Map, List } from 'immutable';
 import { SiteConf } from '../conf/blog.conf.js';
 
 export const generateMap = (data, model) => (
-  data.reduce((acc, item) => {
-    return acc.set(item.id, new model(item));
-  }, new Map()
-  )
+  data.reduce((acc, item) => (
+    acc.set(item.id, new model(item))
+  ), new Map())
 );
 
-export const generateList = (data, model) => {
-  const arr = data.map((item) => {
-    return new model(item);
-  }
- );
-  return new List(arr);
-};
+export const generateList = (data, model) => (
+  new List(data.map((item) => new model(item)))
+);
 
-export const extractSummary = (data) => {
-  const reg = new RegExp(`^(.+?)${SiteConf.postSummarySplitChar}`);
-  const summary = reg.exec(data);
-  return summary ? summary[1] : false; 
+export const extractOpening = (data) => {
+  const reg = new RegExp(`^(.+?)${SiteConf.postOpeningSplitChar}`);
+  const opening = reg.exec(data);
+  return opening ? opening[1] : false; 
 };
 
 export const formatPostContent = (data) => {
-  data.html = data.html.replace(SiteConf.postSummarySplitChar,''); 
+  data.html = data.html.replace(SiteConf.postOpeningSplitChar,''); 
   return data;
 };
 
-export const generateListWithSummary = (data, model) => {
+export const getPostListWithOpening = (data, model) => {
   const arr = data.map((item) => {
-    const summary = extractSummary(item.html);
-    if (summary) item.summary = summary;
+    const opening = extractOpening(item.html);
+    if (opening) item.opening = opening;
     else {
       let i = 0;
-      let max = SiteConf.postSummaryChars;
+      let max = SiteConf.postOpeningChars;
       const words = item.html.split(' ');
-      item.summary = '';
+      item.opening = '';
       for (i; i <= max ; i++) {
-        item.summary += `${words[i]} `;
+        item.opening += `${words[i]} `;
       }
-      item.summary += '...</p>';
+      item.opening += '...</p>';
       item.html = null;
     }
     return new model(item);
   }
- );
+  );
   return new List(arr);
 };
 
 export const generateImmutable = (data, model) => (
-  Object.keys(data).reduce( (acc, key) => {
+  Object.keys(data).reduce((acc, key) => {
     let item = data[key];
-    return acc.set( item.id, new model(item) );
+    return acc.set(item.id, new model(item));
   }, new Map()
   )
 );

@@ -14,7 +14,7 @@ const propTypes= {
 
 const PostSummary = ({ post }) => {
   const url = getPostUrl(post.slug);
-  const imageSrc = `${SiteConf.ImageUrl}${post.image}`;
+  const imageSrc = `${SiteConf.ImageUrl}${post.image || post.feature_image}`;
 
   return (
     <div className={ styles.PostSummary } >
@@ -36,7 +36,7 @@ const PostSummary = ({ post }) => {
         />
       </Link>
       <div>
-        { ReactHtmlParser(post.summary)}
+        { ReactHtmlParser(post.opening)}
       </div>
 
     </div>

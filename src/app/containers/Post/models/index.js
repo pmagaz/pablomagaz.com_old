@@ -5,10 +5,13 @@ const PostModel = new Record({
   url: '',
   slug: '',
   html: '',
+  tags: '',
   title: '',
   image: '',
+  opening: '',
   updated_at: '',
   created_at: '',
+  feature_image: '',
   meta_description: '',
   author: 'Pablo Magaz'
 });

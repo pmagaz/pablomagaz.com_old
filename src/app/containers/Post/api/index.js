@@ -7,10 +7,10 @@ export default {
 
   fetchPost (slug) {
     return fetch(SiteConf.postApi.replace(':slug', slug))
-    .then(req => req.json())
-    .then(data => new PostModel(
-      formatPostContent(data.posts[0]))
-    );
+      .then(req => req.json())
+      .then(data => new PostModel(
+        formatPostContent(data.posts[0]))
+      );
     //.catch(err => window.location = '/404.html')
   },
 

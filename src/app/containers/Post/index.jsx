@@ -48,8 +48,8 @@ export class Post extends Component {
 
   render () {
     const post = this.props.Post;
-    const postImage = `${SiteConf.ImageUrl}${post.image}`;
-    
+    const postImage = `${ SiteConf.ImageUrl }${ post.image || post.feature_image }`;
+    console.log(3333, postImage); 
     return (
       <div className={ styles.mainContent  }>
         <div className={ styles.post  }>

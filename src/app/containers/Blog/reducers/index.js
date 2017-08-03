@@ -11,7 +11,7 @@ const blogSuccess = (state, action) => {
   const hasMorePosts = (pagination.page < pagination.pages) ? true : false;
 
   return state
-    .update ('posts', () => state.posts.concat(action.payload.list ))
+    .update ('posts', () => state.posts.concat(action.payload.posts))
     .update ('pagination', () => pagination.set('hasMorePosts', hasMorePosts));
 };
 

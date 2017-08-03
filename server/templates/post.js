@@ -6,7 +6,10 @@ export default function post(params) {
   const state = JSON.stringify(params.state);
   const imageUrl = `${ SiteConf.ImageUrl }${ post.image }`; 
   const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
-  
+  const tagList = post.tags.reduce((acc, tag) => (
+    acc + `    <meta property="article:tag" content="${ tag.name } " />\n`)
+    , '\n');
+
   return `
   <!doctype html>
 	<html lang="utf-8">
@@ -29,14 +32,16 @@ export default function post(params) {
     <meta property="og:url" content="${ postUrl }" />
     <meta property="og:image" content="${ imageUrl }" />
     <meta property="og:description" content="${ post.meta_description }" />
-    
+    ${ tagList }
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${ post.title }" />
     <meta name="twitter:url" content="${ postUrl }" />
-    <meta name="twitter:image" content="${ imageUrl }" />
+    <meta name="twitter:image:src" content="${ imageUrl }" />
     <meta name="twitter:description" content="${ post.meta_description  }" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="${ SiteConf.Author }" />
+    <meta name="twitter:creator" content="${ SiteConf.Author }" />
     ${ params.style }
     ${ params.vendorScript }
     </head>

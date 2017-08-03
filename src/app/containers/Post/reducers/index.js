@@ -6,18 +6,28 @@ const postRequest = state => state;
 
 const postError = state => state;
 
-const postSuccess = (state, action) =>
-  state.merge(action.payload)
-    .set('author', 'Pablo Magaz');
+const postSuccess = (state, { payload }) => ( 
+  state
+    .set('id', payload.id)
+    .set('tags', payload.tags)
+    .set('html', payload.html)
+    .set('title', payload.title)
+    .set('image', payload.image)
+    .set('author', 'Pablo Magaz')
+    .set('created_at', payload.created_at)
+    .set('feature_image', payload.feature_image)
+);
 
-const cleanPost = state =>
+const cleanPost = state => (
   state
     .set('id', -1)
+    .set('tags', '')
     .set('html', '')
     .set('title', '')
     .set('image', '')
     .set('author', '')
-    .set('created_at', '');
+    .set('created_at', '')
+);
 
 const actionHandlers = {
   [ActionTypes.POST_REQUEST]: postRequest,

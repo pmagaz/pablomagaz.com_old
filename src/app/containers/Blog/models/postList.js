@@ -8,9 +8,10 @@ const PostListModel = new Record({
   image: '',
   resume: '',
   html: '',
-  summary: '',
+  opening: '',
   tags: [],
   updated_at: '',
+  feature_image: '',
   author: 'Pablo Magaz'
 });
 

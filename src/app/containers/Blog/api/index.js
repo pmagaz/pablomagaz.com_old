@@ -7,7 +7,7 @@ export default {
 
   fetchPosts(params) {
     const query = params ? `&page=${params}` : `&page=1`;
-    return fetch(`${SiteConf.postsApi}${query}`)
+    return fetch(`${ SiteConf.PostsApi }${ query }`)
       .then(req => req.json())
       .then(payload => ({
         pagination: new PaginationModel(payload.meta.pagination),

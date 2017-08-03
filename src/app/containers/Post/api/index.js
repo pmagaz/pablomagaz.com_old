@@ -6,7 +6,7 @@ import { PostModel } from '../models/';
 export default {
 
   fetchPost (slug) {
-    return fetch(SiteConf.postApi.replace(':slug', slug))
+    return fetch(SiteConf.PostApi.replace(':slug', slug))
       .then(req => req.json())
       .then(data => new PostModel(
         formatPostContent(data.posts[0]))

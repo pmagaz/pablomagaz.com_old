@@ -1,7 +1,7 @@
 import { createReducer, generateList } from 'base';
 import ActionTypes from '../actionTypes';
-import { BlogCollection, PostListModel } from '../models';
-import { Record, List } from 'immutable';
+import { BlogCollection } from '../models';
+
 const blogRequest = state => state;
 
 const blogError = state => state;

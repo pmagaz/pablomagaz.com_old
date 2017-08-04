@@ -1,7 +1,6 @@
 import { createSelector } from 'reselect';
 
-import { getPostListWithOpening, SiteConf } from 'base';
-import { PostListModel } from '../models/';
+import { SiteConf } from 'base';
 
 export const postsState = state => state.Blog.posts;
 export const paginationState = state => state.Blog.pagination;

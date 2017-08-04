@@ -1,6 +1,7 @@
 @import '../../../../styles/base.css';
 
 .PostSummary {
+  margin-bottom: 50px;
   -webkit-animation: fade-in-up 0.2s;
   animation: fade-in-up 0.2s both;
   -webkit-animation-delay: 0.1s;
@@ -10,22 +11,20 @@
       font-family: "$display-regular";
       font-size: 3em;
       line-height: 1em;
+      color: $cl-postSumaryTilte;
     }
-}
-
-.PostSummary:first-child{
-  padding-top: 35px;
+    .postText{
+      color: $cl-postText;
+    }
 }
 
 .linkImage{
     width: 100%;
-    overflow: hidden;
     height: 130px;
     display: block;
-    background-color: $gray-darker;
-}
-
-
-.linkImage img{
-  margin-top: -25%;
+    overflow: hidden;
+    background-color: $bg-linkImage;
+    img{
+      margin-top: -25%;
+    }
 }

@@ -6,7 +6,6 @@ import * as styles from './styles.css';
 import LinkButton from 'components/LinkButton';
   
 const Menu = (props) => {
-  
   return (
     <nav className={ styles.navMenu }>
       <ul>

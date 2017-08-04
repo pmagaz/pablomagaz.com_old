@@ -1,5 +1,6 @@
 @import 'variables/variables.css';
-@import 'fonts.css';
+@import 'mixins/mixins.css';
+@import "../assets/fonts/fonts.css";
 
 @-webkit-keyframes fade-in {
     0% {
@@ -76,7 +77,7 @@ html{
 
 body {
     background-color: $bg-body;
-    color: $black;
+    color: $cl-body;
     font-family: $text-font-light;
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;

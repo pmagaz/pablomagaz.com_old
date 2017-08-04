@@ -1,6 +1,6 @@
 $primary-color: #fb0c49;
 
-$secondary-color: #ccc;
+$secondary-color: #c8ceff;
 
 $tertiary-color: #ccc;
 
@@ -14,18 +14,13 @@ $gray-darker: #444444;
 $black: #151515;
 
 
-$gtq-medium: $primary-color;
-$mentol:#CCDDCC;
-$slobber:#EEEEDD;
-$red:#FF2255;
 
 
-
-/** Main Layout **/
+/** Base **/
 $bg-back: $gray-darker;
 $bg-body: $white;
-$bg-footer: $bg-all;
+$cl-body: $black;
 
-$bg-titleBlog: $gtq-medium;
-$cl-titleBlog: $white;
-$bg-mainContainer: $bg-body;
+
+$cl-icon: $white
+

@@ -2,36 +2,33 @@
 
 section{
   min-height: 100vh;
-  background: cornsilk;
-  border-bottom: 9px solid white;
 }
+
 .mainWrapper{
-  align-items: center;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
-  width: 100%;
+  align-items: center;
 }
+
 .home {
   width: 100%;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  background-image: url("http://k32.kn3.net/taringa/1/B/6/D/4/B/hegel-21/27B.jpg");
+  background-image: url($bg-home);
   background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%;
-
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-
 .brand{
-    background-color: $primary-color;
-    width: 573px;
-    font-size: 3em;
     width: 92%;
-    margin: 40px auto 0;
+    margin: 40px auto 0;  
+    font-size: 3em;
+    background-color: $bg-homeBrand;
     -webkit-animation: fade-in-down 0.4s;
     animation: fade-in-down 0.4s both;
     -webkit-animation-delay: 0.1s;
@@ -40,7 +37,11 @@ section{
       width: 573px;
       margin: 133px 0 0 0;
     } 
+
   h1{
+    width: 100%;
+    padding: 22px 0 22px;
+    display: table;
     font-family: "Montserrat-Medium";
     text-align: center;
     line-height: 40px;
@@ -48,14 +49,28 @@ section{
     letter-spacing: -2px;
     text-transform: uppercase;
     font-weight: bold;
-    color: $white;
-    padding: 22px 0 22px;
-    display: table;
-    width: 100%;
+    color: $cl-homeBrand;
     @media (min-width:$sm){
       width: auto;
       padding: 22px 133px 20px 130px;
       text-align: left;
     }
+  }
+}
+
+.about{
+  background-color: $bg-about;
+  color: $cl-about;
+}
+
+.contact{
+  background-color: $bg-contact;
+  color: $cl-contact;
+}
+
+.about,
+.contact{
+  .content{
+    @mixin mainFit; 
   }
 }

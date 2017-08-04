@@ -2,37 +2,34 @@
 
 .Blog {
     width: 100%;
+    margin-top: $mrgt-blog;
     display: flex;
     flex-direction: column;
-    margin-top: 180px;
-    background: $white;
+    background: $bg-blog;
     .BlogContent{
-      margin: 0 auto;
-      max-width: 1224px;
-      display: inline-block;   
+      margin: 50px auto 100px;
+      @mixin mainFit;
     }
 }
 
   .titleBlog{
+    width: 100%;
+    height: $hgt-titleBlog;
+    margin: 0;
+    left: 0;
+    top: 0;
     font-size: 1,6em;
+    position: fixed;
+    z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
     background: $bg-titleBlog;
     color: $cl-titleBlog;
-    width: 100%;
-    margin: 0;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    height: 180px;
-
-  -webkit-animation: fade-in-down 0.2s;
-  animation: fade-in-down 0.2s both;
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
+    -webkit-animation: fade-in-down 0.2s;
+    animation: fade-in-down 0.2s both;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
   }
 
 .tracks{

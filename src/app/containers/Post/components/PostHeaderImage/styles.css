@@ -1,0 +1,47 @@
+@import '../../../../styles/base.css';
+
+.image-loaded {
+  -webkit-animation: fade-in-down 0.3s;
+  animation: fade-in-down 0.3s both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.image{
+  width: 100vw;
+  min-height: 210px;
+  position: relative;
+  overflow: hidden;
+  background-color: $bg-postHeaderImage;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+}
+
+.image,
+.image:before { background: 50% 50% / cover; }
+
+.image::before {
+  content: "";
+  min-height: 100vh;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: block;
+  background-color: $bg-postHeaderImageBefore;
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+}
+
+.image * {
+  margin: 0;
+  padding: 1em 0;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+}

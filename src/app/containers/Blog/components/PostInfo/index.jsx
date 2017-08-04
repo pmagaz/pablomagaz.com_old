@@ -4,7 +4,7 @@ import * as styles from './styles.css';
 import PostDate from 'components/PostDate';
 
 const propTypes= {
-  author: PropTypes.string.isRequired,
+  author: PropTypes.string,
   date: PropTypes.string.isRequired
 };
 

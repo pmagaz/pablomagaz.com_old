@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import styles from './styles.css';
 
 const Loading = () => (
-  <div className={ styles.loading }>
+  <div className={ styles.loading } >
   </div>
 );
 

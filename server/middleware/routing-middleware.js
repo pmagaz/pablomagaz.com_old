@@ -27,6 +27,7 @@ export default function routingMiddleware(req, res) {
         return renderPage(routeMatch, renderedContainer, store);
       })
       .then(page => res.status(200).send(page))
-      .catch(() => res.status(500).send('Internal Server Error'));
+      .catch(err => console.log(err))
+      //.catch(() => res.status(500).send('Internal Server Error'));
   });
 }

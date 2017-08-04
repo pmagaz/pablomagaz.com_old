@@ -1,7 +1,7 @@
 import { Record, List } from 'immutable';
-import { generateList } from 'base';
 import PostListModel from './postList';
 import PaginationModel from './pagination';
+import { generateList } from 'base';
 
 const BlogCollection = Record({
   posts: List(),
@@ -10,8 +10,9 @@ const BlogCollection = Record({
 
 function setInitialState(initialState) {
   return initialState.Blog = new BlogCollection({
-    posts: generateList( initialState.Blog.posts, PostListModel ),
-    pagination: new PaginationModel( initialState.Blog.posts )
+    posts: new List(initialState.Blog.posts),
+    //posts: generateList(initialState.Blog.posts, PostListModel),
+    pagination: new PaginationModel(initialState.Blog.posts)
   });
 }
 

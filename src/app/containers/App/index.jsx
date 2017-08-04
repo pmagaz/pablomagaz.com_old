@@ -14,6 +14,7 @@ export class App extends Component {
   }
 
   render() {
+
     return (
       <div className={ styles.app  }>
         <header className={ styles.mainHeader  }>

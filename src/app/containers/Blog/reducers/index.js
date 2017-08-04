@@ -1,18 +1,17 @@
-import { createReducer } from 'base';
+import { createReducer, generateList } from 'base';
 import ActionTypes from '../actionTypes';
-import { BlogCollection } from '../models';
-
+import { BlogCollection, PostListModel } from '../models';
+import { Record, List } from 'immutable';
 const blogRequest = state => state;
 
 const blogError = state => state;
 
 const blogSuccess = (state, action) => {
-  const pagination = action.payload.pagination;
+  const pagination = action.payload.meta.pagination;
   const hasMorePosts = (pagination.page < pagination.pages) ? true : false;
 
   return state
-    .update ('posts', () => state.posts.concat(action.payload.posts))
-    .update ('pagination', () => pagination.set('hasMorePosts', hasMorePosts));
+    .update('posts', () => state.posts.concat(action.payload.posts))
 };
 
 const actionHandlers = {

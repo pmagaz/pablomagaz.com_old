@@ -8,11 +8,11 @@ import { fetchRequiredActions } from 'base';
 import Logo from '../../components/Logo';
 import styles from './styles.css';
 
-const propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
-
 export class Main extends Component {
+
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+  };
 
   constructor (props) {
     super(props);
@@ -54,8 +54,6 @@ export class Main extends Component {
     );
   }
 }
-
-Main.propTypes = propTypes;
 
 export default connect(
   (state) => ({ MainModel: state.Main })

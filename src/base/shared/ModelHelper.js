@@ -24,19 +24,8 @@ export const formatPostContent = (data) => {
 
 export const getPostListWithOpening = (data, model) => {
   const arr = data.map((item) => {
+    console.log('makinglist');
     const opening = extractOpening(item.html);
-    if (opening) item.opening = opening;
-    else {
-      let i = 0;
-      let max = SiteConf.postOpeningChars;
-      const words = item.html.split(' ');
-      item.opening = '';
-      for (i; i <= max ; i++) {
-        item.opening += `${words[i]} `;
-      }
-      item.opening += '...</p>';
-      item.html = null;
-    }
     return new model(item);
   }
   );

@@ -1,10 +1,12 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
+import { pure } from 'recompose';
 
 import * as styles from './styles.css';
 import LinkButton from 'components/LinkButton';
   
 const Menu = (props) => {
+  
   return (
     <nav className={ styles.navMenu }>
       <ul>
@@ -40,4 +42,4 @@ const Menu = (props) => {
   )
 };
 
-export default Menu;
+export default pure(Menu);

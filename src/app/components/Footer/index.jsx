@@ -1,10 +1,13 @@
 import React  from 'react';
+import { pure } from 'recompose';
 import { PropTypes } from 'prop-types';
 import * as styles from './styles.css';
+
 import Menu from 'components/Menu';
 import Social from 'components/Social';
 
 import LinkButton from 'components/LinkButton';
+
 const Footer = () => (
   <footer className={ styles.container }>
       <Menu />
@@ -15,4 +18,4 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer;
+export default pure(Footer);

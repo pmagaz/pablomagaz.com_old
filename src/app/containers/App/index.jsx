@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
+
 import styles from './styles.css';
 import LinkButton from 'components/LinkButton';
 import Menu from 'components/Menu';
@@ -31,4 +32,4 @@ export class App extends Component {
   }
 }
 
-export default App;
+export default App; 

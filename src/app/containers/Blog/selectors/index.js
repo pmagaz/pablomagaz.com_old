@@ -12,7 +12,7 @@ export const postsSelector = createSelector(
       if (!post.get('rendered')) {
         const reg = new RegExp(`^(.+?)${ SiteConf.postOpeningSplitChar }`);
         const result = reg.exec(post.get('html'));
-        opening = result[1] ? result[1] : post.get('title');
+        opening = result ? result[1] : post.get('title');
       }
       return post
         .set('html', '')

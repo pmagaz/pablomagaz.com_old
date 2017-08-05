@@ -17,9 +17,8 @@ export const entry = {
   vendor: [
     'react',
     'redux',
-    'reselect',
-    'recompose',
     'react-dom',
+    'recompose',
     'immutable',
     'prop-types',
     'classnames',
@@ -27,8 +26,10 @@ export const entry = {
     'react-router',
     'isomorphic-fetch',
     'html-react-parser',
+    'react-router-scroll',
     'smoothscroll-polyfill',
     'highlight.js/lib/highlight',
+    'highlight.js/lib/languages/javascript',
   ]
 };
 

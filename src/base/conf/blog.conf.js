@@ -34,13 +34,13 @@ if (env === 'development') {
 
 } else {
   clientSecret = 'eeb1f09c6698';
-  SiteUrl = 'http://178.62.245.4:8000';
+  SiteUrl = 'http://178.62.245.4';
   BlogUrl = `${SiteUrl}/blog`;
   GhostUrl = 'http://178.62.245.4:2369';
   ImageUrl = GhostUrl;
   BlogUrl = `${GhostUrl}/blog/`;
   baseApiUrl = `${GhostUrl}/ghost/api/v0.1/`;
-  PostsApiUrl = `${baseApiUrl}posts/`;
+  PostsApiUrl = `${SiteUrl}/api/posts/`;
   PostsApi = `${baseApiUrl}?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
   PostApi = `${baseApiUrl}slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
 } 

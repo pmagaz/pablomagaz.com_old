@@ -15,7 +15,7 @@ let BlogUrl;
 let GhostUrl;
 let ImageUrl;
 let baseApiUrl;
-let postsApiUrl;
+let PostsApiUrl;
 let clientSecret;
 let PostsApi;
 let PostApi;
@@ -28,9 +28,9 @@ if (env === 'development') {
   ImageUrl = GhostUrl;
   BlogUrl = `${GhostUrl}/blog/`;
   baseApiUrl = `${GhostUrl}/ghost/api/v0.1/`;
-  postsApiUrl = `${baseApiUrl}posts/`;
-  PostsApi = `${postsApiUrl}?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
-  PostApi = `${postsApiUrl}slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
+  PostsApiUrl = `${SiteUrl}/api/posts/`;
+  PostsApi = `${baseApiUrl}posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
+  PostApi = `${baseApiUrl}posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
 
 } else {
   clientSecret = 'eeb1f09c6698';
@@ -40,7 +40,7 @@ if (env === 'development') {
   ImageUrl = GhostUrl;
   BlogUrl = `${GhostUrl}/blog/`;
   baseApiUrl = `${GhostUrl}/ghost/api/v0.1/`;
-  postsApiUrl = `${baseApiUrl}posts/`;
+  PostsApiUrl = `${baseApiUrl}posts/`;
   PostsApi = `${postsApiUrl}?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
   PostApi = `${postsApiUrl}slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
 } 
@@ -49,4 +49,4 @@ export function getPostUrl(slug) {
   return '/blog/' + slug;
 }
 
-export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, PostApi, PostsApi, postOpeningChars, postOpeningSplitChar, codeHighlightDelay };
+export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, PostApi, PostsApi, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay };

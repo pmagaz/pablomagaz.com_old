@@ -3,11 +3,9 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
-//import {compose, withPropsOnChange} from 'recompose';
 
 import * as Actions from './actions';
 import { fetchRequiredActions, SiteConf } from 'base';
-import { postsSelector, paginationSelector } from './selectors';
 import PostList from './components/PostList';
 import * as styles from './styles.css';
 
@@ -49,5 +47,5 @@ class Blog extends Component {
 }
 
 export default connect((state, props) => ({
-  Posts: postsSelector(state, props),
+  Posts: state.Blog.posts 
 }))(Blog);

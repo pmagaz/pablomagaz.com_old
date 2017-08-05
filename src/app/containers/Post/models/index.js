@@ -9,7 +9,7 @@ const PostModel = new Record({
   tags: '',
   title: '',
   image: '',
-  author: '',
+  author: SiteConf.Author,
   opening: '',
   updated_at: '',
   created_at: '',

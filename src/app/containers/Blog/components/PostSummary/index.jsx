@@ -2,10 +2,11 @@ import React  from 'react';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router';
 import ReactHtmlParser from 'html-react-parser';
+
 import { getPostUrl, SiteConf } from 'base';
+import PostTag from 'components/PostTag';
 import PostImage from 'components/PostImage';
 import PostInfo from '../PostInfo';
-import PostTag from '../PostTag';
 import * as styles from './styles.css';
 
 const propTypes= {

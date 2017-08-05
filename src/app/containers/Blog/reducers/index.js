@@ -1,6 +1,6 @@
-import { createReducer, generateList } from 'base';
+import { createReducer } from 'base';
 import ActionTypes from '../actionTypes';
-import { BlogCollection } from '../models';
+import { BlogModel } from '../models';
 
 const blogRequest = state => state;
 
@@ -11,7 +11,8 @@ const blogSuccess = (state, action) => {
   const hasMorePosts = (pagination.page < pagination.pages) ? true : false;
 
   return state
-    .update('posts', () => state.posts.concat(action.payload.posts))
+    .update ('posts', () => state.posts.concat(action.payload.posts))
+    //.update ('pagination', () => pagination.set('hasMorePosts', hasMorePosts));
 };
 
 const actionHandlers = {
@@ -20,4 +21,4 @@ const actionHandlers = {
   [ActionTypes.BLOG_ERROR]: blogError
 };
 
-export default createReducer(actionHandlers, new BlogCollection());
+export default createReducer(actionHandlers, new BlogModel());

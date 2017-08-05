@@ -47,6 +47,7 @@ class Blog extends Component {
     );
   }
 }
+
 export default connect((state, props) => ({
   Posts: postsSelector(state, props),
 }))(Blog);

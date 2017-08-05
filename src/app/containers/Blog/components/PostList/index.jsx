@@ -17,18 +17,18 @@ const propTypes= {
 const PostList = ({ posts }) => {
 
     const postsLoaded = isLoaded(posts); 
-    const Posts = posts.map(post => (
-         <PostSummary
+    const Posts = posts.map(post => {
+         return (<PostSummary
         post={ post }
         key={ post.id }
       />
-      )
+      )}
     );
     
     const content = !postsLoaded ? <Loading /> : Posts; 
     
     return (
-    <div> { Posts } </div>
+    <div> { content } </div>
     );
  
  };

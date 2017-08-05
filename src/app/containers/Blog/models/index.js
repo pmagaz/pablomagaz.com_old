@@ -1,19 +1,18 @@
 import { Record, List } from 'immutable';
-import PostListModel from './postList';
-import PaginationModel from './pagination';
-import { generateList } from 'base';
 
-const BlogCollection = Record({
+import PostModel from './post';
+import PaginationModel from './pagination';
+
+const BlogModel = Record({
   posts: List(),
   pagination: Record()
 });
 
 function setInitialState(initialState) {
-  return initialState.Blog = new BlogCollection({
+  return initialState.Blog = new BlogModel({
     posts: new List(initialState.Blog.posts),
-    //posts: generateList(initialState.Blog.posts, PostListModel),
     pagination: new PaginationModel(initialState.Blog.posts)
   });
 }
 
-export { PostListModel, PaginationModel, BlogCollection, setInitialState };
+export { PostModel, PaginationModel, BlogModel, setInitialState };

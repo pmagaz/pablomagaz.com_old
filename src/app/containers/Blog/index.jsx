@@ -46,6 +46,6 @@ class Blog extends Component {
   }
 }
 
-export default connect((state, props) => ({
+export default connect(state => ({
   Posts: state.Blog.posts 
 }))(Blog);

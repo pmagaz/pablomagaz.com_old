@@ -8,7 +8,6 @@ import { fetchRequiredActions, SiteConf } from 'base';
 import styles from './styles.css';
 import codeStyle from '../../styles/code.css';
 import * as Actions from './actions';
-import { postSelector } from './selectors';
 import PostHeader from './components/PostHeader';
 import PostContent from './components/PostContent';
 
@@ -54,6 +53,6 @@ export class Post extends Component {
   }
 }
 
-export default connect((state, props) => ({
-  Post: postSelector(state, props) })
-)(Post);
+export default connect(state => ({
+  Post: state.Post
+}))(Post);

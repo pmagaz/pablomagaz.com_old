@@ -6,11 +6,8 @@ import { PostModel } from '../models/';
 export default {
 
   fetchPost (slug) {
-    return fetch(SiteConf.PostApi.replace(':slug', slug))
+    return fetch(`${ SiteConf.PostApiUrl }${ slug}`)
       .then(req => req.json())
-      .then(data => new PostModel(data.posts[0])
-      );
-    //.catch(err => window.location = '/404.html')
+      .then(payload => new PostModel(payload));
   }
-
 };

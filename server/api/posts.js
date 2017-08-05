@@ -26,7 +26,7 @@ export const PostList = (posts) => {
 };
 
 
-export const postApiHandler = (req, res, next)  => (
+export const postsApiHandler = (req, res, next)  => (
   request(`${ SiteConf.PostsApi}`, (error, response, body) => {
     const data = JSON.parse(body);
     const pagination = data.meta.pagination;

@@ -92,7 +92,6 @@
     "react-pure-render": "1.0.2",
     "recompose": "0.24.0",
     "redux-logger": "3.0.6",
-    "reselect": "^3.0.1",
     "rimraf": "2.6.1",
     "smoothscroll-polyfill": "0.3.6",
     "style-loader": "0.18.2",

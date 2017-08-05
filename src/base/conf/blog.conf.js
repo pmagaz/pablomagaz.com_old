@@ -18,6 +18,7 @@ let ImageUrl;
 let BaseApiUrl;
 let PostsApiUrl;
 let clientSecret;
+let PostApiUrl;
 let PostsApi;
 let PostApi;
 
@@ -30,6 +31,7 @@ if (env === 'development') {
   ImageUrl = GhostUrl;
   BlogUrl = `${ GhostUrl }/blog/`;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
+  PostApiUrl = `${ SiteUrl }/api/post/`;
   PostsApiUrl = `${ SiteUrl }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
@@ -42,6 +44,7 @@ if (env === 'development') {
   ImageUrl = GhostUrl;
   BlogUrl = `${ GhostUrl }/blog/`;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
+  PostApiUrl = `${ SiteUrl }/api/post/`;
   PostsApiUrl = `${ SiteUrl }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
@@ -51,4 +54,4 @@ export function getPostUrl(slug) {
   return '/blog/' + slug;
 }
 
-export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, PostApi, PostsApi, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay };
+export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay };

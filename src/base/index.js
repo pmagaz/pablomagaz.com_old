@@ -12,4 +12,4 @@ export { generateMap } from './shared/ModelHelper';
 export { actionCreator } from './shared/ActionCreator';
 export { fetchRequiredActions } from './shared/FetchData';
 export { createActionType } from './shared/CreateActionType';
-export { generateImmutable, formatPostContent, getPostListWithOpening, generateList, extractOpening } from './shared/ModelHelper';
+export { generateImmutable, formatPostContent, getPostListWithOpening, generateList, extractOpening, RecordList } from './shared/ModelHelper';

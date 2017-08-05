@@ -1,6 +1,5 @@
 import { createSelector } from 'reselect';
 import { SiteConf, getDate } from 'base';
-import { PostModel } from '../models';
 
 export const postsState = state => state.Blog.posts;
 export const paginationState = state => state.Blog.pagination;
@@ -9,15 +8,16 @@ export const postsSelector = createSelector(
   postsState,
   posts => (
     posts.map(post => {
-      if (!post.rendered) {
+      let opening;
+      if (!post.get('rendered')) {
         const reg = new RegExp(`^(.+?)${ SiteConf.postOpeningSplitChar }`);
-        const opening = reg.exec(post.html);
-        if (opening) post.opening = opening[1];
-        else post.opening = post.title;
+        const result = reg.exec(post.get('html'));
+        opening = result[1] ? result[1] : post.get('title');
       }
-      post.html = '';
-      post.rendered = true;
-      post.updated_at = getDate(post.updated_at);
-      return new PostModel(post);
+      return post
+        .set('html', '')
+        .set('rendered', true)
+        .set('opening', opening)
+        .set('updated_at', getDate(post.get('updated_at')));
     })
   ));

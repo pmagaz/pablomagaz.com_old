@@ -41,8 +41,8 @@ if (env === 'development') {
   BlogUrl = `${GhostUrl}/blog/`;
   baseApiUrl = `${GhostUrl}/ghost/api/v0.1/`;
   PostsApiUrl = `${baseApiUrl}posts/`;
-  PostsApi = `${postsApiUrl}?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
-  PostApi = `${postsApiUrl}slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
+  PostsApi = `${baseApiUrl}?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
+  PostApi = `${baseApiUrl}slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
 } 
 
 export function getPostUrl(slug) {

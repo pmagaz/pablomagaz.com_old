@@ -28,7 +28,7 @@ const PostList = ({ posts }) => {
     const content = !postsLoaded ? <Loading /> : Posts; 
     
     return (
-    <div> { content } </div>
+    <div> { Posts } </div>
     );
  
  };

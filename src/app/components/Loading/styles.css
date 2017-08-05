@@ -5,7 +5,7 @@
   height: 30px;
   top: 20%;
   left: 50%;
-  background: $bg-titleBlog;
+  background: $bg-back;
   margin: 100px auto;
   -webkit-animation: sk-rotateplane 0.5s infinite ease-in-out;
   animation: sk-rotateplane 0.5s infinite ease-in-out;

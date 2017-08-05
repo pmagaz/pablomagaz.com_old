@@ -67,7 +67,6 @@ export const module = {
 
 export const plugins = [
   new webpack.DefinePlugin({'process.env': { NODE_ENV: JSON.stringify('production')}}),
-  new webpack.optimize.DedupePlugin(),
   new webpack.DllReferencePlugin({
     context: path.join(__dirname),
     manifest: require('../dist/dlls/vendor-manifest.json')

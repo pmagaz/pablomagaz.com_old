@@ -2,7 +2,6 @@ import { Record, List } from 'immutable';
 
 import { RecordList } from 'base';
 import PostModel from './post';
-import * as helpers from './helpers';
 import PaginationModel from './pagination';
 
 const BlogModel = Record({
@@ -18,4 +17,4 @@ function setInitialState(initialState) {
   });
 }
 
-export { PostModel, PaginationModel, BlogModel, helpers, setInitialState };
+export { PostModel, PaginationModel, BlogModel, setInitialState };

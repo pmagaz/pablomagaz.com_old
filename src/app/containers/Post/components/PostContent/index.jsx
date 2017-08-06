@@ -7,7 +7,9 @@ import javascript from 'highlight.js/lib/languages/javascript';
 
 import { SiteConf, context, getDate } from 'base';
 import Loading from 'components/Loading';
+import PostTag from 'components/PostTag';
 import PostDate from 'components/PostDate';
+import PostInfo from 'components/PostInfo';
 import styles from './styles.css';
 
 const propTypes= {
@@ -56,12 +58,11 @@ export class PostContent extends Component {
       <div className={ styles.post }>
         <div className={ postContentStyle }>
           <h1>{ post.title }</h1>
-          <span className={ styles.author } >
-            { post.author }
-          </span>
-          <PostDate
-            date={ getDate(post.published_at) }
-          />
+          <PostInfo
+            author={ post.author }
+            tags={ post.tags }
+            date={ post.published_at }
+           />
           { content }
         </div>
       </div>

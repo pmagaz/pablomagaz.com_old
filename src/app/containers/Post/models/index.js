@@ -1,12 +1,12 @@
 import { Record } from 'immutable';
 import { SiteConf } from 'base';
 
-export const PostModel = new Record({
+export const PostModel = Record({
   id: -1,
   url: '',
   slug: '',
   html: '',
-  tags: '',
+  tags: [],
   title: '',
   image: '',
   opening: '',

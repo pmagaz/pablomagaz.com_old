@@ -6,8 +6,8 @@ import ReactHtmlParser from 'html-react-parser';
 
 import { getPostUrl, SiteConf, context } from 'base';
 import PostTag from 'components/PostTag';
+import PostInfo from 'components/PostInfo';
 import PostImage from 'components/PostImage';
-import PostInfo from '../PostInfo';
 import styles from './styles.css';
 
 const propTypes= {
@@ -26,16 +26,13 @@ const PostSummary = ({ post }) => {
 
   return (
     <div className={ postSummaryStyle } >
-      <PostInfo
-        author={ post.author }
-        date={ post.published_at }
-      />
       <Link to={ url }>
+      <PostInfo
+        date={ post.published_at }
+        tags={ post.tags }
+      />
         <h1> { post.title } </h1>
       </Link>
-        <PostTag
-          tags={ post.tags }
-        />
       <Link className={ styles.linkImage } to={ url }>
         <PostImage
           src={ imageSrc }

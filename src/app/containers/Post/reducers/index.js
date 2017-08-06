@@ -22,7 +22,7 @@ const postSuccess = (state, { payload }) => (
 const cleanPost = state => (
   state
     .set('id', -1)
-    .set('tags', '')
+    .set('tags',[])
     .set('html', '')
     .set('title', '')
     .set('image', '')

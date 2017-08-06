@@ -24,12 +24,6 @@
   animation-delay: 20ms;
 }
 
-.author {
-    padding-right: 2em;
-    font-size: .8em;
-    letter-spacing: 0.1em;
-}
-
 h1{
     margin: 0;
     font-family: $display-regular;

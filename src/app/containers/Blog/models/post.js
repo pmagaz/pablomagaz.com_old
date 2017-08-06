@@ -4,12 +4,12 @@ import { SiteConf } from 'base';
 const PostModel = Record({
   id: -1,
   uuid: '',
-  title: '',
   slug: '',
-  image: '',
   html: '',
-  opening: '',
   tags: [],
+  title: '',
+  image: '',
+  opening: '',
   published_at: '',
   feature_image: '',
   author: SiteConf.Author

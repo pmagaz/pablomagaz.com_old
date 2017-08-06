@@ -2,10 +2,11 @@
 
 .postTag{
     font-size: .8em;
-    margin-bottom: .6em;
-    padding: .6em .6em .6em 2em;
+    margin-bottom: .2em;
+    padding: .2em .2em .2em 2em;
     display: inline-block;
     letter-spacing: 0.1em;
     background-color: $bg-postTag;
+    border-radius: 6px;
     color: $cl-postTag;
 }

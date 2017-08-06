@@ -26,7 +26,7 @@ export class Main extends Component {
     const smoothscroll = require('smoothscroll-polyfill').polyfill(); 
     const hash = this.props.location.hash; 
     if(hash) this.scrollToHash(hash);
-    this.actions.getPosts(1);
+    //this.actions.getPosts(1);
   }
 
   scrollToHash(hash){

@@ -7,7 +7,6 @@
   z-index: -1;
   top: 0;
   overflow: hidden;
-  background-color: $bg-postHeader;
   background-position-y: 50%;
   background-size: 100%;
   -webkit-transform-style: inherit;

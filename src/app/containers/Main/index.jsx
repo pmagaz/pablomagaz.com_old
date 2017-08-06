@@ -60,6 +60,4 @@ export class Main extends Component {
   }
 }
 
-export default connect(
-  (state) => ({ MainModel: state.Main })
-)(Main);
+export default connect(null)(Main);

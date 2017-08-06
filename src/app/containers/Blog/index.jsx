@@ -44,7 +44,7 @@ class Blog extends Component {
       <div className= { styles.Blog } >
         <div className= { styles.BlogContent } >
           <h1 className={ blogTitleClass }>
-          EL BLOG ISOMORFICO
+          { SiteConf.BlogTitle.toUpperCase()}
           </h1>
           <div> 
             <PostList posts={ posts } />

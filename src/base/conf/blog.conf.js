@@ -3,7 +3,7 @@ import env from '../shared/Env';
 const Author = 'Pablo Magaz';
 const SiteTitle = Author; 
 const SiteDescription = Author;
-const BlogTitle = 'El Blog Isom&oacute;rfico';
+const BlogTitle = 'El Blog Isomórfico';
 const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
 const postOpeningChars= 46;

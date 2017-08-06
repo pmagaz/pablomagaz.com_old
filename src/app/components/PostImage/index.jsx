@@ -35,7 +35,7 @@ export class PostImage extends Component {
     const { src, alt, width } = this.props;
     const cx = classNames.bind(styles);
 
-    const imageClass = cx({
+    const imageStyle = cx({
       'image': true,
       'imageAnim': context.client ? true : false 
     });
@@ -46,7 +46,7 @@ export class PostImage extends Component {
           src={ src }
           alt={ alt }
           width={ width }
-          className={ imageClass }
+          className={ imageStyle }
           ref={ (ref) => { this.imageRef = ref;} }
         />
       </div>

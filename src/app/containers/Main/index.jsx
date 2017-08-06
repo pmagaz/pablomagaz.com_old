@@ -2,12 +2,14 @@ import Immutable from 'immutable';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
+import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 import { fetchRequiredActions } from 'base';
 
+import { context } from 'base';
 import Logo from '../../components/Logo';
-import styles from './styles.css';
 import * as Actions from '../Blog/actions';
+import styles from './styles.css';
 
 export class Main extends Component {
 
@@ -33,10 +35,15 @@ export class Main extends Component {
   }
 
   render () {
+    const cx = classNames.bind(styles);
+    const brandStyle = cx({
+      'brand': true,
+      'brandAnim': context.client ? true : false
+    });
     return (
       <div className={ styles.mainWrapper }>
         <section className={ styles.home }>
-            <div className={ styles.brand }>
+            <div className={ brandStyle }>
               <h1>Pablo Magaz</h1>
             </div>
         </section>

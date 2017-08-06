@@ -13,12 +13,13 @@
         margin: 50px auto 100px;
         position: relative;
         z-index: 2;
-        -webkit-animation: fade-in-up 0.2s;
-        animation: fade-in-up 0.2s both;
-        -webkit-animation-delay: 0.0s;
-        animation-delay: 0.0s;
-        
+        opacity: 0;
     }
+}
+
+.postContentAnim {
+  -webkit-animation: fade-in-up 250ms;
+  animation: fade-in-up 250ms both;
 }
 
 .author {

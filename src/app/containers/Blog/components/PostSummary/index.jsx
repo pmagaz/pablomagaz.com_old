@@ -19,13 +19,13 @@ const PostSummary = ({ post }) => {
   const imageSrc = `${SiteConf.ImageUrl}${post.image || post.feature_image}`;
 
   const cx = classNames.bind(styles);
-  const postSummaryClass = cx({
+  const postSummaryStyle = cx({
     'PostSummary': true,
     'PostSummaryAnim': context.client ? true : false
   });
 
   return (
-    <div className={ postSummaryClass } >
+    <div className={ postSummaryStyle } >
       <PostInfo
         author={ post.author }
         date={ post.updated_at }

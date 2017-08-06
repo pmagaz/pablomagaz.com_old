@@ -10,8 +10,8 @@
 .Post {
   width: 100%;
   font-size: 32px;
+}
+.PostAnim {
   -webkit-animation: fade-in-down 0.2s;
-  animation: fade-in-down 0.2s both;
-  -webkit-animation-delay: 0.0s;
-  animation-delay: 0.0s;
+  animation: fade-in-down 0.2s both; 
 }

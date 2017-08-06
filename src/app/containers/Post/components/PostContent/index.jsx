@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import ReactHtmlParser from 'html-react-parser';
+import classNames from 'classnames/bind';
 import hljs from 'highlight.js/lib/highlight';
+import ReactHtmlParser from 'html-react-parser';
 import javascript from 'highlight.js/lib/languages/javascript';
 
-import { SiteConf } from 'base';
+import { SiteConf, context } from 'base';
 import Loading from 'components/Loading';
 import PostDate from 'components/PostDate';
 import styles from './styles.css';
@@ -41,23 +42,29 @@ export class PostContent extends Component {
   }
 
   render () {
-  const post = this.props.post;
-  const postLoaded = this.isLoaded(post);
-  const content = postLoaded ? <Loading /> : ReactHtmlParser(post.html); 
+    const post = this.props.post;
+    const postLoaded = this.isLoaded(post);
+    const content = postLoaded ? <Loading /> : ReactHtmlParser(post.html); 
 
-  return (
-    <div className={ styles.post }>
-      <div className={ styles.postContent }>
-        <h1>{ post.title }</h1>
-        <span className={ styles.author } >
-          { post.author }
-        </span>
-        <PostDate
-          date={ post.created_at }
-        />
-        { ReactHtmlParser(post.html) }
+    const cx = classNames.bind(styles);
+    const postContentStyle = cx({
+      'postContent': true,
+      'postContentAnim': context.client ? true : false
+    });
+
+    return (
+      <div className={ styles.post }>
+        <div className={ postContentStyle }>
+          <h1>{ post.title }</h1>
+          <span className={ styles.author } >
+            { post.author }
+          </span>
+          <PostDate
+            date={ post.created_at }
+          />
+          { content }
+        </div>
       </div>
-    </div>
     );
   };
 }

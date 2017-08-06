@@ -1,5 +1,8 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
+import classNames from 'classnames/bind';
+
+import { context } from 'base';
 import styles from './styles.css';
 
 const propTypes= {
@@ -13,8 +16,14 @@ const PostHeader = ({ image, title }) => {
     backgroundImage: 'url(' + image + ')'
   };
 
+  const cx = classNames.bind(styles);
+  const postHeaderStyle = cx({
+    'postHeader': true,
+    'postHeaderAnim': context.client ? true : false
+  });
+
   return(
-    <div style={style} className={ styles.postHeader}></div>
+    <div style={ style } className={ postHeaderStyle }></div>
   )
 };
 

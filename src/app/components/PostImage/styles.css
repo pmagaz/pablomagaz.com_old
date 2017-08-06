@@ -6,10 +6,8 @@
 }
 
 .imageAnim {
-  -webkit-animation: fade-in-up 0.2s;
-  animation: fade-in-up 0.2s both;
-  -webkit-animation-delay: 0.0s;
-  animation-delay: 0.0s;
+  -webkit-animation: fade-in 0.2s;
+  animation: fade-in 0.2s both;
 }
 
 .imageWrapper {

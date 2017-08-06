@@ -33,9 +33,6 @@ const Menu = (props) => {
           value="Contacto"
         />  
         </li>
-          <li>
-            <a href="https://github.com/pmagaz/pablomagaz.com">Source Code</a>
-        </li>
       </ul>
     </nav>
   )

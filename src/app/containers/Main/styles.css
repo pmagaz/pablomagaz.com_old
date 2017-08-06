@@ -58,8 +58,8 @@ section{
 .brandAnim {
   -webkit-animation: fade-in-down 0.4s;
    animation: fade-in-down 0.4s both;
-  -webkit-animation-delay: 10ms;
-  animation-delay: 10ms;
+  -webkit-animation-delay: 90ms;
+  animation-delay: 90ms;
 }
 .about{
   background-color: $bg-about;

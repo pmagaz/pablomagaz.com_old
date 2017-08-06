@@ -12,13 +12,12 @@ const propTypes= {
 };
 
 const PostInfo = ({ author, date, tags }) => (
-  <div className={ styles.infoWrited }>
-    { author ?
+  <div className={ styles.postInfo }>
     <span className={ styles.author } >
-      by { author }
-    </span> : null }
-    <PostDate date={ date } />
-    <PostTag tags={ tags } />
+    { author }
+    </span> 
+    | <PostDate date={ date } />
+    | <PostTag tags={ tags } />
   </div>
 );
 

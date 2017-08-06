@@ -63,7 +63,9 @@ export class PostContent extends Component {
             tags={ post.tags }
             date={ post.published_at }
            />
-          { content }
+           <div className={ styles.postText }> 
+            { content }
+          </div>
         </div>
       </div>
     );

@@ -2,20 +2,20 @@
 
 .PostSummary {
   opacity: 0;
-  margin-bottom: 50px;
-    a h1{
+  margin-bottom: 1.8em;
+    a h1 {
       font-family: "$display-regular";
       font-size: 2.9em;
       line-height: 1em;
       letter-spacing: -2px;
-      margin-bottom: 18px;
+      margin-bottom: 0.6em;
       color: $cl-postSumaryTilte;
     }
     .postText{
       letter-spacing: -1px;
-      font-size: 1em;
+      font-size: 0.9em;
       color: $cl-postText;
-            font-family: "$text-font";
+      font-family: "$text-font";
     }
 }
 

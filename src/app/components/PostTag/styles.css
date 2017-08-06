@@ -6,7 +6,6 @@
     padding: .2em .2em .2em 2em;
     display: inline-block;
     letter-spacing: 0.1em;
-    background-color: $bg-postTag;
     border-radius: 6px;
     color: $cl-postTag;
 }

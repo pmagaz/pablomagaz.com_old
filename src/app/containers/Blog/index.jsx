@@ -44,7 +44,7 @@ class Blog extends Component {
       <div className= { styles.Blog } >
         <div className= { styles.BlogContent } >
           <h1 className={ blogTitleStyle }>
-          { SiteConf.BlogTitle.toUpperCase()}
+            { SiteConf.BlogTitle.toUpperCase() }
           </h1>
           <div> 
             <PostList posts={ posts } />
@@ -56,5 +56,5 @@ class Blog extends Component {
 }
 
 export default connect(state => ({
-  Blog: state.Blog,
+  Blog: state.Blog
 }))(Blog);

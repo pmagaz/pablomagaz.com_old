@@ -5,13 +5,12 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 
 import { fetchRequiredActions, context } from 'base';
-import styles from './styles.css';
-import codeStyle from '../../styles/code.css';
 import * as Actions from './actions';
 import PostHeader from './components/PostHeader';
 import PostContent from './components/PostContent';
+import styles from './styles.css';
 
-export class Post extends Component {
+class Post extends Component {
 
   static proopTypes = {
     dispatch: PropTypes.func.isRequired,

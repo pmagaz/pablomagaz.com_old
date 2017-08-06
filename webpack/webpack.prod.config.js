@@ -79,5 +79,5 @@ export const plugins = [
   new copyWebpackPlugin([{ from: 'src/app/assets', to: '../dist/assets' }]),
   new webpack.NoEmitOnErrorsPlugin(),
   new webpack.optimize.UglifyJsPlugin({compressor: { warnings: false }, output: {comments: false}}),
-  new ExtractTextPlugin({ filename: 'bundle.css', allChunks: true })
+  new ExtractTextPlugin({ filename: 'styles.[contenthash].css', allChunks: true })
 ].concat(common.plugins);

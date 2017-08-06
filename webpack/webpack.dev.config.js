@@ -46,7 +46,7 @@ export const module = {
           options: {
             modules: true,
             importLoaders: 1,
-            localIdentName: '[name]__[local]-[hash:base64:4]'
+            localIdentName: '[local]-[hash:base64:4]'
           }
         },
         {

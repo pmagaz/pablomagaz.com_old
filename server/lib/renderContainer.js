@@ -9,6 +9,5 @@ export default function renderContainer(store, renderProps) {
     <Provider store={ store }>
       <RouterContext { ...renderProps } />
     </Provider>
- );
-
+  );
 }

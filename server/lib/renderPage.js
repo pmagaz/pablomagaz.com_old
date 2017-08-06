@@ -1,6 +1,6 @@
 import base from 'base';
-import getScripts  from '../lib/GetScripts';
 import * as templates from '../templates/';
+import { getScripts, getStyles } from '../lib/bundle';
 
 export default function renderPage(routeMatch, container, store){
 
@@ -9,9 +9,9 @@ export default function renderPage(routeMatch, container, store){
     container: container,
     routeMatch: routeMatch,
     state: store.getState(),
+    style: getStyles('app'),
     appScript: getScripts('app'),
-    vendorScript: getScripts('vendor'),
-    style: (base.env === 'production') ? '<link rel="stylesheet" href="/bundle.css">' : ''
+    vendorScript: getScripts('vendor')
   };
 
   let template;
@@ -19,7 +19,7 @@ export default function renderPage(routeMatch, container, store){
 
   if (route.length === 1) template = templates[route];
   else {
-    if(route[1].length > 2) template = templates.post;
+    if (route[1].length > 2) template = templates.post;
     else template = templates[route[0]];
   }
 

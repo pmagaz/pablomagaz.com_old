@@ -1,7 +1,6 @@
 @import '../../styles/base.css';
 
 .postInfo {
-  margin-bottom: 0.3em;
   span {
     font-size: .8em;
     padding-right: 2em;

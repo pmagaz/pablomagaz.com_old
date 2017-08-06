@@ -32,7 +32,7 @@ const PostSummary = ({ post }) => {
           author={ post.author }
           date={ post.published_at }
       />
-        <h1> { post.title } </h1>
+      <h1> { post.title } </h1>
       </Link>
       <Link className={ styles.linkImage } to={ url }>
         <PostImage

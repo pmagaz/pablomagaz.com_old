@@ -35,10 +35,9 @@ class Blog extends Component {
   render () {
     const posts = this.props.Blog.posts;
     const cx = classNames.bind(styles);
-    
     const blogTitleClass = cx({
       'titleBlog': true,
-      'titleBlogAnim': (context === 'client') ? true : false
+      'titleBlogAnim': context.client ? true : false
     });
 
     return (

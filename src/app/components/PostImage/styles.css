@@ -1,10 +1,15 @@
 @import '../../styles/base.css';
 
 .image-loaded {
+  -webkit-animation: fade-in-up 0.2s;
+  animation: fade-in-up 0.2s both;
+  -webkit-animation-delay: 0.0s;
+  animation-delay: 0.0s;
 }
 
 .image {
-    width:100%
+  width:100%;
+  opacity: 0;
 }
 
 .imageWrapper {

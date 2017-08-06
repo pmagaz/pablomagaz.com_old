@@ -3,6 +3,7 @@ import React, { Component }  from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames/bind';
 
+import { context } from 'base';
 import styles from './styles.css';
 
 const propTypes= {
@@ -36,7 +37,7 @@ export class PostImage extends Component {
 
     const imageClass = cx({
       'image': true,
-      'image-loaded': this.state.loaded
+      'image-loaded': context === 'client' ? true : false 
     });
 
     return (

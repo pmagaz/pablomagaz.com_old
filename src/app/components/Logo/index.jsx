@@ -12,7 +12,7 @@ const propTypes= {
 const Logo = ( props ) => (
   <LinkButton
       location="/"
-      value="Pablo Magaz"
+      value="PM"
     />
 );
 

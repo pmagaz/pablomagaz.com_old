@@ -33,7 +33,7 @@ if (env === 'development') {
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = `${ SiteUrl }/api/post/`;
   PostsApiUrl = `${ SiteUrl }/api/posts/`;
-  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
+  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
 } else {
   HostName = 'http://178.62.245.4';
@@ -46,7 +46,7 @@ if (env === 'development') {
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = `${ SiteUrl }/api/post/`;
   PostsApiUrl = `${ SiteUrl }/api/posts/`;
-  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at&order=created_at desc&limit=${numPosts}`;
+  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
 } 
 

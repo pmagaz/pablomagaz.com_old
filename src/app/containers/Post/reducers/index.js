@@ -14,7 +14,8 @@ const postSuccess = (state, { payload }) => (
     .set('title', payload.title)
     .set('image', payload.image)
     .set('author', SiteConf.Author)
-    .set('created_at', payload.created_at)
+    .set('updated_at', payload.updated_at)
+    .set('published_at', payload.published_at)
     .set('feature_image', payload.feature_image)
 );
 
@@ -26,7 +27,7 @@ const cleanPost = state => (
     .set('title', '')
     .set('image', '')
     .set('author', '')
-    .set('created_at', '')
+    .set('published_at', '')
     .set('feature_image', '')
 );
 

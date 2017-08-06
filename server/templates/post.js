@@ -22,7 +22,7 @@ export default function post(params) {
     <meta name="description" content="${ SiteConf.SiteDescription }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="article:modified_time" content="${ post.updated_at }" /> 
-    <meta property="article:published_time" content="${ post.created_at }" />
+    <meta property="article:published_time" content="${ post.published_at }" />
     <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="canonical" href="${ postUrl }" />
     

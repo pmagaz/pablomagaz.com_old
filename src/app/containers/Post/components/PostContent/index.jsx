@@ -60,7 +60,7 @@ export class PostContent extends Component {
             { post.author }
           </span>
           <PostDate
-            date={ post.created_at }
+            date={ post.published_at }
           />
           { content }
         </div>

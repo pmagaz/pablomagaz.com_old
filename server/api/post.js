@@ -11,6 +11,7 @@ export const postApiHandler = (req, res)  => {
     } else {
       const post = data.posts[0];
       post.updated_at = getDate(post.updated_at);
+      post.published_at = getDate(post.published_at);
       const html = post.html;
       post.html = html.replace(SiteConf.postOpeningSplitChar,'');
       res.json(post);

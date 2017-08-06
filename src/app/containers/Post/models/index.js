@@ -11,7 +11,7 @@ export const PostModel = new Record({
   image: '',
   opening: '',
   updated_at: '',
-  created_at: '',
+  published_at: '',
   feature_image: '',
   meta_description: '',
   author: SiteConf.Author,

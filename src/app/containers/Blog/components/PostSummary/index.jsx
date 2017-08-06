@@ -28,7 +28,7 @@ const PostSummary = ({ post }) => {
     <div className={ postSummaryStyle } >
       <PostInfo
         author={ post.author }
-        date={ post.updated_at }
+        date={ post.published_at }
       />
       <Link to={ url }>
         <h1> { post.title } </h1>

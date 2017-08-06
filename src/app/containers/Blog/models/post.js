@@ -10,7 +10,7 @@ const PostModel = Record({
   html: '',
   opening: '',
   tags: [],
-  updated_at: '',
+  published_at: '',
   feature_image: '',
   author: SiteConf.Author
 });

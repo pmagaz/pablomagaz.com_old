@@ -29,7 +29,7 @@ export const PostList = (posts) => {
     }
     post.html = null;
     post.markdown = null;
-    post.updated_at = getDate(post.updated_at);
+    post.published_at = getDate(post.published_at);
     return post;
   }
   );

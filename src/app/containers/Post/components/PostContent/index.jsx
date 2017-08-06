@@ -5,7 +5,7 @@ import hljs from 'highlight.js/lib/highlight';
 import ReactHtmlParser from 'html-react-parser';
 import javascript from 'highlight.js/lib/languages/javascript';
 
-import { SiteConf, context } from 'base';
+import { SiteConf, context, getDate } from 'base';
 import Loading from 'components/Loading';
 import PostDate from 'components/PostDate';
 import styles from './styles.css';
@@ -60,7 +60,7 @@ export class PostContent extends Component {
             { post.author }
           </span>
           <PostDate
-            date={ post.published_at }
+            date={ getDate(post.published_at) }
           />
           { content }
         </div>

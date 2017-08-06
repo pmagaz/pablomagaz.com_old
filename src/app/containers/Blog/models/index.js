@@ -4,16 +4,21 @@ import { RecordList } from 'base';
 import PostModel from './post';
 import PaginationModel from './pagination';
 
-const BlogModel = Record({
+export const BlogModel = Record({
   posts: List(),
   pagination: Record(),
 });
 
-function setInitialState(initialState) {
-  return initialState.Blog = new BlogModel({
+export const responseBlogModel = payload => ({
+  posts: RecordList(payload.posts, PostModel),
+  pagination: new PaginationModel(payload.pagination),
+});
+
+export const setInitialState = initialState => (
+  initialState.Blog = new BlogModel({
     posts: RecordList(initialState.Blog.posts, PostModel),
     pagination: new PaginationModel(initialState.Blog.posts),
-  });
-}
+  })
+);
 
-export { PostModel, PaginationModel, BlogModel, setInitialState };
+export { PostModel, PaginationModel };

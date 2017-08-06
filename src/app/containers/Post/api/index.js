@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
 
-import { SiteConf, formatPostContent } from 'base';
+import { SiteConf } from 'base';
 import { PostModel } from '../models/';
 
 export default {

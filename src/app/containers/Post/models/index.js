@@ -1,7 +1,7 @@
 import { Record } from 'immutable';
 import { SiteConf } from 'base';
 
-const PostModel = new Record({
+export const PostModel = new Record({
   id: -1,
   url: '',
   slug: '',
@@ -9,16 +9,14 @@ const PostModel = new Record({
   tags: '',
   title: '',
   image: '',
-  author: SiteConf.Author,
   opening: '',
   updated_at: '',
   created_at: '',
   feature_image: '',
   meta_description: '',
+  author: SiteConf.Author,
 });
 
-function setInitialState(initialState) {
-  return initialState.Post = new PostModel(initialState.Post);
-}
-
-export { PostModel, setInitialState };
+export const setInitialState = initialState => (
+  initialState.Post = new PostModel(initialState.Post)
+);

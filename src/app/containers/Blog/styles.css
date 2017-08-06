@@ -33,8 +33,10 @@
   }
 
 .titleBlogAnim {
-  -webkit-animation: fade-in-down 0.2s;
-   animation: fade-in-down 0.2s both;
+  -webkit-animation: fade-in-down 250ms;
+  animation: fade-in-down 250ms both;
+  -webkit-animation-delay: 20ms;
+  animation-delay: 20ms;
 }
 
 .tracks{

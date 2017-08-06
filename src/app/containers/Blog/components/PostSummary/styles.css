@@ -19,8 +19,10 @@
 }
 
 .PostSummaryAnim {
-  -webkit-animation: fade-in-up 250ms;
-  animation: fade-in-up 250ms both;
+  -webkit-animation: fade-in-up 230ms;
+  animation: fade-in-up 230ms both;
+  -webkit-animation-delay: 10ms;
+  animation-delay: 10ms;
 }
 
 .linkImage{

@@ -20,6 +20,8 @@
 .postContentAnim {
   -webkit-animation: fade-in-up 250ms;
   animation: fade-in-up 250ms both;
+  -webkit-animation-delay: 20ms;
+  animation-delay: 20ms;
 }
 
 .author {

@@ -1,7 +1,8 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
-import * as styles from './styles.css';
+
 import PostDate from 'components/PostDate';
+import styles from './styles.css';
 
 const propTypes= {
   author: PropTypes.string,

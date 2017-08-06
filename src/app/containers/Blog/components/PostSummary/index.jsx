@@ -1,13 +1,14 @@
 import React  from 'react';
-import { PropTypes } from 'prop-types';
 import { Link } from 'react-router';
+import { PropTypes } from 'prop-types';
+import classNames from 'classnames/bind';
 import ReactHtmlParser from 'html-react-parser';
 
 import { getPostUrl, SiteConf } from 'base';
 import PostTag from 'components/PostTag';
 import PostImage from 'components/PostImage';
 import PostInfo from '../PostInfo';
-import * as styles from './styles.css';
+import styles from './styles.css';
 
 const propTypes= {
   post: PropTypes.object.isRequired
@@ -17,8 +18,14 @@ const PostSummary = ({ post }) => {
   const url = getPostUrl(post.slug);
   const imageSrc = `${SiteConf.ImageUrl}${post.image || post.feature_image}`;
 
+  const cx = classNames.bind(styles);
+  const postSummaryClass = cx({
+    'PostSummary': true,
+    'PostSummaryAnim': true
+  });
+
   return (
-    <div className={ styles.PostSummary } >
+    <div className={ postSummaryClass } >
       <PostInfo
         author={ post.author }
         date={ post.updated_at }

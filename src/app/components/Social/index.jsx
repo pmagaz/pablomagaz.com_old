@@ -1,8 +1,8 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
-import * as styles from './styles.css';
 
 import LinkButton from 'components/LinkButton';
+import styles from './styles.css';
 
 /*
 MOVE SVG TO CORRECT PLACE :) 

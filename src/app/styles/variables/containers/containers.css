@@ -18,7 +18,7 @@ $cl-infoWrited: $black;
 
 /** Blog/components/ Post Sumary **/
 $bg-linkImage: $gray-darker;
-$cl-postSumaryTilte: $bg-back;
+$cl-postSumaryTilte: $gray-darker;
 
 $cl-postText: $black;
 

@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch';
+import { Record } from 'immutable';
 
 import { SiteConf, RecordList } from 'base';
 import { PaginationModel, PostModel } from '../models';
@@ -12,7 +13,7 @@ export default {
       .then(req => req.json())
       .then(payload => ({
         posts: RecordList(payload.posts, PostModel),
-        pagination: new PaginationModel(payload.pagination)
+        pagination: new PaginationModel(payload.pagination),
       }))
       .catch(err => console.log(err));
   },

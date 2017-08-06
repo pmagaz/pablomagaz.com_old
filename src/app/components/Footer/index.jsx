@@ -1,7 +1,7 @@
 import React  from 'react';
 import { pure } from 'recompose';
 import { PropTypes } from 'prop-types';
-import * as styles from './styles.css';
+import styles from './styles.css';
 
 import Menu from 'components/Menu';
 import Social from 'components/Social';

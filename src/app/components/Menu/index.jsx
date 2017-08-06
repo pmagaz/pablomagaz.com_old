@@ -1,9 +1,9 @@
 import React  from 'react';
-import { PropTypes } from 'prop-types';
 import { pure } from 'recompose';
+import { PropTypes } from 'prop-types';
 
-import * as styles from './styles.css';
 import LinkButton from 'components/LinkButton';
+import styles from './styles.css';
   
 const Menu = (props) => {
   return (

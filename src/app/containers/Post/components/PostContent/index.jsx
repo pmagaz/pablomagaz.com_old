@@ -7,7 +7,7 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import { SiteConf } from 'base';
 import Loading from 'components/Loading';
 import PostDate from 'components/PostDate';
-import * as styles from './styles.css';
+import styles from './styles.css';
 
 const propTypes= {
   post: PropTypes.object.isRequired

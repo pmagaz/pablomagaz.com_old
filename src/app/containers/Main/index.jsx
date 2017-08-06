@@ -7,6 +7,7 @@ import { fetchRequiredActions } from 'base';
 
 import Logo from '../../components/Logo';
 import styles from './styles.css';
+import * as Actions from '../Blog/actions';
 
 export class Main extends Component {
 
@@ -16,12 +17,14 @@ export class Main extends Component {
 
   constructor (props) {
     super(props);
+    this.actions = bindActionCreators(Actions, props.dispatch);
   }
 
   componentDidMount(){
     const smoothscroll = require('smoothscroll-polyfill').polyfill(); 
     const hash = this.props.location.hash; 
     if(hash) this.scrollToHash(hash);
+    this.actions.getPosts(1);
   }
 
   scrollToHash(hash){

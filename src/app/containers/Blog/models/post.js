@@ -1,7 +1,7 @@
 import { Record } from 'immutable';
 import { SiteConf } from 'base';
 
-const PostModel = new Record({
+const PostModel = Record({
   id: -1,
   uuid: '',
   title: '',
@@ -11,7 +11,6 @@ const PostModel = new Record({
   opening: '',
   tags: [],
   updated_at: '',
-  rendered: false,
   feature_image: '',
   author: SiteConf.Author
 });

@@ -1,6 +1,7 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
-import * as styles from './styles.css';
+
+import styles from './styles.css';
 
 const propTypes= {
   tags: PropTypes.array.isRequired,

@@ -6,14 +6,13 @@ import PaginationModel from './pagination';
 
 const BlogModel = Record({
   posts: List(),
-  pagination: Record()
+  pagination: Record(),
 });
 
 function setInitialState(initialState) {
   return initialState.Blog = new BlogModel({
-    //posts: new List(initialState.Blog.posts),
     posts: RecordList(initialState.Blog.posts, PostModel),
-    pagination: new PaginationModel(initialState.Blog.posts)
+    pagination: new PaginationModel(initialState.Blog.posts),
   });
 }
 

@@ -1,6 +1,6 @@
 import { Record } from 'immutable';
 
-const PaginationModel = new Record({
+const PaginationModel = Record({
   page: -1,
   limit: -1,
   pages: -1,

@@ -2,20 +2,27 @@
 
 .PostSummary {
   margin-bottom: 50px;
-   -webkit-animation: fade-in-up 0.2s;
+    a h1{
+      font-family: "$display-regular";
+      font-size: 2.9em;
+      line-height: 1em;
+      letter-spacing: -2px;
+      color: $cl-postSumaryTilte;
+    }
+    .postText{
+      letter-spacing: -1px;
+      font-size: 1em;
+      color: $cl-postText;
+            font-family: "$text-font";
+    }
+}
+
+.PostSummaryAnim {
+  -webkit-animation: fade-in-up 0.2s;
   animation: fade-in-up 0.2s both;
   -webkit-animation-delay: 0.0s;
   animation-delay: 0.0s;
   margin-bottom: 50px;
-    a h1{
-      font-family: "$display-regular";
-      font-size: 3em;
-      line-height: 1em;
-      color: $cl-postSumaryTilte;
-    }
-    .postText{
-      color: $cl-postText;
-    }
 }
 
 .linkImage{

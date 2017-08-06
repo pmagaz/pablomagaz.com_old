@@ -14,11 +14,14 @@
 
   .titleBlog{
     width: 100%;
+    font-family: "$display-bold";
+    line-height: 40px;
+    letter-spacing: -3px;
     height: $hgt-titleBlog;
     margin: 0;
     left: 0;
     top: 0;
-    font-size: 1,6em;
+    font-size: 1,9em;
     position: fixed;
     z-index: -1;
     display: flex;
@@ -26,11 +29,14 @@
     align-items: center;
     background: $bg-titleBlog;
     color: $cl-titleBlog;
-    -webkit-animation: fade-in-down 0.2s;
-    animation: fade-in-down 0.2s both;
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
   }
+
+.titleBlogAnim {
+  -webkit-animation: fade-in-down 0.2s;
+   animation: fade-in-down 0.2s both;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
 
 .tracks{
   padding-top: 138px;

@@ -31,6 +31,9 @@ export default function blog(params) {
     <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
     ${ params.style }
     ${ params.vendorScript }
+    <script id=‘context’ type=‘application/json’>
+    var context = 'server';
+    </script>
     </head>
     <body>
       <div id="root">${ params.container }</div>

@@ -5,14 +5,11 @@ import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 
-import * as Actions from './actions';
-import { fetchRequiredActions, SiteConf } from 'base';
+import { fetchRequiredActions, SiteConf, context } from 'base';
 import PostList from './components/PostList';
 import styles from './styles.css';
 
 class Blog extends Component {
-
-  static requiredActions = [Actions.getPosts];
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
@@ -21,6 +18,8 @@ class Blog extends Component {
       pagination: PropTypes.instanceOf(Immutable.Record).isRequired,
     })
   }
+  
+  static requiredActions = [Actions.getPosts];
 
   constructor(props) {
     super(props);
@@ -35,12 +34,12 @@ class Blog extends Component {
   render () {
     const posts = this.props.Blog.posts;
     const cx = classNames.bind(styles);
-     const blogTitleClass = cx({
-      'titleBlog': true,
-      'titleBlogAnim': posts.size 
-    });
     
-    console.log(444444, posts.size, this.props.Blog.rendered );
+    const blogTitleClass = cx({
+      'titleBlog': true,
+      'titleBlogAnim': (context === 'client') ? true : false
+    });
+
     return (
       <div className= { styles.Blog } >
         <div className= { styles.BlogContent } >

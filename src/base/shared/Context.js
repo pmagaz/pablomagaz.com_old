@@ -1,0 +1,1 @@
+export const context = (typeof window !== 'undefined') ? 'client' : 'server'; 

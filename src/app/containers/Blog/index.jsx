@@ -6,6 +6,7 @@ import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 
 import { fetchRequiredActions, SiteConf, context } from 'base';
+import * as Actions from './actions';
 import PostList from './components/PostList';
 import styles from './styles.css';
 

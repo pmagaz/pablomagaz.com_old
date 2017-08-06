@@ -55,7 +55,7 @@ export class PostContent extends Component {
         <PostDate
           date={ post.created_at }
         />
-        { content }
+        { ReactHtmlParser(post.html) }
       </div>
     </div>
     );

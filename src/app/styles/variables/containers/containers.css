@@ -24,7 +24,8 @@ $cl-postText: $black;
 
 /** Blog/components/ Post Tag **/
 $bg-postTag: $secondary-color;
-$cl-postTag: darken($secondary-color, 15%);
+$cl-postTag: color($secondary-color lightness(-75%));
+$brd-postTag: 1px solid $secondary-color;
 
 
 

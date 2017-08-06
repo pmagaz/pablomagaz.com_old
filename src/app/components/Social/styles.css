@@ -4,6 +4,11 @@
     width: 500px;
     margin: 0 auto;
     img{
-        width: 60px;
+        width: 36px;
+        opacity: .7;
+        &:hover{
+            opacity: 1;
+        }
     }
 }
+

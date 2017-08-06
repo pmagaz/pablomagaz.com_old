@@ -1,6 +1,5 @@
 @import 'variables/variables.css';
 @import 'mixins/mixins.css';
-@import "../assets/fonts/fonts.css";
 
 @-webkit-keyframes fade-in-up {
     0% {
@@ -61,7 +60,8 @@ html{
 body {
     background-color: $bg-body;
     color: $cl-body;
-    font-family: $text-font-light;
+    @mixin fontFamilyLight;
+    font
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;
     font-size: 13px;

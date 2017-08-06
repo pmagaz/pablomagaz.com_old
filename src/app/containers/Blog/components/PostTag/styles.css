@@ -1,11 +1,8 @@
 @import '../../../../styles/base.css';
 
-.postTag{
-    font-size: .8em;
-    margin-bottom: .6em;
-    padding: .6em .6em .6em 2em;
-    display: inline-block;
-    letter-spacing: 0.1em;
+.postTag mark{
     background-color: $bg-postTag;
     color: $cl-postTag;
+    letter-spacing: 0.1em;
+    padding: .4em 0.8em;
 }

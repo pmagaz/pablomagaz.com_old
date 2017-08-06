@@ -1,9 +1,8 @@
 @define-mixin icon $name {
-    padding-left: 16px;
-    &::after {
+
         content: "";
-        background-url: url(./assets/icons/$(name).svg);
-    }
+        background: url(../../assets/icons/$(name).svg);
+
 }
 
 

@@ -24,6 +24,7 @@ export default function blog(params) {
     <meta name="twitter:url" content="http://pablomagaz.com/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <link rel="icon" href="assets/images/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
     ${ params.style }
     ${ params.vendorScript }
     </head>

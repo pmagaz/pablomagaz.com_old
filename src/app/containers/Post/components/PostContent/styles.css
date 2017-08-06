@@ -29,7 +29,7 @@
 
 h1{
     margin: 0;
-    font-family: $display-regular;
+    @mixin fontFamilyMedium;
     color: $cl-postContentTilte;
     font-size: 3em;
     line-height: 1em;

@@ -2,6 +2,8 @@
 
 section{
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .mainWrapper{
@@ -21,7 +23,7 @@ section{
   background-image: url($bg-home);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .brand{
@@ -42,7 +44,7 @@ section{
     width: 100%;
     padding: 22px 0 22px;
     display: table;
-    font-family: "Montserrat-Medium";
+    @mixin fontFamilyMedium;
     text-align: center;
     line-height: 40px;
     font-size: 45px;

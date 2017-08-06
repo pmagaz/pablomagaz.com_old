@@ -28,6 +28,7 @@ export default function post(params) {
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Pablo Magaz" />
     <link rel="icon" href="assets/images/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
     ${ params.style }
     ${ params.vendorScript }
     </head>

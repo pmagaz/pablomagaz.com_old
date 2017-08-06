@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 
-import { fetchRequiredActions, SiteConf, context } from 'base';
+import { fetchRequiredActions, context } from 'base';
 import styles from './styles.css';
 import codeStyle from '../../styles/code.css';
 import * as Actions from './actions';
@@ -37,13 +37,14 @@ export class Post extends Component {
 
   render () {
     const post = this.props.Post;
-    const postImage = `${ SiteConf.ImageUrl }${ post.image || post.feature_image }`;
+    //REMOVE ME
+    const image = post.image || post.feature_image;
 
     return (
       <div className={ styles.mainContent  }>
         <div className={ styles.post  }>
           <PostHeader
-            image={ postImage }
+            image={ image }
             title={ post.title }
           />
           <PostContent post={ post } />

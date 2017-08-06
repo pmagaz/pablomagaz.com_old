@@ -2,7 +2,7 @@ import React  from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames/bind';
 
-import { context } from 'base';
+import { SiteConf, context } from 'base';
 import styles from './styles.css';
 
 const propTypes= {
@@ -11,10 +11,13 @@ const propTypes= {
 };
 
 const PostHeader = ({ image, title }) => {
+  let style;
+  const postImage = `${ SiteConf.ImageUrl }${ image }`;
 
-  const style = {
-    backgroundImage: 'url(' + image + ')'
-  };
+  if (image) {
+    style = { backgroundImage: 'url(' + postImage + ')' }
+  }
+  else style = null;
 
   const cx = classNames.bind(styles);
   const postHeaderStyle = cx({
@@ -22,7 +25,7 @@ const PostHeader = ({ image, title }) => {
     'postHeaderAnim': context.client ? true : false
   });
 
-  return(
+  return (
     <div style={ style } className={ postHeaderStyle }></div>
   )
 };

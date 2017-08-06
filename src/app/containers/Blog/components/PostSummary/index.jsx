@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import classNames from 'classnames/bind';
 import ReactHtmlParser from 'html-react-parser';
 
-import { getPostUrl, SiteConf } from 'base';
+import { getPostUrl, SiteConf, context } from 'base';
 import PostTag from 'components/PostTag';
 import PostImage from 'components/PostImage';
 import PostInfo from '../PostInfo';
@@ -21,7 +21,7 @@ const PostSummary = ({ post }) => {
   const cx = classNames.bind(styles);
   const postSummaryClass = cx({
     'PostSummary': true,
-    'PostSummaryAnim': true
+    'PostSummaryAnim': (context === 'client') ? true : false
   });
 
   return (

@@ -30,8 +30,6 @@
     background: $bg-titleBlog;
     color: $cl-titleBlog;
     opacity: 0;
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
   }
 
 .titleBlogAnim {

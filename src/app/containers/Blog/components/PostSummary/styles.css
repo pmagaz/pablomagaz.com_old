@@ -1,6 +1,7 @@
 @import '../../../../styles/base.css';
 
 .PostSummary {
+  opacity: 0;
   margin-bottom: 50px;
     a h1{
       font-family: "$display-regular";
@@ -22,7 +23,6 @@
   animation: fade-in-up 0.2s both;
   -webkit-animation-delay: 0.0s;
   animation-delay: 0.0s;
-  margin-bottom: 50px;
 }
 
 .linkImage{

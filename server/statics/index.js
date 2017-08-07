@@ -4,25 +4,25 @@ import express from 'express';
 import base, { SiteConf } from 'base';
 
 const commonStatics = () => [
-  {route: '/mocks', dir: path.join(__dirname, '../../server/api/mocks')}
+  { route: '/mocks', dir: path.join(__dirname, '../../server/api/mocks') }
 ];
 
 const devStatics = () => [
-  {route: '/dlls', dir: path.join(__dirname, '../../dist/')},
-  {route: '/', dir: path.join(__dirname, '../../src/app')},
+  { route: '/dlls', dir: path.join(__dirname, '../../dist/') },
+  { route: '/', dir: path.join(__dirname, '../../src/app') },
 ];
 
 const prodStatics = () => [
-  {route: '/', dir: path.join(__dirname, '../../dist')},
-  {route: '/assets', dir: path.join(__dirname, '../../dist/assets')},
-  {route: '/content', dir: path.resolve(SiteConf.ContentPath), cache: { maxAge: 31557600 }}
+  { route: '/', dir: path.join(__dirname, '../../dist') },
+  { route: '/assets', dir: path.join(__dirname, '../../dist/assets') },
+  { route: '/content', dir: path.resolve(SiteConf.ContentPath), cache: { maxAge: 31557600 } }
 ];
 
-const envStatics = (base.env === 'development') ? commonStatics().concat(devStatics()) : commonStatics.concat(prodStatics());
-const statics = envStatics;
+const envStatics = (base.env === 'development') ?
+  commonStatics().concat(devStatics()) : commonStatics().concat(prodStatics());
 
 export default function applyStaticsPaths(app) {
-  statics.map(function(staticPath) {
+  envStatics.map(function(staticPath) {
     app.use(staticPath.route, express.static(staticPath.dir, staticPath.cache));
     base.console.success(`Applied static path ${staticPath.route}`);
   });

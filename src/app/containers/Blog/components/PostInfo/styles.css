@@ -1,7 +1,6 @@
 @import '../../../../styles/base.css';
 
 .infoWrited span {
-    font-size: .8em;
     padding-right: 2em;
     letter-spacing: 0.1em;
     color: $cl-infoWrited;

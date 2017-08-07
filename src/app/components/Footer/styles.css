@@ -33,5 +33,6 @@ footer.container{
     margin-top: 20px;
     text-align: center;
     display: block;
+    opacity: .7;
 }
 

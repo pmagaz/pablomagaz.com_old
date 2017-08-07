@@ -81,7 +81,8 @@ a{
     color: inherit;
 }
 p {
-    font-size: 1.3em;
+    font-size: 1.2em;
+    margin: 0.8em 0;
 }
 
 @media (min-width: $sm) {

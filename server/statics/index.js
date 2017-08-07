@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 
-import base from 'base';
+import base, { SiteConf } from 'base';
 
 const commonStatics = [
   {route: '/mocks', dir: path.join(__dirname, '../../server/api/mocks')}
@@ -15,6 +15,7 @@ const devStatics = [
 const prodStatics = [
   {route: '/', dir: path.join(__dirname, '../../dist')},
   {route: '/assets', dir: path.join(__dirname, '../../dist/assets')},
+  {route: '/content', dir: path.resolve(SiteConf.ContentPath)}
 ];
 
 const envStatics = (base.env === 'development') ? commonStatics.concat(devStatics) : commonStatics.concat(prodStatics);

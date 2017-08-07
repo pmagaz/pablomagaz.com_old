@@ -21,6 +21,7 @@ let clientSecret;
 let PostApiUrl;
 let PostsApi;
 let PostApi;
+let ContentPath;
 
 if (env === 'development') {
   HostName = 'http://localhost';
@@ -41,7 +42,8 @@ if (env === 'development') {
   SiteUrl = `${ HostName }`;
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = `${ HostName }:2369`;
-  ImageUrl = GhostUrl;
+  ContentPath = '/var/www/ghost/content';
+  ImageUrl = HostName;
   BlogUrl = `${ GhostUrl }/blog/`;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = `${ SiteUrl }/api/post/`;
@@ -54,4 +56,4 @@ export function getPostUrl(slug) {
   return '/blog/' + slug;
 }
 
-export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay };
+export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay };

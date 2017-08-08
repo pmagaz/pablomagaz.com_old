@@ -22,5 +22,5 @@ export function getScripts(file) {
 
 export function getStyles(file) {
   const cssPath = files[file].css;
-  return (env === 'production') ? `<link rel="stylesheet" href="${cssPath}">` : '';
+  return (env === 'production') ? `<link rel="stylesheet" href="/assets/${cssPath}">` : '';
 }

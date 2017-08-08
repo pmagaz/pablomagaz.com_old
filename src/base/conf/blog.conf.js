@@ -37,8 +37,8 @@ if (env === 'development') {
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
 } else {
-  HostName = 'http://178.62.245.4';
-  clientSecret = 'eeb1f09c6698';
+  HostName = 'http://188.166.64.61';
+  clientSecret = '5f55ba1e8b54';
   SiteUrl = `${ HostName }`;
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = `${ HostName }:2369`;

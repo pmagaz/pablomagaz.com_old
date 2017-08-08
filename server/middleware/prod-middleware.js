@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import helmet from 'helmet';
 import compression from 'compression';
 
 import base from 'base';
@@ -26,6 +27,7 @@ const allowCrossDomain = function(req, res, next) {
 
 const applyProdMiddleware = function() {
   return [
+    helmet(),
     compression(),
     allowCrossDomain
   ];

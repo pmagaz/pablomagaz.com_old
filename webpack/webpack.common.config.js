@@ -18,6 +18,7 @@ export const entry = {
   vendor: [
     'react',
     'redux',
+    'react-ga',
     'react-dom',
     'recompose',
     'immutable',

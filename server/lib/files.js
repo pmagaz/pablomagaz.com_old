@@ -16,8 +16,8 @@ if (env === 'development') {
 }
 
 export function getScripts(file) {
-  const scriptPath = `/assets${files[file].js}`;
-  return `<script src="${scriptPath}"></script>`;
+  const scriptPath = `${files[file].js}`;
+  return (env === 'production') ? `<script src="/assets${scriptPath}"></script>` : `<script src="${scriptPath}"></script>`; 
 }
 
 export function getStyles(file) {

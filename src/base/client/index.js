@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { useScroll } from 'react-router-scroll';
 import { Router, browserHistory, applyRouterMiddleware } from 'react-router';
 
+import { trackGa } from 'base';
 import InitialState from 'store/InitialState';
 import ConfigureStore from 'store/ConfigureStore';
 import routes from '../routes';
@@ -15,6 +16,7 @@ render(
     <Router
       routes={ routes }
       history={ browserHistory }
+      onUpdate={ () => trackGa() }
       render={ applyRouterMiddleware(useScroll()) }
     />
   </Provider>,

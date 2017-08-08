@@ -9,6 +9,7 @@ const numPosts = 10;
 const postOpeningChars= 46;
 const codeHighlightDelay = 300;
 const postOpeningSplitChar = '@@@';
+const GoogleAnaliticsId = 'aaaaa';
 
 let HostName;
 let SiteUrl;
@@ -56,4 +57,4 @@ export function getPostUrl(slug) {
   return '/blog/' + slug;
 }
 
-export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay };
+export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId };

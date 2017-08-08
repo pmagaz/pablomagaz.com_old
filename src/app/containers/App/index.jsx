@@ -19,8 +19,10 @@ export class App extends Component {
     return (
       <div className={ styles.app  }>
         <header className={ styles.mainHeader  }>
+          <div className={ styles.mainHeaderWrapper }>
             <Logo />
             <Menu />
+          </div>
         </header>
         <main className={ styles.container  }>
           {this.props.children}

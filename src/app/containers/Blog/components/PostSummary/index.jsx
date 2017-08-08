@@ -27,12 +27,7 @@ const PostSummary = ({ post }) => {
   return (
     <div className={ postSummaryStyle } >
       <Link to={ url }>
-        <PostInfo
-          tags={ post.tags }
-          author={ post.author }
-          date={ post.published_at }
-      />
-      <h1> { post.title } </h1>
+        <h1> { post.title } </h1>
       </Link>
       <Link className={ styles.linkImage } to={ url }>
         <PostImage
@@ -41,6 +36,11 @@ const PostSummary = ({ post }) => {
           width="500"
         />
       </Link>
+      <PostInfo
+          tags={ post.tags }
+          author={ post.author }
+          date={ post.published_at }
+      />
       <div className={ styles.postText }>
         { ReactHtmlParser(post.opening) }
       </div>

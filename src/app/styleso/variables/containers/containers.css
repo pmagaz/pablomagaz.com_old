@@ -1,9 +1,6 @@
 /** App **/
 $bg-mainContainer: $bg-body;
-
-$bg-mainHeader: $primary-color;
 $cl-mainHeader: $white;
-$bdr-mainHeader: 2px solid $bg-back;
 
 $mrgb-mainContainer: $parallax-footer;
 
@@ -26,8 +23,7 @@ $cl-postText: $black;
 
 /** Blog/components/ Post Tag **/
 $bg-postTag: $secondary-color;
-$cl-postTag: color($secondary-color lightness(-85%));
-$brd-postTag: 1px solid $secondary-color;
+$cl-postTag: darken($secondary-color, 15%);
 
 
 

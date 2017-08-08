@@ -14,9 +14,6 @@
 
   .titleBlog{
     width: 100%;
-    font-family: "$display-bold";
-    line-height: 40px;
-    letter-spacing: -3px;
     height: $hgt-titleBlog;
     margin: 0;
     left: 0;
@@ -30,6 +27,7 @@
     background: $bg-titleBlog;
     color: $cl-titleBlog;
     opacity: 0;
+    @mixin fontFamilyMedium;
   }
 
 .titleBlogAnim {

@@ -11,7 +11,7 @@ const PostTag = ({ tags }) => {
 
   const tagList = tags.map(tag => {
     return (
-      <span key={ tag.id }> { tag.name } </span>
+      <mark key={ tag.id }> { tag.name } </mark>
     );
   });
 

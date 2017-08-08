@@ -19,16 +19,20 @@ main.container {
 }
 
 header.mainHeader{
-    @mixin mainFit;
     width: 100%;
-    height: 50px;
-    margin: 0 auto;
     left: 0;
     right: 0;
     position: fixed;
     z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-top: $bdr-mainHeader;
+    background: $bg-mainHeader;
     color: $cl-mainHeader;
+    .mainHeaderWrapper{
+        @mixin mainFit; 
+        margin: 0 auto;  
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
 }

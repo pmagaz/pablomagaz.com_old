@@ -24,10 +24,10 @@ let PostApi;
 
 if (env === 'development') {
   HostName = 'http://localhost';
-  clientSecret = '285ee4eda6c3';
+  clientSecret = '8628165087ba';
   SiteUrl = `${ HostName }:8000`;
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = `${ HostName }:2369`;
+  GhostUrl = `${ HostName }:2368`;
   ImageUrl = GhostUrl;
   BlogUrl = `${ GhostUrl }/blog/`;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;

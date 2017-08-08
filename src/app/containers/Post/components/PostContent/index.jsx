@@ -7,16 +7,10 @@ import javascript from 'highlight.js/lib/languages/javascript';
 
 import { SiteConf, context, getDate } from 'base';
 import Loading from 'components/Loading';
-import PostTag from 'components/PostTag';
-import PostDate from 'components/PostDate';
 import PostInfo from 'components/PostInfo';
 import styles from './styles.css';
 
-const propTypes= {
-  post: PropTypes.object.isRequired
-};
-
-export class PostContent extends Component {
+class PostContent extends Component {
 
   static proopTypes = {
     post: PropTypes.object.isRequired

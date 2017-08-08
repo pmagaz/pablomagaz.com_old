@@ -26,7 +26,7 @@ class PostContent extends Component {
   }
 
    highlightCode() {
-    setTimeout(function(){
+    setTimeout(() => {
       hljs.initHighlighting.called = false;
       hljs.registerLanguage('javascript', javascript);
       hljs.initHighlighting();

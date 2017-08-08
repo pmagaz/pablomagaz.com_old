@@ -1,5 +1,4 @@
-import request from 'request';
-import base, { SiteConf } from '../src/base/';
+import base  from '../src/base/';
 import routingMiddleware from './middleware/routing-middleware';
 
 import { postApiHandler } from './api/post';

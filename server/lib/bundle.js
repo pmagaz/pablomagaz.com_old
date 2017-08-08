@@ -16,7 +16,7 @@ if (env === 'development') {
 }
 
 export function getScripts(file) {
-  const scriptPath = files[file].js;
+  const scriptPath = `/assets/${files[file].js}`;
   return `<script src="${scriptPath}"></script>`;
 }
 

@@ -4,7 +4,6 @@ import express from 'express';
 import base, { SiteConf } from 'base';
 
 const commonStatics = () => [
-  { route: '/mocks', dir: path.join(__dirname, '../../server/api/mocks') }
 ];
 
 const devStatics = () => [

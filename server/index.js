@@ -1,5 +1,5 @@
 require('babel-core/register');
-var base = require('../src/base').default;
+const base = require('../src/base').default;
 
 require('css-modules-require-hook')({
   rootDir: './',

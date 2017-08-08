@@ -15,7 +15,7 @@ export const entry = {
 };
 
 export const output = {
-  path: common.buildPath,
+  path: common.assetsPath,
   publicPath: '/',
   library: '[name]',
   filename: '[name].[hash].js',

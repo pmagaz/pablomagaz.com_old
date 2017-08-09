@@ -9,5 +9,5 @@ node_modules/
 bower_components/
 .nyc_output/
 .vscode/
-*.txt
+nohup.out
 src/base/conf/blog.conf.js

@@ -26,15 +26,14 @@ const allowCrossDomain = function(req, res, next) {
   next();
 };
 
-const enableSsl = SiteConf.Ssl ? forceSSL : null;
-
-const applyProdMiddleware = function() {
-  return [
-    enableSsl,
+const applyProdMiddleware = () => {
+  const middleware = [
     helmet(),
     compression(),
     allowCrossDomain
   ];
+  if (SiteConf.Ssl) middleware.unshift(forceSSL); 
+  return middleware;
 };
 
 module.exports = applyProdMiddleware;

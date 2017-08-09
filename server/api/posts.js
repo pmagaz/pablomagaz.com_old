@@ -6,9 +6,10 @@ export const postsApiHandler = (req, res, next)  => {
   const options = {
     url: SiteConf.PostsApi,
     strictSSL: false,
-    secureProtocol: 'TLSv1_method'
+    secureProtocol: 'TLSv1_method',
+    rejectUnauthorized: false
 };
-  
+
   request(options, (error, response, body) => {
     if (error) {
       console.log(error);

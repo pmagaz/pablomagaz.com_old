@@ -23,8 +23,8 @@
 @-webkit-keyframes fade-in-up {
     0% {
         opacity: 0.5;
-        -webkit-transform: translateY(+6px);
-        transform: translateY(+6px);
+        -webkit-transform: translateY(+5px);
+        transform: translateY(+5px);
     }
     100% {
         opacity: 1;
@@ -35,8 +35,8 @@
 @keyframes fade-in-up {
     0% {
         opacity: 0.5;
-        -webkit-transform: translateY(+6px);
-        transform: translateY(+6px);
+        -webkit-transform: translateY(+5px);
+        transform: translateY(+5px);
     }
     100% {
         opacity: 1;

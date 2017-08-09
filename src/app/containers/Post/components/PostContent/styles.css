@@ -28,8 +28,10 @@
 }
 
 .postContentAnim {
-  -webkit-animation: fade-in 250ms;
-  animation: fade-in 250ms both;
+  -webkit-animation: fade-in-up 150ms;
+  animation: fade-in-up 150ms both;
+  -webkit-animation-delay: 20ms;
+  animation-delay: 20ms;
 }
 
 h1{

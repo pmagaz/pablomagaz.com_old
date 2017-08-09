@@ -43,9 +43,13 @@ class Blog extends Component {
     return (
       <div className= { styles.Blog } >
         <div className= { styles.BlogContent } >
-          <h1 className={ blogTitleStyle }>
-            { SiteConf.BlogTitle.toUpperCase() }
-          </h1>
+          <header className={ blogTitleStyle }>
+            <div className={ styles.blogTitleWrap }>
+              <h1>
+                { SiteConf.BlogTitle.toUpperCase() }
+              </h1>
+            </div>
+          </header>
           <div> 
             <PostList posts={ posts } />
           </div>

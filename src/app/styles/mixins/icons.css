@@ -4,25 +4,3 @@
         background: url(../../assets/icons/$(name).svg);
 
 }
-
-
-
-@define-mixin icon $network, $color: $cl-icon {
-    .icon.is-$(network) {
-        color: $color;
-    }
-    .icon.is-$(network):hover {
-        color: white;
-        background: $color;
-    }
-}
-
-@mixin icon linkedin {
-    background: url(../../assets/icons/linkedin.svg);
-}
-@mixin icon twitter {
-    background: url(../../assets/icons/twitter.svg);
-}
-@mixin icon email {
-    background: url(../../assets/icons/email.svg);
-}

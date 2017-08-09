@@ -6,6 +6,18 @@
     margin: 20px auto 0;
 }
 
+
+.LinkButton:nth-child(1){
+    @mixin icon linkedin;
+}
+.LinkButton:nth-child(2){
+    @mixin icon twitter;
+}
+.LinkButton:nth-child(3){
+    @mixin icon email;
+}
+
+
 .LinkButton:nth-child(1){
     background-image: src="../../assets/icons/linkedin.svg";
     color: red;

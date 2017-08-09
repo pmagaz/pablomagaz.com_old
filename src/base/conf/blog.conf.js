@@ -26,6 +26,7 @@ let PostApi;
 let ContentPath;
 let Ssl;
 let keysPath;
+let Protocol;
 
 if (env === 'development') {
   HostName = 'localhost';
@@ -44,21 +45,22 @@ if (env === 'development') {
   Ssl = true;
   keysPath = null;
 } else {
-  HostName = '178.62.231.228';
+  Ssl = true;
+  Protocol = Ssl ? 'https://' : 'http://';
+  HostName = '188.166.49.134';
   ServerUrl = `http://${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
   clientSecret = 'd7d4f5b6725d';
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = `${ ServerUrl }:2369`;
   BlogUrl = `${ GhostUrl }/blog/`;
-  ImageUrl = `https://${ HostName }`;
+  ImageUrl = `${Protocol}${ HostName }`;
   ContentPath = '/var/www/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
-  PostApiUrl = `https://${ HostName }/api/post/`;
-  PostsApiUrl = `https://${ HostName }/api/posts/`;
+  PostApiUrl = `${Protocol}${ HostName }/api/post/`;
+  PostsApiUrl = `${Protocol}${ HostName }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
-  Ssl = true;
   keysPath = '';
 } 
 

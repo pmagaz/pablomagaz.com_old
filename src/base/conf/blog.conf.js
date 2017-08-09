@@ -42,7 +42,7 @@ if (env === 'development') {
   Ssl = true;
   keysPath = null;
 } else {
-  HostName = 'http://178.62.231.228';
+  HostName = 'https://178.62.231.228';
   clientSecret = 'd7d4f5b6725d';
   SiteUrl = `${ HostName }`;
   BlogUrl = `${ SiteUrl }/blog`;

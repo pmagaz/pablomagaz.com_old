@@ -22,7 +22,7 @@ const launchServer = () => {
     .then(() => {
       base.console.info(`Setting up server...`);
       HttpServer(app);
-      if (base.env == 'production' && SiteConf.Ssl) HttpsServer(app);
+      HttpsServer(app);
     })
     .catch((e) => {
       base.console.error(`Server Error ${e}...`);

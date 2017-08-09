@@ -9,6 +9,7 @@ const applyServerRouting = (app) => {
   if (env == 'production') {
     app.all('*', (req, res, next) => {
       if (req.secure) return next();
+	    console.log(666666, req.url);
       res.redirect('https://'+req.hostname + ':' + app.get('secPort') + req.url);
     });
   }

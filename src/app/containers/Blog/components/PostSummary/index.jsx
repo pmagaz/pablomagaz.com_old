@@ -15,7 +15,7 @@ const propTypes= {
 };
 
 const PostSummary = ({ post }) => {
-  const url = getPostUrl(post.slug);
+  const url '/blog/' + post.slug;
   const imageSrc = `${SiteConf.ImageUrl}${post.image || post.feature_image}`;
 
   const cx = classNames.bind(styles);

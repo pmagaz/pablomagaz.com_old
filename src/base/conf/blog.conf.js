@@ -12,6 +12,7 @@ const postOpeningSplitChar = '@@@';
 const GoogleAnaliticsId = 'aaaaa';
 
 let HostName;
+let ServerUrl;
 let SiteUrl;
 let BlogUrl;
 let GhostUrl;
@@ -27,11 +28,12 @@ let Ssl;
 let keysPath;
 
 if (env === 'development') {
-  HostName = 'http://localhost';
+  HostName = 'localhost';
+  ServerUrl = `http://${ HostName }`;
   clientSecret = '285ee4eda6c3';
-  SiteUrl = `${ HostName }:8000`;
+  SiteUrl = `${ ServerUrl }:8000`;
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = `${ HostName }:2369`;
+  GhostUrl = `${ ServerUrl }:2369`;
   ImageUrl = GhostUrl;
   BlogUrl = `${ GhostUrl }/blog/`;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
@@ -42,13 +44,14 @@ if (env === 'development') {
   Ssl = true;
   keysPath = null;
 } else {
-  HostName = 'https://178.62.231.228';
+  HostName = '178.62.231.228';
+  ServerUrl = `http://${ HostName }`;
   clientSecret = 'd7d4f5b6725d';
-  SiteUrl = `${ HostName }`;
+  SiteUrl = `${ ServerUrl }`;
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = `${ HostName }:2369`;
+  GhostUrl = `${ ServerUrl }:2369`;
   ContentPath = '/var/www/ghost/content';
-  ImageUrl = HostName;
+  ImageUrl = `https://${ HostName }`;
   BlogUrl = `${ GhostUrl }/blog/`;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = `${ SiteUrl }/api/post/`;

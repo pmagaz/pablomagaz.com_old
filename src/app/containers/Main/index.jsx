@@ -11,7 +11,7 @@ import Logo from '../../components/Logo';
 import * as Actions from '../Blog/actions';
 import styles from './styles.css';
 
-export class Main extends Component {
+class Main extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,

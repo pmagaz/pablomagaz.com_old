@@ -19,7 +19,7 @@ class Post extends Component {
 
   static requiredActions = [Actions.getPost];
   
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.actions = bindActionCreators(Actions, props.dispatch);
   }

@@ -9,4 +9,4 @@ node_modules/
 bower_components/
 .nyc_output/
 .vscode/
-src/base/conf/blog.conf.js
+nohup.out

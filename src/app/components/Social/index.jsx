@@ -9,9 +9,6 @@ MOVE SVG TO CORRECT PLACE :)
 */
 const Social = () => (
     <div className={ styles.socialBox }>
-          <LinkButton/>
-          <LinkButton/>
-          <LinkButton/>
   </div>
 );
 

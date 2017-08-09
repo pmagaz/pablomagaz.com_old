@@ -7,9 +7,10 @@ import baseWpPlugins from '../src/base/wp-plugins';
 
 export const mainPath = path.resolve(__dirname, '..');
 export const context = path.resolve(__dirname, '../');
-export const buildPath = path.resolve(__dirname, '..', 'dist');
+export const buildPath = path.resolve(__dirname, '../dist');
 export const basePath = path.resolve(__dirname, '../src/base');
 export const dllPath = path.resolve(__dirname, '../dist/dlls');
+export const assetsPath = path.resolve(__dirname, '../dist/assets');
 export const clientPath = path.resolve(__dirname, '../src/base/client/');
 export const manifestPath = buildPath;
 
@@ -17,6 +18,7 @@ export const entry = {
   vendor: [
     'react',
     'redux',
+    'react-ga',
     'react-dom',
     'recompose',
     'immutable',

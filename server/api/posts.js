@@ -1,13 +1,18 @@
 import request from 'request';
 import { SiteConf, getDate } from '../../src/base/';
 
-export const postsApiHandler = (req, res)  => {
-  request(`${ SiteConf.PostsApi}`, (error, response, body) => {
-    const data = JSON.parse(body);
-    const pagination = data.meta.pagination;
-    const posts = PostList(data.posts);
-    const result = { posts, pagination };
-    res.json(result);
+export const postsApiHandler = (req, res, next)  => {
+  request(`${ SiteConf.PostsApi }`, (error, response, body) => {
+    if (error) {
+      console.log(error);
+      res.status(500).json(error);
+    } else {
+      const data = JSON.parse(body);
+      const pagination = data.meta.pagination;
+      const posts = PostList(data.posts);
+      const result = { posts, pagination };
+      res.json(result);
+    }
   });
 }; 
 

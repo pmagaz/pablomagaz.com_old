@@ -15,7 +15,7 @@ export const entry = {
 };
 
 export const output = {
-  path: common.buildPath,
+  path: common.assetsPath,
   publicPath: '/',
   library: '[name]',
   filename: '[name].[hash].js',
@@ -48,7 +48,7 @@ export const module = {
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: '[local]-[hash:base64:4]'
+              localIdentName: '[hash:base64:4]'
             }
           },
           {
@@ -76,8 +76,8 @@ export const plugins = [
     chunks: ['app'],
     minChunks: module => /node_modules/.test(module.resource)
   }),
-  new copyWebpackPlugin([{ from: 'src/app/assets', to: '../dist/assets' }]),
+  new copyWebpackPlugin([{ from: 'src/app/assets', to: '../assets' }]),
   new webpack.NoEmitOnErrorsPlugin(),
-  new webpack.optimize.UglifyJsPlugin({compressor: { warnings: false }, output: {comments: false}}),
+  new webpack.optimize.UglifyJsPlugin({compressor: { warnings: false }, output: { comments: false }}),
   new ExtractTextPlugin({ filename: 'styles.[contenthash].css', allChunks: true })
 ].concat(common.plugins);

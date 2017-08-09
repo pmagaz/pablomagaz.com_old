@@ -1,5 +1,24 @@
 @import 'variables/variables.css';
 @import 'mixins/mixins.css';
+@import 'fonts.css';
+@import 'code.css';
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 @-webkit-keyframes fade-in-up {
     0% {
@@ -61,8 +80,12 @@ body {
     background-color: $bg-body;
     color: $cl-body;
     @mixin fontFamilyLight;
+<<<<<<< HEAD
     font
     -webkit-font-smoothing: antialiased;
+=======
+    font-webkit-font-smoothing: antialiased;
+>>>>>>> master
     line-height: 1.5;
     font-size: 13px;
     height: 100%;

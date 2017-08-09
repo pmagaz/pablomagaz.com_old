@@ -22,7 +22,7 @@ const PostHeader = ({ image, title }) => {
   const cx = classNames.bind(styles);
   const postHeaderStyle = cx({
     'postHeader': true,
-    'postHeaderAnim': context.client ? true : false
+    'postHeaderAnim': true,//context.client ? true : false
   });
 
   return (

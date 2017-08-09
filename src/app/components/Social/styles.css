@@ -1,3 +1,5 @@
+@import '../../styles/base.css';
+
 .socialBox{   
     display: flex;
     justify-content: space-around;
@@ -5,7 +7,6 @@
     height: 30px;
     margin: 20px auto 0;
 }
-
 
 .LinkButton:nth-child(1){
     @mixin icon linkedin;
@@ -16,7 +17,6 @@
 .LinkButton:nth-child(3){
     @mixin icon email;
 }
-
 
 .LinkButton:nth-child(1){
     background-image: src="../../assets/icons/linkedin.svg";

@@ -45,7 +45,7 @@ if (env === 'development') {
   Ssl = true;
   keysPath = null;
 } else {
-  Ssl = true;
+  Ssl = false;
   Protocol = Ssl ? 'https://' : 'http://';
   HostName = '188.166.49.134';
   ServerUrl = `http://${ HostName }`;

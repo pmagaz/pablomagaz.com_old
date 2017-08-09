@@ -1,14 +1,21 @@
 import request from 'request';
-import { SiteConf, getDate } from '../../src/base/';
+import { SiteConf, getDate, env } from 'base';
 
 export const postsApiHandler = (req, res, next)  => {
  
-  const options = {
-    url: SiteConf.PostsApi,
-    strictSSL: false,
-    secureProtocol: 'TLSv1_method',
-    rejectUnauthorized: false
-};
+  let options;
+  if (env === 'development') {
+    options = { uri: SiteConf.PostsApi };
+  } else {
+    options = {
+      url: SiteConf.PostsApi,
+      strictSSL: false,
+      secureProtocol: 'TLSv1_method',
+      tls: {
+        rejectUnauthorized: false,
+      }
+    };
+  }
 
   request(options, (error, response, body) => {
     if (error) {

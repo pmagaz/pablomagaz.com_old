@@ -1,7 +1,7 @@
 @import '../../../../styles/base.css';
 
 .PostSummary {
-  opacity: 0.3;
+  opacity: 0.5;
   margin-bottom: 4em;
     a h1 {
       @mixin fontFamilyMedium;
@@ -19,8 +19,8 @@
 }
 
 .PostSummaryAnim {
-  -webkit-animation: fade-in-up 200ms;
-  animation: fade-in-up 200ms both;
+  -webkit-animation: fade-in 200ms;
+  animation: fade-in 200ms both;
 }
 
 .linkImage{

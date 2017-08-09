@@ -44,7 +44,7 @@ class Blog extends Component {
         <div className= { styles.BlogContent } >
           <header className={ styles.titleBlog }>
             <div className={ styles.blogTitleWrap }>
-              <h1 className={ styles.titleBlogAnim }>
+              <h1 className={ blogTitleStyle }>
                 { SiteConf.BlogTitle.toUpperCase() }
               </h1>
             </div>

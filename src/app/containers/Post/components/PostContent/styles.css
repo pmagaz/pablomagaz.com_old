@@ -14,7 +14,7 @@
         margin: 50px auto 100px;
         position: relative;
         z-index: 2;
-        opacity: 0.3;
+        opacity: 0.4;
         font-size: 0.9em;
     }
 
@@ -28,10 +28,8 @@
 }
 
 .postContentAnim {
-  -webkit-animation: fade-in-up 250ms;
-  animation: fade-in-up 250ms both;
-  -webkit-animation-delay: 20ms;
-  animation-delay: 20ms;
+  -webkit-animation: fade-in 250ms;
+  animation: fade-in 250ms both;
 }
 
 h1{

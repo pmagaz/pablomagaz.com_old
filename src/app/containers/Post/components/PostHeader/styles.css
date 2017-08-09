@@ -29,6 +29,10 @@
   background-size: cover;
   -webkit-transform-style: inherit;
   transform-style: inherit;
+     -webkit-animation: fade-in-down 250ms;
+  animation: fade-in-down 250ms both;
+  -webkit-animation-delay: 20ms;
+  animation-delay: 20ms;
 }
 
 .postHeader * {

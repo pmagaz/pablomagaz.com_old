@@ -37,7 +37,7 @@ export class PostImage extends Component {
 
     const imageStyle = cx({
       'image': true,
-      'imageAnim': context.client ? true : false 
+      'imageAnim': this.state.loaded && context.client ? true : false 
     });
 
     return (

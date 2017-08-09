@@ -7,7 +7,7 @@
   "scripts": {
     "logo": "node ./src/base/conf/.react-base/logo.js",
     "webpack": "node_modules/webpack/bin/webpack.js",
-    "clean": "rimraf dist/**/",
+    "clean": "rimraf dist/**/*",
     "clean:files": "rimraf dist/app.js",
     "generate": "npm run logo && yo react-base",
     "generate:component": "npm run logo && yo react-base --option=2",

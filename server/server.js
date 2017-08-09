@@ -1,10 +1,10 @@
 import express from 'express';
 
-import base from 'base/';
+import base from 'base';
 import HttpServer from './HttpServer';
 import HttpsServer from './HttpsServer';
-import applyServerRouting from './routing';
 import applyStaticsPaths from './statics';
+import applyServerRouting from './routing';
 import applyEnvMiddleWare from './middleware';
 
 const app = express();

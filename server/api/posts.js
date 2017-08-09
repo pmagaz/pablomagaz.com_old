@@ -1,3 +1,4 @@
+import http from 'http';
 import request from 'request';
 import { SiteConf, getDate, env } from 'base';
 
@@ -8,6 +9,7 @@ export const postsApiHandler = (req, res, next)  => {
     options = { uri: SiteConf.PostsApi };
   } else {
     options = {
+      port: 443,
       url: SiteConf.PostsApi,
       strictSSL: false,
       secureProtocol: 'TLSv1_method',
@@ -16,6 +18,7 @@ export const postsApiHandler = (req, res, next)  => {
       }
     };
   }
+  options.agent = http.Agent(options);
 
   request(options, (error, response, body) => {
     if (error) {

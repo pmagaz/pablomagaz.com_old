@@ -3,7 +3,7 @@ import helmet from 'helmet';
 import forceSSL from 'express-force-ssl';
 import compression from 'compression';
 
-import base from 'base';
+import base, { SiteConf } from 'base';
 
 const config = require('../../webpack/index.babel.js');
 
@@ -26,9 +26,11 @@ const allowCrossDomain = function(req, res, next) {
   next();
 };
 
+const enableSsl = SiteConf.Ssl ? forceSSL : null;
+
 const applyProdMiddleware = function() {
   return [
-    forceSSL,
+    enableSsl,
     helmet(),
     compression(),
     allowCrossDomain

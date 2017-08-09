@@ -1,6 +1,6 @@
 import express from 'express';
 
-import base from 'base';
+import base, { SiteConf } from 'base';
 import HttpServer from './HttpServer';
 import HttpsServer from './HttpsServer';
 import applyStaticsPaths from './statics';
@@ -22,7 +22,7 @@ const launchServer = () => {
     .then(() => {
       base.console.info(`Setting up server...`);
       HttpServer(app);
-      if (base.env == 'production') HttpsServer(app);
+      if (base.env == 'production' && SiteConf.Ssl) HttpsServer(app);
     })
     .catch((e) => {
       base.console.error(`Server Error ${e}...`);

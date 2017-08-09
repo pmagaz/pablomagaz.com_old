@@ -46,24 +46,20 @@ if (env === 'development') {
 } else {
   HostName = '178.62.231.228';
   ServerUrl = `http://${ HostName }`;
-  clientSecret = 'd7d4f5b6725d';
   SiteUrl = `${ ServerUrl }`;
+  clientSecret = 'd7d4f5b6725d';
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = `${ ServerUrl }:2369`;
-  ContentPath = '/var/www/ghost/content';
-  ImageUrl = `https://${ HostName }`;
   BlogUrl = `${ GhostUrl }/blog/`;
+  ImageUrl = `https://${ HostName }`;
+  ContentPath = '/var/www/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
-  PostApiUrl = `${ SiteUrl }/api/post/`;
-  PostsApiUrl = `${ SiteUrl }/api/posts/`;
+  PostApiUrl = `https://${ HostName }/api/post/`;
+  PostsApiUrl = `https://${ HostName }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
   Ssl = true;
   keysPath = '';
 } 
-
-export function getPostUrl(slug) {
-  return '/blog/' + slug;
-}
 
 export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, keysPath};

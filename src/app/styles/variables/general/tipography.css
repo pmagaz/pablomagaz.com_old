@@ -1,4 +1,5 @@
-$text-font: Montserrat-Light;
-$text-font-light: Montserrat-Light;
-$display-bold: Montserrat-Regular;
-$display-regular: Varela; 
+$app-font-family: 'Montserrat', sans-serif;
+
+$text-font-light: 300;
+$text-font: 400;
+$display-medium: 500;

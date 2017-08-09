@@ -1,9 +1,30 @@
+@import '../../styles/base.css';
+
 .socialBox{   
     display: flex;
-    justify-content: center;
-    width: 500px;
-    margin: 0 auto;
-    img{
-        width: 60px;
-    }
+    justify-content: space-around;
+    width: 172px;
+    height: 30px;
+    margin: 20px auto 0;
+}
+
+.LinkButton:nth-child(1){
+    @mixin icon linkedin;
+}
+.LinkButton:nth-child(2){
+    @mixin icon twitter;
+}
+.LinkButton:nth-child(3){
+    @mixin icon email;
+}
+
+.LinkButton:nth-child(1){
+    background-image: src="../../assets/icons/linkedin.svg";
+    color: red;
+}
+.LinkButton:nth-child(2){
+    background-image: src="../../assets/icons/twitter.svg";
+}
+.LinkButton:nth-child(3){
+    background-image: src="../../assets/icons/email";
 }

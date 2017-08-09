@@ -11,16 +11,8 @@ footer.container{
     color: $cl-footer;
 
     nav{
-        max-width: 400px;
+        max-width: 270px;
         margin: 0 auto;
-        ul{
-            margin: 0;
-            display: flex;
-            list-style: none;
-            li{
-                margin: 0 10px;
-            }
-        }
     }
     
     .txt img {

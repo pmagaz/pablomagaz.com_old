@@ -1,0 +1,14 @@
+@define-mixin fontFamilyLight{
+    font-family: $app-font-family;
+    font-weight: 300;
+}
+
+@define-mixin fontFamilyRegular{
+    font-family: $app-font-family;
+    font-weight: 400;
+}
+
+@define-mixin fontFamilyMedium{
+    font-family: $app-font-family;
+    font-weight: 500;
+}

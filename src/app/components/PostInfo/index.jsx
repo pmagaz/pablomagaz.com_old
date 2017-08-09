@@ -16,8 +16,8 @@ const PostInfo = ({ author, date, tags }) => (
     <span className={ styles.author } >
     { author }
     </span> 
-    | <PostDate date={ date } />
-    | <PostTag tags={ tags } />
+    <PostDate date={ date } />
+    <PostTag tags={ tags } />
   </div>
 );
 

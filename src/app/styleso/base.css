@@ -1,7 +1,6 @@
 @import 'variables/variables.css';
 @import 'mixins/mixins.css';
-@import 'fonts.css';
-@import 'code.css';
+@import "../assets/fonts/fonts.css";
 
 @-webkit-keyframes fade-in {
     0% {
@@ -49,8 +48,8 @@
 @-webkit-keyframes fade-in-down {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-11px);
-        transform: translateY(-11px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     100% {
         opacity: 1;
@@ -61,8 +60,8 @@
 @keyframes fade-in-down {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-11px);
-        transform: translateY(-11px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     100% {
         opacity: 1;
@@ -79,8 +78,8 @@ html{
 body {
     background-color: $bg-body;
     color: $cl-body;
-    @mixin fontFamilyLight;
-    font-webkit-font-smoothing: antialiased;
+    font-family: $text-font-light;
+    -webkit-font-smoothing: antialiased;
     line-height: 1.5;
     font-size: 13px;
     height: 100%;
@@ -99,8 +98,7 @@ a{
     color: inherit;
 }
 p {
-    font-size: 1.4em;
-    margin: 0.8em 0;
+    font-size: 1.3em;
 }
 
 @media (min-width: $sm) {

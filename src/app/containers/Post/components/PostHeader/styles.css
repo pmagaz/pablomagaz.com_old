@@ -11,14 +11,17 @@
   background-size: 100%;
   -webkit-transform-style: inherit;
   transform-style: inherit;
-  opacity: 0;
+  -webkit-animation: fade-in-down 0.3s;
+  animation: fade-in-down 0.3s both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .postHeaderAnim {
-   -webkit-animation: fade-in-down 250ms;
-  animation: fade-in-down 250ms both;
-  -webkit-animation-delay: 20ms;
-  animation-delay: 20ms;
+-webkit-animation: fade-in-down 0.3s;
+  animation: fade-in-down 0.3s both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .postHeader::before {
@@ -29,10 +32,6 @@
   background-size: cover;
   -webkit-transform-style: inherit;
   transform-style: inherit;
-     -webkit-animation: fade-in-down 250ms;
-  animation: fade-in-down 250ms both;
-  -webkit-animation-delay: 20ms;
-  animation-delay: 20ms;
 }
 
 .postHeader * {

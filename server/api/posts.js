@@ -2,7 +2,14 @@ import request from 'request';
 import { SiteConf, getDate } from '../../src/base/';
 
 export const postsApiHandler = (req, res, next)  => {
-  request(`${ SiteConf.PostsApi }`, (error, response, body) => {
+ 
+  const options = {
+    url: SiteConf.PostsApi,
+    strictSSL: false,
+    secureProtocol: 'TLSv1_method'
+};
+  
+  request(options, (error, response, body) => {
     if (error) {
       console.log(error);
       res.status(500).json(error);

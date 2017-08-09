@@ -26,7 +26,6 @@
     align-items: center;
     background: $bg-titleBlog;
     color: $cl-titleBlog;
-    opacity: 0;
     .blogTitleWrap{
       @mixin mainFit;
       width: 100%;

@@ -28,7 +28,7 @@ section{
     width: 92%;
     margin: 40px auto 0;  
     font-size: 3em;
-    opacity: 0;
+    opacity: 0.3;
     background-color: $bg-homeBrand;
     @media (min-width:$sm){
       width: 573px;

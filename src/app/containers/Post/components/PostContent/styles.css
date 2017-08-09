@@ -14,7 +14,7 @@
         margin: 50px auto 100px;
         position: relative;
         z-index: 2;
-        opacity: 0;
+        opacity: 0.3;
         font-size: 0.9em;
     }
 

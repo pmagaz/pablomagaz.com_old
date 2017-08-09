@@ -36,16 +36,15 @@ class Blog extends Component {
     const posts = this.props.Blog.posts;
     const cx = classNames.bind(styles);
     const blogTitleStyle = cx({
-      'titleBlog': true,
       'titleBlogAnim': context.client ? true : false
     });
 
     return (
       <div className= { styles.Blog } >
         <div className= { styles.BlogContent } >
-          <header className={ blogTitleStyle }>
+          <header className={ styles.titleBlog }>
             <div className={ styles.blogTitleWrap }>
-              <h1>
+              <h1 className={ styles.titleBlogAnim }>
                 { SiteConf.BlogTitle.toUpperCase() }
               </h1>
             </div>

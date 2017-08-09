@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import helmet from 'helmet';
-import forceSSL from 'express-force-ssl';
 import compression from 'compression';
+import forceSSL from 'express-force-ssl';
 
 import base, { SiteConf } from 'base';
 

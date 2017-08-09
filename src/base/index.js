@@ -7,6 +7,7 @@ export { env };
 export { createReducer }; 
 export default { console, env };
 export * from './conf/blog.conf';
+//export * from './shared/FileSystem';
 export { context } from './shared/Context';
 export { trackGa } from './shared/TrackGa';
 export { getDate } from './shared/DateHelper';

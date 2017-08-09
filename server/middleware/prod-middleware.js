@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import helmet from 'helmet';
+import forceSSL from 'express-force-ssl';
 import compression from 'compression';
 
 import base from 'base';
@@ -27,6 +28,7 @@ const allowCrossDomain = function(req, res, next) {
 
 const applyProdMiddleware = function() {
   return [
+    forceSSL,
     helmet(),
     compression(),
     allowCrossDomain

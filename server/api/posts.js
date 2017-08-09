@@ -2,9 +2,12 @@ import http from 'http';
 import request from 'request';
 import { SiteConf, getDate, env } from 'base';
 
+import SsslOptions from '../lib/ssl';
+
 export const postsApiHandler = (req, res, next)  => {
  
   let options;
+  const sslOptions = SsslOptions();
   if (env === 'development') {
     options = { uri: SiteConf.PostsApi };
   } else {
@@ -15,7 +18,8 @@ export const postsApiHandler = (req, res, next)  => {
       secureProtocol: 'TLSv1_method',
       tls: {
         rejectUnauthorized: false,
-      }
+      },
+      ...sslOptions
     };
   }
   options.agent = http.Agent(options);

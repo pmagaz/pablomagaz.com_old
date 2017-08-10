@@ -3,13 +3,13 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 300;
-  src: local('Montserrat Light'), local('Montserrat-Light'), url(MontserratLight.woff) format('woff');
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(../assets/fonts/MontserratLight.woff) format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(MontserratMedium.woff) format('woff');
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(../assets/fonts/MontserratMedium.woff) format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }

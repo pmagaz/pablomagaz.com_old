@@ -1,4 +1,5 @@
-@import '../../../../styles/base.css';
+@import '../../../../styles/variables/variables.css';
+@import '../../../../styles/anims.css';
 
 .post{
     width: 100%;

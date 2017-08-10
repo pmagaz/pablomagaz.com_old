@@ -1,4 +1,6 @@
-@import '../../../../styles/base.css';
+@import '../../../../styles/variables/variables.css';
+@import '../../../../styles/mixins/mixins.css';
+@import '../../../../styles/anims.css';
 
 .PostSummary {
   opacity: 0.5;

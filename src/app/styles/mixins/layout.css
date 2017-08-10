@@ -8,6 +8,7 @@
     height: 120px;
     display: block;
     overflow: hidden;
+    border-top: $bdrt-linkImage;
     img{
       margin-top: -25%;
     }

@@ -3,7 +3,7 @@ $bg-mainContainer: $bg-body;
 
 $bg-mainHeader: $primary-color;
 $cl-mainHeader: $white;
-$bdr-mainHeader: 2px solid $bg-back;
+$bdr-mainHeader: 4px solid $bg-back;
 
 $mrgb-mainContainer: $parallax-footer;
 
@@ -21,6 +21,8 @@ $cl-infoWrited: $black;
 
 /** Blog/components/ Post Sumary **/
 $cl-postSumaryTilte: $bg-back;
+
+$bdrt-linkImage: 1px solid $bg-back;
 
 $cl-postText: $black;
 

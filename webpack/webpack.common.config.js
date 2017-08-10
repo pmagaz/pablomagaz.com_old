@@ -39,7 +39,7 @@ export const module = {
   rules: [
     { test: /\.json$/, loader: 'json-loader', include: [mainPath] },
     { test: /\.html/, loader: 'raw-loader', include: [mainPath] },
-    { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+    { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=40000' },
   ]
 };
 

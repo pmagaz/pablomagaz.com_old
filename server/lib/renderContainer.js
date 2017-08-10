@@ -1,13 +1,19 @@
 import React from 'react';
+import lruChache from 'lru-cache';
 import { Provider } from 'react-redux';
+import ReactRender from 'fast-react-render';
 import { RouterContext } from 'react-router';
-import { renderToStaticMarkup } from 'react-dom/server';
 
-export default function renderContainer(store, renderProps) {
+const cache  = lruChache({
+  max: 500,
+  maxAge: 1000 * 60 * 60
+});
 
-  return renderToStaticMarkup(
+const renderContainer = (store, renderProps) => (
+  ReactRender.elementToString(
     <Provider store={ store }>
       <RouterContext { ...renderProps } />
-    </Provider>
-  );
-}
+    </Provider>, { cache })
+);
+
+export default renderContainer;

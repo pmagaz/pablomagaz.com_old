@@ -29,7 +29,7 @@ export default function routingMiddleware(req, res) {
       })
       .then(page => res.status(200).send(page))
       .catch(err => {
-        console.log(1111, err);
+        console.log('SERVER ERROR!', err);
         res.status(500).send('Internal Server Error');
       });
   });

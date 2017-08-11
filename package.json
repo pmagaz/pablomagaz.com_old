@@ -37,7 +37,7 @@
     "compression": "1.7.0",
     "create-reduxreducer": "^1.0.0",
     "css-modules-require-hook": "4.0.6",
-    "express": "4.15.3",
+    "express": "^4.15.3",
     "express-force-ssl": "^0.3.2",
     "fast-react-render": "^1.2.2",
     "helmet": "^3.8.1",
@@ -56,7 +56,8 @@
     "react-router-scroll": "0.4.2",
     "redux": "3.7.2",
     "redux-req-middleware": "1.0.4",
-    "request": "2.81.0"
+    "request": "2.81.0",
+    "spdy": "^3.4.7"
   },
   "devDependencies": {
     "assets-webpack-plugin": "3.5.1",

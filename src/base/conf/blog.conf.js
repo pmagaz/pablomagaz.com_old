@@ -29,23 +29,25 @@ let keysPath;
 let Protocol;
 
 if (env === 'development') {
-  HostName = 'localhost';
+  Ssl = true;
+  Protocol = Ssl ? 'https://' : 'http://';
+  HostName = 'localhost:8000';
   ServerUrl = `http://${ HostName }`;
+  SiteUrl = `${ ServerUrl }`;
   clientSecret = '285ee4eda6c3';
-  SiteUrl = `${ ServerUrl }:8000`;
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = `${ ServerUrl }:2369`;
-  ImageUrl = GhostUrl;
+  GhostUrl = 'http://localhost:2369'; 
   BlogUrl = `${ GhostUrl }/blog/`;
+  ImageUrl = `${Protocol}${ HostName }`;
+  ContentPath = '/Users/Pablo/js/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
-  PostApiUrl = `${ SiteUrl }/api/post/`;
-  PostsApiUrl = `${ SiteUrl }/api/posts/`;
+  PostApiUrl = `${Protocol}${ HostName }/api/post/`;
+  PostsApiUrl = `${Protocol}${ HostName }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
-  Ssl = true;
-  keysPath = null;
+  keysPath = '';
 } else {
-  Ssl = false;
+  Ssl = true;
   Protocol = Ssl ? 'https://' : 'http://';
   HostName = '188.166.49.134';
   ServerUrl = `http://${ HostName }`;

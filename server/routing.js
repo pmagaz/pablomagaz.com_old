@@ -6,12 +6,13 @@ import { postsApiHandler } from './api/posts';
 
 const applyServerRouting = (app) => {
  
-  if (env === 'production' && SiteConf.Ssl) {
+  /*
+  if (SiteConf.Ssl) {
     app.all('*', (req, res, next) => {
       if (req.secure) return next();
       res.redirect('https://'+req.hostname + ':' + app.get('secPort') + req.url);
     });
-  }
+  }*/
   
   app.route('/api/posts/:page?')
     .get(postsApiHandler);

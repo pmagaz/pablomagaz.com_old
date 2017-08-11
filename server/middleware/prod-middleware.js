@@ -31,7 +31,7 @@ const applyProdMiddleware = () => {
     helmet(),
     compression()
   ];
-  if (SiteConf.Ssl) middleware.unshift(forceSSL); 
+  //if (SiteConf.Ssl) middleware.unshift(forceSSL); 
   return middleware;
 };
 

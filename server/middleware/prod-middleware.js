@@ -20,7 +20,7 @@ compiler.plugin('done', function() {
 
 const allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Methods', 'GET,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 };
@@ -29,7 +29,7 @@ const applyProdMiddleware = () => {
   const middleware = [
     helmet(),
     compression(),
-    allowCrossDomain
+    //allowCrossDomain
   ];
   return middleware;
 };

@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import classNames from 'classnames/bind';
 import ReactHtmlParser from 'html-react-parser';
 
-import { getPostUrl, SiteConf, context } from 'base';
+import { SiteConf, context } from 'base';
 import PostTag from 'components/PostTag';
 import PostInfo from 'components/PostInfo';
 import PostImage from 'components/PostImage';
@@ -15,13 +15,13 @@ const propTypes= {
 };
 
 const PostSummary = ({ post }) => {
-  const url = getPostUrl(post.slug);
-  const imageSrc = `${SiteConf.ImageUrl}${post.image || post.feature_image}`;
+  const url = '/blog/' + post.slug;
+  const imageSrc = `${ SiteConf.ImageUrl }${ post.image || post.feature_image }`;
 
   const cx = classNames.bind(styles);
   const postSummaryStyle = cx({
     'PostSummary': true,
-    'PostSummaryAnim': context.client ? true : false
+    //'PostSummaryAnim': context.client ? true : false
   });
 
   return (

@@ -1,8 +1,9 @@
 import webpack from 'webpack';
 import helmet from 'helmet';
 import compression from 'compression';
+import forceSSL from 'express-force-ssl';
 
-import base from 'base';
+import base, { SiteConf } from 'base';
 
 const config = require('../../webpack/index.babel.js');
 
@@ -25,12 +26,13 @@ const allowCrossDomain = function(req, res, next) {
   next();
 };
 
-const applyProdMiddleware = function() {
-  return [
+const applyProdMiddleware = () => {
+  const middleware = [
     helmet(),
-    compression(),
-    allowCrossDomain
+    compression()
   ];
+  if (SiteConf.Ssl) middleware.unshift(forceSSL); 
+  return middleware;
 };
 
 module.exports = applyProdMiddleware;

@@ -1,75 +1,8 @@
 @import 'variables/variables.css';
 @import 'mixins/mixins.css';
+@import 'anims.css';
 @import 'fonts.css';
 @import 'code.css';
-
-@-webkit-keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes fade-up {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fade-in-up {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(+10px);
-        transform: translateY(+10px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-@keyframes fade-in-up {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(+10px);
-        transform: translateY(+10px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-
-@-webkit-keyframes fade-in-down {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-11px);
-        transform: translateY(-11px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-@keyframes fade-in-down {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-11px);
-        transform: translateY(-11px);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
 
 html{
     height: 100%;

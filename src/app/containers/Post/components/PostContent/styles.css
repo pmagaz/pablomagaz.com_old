@@ -1,4 +1,5 @@
-@import '../../../../styles/base.css';
+@import '../../../../styles/variables/variables.css';
+@import '../../../../styles/mixins/mixins.css';
 
 .post{
     width: 100%;
@@ -14,7 +15,6 @@
         margin: 50px auto 100px;
         position: relative;
         z-index: 2;
-        opacity: 0;
         font-size: 0.9em;
     }
 
@@ -32,8 +32,8 @@
 }
 
 .postContentAnim {
-  -webkit-animation: fade-in-up 250ms;
-  animation: fade-in-up 250ms both;
+  -webkit-animation: fade-in-up 150ms;
+  animation: fade-in-up 150ms both;
   -webkit-animation-delay: 20ms;
   animation-delay: 20ms;
 }

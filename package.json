@@ -38,10 +38,16 @@
     "create-reduxreducer": "^1.0.0",
     "css-modules-require-hook": "4.0.6",
     "express": "4.15.3",
+    "express-force-ssl": "^0.3.2",
+    "fast-react-render": "^1.2.2",
     "helmet": "^3.8.1",
     "html-react-parser": "0.3.5",
+    "http": "0.0.0",
+    "https": "^1.0.0",
     "isomorphic-fetch": "2.2.1",
+    "lru-cache": "4.1.1",
     "postcss-clean": "^1.0.3",
+    "prop-types": "15.5.10",
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-ga": "^2.2.0",
@@ -65,6 +71,7 @@
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-0": "6.24.1",
     "babel-register": "6.24.1",
+    "base64-font-loader": "0.0.4",
     "chalk": "2.1.0",
     "classnames": "2.2.5",
     "copy-webpack-plugin": "4.0.1",
@@ -83,6 +90,7 @@
     "ignore-styles": "5.0.1",
     "immutable": "3.8.1",
     "postcss-browser-reporter": "0.5.0",
+    "postcss-discard-duplicates": "^2.1.0",
     "postcss-import": "10.0.0",
     "postcss-loader": "2.0.6",
     "postcss-mixins": "6.0.1",
@@ -106,8 +114,7 @@
     "webpack": "3.4.1",
     "webpack-dev-middleware": "1.12.0",
     "webpack-dev-server": "2.6.1",
-    "webpack-hot-middleware": "2.18.2",
-    "why-did-you-update": "0.0.8"
+    "webpack-hot-middleware": "2.18.2"
   },
   "nyc": {
     "exclude": [

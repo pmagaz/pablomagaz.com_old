@@ -1,6 +1,8 @@
 .logo {
   font-family: 'MontSerrat';
+  display: none;
 }
 .miniTitle {
   @mixin fontFamilyMedium;
+  visibility: hidden;
  }

@@ -1,4 +1,5 @@
-@import '../../styles/base.css';
+@import '../../styles/variables/variables.css';
+@import '../../styles/mixins/mixins.css';
 
 .Blog {
     width: 100%;
@@ -32,7 +33,6 @@
     align-items: center;
     background: $bg-titleBlog;
     color: $cl-titleBlog;
-    opacity: 0;
     .blogTitleWrap{
       @mixin mainFit;
       width: 100%;
@@ -54,10 +54,8 @@
   }
 
 .titleBlogAnim {
-  -webkit-animation: fade-in-down 250ms;
-  animation: fade-in-down 250ms both;
-  -webkit-animation-delay: 20ms;
-  animation-delay: 20ms;
+  -webkit-animation: fade-in-down 200ms;
+  animation: fade-in-down 200ms both;
 }
 
 .tracks{

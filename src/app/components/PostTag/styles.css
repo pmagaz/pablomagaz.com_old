@@ -1,6 +1,7 @@
-@import '../../styles/base.css';
+@import '../../styles/variables/variables.css';
 
 mark{
+    font-size: 0.8em;
     padding: .4em .6em;
     background-color: $bg-postTag;
     color: $cl-postTag;

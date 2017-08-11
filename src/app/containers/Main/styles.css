@@ -1,4 +1,4 @@
-@import '../../styles/base.css';
+@import '../../styles/variables/variables.css';
 
 section{
   min-height: 100vh;
@@ -28,7 +28,6 @@ section{
     width: 92%;
     margin: 40px auto 0;  
     font-size: 3em;
-    opacity: 0;
     background-color: $bg-homeBrand;
     @media (min-width:$sm){
       width: 573px;

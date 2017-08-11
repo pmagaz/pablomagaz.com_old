@@ -39,7 +39,7 @@ export const module = {
   rules: [
     { test: /\.json$/, loader: 'json-loader', include: [mainPath] },
     { test: /\.html/, loader: 'raw-loader', include: [mainPath] },
-    { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+    { test: /\.(woff|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'base64-font-loader' },
   ]
 };
 
@@ -62,11 +62,11 @@ export const plugins = [
 ];
 
 export const postcss = [
-  require('postcss-import')({ addDependencyTo: webpack }),
+  require('postcss-import')(),
+  require('postcss-url')(),
   require('postcss-modules-extract-imports'),
   require('postcss-nested')(),
   require('postcss-reporter')(),
-  require('postcss-url')(),
   require('precss')(),
   require('postcss-mixins')(),
 ];

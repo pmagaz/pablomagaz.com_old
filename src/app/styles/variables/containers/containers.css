@@ -22,13 +22,13 @@ $cl-infoWrited: $black;
 /** Blog/components/ Post Sumary **/
 $cl-postSumaryTilte: $bg-back;
 
-$bdrt-linkImage: 1px solid $bg-back;
+$bdrt-linkImage: 1px solid #c3c3c3;
 
 $cl-postText: $black;
 
 /** Blog/components/ Post Tag **/
 $bg-postTag: $secondary-color;
-$cl-postTag: color($secondary-color lightness(-85%));
+$cl-postTag: $white;
 $brd-postTag: 1px solid $secondary-color;
 
 

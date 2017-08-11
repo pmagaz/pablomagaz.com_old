@@ -11,8 +11,8 @@ const codeHighlightDelay = 300;
 const postOpeningSplitChar = '@@@';
 const GoogleAnaliticsId = 'aaaaa';
 
-
 let HostName;
+let ServerUrl;
 let SiteUrl;
 let BlogUrl;
 let GhostUrl;
@@ -23,13 +23,18 @@ let clientSecret;
 let PostApiUrl;
 let PostsApi;
 let PostApi;
+let ContentPath;
+let Ssl;
+let keysPath;
+let Protocol;
 
 if (env === 'development') {
-  HostName = 'http://localhost';
+  HostName = 'localhost';
+  ServerUrl = `http://${ HostName }`;
   clientSecret = '8628165087ba';
-  SiteUrl = `${ HostName }:8000`;
+  SiteUrl = `${ ServerUrl }:8000`;
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = `${ HostName }:2368`;
+  GhostUrl = `${ ServerUrl }:2368`;
   ImageUrl = GhostUrl;
   BlogUrl = `${ GhostUrl }/blog/`;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
@@ -37,23 +42,26 @@ if (env === 'development') {
   PostsApiUrl = `${ SiteUrl }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
+  Ssl = true;
+  keysPath = null;
 } else {
-  HostName = 'http://178.62.231.228';
-  clientSecret = 'eeb1f09c6698';
-  SiteUrl = `${ HostName }`;
+  Ssl = false;
+  Protocol = Ssl ? 'https://' : 'http://';
+  HostName = '188.166.49.134';
+  ServerUrl = `http://${ HostName }`;
+  SiteUrl = `${ ServerUrl }`;
+  clientSecret = 'd7d4f5b6725d';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = `${ HostName }:2369`;
-  ImageUrl = GhostUrl;
+  GhostUrl = 'http://localhost:2369'; 
   BlogUrl = `${ GhostUrl }/blog/`;
+  ImageUrl = `${Protocol}${ HostName }`;
+  ContentPath = '/var/www/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
-  PostApiUrl = `${ SiteUrl }/api/post/`;
-  PostsApiUrl = `${ SiteUrl }/api/posts/`;
+  PostApiUrl = `${Protocol}${ HostName }/api/post/`;
+  PostsApiUrl = `${Protocol}${ HostName }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
+  keysPath = '';
 } 
 
-export function getPostUrl(slug) {
-  return '/blog/' + slug;
-}
-
-export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId};
+export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, keysPath};

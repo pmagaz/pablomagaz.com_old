@@ -1,18 +1,14 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
 
-import LinkButton from 'components/LinkButton';
+import SocialIcon from 'components/SocialIcon';
 import styles from './styles.css';
-
 
 const Social = () => (
     <div className={ styles.socialBox }>
-
-<div  className={ styles.linkedin }></div>
-<div  className={ styles.twitter }></div>
-<div  className={ styles.email }></div>
-
-
+      <SocialIcon className= { styles.linkedin } />
+      <SocialIcon className= { styles.twitter } />
+      <SocialIcon className= { styles.email } />
   </div>
 );
 

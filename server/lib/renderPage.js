@@ -1,7 +1,7 @@
 import * as templates from '../templates/';
 import { getScripts, getStyles } from '../lib/files';
 
-export default function renderPage(routeMatch, container, store){
+export default function renderPage(routeMatch, container, store) {
 
   const params = {
     title: params,

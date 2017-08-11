@@ -7,6 +7,14 @@ export const generateMap = (data, model) => (
   ), new Map())
 );
 
+export const ListToArray = (list) => {
+  const arr = [];
+  list.map(item => (
+    arr.push(item)
+  ));
+  return arr;
+};
+
 export const RecordList = (data, model) => (
   new List(data.map((item) => new model(item)))
 );

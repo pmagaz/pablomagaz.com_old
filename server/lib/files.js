@@ -17,10 +17,10 @@ if (env === 'development') {
 
 export function getScripts(file) {
   const scriptPath = `${files[file].js}`;
-  return (env === 'production') ? `<script src="/assets${scriptPath}"></script>` : `<script src="${scriptPath}"></script>`; 
+  return (env === 'production') ? `<script defer src="/assets${scriptPath}"></script>` : `<script src="${scriptPath}"></script>`; 
 }
 
 export function getStyles(file) {
   const cssPath = files[file].css;
-  return (env === 'production') ? `<link rel="stylesheet" href="/assets${cssPath}">` : '';
+  return (env === 'production') ? `<link rel="stylesheet" href="/assets${cssPath}" media='all'">` : '';
 }

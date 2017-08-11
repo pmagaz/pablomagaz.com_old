@@ -2,6 +2,7 @@
 
 .image {
   width:100%;
+  opacity: 0;
 }
 
 .imageAnim {

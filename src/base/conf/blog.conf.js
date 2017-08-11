@@ -47,7 +47,7 @@ if (env === 'development') {
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
   keysPath = '';
 } else {
-  Ssl = false;
+  Ssl = true;
   Protocol = Ssl ? 'https://' : 'http://';
   HostName = '188.166.49.134';
   ServerUrl = `http://${ HostName }`;

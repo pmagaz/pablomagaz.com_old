@@ -46,6 +46,7 @@
     "https": "^1.0.0",
     "isomorphic-fetch": "2.2.1",
     "lru-cache": "4.1.1",
+    "needle": "^2.0.0",
     "postcss-clean": "^1.0.3",
     "prop-types": "15.5.10",
     "react": "15.6.1",

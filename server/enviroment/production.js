@@ -1,2 +1,2 @@
-export const port = 80;
+export const port = 443;
 export const sslPort = 443;

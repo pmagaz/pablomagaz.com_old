@@ -18,10 +18,18 @@ compiler.plugin('done', function() {
   base.console.success(`Bundled project in ${Date.now() - bundleStart} ms!`);
 });
 
+const allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+};
+
 const applyProdMiddleware = () => {
   const middleware = [
     helmet(),
-    compression()
+    compression(),
+    allowCrossDomain
   ];
   return middleware;
 };

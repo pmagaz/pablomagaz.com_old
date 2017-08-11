@@ -19,7 +19,11 @@
     }
 
     h1 {
-     margin-bottom: 0.4em;
+        @mixin fontFamilyMedium;
+        margin-bottom: 0.4em;
+        color: $cl-postContentTilte;
+        font-size: 3em;
+        line-height: 1em;
     }
 
     .postText {
@@ -32,13 +36,4 @@
   animation: fade-in-up 250ms both;
   -webkit-animation-delay: 20ms;
   animation-delay: 20ms;
-}
-
-h1{
-    margin: 0;
-    margin-bottom: 10px;
-    @mixin fontFamilyMedium;
-    color: $cl-postContentTilte;
-    font-size: 3em;
-    line-height: 1em;
 }

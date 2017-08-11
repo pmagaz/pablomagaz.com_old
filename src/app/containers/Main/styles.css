@@ -21,7 +21,7 @@ section{
   background-image: url($bg-home);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .brand{

@@ -80,12 +80,7 @@ body {
     background-color: $bg-body;
     color: $cl-body;
     @mixin fontFamilyLight;
-<<<<<<< HEAD
-    font
-    -webkit-font-smoothing: antialiased;
-=======
     font-webkit-font-smoothing: antialiased;
->>>>>>> master
     line-height: 1.5;
     font-size: 13px;
     height: 100%;

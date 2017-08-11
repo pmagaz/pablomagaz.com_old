@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux';
 import { fetchRequiredActions, SiteConf, context } from 'base';
 import * as Actions from './actions';
 import PostList from './components/PostList';
+import LinkButton from 'components/LinkButton';
 import styles from './styles.css';
 
 class Blog extends Component {
@@ -48,11 +49,14 @@ class Blog extends Component {
               <h1>
                 { SiteConf.BlogTitle.toUpperCase() }
               </h1>
+              <LinkButton
+                location="#contact"
+                value="//Source Code"
+              />  
             </div>
           </header>
-          <div> 
-            <PostList posts={ posts } />
-          </div>
+          <span className= { styles.band } ></span>
+          <PostList posts={ posts } />
         </div>
       </div>
     );

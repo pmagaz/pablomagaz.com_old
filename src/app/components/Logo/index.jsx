@@ -10,10 +10,13 @@ const propTypes= {
 };
 
 const Logo = ( props ) => (
-  <LinkButton
-      location="/"
-      value="PM"
-    />
+
+    <span className={ styles.miniTitle }>
+      <LinkButton
+        location="/blog"
+        value="EL BLOG ISOMÓRFICO"
+      />
+    </span>
 );
 
 Logo.propTypes= propTypes;

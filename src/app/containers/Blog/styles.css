@@ -12,13 +12,19 @@
     }
 }
 
+.band{
+  background: $white;
+  width: 100%;
+}
   .titleBlog{
     width: 100%;
     height: $hgt-titleBlog;
     margin: 0;
     left: 0;
     top: 0;
-    font-size: 1,9em;
+    padding-top: 11px;
+    font-size: 1.5em;
+    line-height: 1;
     position: fixed;
     z-index: -1;
     display: flex;
@@ -30,9 +36,19 @@
     .blogTitleWrap{
       @mixin mainFit;
       width: 100%;
+      display: flex;
+      justify-content: space-between;
       h1{
         @mixin fontFamilyMedium;
         color: $cl-titleBlog;
+        word-break: break-word;
+        width: 400px;
+      }
+      h1 + div{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 34px;
+        font-size: 17px;
       }
     }
   }

@@ -1,7 +1,6 @@
 import webpack from 'webpack';
 import helmet from 'helmet';
 import compression from 'compression';
-import forceSSL from 'express-force-ssl';
 
 import base, { SiteConf } from 'base';
 
@@ -19,19 +18,11 @@ compiler.plugin('done', function() {
   base.console.success(`Bundled project in ${Date.now() - bundleStart} ms!`);
 });
 
-const allowCrossDomain = function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-};
-
 const applyProdMiddleware = () => {
   const middleware = [
     helmet(),
     compression()
   ];
-  //if (SiteConf.Ssl) middleware.unshift(forceSSL); 
   return middleware;
 };
 

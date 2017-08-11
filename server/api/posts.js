@@ -4,16 +4,16 @@ import { SiteConf, getDate } from 'base';
 // process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 export const postsApiHandler = (req, res)  => {
   needle('get', SiteConf.PostsApi)
-  .then(resp => {
-    const data = resp.body;
-    const pagination = data.meta.pagination;
-    const posts = PostList(data.posts);
-    const result = { posts, pagination };
-    res.json(result);
-  })
-  .catch(err => {
-    res.status(500).json(err);
-  })
+    .then(resp => {
+      const data = resp.body;
+      const pagination = data.meta.pagination;
+      const posts = PostList(data.posts);
+      const result = { posts, pagination };
+      res.json(result);
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
 }; 
 
 export const PostList = (posts) => {

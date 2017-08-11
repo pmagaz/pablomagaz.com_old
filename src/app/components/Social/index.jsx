@@ -1,14 +1,14 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
 
-import LinkButton from 'components/LinkButton';
+import SocialIcon from 'components/SocialIcon';
 import styles from './styles.css';
 
-/*
-MOVE SVG TO CORRECT PLACE :) 
-*/
 const Social = () => (
     <div className={ styles.socialBox }>
+      <SocialIcon />
+      <SocialIcon />
+      <SocialIcon />
   </div>
 );
 

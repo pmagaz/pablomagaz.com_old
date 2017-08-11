@@ -21,7 +21,7 @@ const PostSummary = ({ post }) => {
   const cx = classNames.bind(styles);
   const postSummaryStyle = cx({
     'PostSummary': true,
-    'PostSummaryAnim': context.client ? true : false
+    //'PostSummaryAnim': context.client ? true : false
   });
 
   return (

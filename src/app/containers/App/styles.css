@@ -27,8 +27,6 @@ header.mainHeader{
     border-top: $bdr-mainHeader;
     background: $bg-mainHeader;
     color: $cl-mainHeader;
-      -webkit-animation: fade-in-down 250ms;
-  animation: fade-in-down 250ms both;
     .mainHeaderWrapper{
         @mixin mainFit; 
         margin: 0 auto;  

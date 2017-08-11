@@ -1,5 +1,4 @@
 @import '../../../../styles/variables/variables.css';
-@import '../../../../styles/anims.css';
 
 .postHeader {
   width: 100%; 
@@ -12,10 +11,6 @@
   background-size: 100%;
   -webkit-transform-style: inherit;
   transform-style: inherit;
-  -webkit-animation: fade-in-down 0.3s;
-  animation: fade-in-down 0.3s both;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
 }
 
 .postHeaderAnim {

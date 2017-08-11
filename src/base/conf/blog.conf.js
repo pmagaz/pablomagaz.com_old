@@ -49,7 +49,7 @@ if (env === 'development') {
 } else {
   Ssl = false;
   Protocol = Ssl ? 'https://' : 'http://';
-  HostName = '188.166.49.134';
+  HostName = '188.166.49.134:8000';
   ServerUrl = `http://${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
   clientSecret = 'd7d4f5b6725d';

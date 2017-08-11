@@ -15,20 +15,13 @@ export default function routingMiddleware(req, res) {
     if (error) return res.status(500).send(error.message);
     if (redirectLocation) return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     if (renderProps == null) return res.status(404).send('Not found');
-    const startRequired = Date.now();
     fetchRequiredActions(store.dispatch, renderProps.components, renderProps.params, context.context)
       .then(() => {
         if (postNotFound(renderProps, store)) return res.status(404).send('Not found');
         else {
-          console.log('fetchRequired', Date.now() - startRequired);
-          const startContainer = Date.now();
           const routeMatch = renderProps.location.pathname;
           const renderedContainer = renderContainer(store, renderProps);
-          console.log('renderContainer', Date.now() - startContainer);
-          const startPage = Date.now();
-          const page = renderPage(routeMatch, renderedContainer, store);
-          console.log('renderPage', Date.now() - startPage);
-          return page;
+          return renderPage(routeMatch, renderedContainer, store);
         }
       })
       .then(page => res.status(200).send(page))

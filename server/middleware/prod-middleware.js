@@ -29,8 +29,7 @@ const allowCrossDomain = function(req, res, next) {
 const applyProdMiddleware = () => {
   const middleware = [
     helmet(),
-    compression(),
-    allowCrossDomain
+    compression()
   ];
   if (SiteConf.Ssl) middleware.unshift(forceSSL); 
   return middleware;

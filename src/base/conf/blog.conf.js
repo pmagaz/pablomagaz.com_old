@@ -31,10 +31,10 @@ let Protocol;
 if (env === 'development') {
   HostName = 'localhost';
   ServerUrl = `http://${ HostName }`;
-  clientSecret = '8628165087ba';
+  clientSecret = '285ee4eda6c3';
   SiteUrl = `${ ServerUrl }:8000`;
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = `${ ServerUrl }:2368`;
+  GhostUrl = `${ ServerUrl }:2369`;
   ImageUrl = GhostUrl;
   BlogUrl = `${ GhostUrl }/blog/`;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;

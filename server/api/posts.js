@@ -25,6 +25,7 @@ export const postsApiHandler = (req, res, next)  => {
   }
   options.agent = http.Agent(options);
   */
+  const startApi = Date.now();
   request(SiteConf.PostsApi, (error, response, body) => {
     if (error) {
       console.log(error);
@@ -34,6 +35,7 @@ export const postsApiHandler = (req, res, next)  => {
       const pagination = data.meta.pagination;
       const posts = PostList(data.posts);
       const result = { posts, pagination };
+      console.log('apiCall', Date.now() - startApi);
       res.json(result);
     }
   });

@@ -52,7 +52,7 @@ if (env === 'development') {
   SiteUrl = `${ ServerUrl }`;
   clientSecret = 'd7d4f5b6725d';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = `${ ServerUrl }:2369`;
+  GhostUrl = 'http://localhost:2369'; 
   BlogUrl = `${ GhostUrl }/blog/`;
   ImageUrl = `${Protocol}${ HostName }`;
   ContentPath = '/var/www/ghost/content';

@@ -20,7 +20,7 @@ class Blog extends Component {
     })
   }
   
-  static requiredActions = [Actions.getPosts, ];
+  static requiredActions = [Actions.getPosts];
 
   constructor(props) {
     super(props);

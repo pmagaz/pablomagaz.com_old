@@ -2,7 +2,6 @@
 
 .image {
   width:100%;
-  opacity: 0;
 }
 
 .imageAnim {
@@ -27,4 +26,12 @@
     -webkit-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.fade-appear {
+  opacity: 0.01;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
 }

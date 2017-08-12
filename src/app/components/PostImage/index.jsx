@@ -2,6 +2,8 @@ import ReactDOM from 'react-dom';
 import React, { Component }  from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames/bind';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+import Lazyload from 'react-lazyload';
 
 import { context } from 'base';
 import styles from './styles.css';
@@ -21,10 +23,12 @@ export class PostImage extends Component {
   }
 
   componentDidMount() {
+    /*
     const imgTag = ReactDOM.findDOMNode(this.imageRef);
     const img = new window.Image();
     img.onload = this.onImageLoad.bind(this);
     img.src = imgTag.getAttribute('src');
+    */
   }
 
   onImageLoad() {
@@ -37,22 +41,26 @@ export class PostImage extends Component {
 
     const imageStyle = cx({
       'image': true,
-      'imageAnim': this.state.loaded && context.client ? true : false 
+      //'fade-appear': 
+      //'imageAnim': this.state.loaded && context.client ? true : false 
     });
 
     return (
       <div className = { styles.imageWrapper } >
-        <img
-          src={ src }
-          alt={ alt }
-          width={ width }
-          className={ imageStyle }
-          ref={ (ref) => { this.imageRef = ref;} }
-        />
+        <Lazyload throttle={200} height={120} offset={300}>
+          <CSSTransitionGroup
+            key="1"
+            transitionName="fade"
+            transitionAppear={ true }
+            transitionAppearTimeout={500}
+            transitionEnter={false}
+            transitionLeave={false}>
+            <img className={ imageStyle } src={ src } alt={ alt } width={ width } />
+            </CSSTransitionGroup>
+          </Lazyload>
       </div>
     );
   }
-
 }
 
 PostImage.propTypes = propTypes;

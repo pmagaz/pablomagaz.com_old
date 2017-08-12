@@ -32,8 +32,10 @@ a{
     color: inherit;
 }
 p {
-    font-size: 1.4em;
+    font-size: 1.2em;
     margin: 0.8em 0;
+    letter-spacing: -0.02em;
+    color: $gray-dark;
 }
 
 @media (min-width: $sm) {

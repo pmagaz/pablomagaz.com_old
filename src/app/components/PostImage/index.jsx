@@ -47,7 +47,7 @@ export class PostImage extends Component {
 
     return (
       <div className = { styles.imageWrapper } >
-        <Lazyload throttle={200} height={120} offset={300}>
+        <Lazyload throttle={200} height={120} offset={400}>
           <CSSTransitionGroup
             key="1"
             transitionName="fade"

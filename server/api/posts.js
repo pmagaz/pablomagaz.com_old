@@ -1,7 +1,6 @@
 import needle from 'needle';
 import { SiteConf, getDate } from 'base';
 
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 export const postsApiHandler = (req, res)  => {
   needle('get', SiteConf.PostsApi)
     .then(resp => {

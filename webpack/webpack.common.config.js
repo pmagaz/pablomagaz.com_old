@@ -26,11 +26,13 @@ export const entry = {
     'classnames',
     'react-redux',
     'react-router',
+    'react-lazyload',
     'isomorphic-fetch',
     'html-react-parser',
     'react-router-scroll',
     'smoothscroll-polyfill',
     'highlight.js/lib/highlight',
+    'react-addons-css-transition-group',
     'highlight.js/lib/languages/javascript',
   ]
 };

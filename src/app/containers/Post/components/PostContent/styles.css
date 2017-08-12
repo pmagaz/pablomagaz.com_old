@@ -16,19 +16,35 @@
         position: relative;
         z-index: 2;
         font-size: 0.9em;
+
+
+        h2 {
+            @mixin fontFamilyLight;
+            font-size: 1.4em;
+            letter-spacing: 0em;
+            letter-spacing: -0.01em;
+            line-height: 1.4em;
+            margin-bottom: 2em;
+            color: $cl-postSumaryOpening;
+            
+          }
+        
+        b {
+            color: $gray-middark;
+            letter-spacing: 0.1em;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
     }
 
     h1 {
         @mixin fontFamilyMedium;
         margin-bottom: 0.4em;
-        color: $cl-postContentTilte;
+        color: $cl-postSumaryTilte;
         font-size: 3em;
         line-height: 1em;
     }
 
-    .postText {
-      margin-top: 0.8em;
-    }
 }
 
 .postContentAnim {

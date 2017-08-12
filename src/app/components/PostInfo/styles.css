@@ -8,7 +8,8 @@
     font-size: .8em;
     letter-spacing: 0.1em;
     padding: .4em 0.8em;
-    color: $cl-infoWrited;
+   dcolor: $cl-infoWrited;
+
   }
   span:first-child{
     padding-left: 0;

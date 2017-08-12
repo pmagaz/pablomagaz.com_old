@@ -8,7 +8,7 @@ const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
 const postOpeningChars= 46;
 const codeHighlightDelay = 300;
-const postOpeningSplitChar = '@@@';
+const postOpeningSplitChar = '</h2>';
 const GoogleAnaliticsId = 'aaaaa';
 
 let HostName;

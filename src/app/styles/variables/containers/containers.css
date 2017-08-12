@@ -21,6 +21,7 @@ $cl-infoWrited: $black;
 
 /** Blog/components/ Post Sumary **/
 $cl-postSumaryTilte: $bg-back;
+$cl-postSumaryOpening : $gray-middark; 
 
 $bdrt-linkImage: 1px solid #c3c3c3;
 

@@ -16,8 +16,7 @@ const blogSuccess = (state, action) => {
 };
 
 const cleanTagFilter = (state) => (
-  state
-    .update('posts', (posts) => posts.clear())
+  state.update('posts', (posts) => posts.clear())
 );
 
 const actionHandlers = {

@@ -17,8 +17,7 @@ export const postsApiHandler = (req, res)  => {
 }; 
 
 export const PostList = (posts, filter) => {
-  const data = [];
-  posts.map((post) => {
+  return posts.filter((post) => {
     const reg = new RegExp(`^(.+?)${ SiteConf.postOpeningSplitChar }`);
     const result = reg.exec(post.html);
     if (result) post.opening = result[1];
@@ -37,10 +36,10 @@ export const PostList = (posts, filter) => {
     post.markdown = null;
     post.published_at = getDate(post.published_at);
     if (filter) {
-      if (post.tags[0].slug === filter.split(':')[1]) data.push(post);
+      if (post.tags[0].slug === filter.split(':')[1]) return post;//data.push(post);
+      else return false;
     }
-    else data.push(post);
+    else return post;
   }
   );
-  return data;
 };

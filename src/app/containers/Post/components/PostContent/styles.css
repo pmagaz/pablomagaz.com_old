@@ -19,8 +19,8 @@
     }
 
     h1 {
-        @mixin fontFamilyMedium;
-        margin-bottom: 0.4em;
+        font-family: $fontFamilyMedium;
+        margin-bottom: 0.2em;
         color: $cl-postContentTilte;
         font-size: 3em;
         line-height: 1em;

@@ -1,5 +1,2 @@
-$app-font-family: 'Montserrat', sans-serif;
-
-$text-font-light: 300;
-$text-font: 400;
-$display-medium: 500;
+$fontFamilyLight: 'Montserrat-light', sans-serif;
+$fontFamilyMedium: 'Montserrat-medium', sans-serif;

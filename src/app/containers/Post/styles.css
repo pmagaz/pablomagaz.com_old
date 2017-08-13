@@ -1,4 +1,3 @@
-
 .container {
   max-width: 1024px;
 }
@@ -6,10 +5,12 @@
 .mainContent{
   width: 100%;
 }
+
 .Post {
   width: 100%;
   font-size: 32px;
 }
+
 .PostAnim {
   -webkit-animation: fade-in-down 0.2s;
   animation: fade-in-down 0.2s both; 

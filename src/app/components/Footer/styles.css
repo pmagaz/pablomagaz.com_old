@@ -2,7 +2,7 @@
 
 footer.container{
     width: 100%;
-    height: $mrgt-footer;
+    height: $h-footer;
     padding: 20px 0;
     position: fixed;
     bottom: 0;
@@ -10,18 +10,22 @@ footer.container{
     color: $cl-footer;
 
     nav{
-        max-width: 270px;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
     }
     
     .txt img {
         width: 40px;
     }
   
+    .copyright {
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+        span{
+            margin: 0 .2em;
+        }
+    }
 }
-.copyright {
-    margin-top: 20px;
-    text-align: center;
-    display: block;
-}
+
 

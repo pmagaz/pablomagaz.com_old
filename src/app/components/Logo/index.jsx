@@ -14,7 +14,7 @@ const Logo = ( props ) => (
     <span className={ styles.miniTitle }>
       <LinkButton
         location="/blog"
-        value="EL BLOG ISOMÓRFICOsssss"
+        value="EL BLOG ISOMÓRFICO"
       />
     </span>
 );

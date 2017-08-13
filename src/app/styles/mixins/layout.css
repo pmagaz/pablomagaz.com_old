@@ -1,6 +1,6 @@
 @define-mixin mainFit {
-    padding: 0 30px;
-    max-width: 1224px;
+    padding: $layout-padding;
+    max-width: $layout-max-width;
 }
 
 @define-mixin linkImage {

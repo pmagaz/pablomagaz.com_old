@@ -12,7 +12,7 @@ const Footer = () => (
   <footer className={ styles.container }>
       <Menu />
     <div className={ styles.copyright }>
-    © 2017 Pablo Magaz. All rights reserved. 
+    <span>© 2017</span><span> Pablo Magaz.</span><span> All rights reserved. </span>
     </div>
     <Social />
   </footer>

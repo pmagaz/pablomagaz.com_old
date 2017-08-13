@@ -4,7 +4,7 @@
 .PostSummary {
   margin-bottom: 4em;
     a h1 {
-      @mixin fontFamilyMedium;
+      font-family: $fontFamilyMedium;
       font-size: 2.9em;
       letter-spacing: -0.02em;
       line-height: 1.2em;
@@ -12,7 +12,6 @@
       color: $cl-postSumaryTilte;
     }
     .postText{
-      @mixin fontFamilyLight;
       font-size: 0.8em;
       color: $cl-postText;
     }

@@ -14,7 +14,7 @@
 }
 
 .postHeaderAnim {
--webkit-animation: fade-in-down 0.3s;
+  -webkit-animation: fade-in-down 0.3s;
   animation: fade-in-down 0.3s both;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
@@ -28,17 +28,4 @@
   background-size: cover;
   -webkit-transform-style: inherit;
   transform-style: inherit;
-}
-
-.postHeader * {
-  margin: 0;
-  padding: 1em 0;
-  font-weight: normal;
-  letter-spacing: 0.2em;
-  text-align: center;  
-}
-
-.postHeader > img{
-  -webkit-filter: sepia(1);
-  filter: sepia(1);
 }

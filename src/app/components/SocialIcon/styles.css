@@ -1,3 +1,17 @@
+
 .SocialIcon{
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+}
+
+.SocialIcon:nth-child(1){
+ background-image: src("../assets/icons/linkedin.svg");
+}
+.SocialIcon:nth-child(2){
+ background-image: src("../assets/icons/twitter.svg");
+}
+.SocialIcon:nth-child(3){
+ background-image: src("../assets/icons/email");
 }

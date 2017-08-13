@@ -1,5 +1,22 @@
 @import '../../styles/base.css';
 
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a{
+    border: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-size: 1.4em;
+    margin: 0.8em 0;
+}
+
 .app{
     min-height: 100vh;
     display: flex;
@@ -13,6 +30,7 @@
     position: relative;
     z-index: 1;
 }
+
 main.container {
     margin-bottom: $mrgb-mainContainer;
     background: $bg-mainContainer;

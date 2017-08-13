@@ -1,8 +1,10 @@
+@import '../../styles/mixins/mixins.css';
+
 .logo {
   font-family: 'MontSerrat';
   display: none;
 }
 .miniTitle {
-  @mixin fontFamilyMedium;
+  font-family: $fontFamilyMedium;
   visibility: hidden;
  }

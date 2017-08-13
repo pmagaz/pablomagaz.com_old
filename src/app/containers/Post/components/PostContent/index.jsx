@@ -58,7 +58,7 @@ class PostContent extends Component {
             date={ post.published_at }
            />
            <div className={ styles.postText }> 
-            { content }
+            { ReactHtmlParser(post.html) }
           </div>
         </div>
       </div>

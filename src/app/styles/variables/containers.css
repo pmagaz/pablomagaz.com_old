@@ -23,7 +23,7 @@ $cl-postSumaryTilte: $bg-back;
 
 $bdrt-linkImage: 1px solid #c3c3c3;
 
-$cl-postText: $black;
+$cl-postText: $cl-body;
 
 
 /** Main **/

@@ -15,14 +15,13 @@
         margin: 50px auto 100px;
         position: relative;
         z-index: 2;
-        font-size: 0.9em;
     }
 
     h1 {
         font-family: $fontFamilyMedium;
         margin-bottom: 0.2em;
         color: $cl-postContentTilte;
-        font-size: 3em;
+        font-size: 2.9em;
         line-height: 1em;
     }
 

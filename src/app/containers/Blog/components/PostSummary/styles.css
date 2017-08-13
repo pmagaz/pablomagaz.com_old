@@ -12,7 +12,6 @@
       color: $cl-postSumaryTilte;
     }
     .postText{
-      font-size: 0.8em;
       color: $cl-postText;
     }
 }

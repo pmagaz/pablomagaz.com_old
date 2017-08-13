@@ -4,7 +4,14 @@
   font-family: 'MontSerrat';
   display: none;
 }
+
 .miniTitle {
   @mixin fontFamilyMedium;
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 140ms ease-in;
+}
+
+ .miniTitleActive {
+  @mixin fontFamilyMedium;
+  transition: opacity 140ms ease-in;
  }

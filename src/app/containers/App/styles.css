@@ -17,22 +17,3 @@ main.container {
     margin-bottom: $mrgb-mainContainer;
     background: $bg-mainContainer;
 }
-
-header.mainHeader{
-    width: 100%;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: 2;
-    border-top: $bdr-mainHeader;
-    background: $bg-mainHeader;
-    color: $cl-mainHeader;
-    .mainHeaderWrapper{
-        @mixin mainFit; 
-        margin: 0 auto;  
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;    
-    }
-}

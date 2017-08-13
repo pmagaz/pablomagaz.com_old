@@ -4,26 +4,21 @@ import React, { Component } from 'react';
 
 import styles from './styles.css';
 import LinkButton from 'components/LinkButton';
-import Menu from 'components/Menu';
+import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Logo from 'components/Logo';
 
-export class App extends Component {
+class App extends Component {
 
   static propTypes = {
     children: PropTypes.object.isRequired
   }
 
   render() {
-
+    const location = this.props.location;
     return (
       <div className={ styles.app  }>
-        <header className={ styles.mainHeader  }>
-          <div className={ styles.mainHeaderWrapper }>
-            <Logo />
-            <Menu />
-          </div>
-        </header>
+        <Header location={ location }/>
         <main className={ styles.container  }>
           {this.props.children}
         </main>
@@ -34,4 +29,4 @@ export class App extends Component {
   }
 }
 
-export default App; 
+export default connect(null)(App);

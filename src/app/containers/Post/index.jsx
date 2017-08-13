@@ -26,8 +26,8 @@ class Post extends Component {
 
   componentDidMount() {
     const post = this.props.Post;
-    const posLoaded = !~post.id ? true : false;  
-    fetchRequiredActions(Post.requiredActions, this.props, posLoaded);
+    const postLoaded = !~post.id ? true : false;  
+    fetchRequiredActions(Post.requiredActions, this.props, postLoaded);
   }
 
   componentWillUnmount() {

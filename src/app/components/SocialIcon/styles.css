@@ -1,9 +1,10 @@
 
 .SocialIcon{
+  width: 40px;
+  flex: 2;
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
-  width: 40px;
 }
 
 .SocialIcon:nth-child(1){
@@ -15,3 +16,10 @@
 .SocialIcon:nth-child(3){
  background-image: src("../assets/icons/email");
 }
+
+.SocialIcon:nth-child(1):hover,
+.SocialIcon:nth-child(2):hover,
+.SocialIcon:nth-child(3):hover{
+  opacity: 1 !important;
+  transition: opacity .2s ease-in-out; 
+ }

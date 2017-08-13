@@ -12,6 +12,7 @@ export const postsApiHandler = (req, res)  => {
       res.json(result);
     })
     .catch(err => {
+      console.log(333, err);
       res.status(500).json(err);
     });
 }; 
@@ -35,8 +36,8 @@ export const PostList = (posts, filter) => {
     post.html = null;
     post.markdown = null;
     post.published_at = getDate(post.published_at);
-    if (filter) {
-      if (post.tags[0].slug === filter.split(':')[1]) return post;//data.push(post);
+    if (filter && post.tags[0]) {
+      if (post.tags[0].slug === filter.split(':')[1]) return post;
       else return false;
     }
     else return post;

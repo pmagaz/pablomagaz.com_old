@@ -15,7 +15,7 @@ class Logo extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { show: false };
+    this.state = { show: false, scrollTop: 0, reset: false };
   }
 
   componentDidMount() {
@@ -23,19 +23,22 @@ class Logo extends Component {
   }
 
   isPost() {
-    return this.props.location.pathname.length >= 6;
+    const location = this.props.location;
+    return (!!~location.pathname.indexOf('tag') || location.pathname.length < 6) ? false : true;
+  }
+
+  isHome() {
+    return (this.props.location.pathName === '/') ? true : false; 
   }
 
   handleScroll(event) {
     const scrollTop = event.srcElement.body.scrollTop;
-    
     if(scrollTop >= 118 && !this.state.show && !this.isPost()) {
-      this.setState({ show: true });
+      this.setState({ show: true, scrollTop });
     } 
-    
-    if(scrollTop <= 118 && this.state.show && !this.isPost()) {
-      this.setState({ show: false });
-    } 
+    else if(scrollTop <= 118 && this.state.show && !this.isPost()) {
+      this.setState({ show: false, scrollTop });
+    }
   }
 
   render() {
@@ -43,19 +46,20 @@ class Logo extends Component {
     const pathName = this.props.location.pathname;
     const hash = this.props.location.hash;
     const isHome = (pathName === '/') ? true : false; 
-    if (isHome) value = '';
+    
+    if (this.isHome()) value = '';
     else value = SiteConf.BlogTitle.toUpperCase(); 
-
+    
     const cx = classNames.bind(styles);
      const miniTitleStyle = cx({
-      'miniTitle': !this.state.show && !this.isPost() ? true : false,
-      'miniTitleActive': this.state.show || this.isPost() || !isHome ? true : false 
+      'miniTitle': !this.state.show && !this.isPost() || isHome ? true : false,
+      'miniTitleActive': ((this.state.show || this.isPost() || !isHome )) ? true : false 
     });
 
     return (
       <span className={ miniTitleStyle }>
         <LinkButton
-          id="Logo"
+         id="Logo"
           location="/blog"
           value={ value }  
         />
@@ -64,4 +68,4 @@ class Logo extends Component {
   }
 };
 
-export default pure(Logo);
+export default Logo;

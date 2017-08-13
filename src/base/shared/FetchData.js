@@ -9,12 +9,10 @@ export function fetchRequiredActions(...args) {
 
 function fetchServerData(dispatch, components, params) {
   const actions = components.reduce((prev, component) => {
-    const requiredActions = component['requiredActions']; 
-    return (requiredActions) ? requiredActions : []; 
-    /*return Object.keys(component).reduce((acc, key) => {
+    return Object.keys(component).reduce((acc, key) => {
       const hasRequiredActions = component[key].hasOwnProperty('requiredActions');
       return hasRequiredActions ? component[key].requiredActions.concat(acc) : acc;
-    }, prev);*/
+    }, prev);
   }, []);
   const requiredActions = actions.map(action => dispatch(action(params)));
   return Promise.all(requiredActions);

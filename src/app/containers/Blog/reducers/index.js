@@ -15,10 +15,16 @@ const blogSuccess = (state, action) => {
     .update('pagination', () => pagination.set('hasMorePosts', hasMorePosts));
 };
 
+const cleanTagFilter = (state) => (
+  state
+    .update('posts', (posts) => posts.clear())
+);
+
 const actionHandlers = {
   [ActionTypes.BLOG_REQUEST]: blogRequest,
   [ActionTypes.BLOG_SUCCESS]: blogSuccess,
-  [ActionTypes.BLOG_ERROR]: blogError
+  [ActionTypes.BLOG_ERROR]: blogError,
+  [ActionTypes.CLEAN_TAG_FILTER]: cleanTagFilter
 };
 
 export default createReducer(actionHandlers, new BlogModel());

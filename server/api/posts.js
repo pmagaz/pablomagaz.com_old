@@ -5,8 +5,9 @@ export const postsApiHandler = (req, res)  => {
   needle('get', SiteConf.PostsApi)
     .then(resp => {
       const data = resp.body;
+      const filter = req.params.filter;
       const pagination = data.meta.pagination;
-      const posts = PostList(data.posts);
+      const posts = PostList(data.posts, filter);
       const result = { posts, pagination };
       res.json(result);
     })
@@ -15,8 +16,9 @@ export const postsApiHandler = (req, res)  => {
     });
 }; 
 
-export const PostList = (posts) => {
-  return posts.map((post) => {
+export const PostList = (posts, filter) => {
+  const data = [];
+  posts.map((post) => {
     const reg = new RegExp(`^(.+?)${ SiteConf.postOpeningSplitChar }`);
     const result = reg.exec(post.html);
     if (result) post.opening = result[1];
@@ -34,7 +36,11 @@ export const PostList = (posts) => {
     post.html = null;
     post.markdown = null;
     post.published_at = getDate(post.published_at);
-    return post;
+    if (filter) {
+      if (post.tags[0].slug === filter.split(':')[1]) data.push(post);
+    }
+    else data.push(post);
   }
   );
+  return data;
 };

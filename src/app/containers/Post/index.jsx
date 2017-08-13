@@ -36,7 +36,6 @@ class Post extends Component {
 
   render () {
     const post = this.props.Post;
-    //REMOVE ME
     const image = post.image || post.feature_image;
 
     return (

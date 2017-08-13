@@ -1,5 +1,6 @@
 @import '../../styles/variables/variables.css';
 @import '../../styles/mixins/mixins.css';
+@import '../../styles/anims.css';
 
 .Blog {
     width: 100%;
@@ -8,7 +9,7 @@
     flex-direction: column;
     background: $bg-blog;
     .BlogContent{
-      margin: 50px auto 100px;
+      margin: 30px auto 100px;
       @mixin mainFit;
     }
 }
@@ -43,6 +44,13 @@
         color: $cl-titleBlog;
         word-break: break-word;
         width: 400px;
+        letter-spacing: -0.01em
+      }
+      img {
+        float: left;
+        margin-top: 40px;
+        margin-right: 18px;
+        
       }
       h1 + div{
         display: flex;
@@ -54,8 +62,8 @@
   }
 
 .titleBlogAnim {
-  -webkit-animation: fade-in-down 200ms;
-  animation: fade-in-down 200ms both;
+  -webkit-animation: fade-in-down 150ms;
+  animation: fade-in-down 150ms both;
 }
 
 .tracks{

@@ -6,10 +6,11 @@ import { responseBlogModel } from '../models';
 export default {
 
   fetchPosts(params) {
-    const page = params ? `${params}` : `1`;
-    return fetch(`${ SiteConf.PostsApiUrl }${ page }`)
+    let reqParams = '';
+    if (params && params.tag) reqParams += `tag:${params.tag}`
+    return fetch(`${ SiteConf.PostsApiUrl }${reqParams}`)
       .then(req => req.json())
       .then(payload => responseBlogModel(payload))
-      .catch(err => console.log(err));
+      .catch(err => err);
   },
 };

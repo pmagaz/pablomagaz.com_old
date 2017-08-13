@@ -33,11 +33,23 @@ class Blog extends Component {
     fetchRequiredActions(Blog.requiredActions, this.props, postsLoaded);
   }
 
+  componentWillReceiveProps(nextProps){
+    const prevParams = this.props.params;
+    const nextParams = nextProps.params;
+    const params = { params: nextParams };
+    if(prevParams && prevParams.tag !== nextParams.tag ) this.actions.getPosts(nextParams);
+  }
+
+  componentWillUnmount(){
+    const pathName = this.props.location.pathname;
+    if(~pathName.indexOf('tag')) this.actions.cleanTagFilter();
+  }
+
   render () {
     const posts = this.props.Blog.posts;
     const cx = classNames.bind(styles);
     const blogTitleStyle = cx({
-      //'titleBlogAnim': context.client ? true : false
+    'titleBlogAnim': context.client ? true : false
     });
 
     return (
@@ -45,9 +57,12 @@ class Blog extends Component {
         <div className= { styles.BlogContent } >
           <header className={ styles.titleBlog }>
             <div className={ styles.blogTitleWrap }>
-              <h1 className={ blogTitleStyle }>
+            <div className={ blogTitleStyle } > 
+             <img src="assets/images/LogoBlog.png" height="78" />
+              <h1>
                 { SiteConf.BlogTitle.toUpperCase() }
               </h1>
+              </div>
               <LinkButton
                 location="#contact"
                 value="//Source Code"
@@ -63,5 +78,5 @@ class Blog extends Component {
 }
 
 export default connect(state => ({
-  Blog: state.Blog
+  Blog: state.Blog,
 }))(Blog);

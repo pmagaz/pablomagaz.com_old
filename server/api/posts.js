@@ -36,8 +36,8 @@ export const PostList = (posts, filter) => {
     post.html = null;
     post.markdown = null;
     post.published_at = getDate(post.published_at);
-    if (filter && post.tags[0]) {
-      if (post.tags[0].slug === filter.split(':')[1]) return post;
+    if (filter) {
+      if (post.tags[0] && post.tags[0].slug === filter.split(':')[1]) return post;
       else return false;
     }
     else return post;

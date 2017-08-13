@@ -58,7 +58,7 @@ class Blog extends Component {
           <header className={ styles.titleBlog }>
             <div className={ styles.blogTitleWrap }>
             <div className={ blogTitleStyle } > 
-             <img src="assets/images/LogoBlog.png" height="78" />
+             <img src="assets/images/LogoBlog.png" height="84" />
               <h1>
                 { SiteConf.BlogTitle.toUpperCase() }
               </h1>

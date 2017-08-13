@@ -43,13 +43,13 @@
         @mixin fontFamilyMedium;
         color: $cl-titleBlog;
         word-break: break-word;
-        width: 400px;
+        width: 410px;
         letter-spacing: -0.01em
       }
       img {
         float: left;
-        margin-top: 40px;
-        margin-right: 18px;
+        margin-top: 43px;
+        margin-right: 10px;
         
       }
       h1 + div{

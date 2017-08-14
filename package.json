@@ -42,7 +42,6 @@
     "helmet": "^3.8.1",
     "html-react-parser": "0.3.5",
     "http": "0.0.0",
-    "https": "^1.0.0",
     "isomorphic-fetch": "2.2.1",
     "needle": "^2.0.0",
     "postcss-clean": "^1.0.3",

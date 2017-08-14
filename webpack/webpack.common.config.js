@@ -42,6 +42,7 @@ export const module = {
     { test: /\.json$/, loader: 'json-loader', include: [mainPath] },
     { test: /\.html/, loader: 'raw-loader', include: [mainPath] },
     { test: /\.(woff|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'base64-font-loader' },
+    { test: /\.(png|jpg|jpeg|gif)$/, loader: 'url-loader?limit=100000' },
   ]
 };
 

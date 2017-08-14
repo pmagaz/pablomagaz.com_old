@@ -32,7 +32,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $bg-titleBlog;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("../../assets/images/BlogHeaderBackground.png");
   color: $cl-titleBlog;
   .blogTitleWrap{
     @mixin mainFit;
@@ -55,6 +57,6 @@
 }
 
 .titleBlogAnim {
-  -webkit-animation: fade-in-down 200ms;
-  animation: fade-in-down 200ms both;
+  -webkit-animation: fade-in-down 140ms;
+  animation: fade-in-down 140ms both;
 }

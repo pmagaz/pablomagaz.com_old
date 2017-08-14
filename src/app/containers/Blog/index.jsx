@@ -71,10 +71,6 @@ class Blog extends Component {
                 { SiteConf.BlogTitle.toUpperCase() }
               </h1>
               </div>
-              <LinkButton
-                location="#contact"
-                value="//Source Code"
-              />  
             </div>
           </header>
           <span className= { styles.band } ></span>

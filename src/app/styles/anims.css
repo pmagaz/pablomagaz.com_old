@@ -43,8 +43,8 @@
 @-webkit-keyframes fade-in-down {
   0% {
       opacity: 0;
-      -webkit-transform: translateY(-8px);
-      transform: translateY(-8px);
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
   }
   100% {
       opacity: 1;
@@ -55,8 +55,8 @@
 @keyframes fade-in-down {
   0% {
       opacity: 0.5;
-      -webkit-transform: translateY(-8px);
-      transform: translateY(-8px);
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
   }
   100% {
       opacity: 1;

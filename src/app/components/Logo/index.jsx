@@ -34,10 +34,10 @@ class Logo extends Component {
   handleScroll(event) {
     const maxScroll = 120;
     const scrollTop = event.srcElement.body.scrollTop;
-    if(scrollTop >= maxScroll && !this.state.show && !this.isPost()) {
+    if(scrollTop >= maxScroll && !this.state.show && !this.isHome()) {
       this.setState({ show: true, scrollTop });
     } 
-    else if(scrollTop <= maxScroll && this.state.show && !this.isPost()) {
+    else if(scrollTop <= maxScroll && this.state.show && !this.isHome()) {
       this.setState({ show: false, scrollTop });
     }
   }
@@ -53,8 +53,8 @@ class Logo extends Component {
     
     const cx = classNames.bind(styles);
      const miniTitleStyle = cx({
-      'miniTitle': !this.state.show && !this.isPost() || isHome ? true : false,
-      'miniTitleActive': ((this.state.show || this.isPost() || !isHome )) ? true : false 
+      'miniTitle': !this.state.show ? true : false,
+      'miniTitleActive': (this.state.show ) ? true : false 
     });
 
     return (

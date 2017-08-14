@@ -24,8 +24,8 @@
     margin: 0;
     left: 0;
     top: 0;
-    padding-top: 11px;
-    font-size: 1.5em;
+    padding-top: 19px;
+    font-size: 1.3em;
     line-height: 1;
     position: fixed;
     z-index: -1;
@@ -43,7 +43,7 @@
         @mixin fontFamilyMedium;
         color: $cl-titleBlog;
         word-break: break-word;
-        width: 420px;
+        width: 460px;
         letter-spacing: -0.01em
       }
       img {

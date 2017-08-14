@@ -20,7 +20,7 @@
 
         h2 {
             @mixin fontFamilyLight;
-            font-size: 1.4em;
+            font-size: 1.3em;
             letter-spacing: 0em;
             letter-spacing: -0.01em;
             line-height: 1.4em;
@@ -41,7 +41,7 @@
         @mixin fontFamilyMedium;
         margin-bottom: 0.4em;
         color: $cl-postSumaryTilte;
-        font-size: 3em;
+        font-size: 2.3em;
         line-height: 1em;
     }
 

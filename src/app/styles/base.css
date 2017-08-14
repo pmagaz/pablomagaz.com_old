@@ -12,7 +12,7 @@ html{
 body {
     background-color: $bg-body;
     color: $cl-body;
-    @mixin fontFamilyLight;
+    font-family: $fontFamilyLight;
     font-webkit-font-smoothing: antialiased;
     line-height: 1.5;
     font-size: 13px;
@@ -20,46 +20,20 @@ body {
     margin: 0;
     padding: 0;
 }
-
-*{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-a{
-    border: none;
-    text-decoration: none;
-    color: inherit;
-}
-p {
-    font-size: 1.2em;
-    margin: 0.8em 0;
-    letter-spacing: -0.02em;
-    color: $gray-dark;
-}
-
 @media (min-width: $sm) {
-  
   body {
-    font-size: 14px; 
+    font-size: 14px;
   }
-
 }
-
 @media (min-width: $md) {
-  
   body {
     font-size: 15px;
   }
-
 }
-
 @media (min-width: $lg) {
-  
   body {
     font-size: 16px;
   }
-
 }
 
 :global(.fade-appear) {

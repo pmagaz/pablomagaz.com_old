@@ -1,3 +1,5 @@
-$parallax-header: 128px;
-$parallax-post-header: 240px;
+$layout-padding: 0 30px;
+$layout-max-width: 1200px;
+
+$parallax-header: 170px;
 $parallax-footer: 200px;

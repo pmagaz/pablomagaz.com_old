@@ -1,0 +1,16 @@
+/** Footer **/
+$bg-footer: $bg-back;
+$cl-footer: $white;
+
+$h-footer: $parallax-footer;
+
+
+/** Post Info **/
+$cl-post-info-pipe: $secondary-color;
+$cl-infoWrited: $cl-body;
+
+
+/** Post Tag **/
+$bg-postTag: $white;
+$cl-postTag: $secondary-color;
+$brd-postTag: 1px solid $secondary-color;

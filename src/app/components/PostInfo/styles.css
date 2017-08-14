@@ -1,13 +1,13 @@
 @import '../../styles/variables/variables.css';
 
 .postInfo {
-    display: flex;
-    align-items: center;
-    padding: 1em 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0.8em 0 0;
   span {
     font-size: .8em;
     letter-spacing: 0.1em;
-    padding: .4em 0.8em;
+    padding: 0 0.8em;
     color: $cl-infoWrited;
 
   }
@@ -15,12 +15,9 @@
     padding-left: 0;
   }
   span:nth-child(2) {
-    border-right: 1px solid #444;
-    border-left: 1px solid #444;
-    padding: .4em 6px;
-    margin: 0 6px;
+    border-left: 2px solid $cl-post-info-pipe;
   }
-    span + div {
+  span + div {
     flex: 3;
     text-align: right;
   }

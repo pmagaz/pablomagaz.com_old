@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import { PropTypes } from 'prop-types';
-import { pure, onlyUpdateForKeys, onlyUpdateForPropTypes } from 'recompose'
 
 import { SiteConf, ListToArray } from 'base';
 import Loading from 'components/Loading';

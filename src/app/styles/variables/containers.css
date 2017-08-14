@@ -7,6 +7,7 @@ $bdr-mainHeader: 4px solid $bg-back;
 
 $mrgb-mainContainer: $parallax-footer;
 
+
 /** Blog **/
 $bg-blog: $white;
 
@@ -16,8 +17,6 @@ $cl-titleBlog: $white;
 $mrgt-blog: $parallax-header;
 $hgt-titleBlog: $parallax-header;
 
-/** Blog/components/ Post Info **/
-$cl-infoWrited: $black;
 
 /** Blog/components/ Post Sumary **/
 $cl-postSumaryTilte: $bg-back;
@@ -25,13 +24,7 @@ $cl-postSumaryOpening : $gray-middark;
 
 $bdrt-linkImage: 1px solid #c3c3c3;
 
-$cl-postText: $black;
-
-/** Blog/components/ Post Tag **/
-$bg-postTag: $secondary-color;
-$cl-postTag: $white;
-$brd-postTag: 1px solid $secondary-color;
-
+$cl-postText: $cl-body;
 
 
 /** Main **/

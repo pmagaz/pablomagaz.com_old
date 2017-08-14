@@ -32,9 +32,8 @@ class Logo extends Component {
   }
 
   handleScroll(event) {
-    const maxScroll = 86;
+    const maxScroll = 120;
     const scrollTop = event.srcElement.body.scrollTop;
-    console.log(scrollTop);
     if(scrollTop >= maxScroll && !this.state.show && !this.isPost()) {
       this.setState({ show: true, scrollTop });
     } 
@@ -59,13 +58,13 @@ class Logo extends Component {
     });
 
     return (
-      <span className={ miniTitleStyle }>
+      <h1 className={ miniTitleStyle }>
         <LinkButton
          id="Logo"
           location="/blog"
           value={ value }  
         />
-      </span>
+      </h1>
     );
   }
 };

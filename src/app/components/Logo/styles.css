@@ -1,5 +1,4 @@
 @import '../../styles/mixins/mixins.css';
-@import '../../styles/anims.css';
 
 .logo {
   font-family: 'MontSerrat';
@@ -7,11 +6,17 @@
 }
 
 .miniTitle {
-  @mixin fontFamilyMedium;
+  font-family: $fontFamilyMedium;
   opacity: 0;
-}
-
- .miniTitleActive {
-  @mixin fontFamilyMedium;
-  transition: opacity 110ms ease-in;
+  
  }
+
+  .miniTitleActive {
+  font-family: $fontFamilyMedium;
+  font-size: 1em;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+  color: $cl-postSumaryTilte;
+  font-weight: bold;
+   transition: opacity 110ms ease-in;
+  }

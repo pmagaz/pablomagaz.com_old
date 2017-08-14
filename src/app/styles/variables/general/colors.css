@@ -1,10 +1,4 @@
-$primary-color: #fb0c49;
-
-$secondary-color: #3B6796;
-
-$tertiary-color: #ccc;
-
-
+/** Gray scale **/
 $white: #F7F7F7;
 $gray-lighter: #ededed;
 $gray-light: #e0e0e0;
@@ -15,13 +9,14 @@ $gray-darker: #444444;
 $black: #151515;
 
 
+/** Main colors **/
+$primary-color: #fb0c49;
+$secondary-color: #3B6796;
+$tertiary-color: $gray-darker;
 
 
 /** Base **/
-$bg-back: $gray-darker;
+$bg-back: $tertiary-color;
 $bg-body: $white;
-$cl-body: $black;
-
-
-$cl-icon: $white
+$cl-body: $gray-darker;
 

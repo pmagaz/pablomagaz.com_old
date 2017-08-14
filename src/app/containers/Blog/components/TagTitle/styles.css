@@ -1,0 +1,13 @@
+@import '../../../../styles/variables/variables.css';
+@import '../../../../styles/mixins/mixins.css';
+
+.TagTitle {
+  margin-bottom: 2em;
+    h1 {
+      font-family: $fontFamilyMedium;
+      font-size: 2.2em;
+      letter-spacing: -0.02em;
+      line-height: 1.2em;
+      color: $cl-postTag;
+    }
+}

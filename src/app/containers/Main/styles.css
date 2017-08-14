@@ -1,6 +1,6 @@
 @import '../../styles/variables/variables.css';
 
-section{
+:root section{
   min-height: 100vh;
 }
 
@@ -25,22 +25,23 @@ section{
 }
 
 .brand{
-    width: 92%;
-    margin: 40px auto 0;  
-    font-size: 3em;
-    background-color: $bg-homeBrand;
-    @media (min-width:$sm){
-      width: 573px;
-      margin: 133px 0 0 0;
-    } 
-
+  width: 92%;
+  margin: 40px auto 0;  
+  font-size: 3em;
+  background-color: $bg-homeBrand;
+  @media (min-width:$sm){
+    width: 573px;
+    margin: 133px 0 0 0;
+  } 
   h1{
     width: 100%;
-    padding: 22px 0 22px;
+    padding: 22px 0;
+    margin: 0;
     display: table;
     text-align: center;
     line-height: 40px;
     font-size: 45px;
+    font-family: $fontFamilyMedium;
     letter-spacing: -2px;
     text-transform: uppercase;
     font-weight: bold;
@@ -59,6 +60,7 @@ section{
   -webkit-animation-delay: 90ms;
   animation-delay: 90ms;
 }
+
 .about{
   background-color: $bg-about;
   color: $cl-about;

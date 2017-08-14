@@ -5,4 +5,6 @@ mark{
     padding: .4em .6em;
     background-color: $bg-postTag;
     color: $cl-postTag;
+    font-family: $fontFamilyMedium;
+    font-size: 1.2em;
 }

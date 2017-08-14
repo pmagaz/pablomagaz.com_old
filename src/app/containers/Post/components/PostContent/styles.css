@@ -15,34 +15,34 @@
         margin: 50px auto 100px;
         position: relative;
         z-index: 2;
-        font-size: 0.9em;
-
-
-        h2 {
-            @mixin fontFamilyLight;
-            font-size: 1.3em;
-            letter-spacing: 0em;
-            letter-spacing: -0.01em;
-            line-height: 1.4em;
-            margin-bottom: 1.6em;
-            color: $cl-postSumaryOpening;
-            
-          }
+        font-size: 0.8em;
         
-        b {
-            color: $gray-middark;
-            letter-spacing: 0.1em;
-            font-size: 0.8em;
-            text-transform: uppercase;
-        }
     }
 
     h1 {
-        @mixin fontFamilyMedium;
-        margin-bottom: 0.4em;
+        font-family: $fontFamilyMedium;
+        font-size: 2.8em;
+        letter-spacing: -0.02em;
+        line-height: 1.2em;
+        margin-bottom: .3em;
         color: $cl-postSumaryTilte;
-        font-size: 2.3em;
-        line-height: 1em;
+    }
+
+    h2 {
+        font-family: $fontFamilyLight;
+        font-size: 1.4em;
+        line-height: 1.4em;
+        margin-bottom: .3em;
+        color: $cl-postSumaryOpening; 
+      }
+
+      b {
+        color: $gray-middark;
+        letter-spacing: 0.1em;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        font-weight: bold;
+        
     }
 
 }

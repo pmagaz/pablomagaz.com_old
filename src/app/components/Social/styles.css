@@ -1,23 +1,12 @@
-@import '../../styles/mixins/mixins.css';
-
 .socialBox{   
     display: flex;
-    justify-content: space-around;
-    width: 172px;
+    justify-content: space-between;
+    width: 145px;
     height: 30px;
     margin: 20px auto 0;
 }
 
-.linkedin{
-        @mixin icon linkedin;
-    // background-image: src="../../assets/icons/linkedin.svg";
-    color: red;
-}
-.twitter{
-        @mixin icon twitter;
-    // background-image: src="../../assets/icons/twitter.svg";
-}
-.email{
-        @mixin icon email;
-    // background-image: src="../../assets/icons/email";
+.socialBox:hover > div{
+    opacity: .5;
+    transition: opacity .2s ease-in-out;
 }

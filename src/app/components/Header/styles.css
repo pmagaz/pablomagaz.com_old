@@ -7,7 +7,7 @@ header.mainHeader{
   position: fixed;
   z-index: 2;
   border-top: $bdr-mainHeader;
-  background: $bg-mainHeader;
+  
   color: $cl-mainHeader;
   .mainHeaderWrapper{
       @mixin mainFit; 

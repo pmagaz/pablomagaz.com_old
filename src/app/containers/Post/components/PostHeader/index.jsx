@@ -20,13 +20,16 @@ const PostHeader = ({ image, title }) => {
   else style = null;
 
   const cx = classNames.bind(styles);
-  const postHeaderStyle = cx({
-    'postHeader': true,
-    //'postHeaderAnim': context.client ? true : false
+  const postTitleStyle = cx({
+    'postTitleAnim': context.client ? true : false
   });
 
   return (
-    <div style={ style } className={ postHeaderStyle }></div>
+    <div style={ style } className={ styles.postHeader }>
+        <h1 className={ postTitleStyle }>
+          { SiteConf.BlogTitle.toUpperCase() }
+        </h1>
+    </div>
   )
 };
 

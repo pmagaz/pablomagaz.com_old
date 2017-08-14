@@ -1,4 +1,5 @@
 @import '../../../../styles/variables/variables.css';
+@import '../../../../styles/anims.css';
 
 .postHeader {
   width: 100%; 
@@ -6,18 +7,31 @@
   position: fixed;
   z-index: -1;
   top: 0;
+  color: white;
+  font-family: $fontFamilyMedium;
+  color: $cl-titleBlog;
+  word-break: break-word;
   overflow: hidden;
   background-position-y: 50%;
   background-size: 100%;
   -webkit-transform-style: inherit;
   transform-style: inherit;
+
+  h1 {
+    font-size: 2.8em;
+    padding-top: 20px;
+    padding-left: 68px;
+    font-family: $fontFamilyMedium;
+    color: $cl-titleBlog;
+    word-break: break-word;
+    width: 400px;
+    line-height: 1em;
+  }
 }
 
-.postHeaderAnim {
-  -webkit-animation: fade-in-down 0.3s;
-  animation: fade-in-down 0.3s both;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+.postTitleAnim {
+  -webkit-animation: fade-in-down 140ms;
+  animation: fade-in-down 140ms both;
 }
 
 .postHeader::before {

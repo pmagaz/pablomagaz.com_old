@@ -13,11 +13,7 @@ footer.container{
         display: flex;
         justify-content: center;
     }
-    
-    .txt img {
-        width: 40px;
-    }
-  
+
     .copyright {
         margin-top: 20px;
         text-align: center;

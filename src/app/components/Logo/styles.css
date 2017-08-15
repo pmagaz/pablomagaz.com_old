@@ -11,7 +11,7 @@
   
  }
 
-  .miniTitleActive {
+.miniTitleActive {
   font-family: $fontFamilyMedium;
   font-size: 1em;
   letter-spacing: -0.02em;
@@ -19,4 +19,4 @@
   color: $cl-postSumaryTilte;
   font-weight: bold;
    transition: opacity 110ms ease-in;
-  }
+}

@@ -1,7 +1,6 @@
 @import '../../styles/mixins/mixins.css';
 @import '../../styles/variables/variables.css';
-
-header.mainHeader{
+.mainHeader{
   width: 100%;
   left: 0;
   right: 0;
@@ -12,7 +11,7 @@ header.mainHeader{
   -webkit-transition: background-color 140ms ease-in;
   -ms-transition: background-color 140ms ease-in;
   transition: background-color 140ms ease-in;
-  .mainHeaderWrapper{
+  &Wrapper{
       @mixin mainFit; 
       margin: 0 auto;  
       height: 50px;

@@ -12,7 +12,9 @@ const Footer = () => (
   <footer className={ styles.container }>
       <Menu />
     <div className={ styles.copyright }>
-    <span>© 2017</span><span> Pablo Magaz.</span><span> All rights reserved. </span>
+      <span>© 2017</span>
+      <span> Pablo Magaz.</span>
+      <span> All rights reserved. </span>
     </div>
     <Social />
   </footer>

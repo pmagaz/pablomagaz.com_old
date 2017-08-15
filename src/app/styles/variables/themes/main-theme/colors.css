@@ -1,0 +1,19 @@
+/** Gray scale **/
+$white: #F7F7F7;
+$gray-light: #c3c3c3;
+$gray-middark: #5f5f5f;
+$gray-darker: #444444;
+$black: #151515;
+
+
+/** Main colors **/
+$primary-color: #f72354;
+$secondary-color: #3B6796;
+$tertiary-color: $gray-darker;
+
+
+/** Base **/
+$bg-back: $tertiary-color;
+$bg-body: $white;
+$cl-body: $gray-darker;
+

@@ -1,0 +1,77 @@
+/***** COMPONENTS *****/
+
+/** Header **/
+$cl-mainHeader: $white;
+$bdr-mainHeader: 4px solid $bg-back;
+$bg-mainHeader: $tertiary-color;
+$bgi-mainHeaderActive: none;
+
+/** Footer **/
+$bg-footer: $bg-back;
+$cl-footer: $white;
+$h-footer: $parallax-footer;
+
+
+/** Post Info **/
+$cl-post-info-pipe: $secondary-color;
+$cl-infoWrited: $cl-body;
+
+
+/** Post Tag **/
+$bg-postTag: $white;
+$cl-postTag: $secondary-color;
+$brd-postTag: 1px solid $secondary-color;
+
+
+
+
+/***** CONTAINERS *****/
+
+/** App **/
+$bg-mainContainer: $bg-body;
+$mrgb-mainContainer: $parallax-footer;
+
+
+/** Blog **/
+$bg-blog: $white;
+$bg-titleBlog: $primary-color;
+$bgi-titleBlog: none;
+$cl-titleBlog: $white;
+$mrgt-blog: $parallax-header;
+$hgt-titleBlog: $parallax-header;
+
+
+/** Blog/components/ Post Sumary **/
+$cl-postSumaryTilte: $bg-back;
+$cl-postSumaryOpening : $gray-middark; 
+$bdrt-linkImage: 1px solid $gray-light;
+$cl-postText: $cl-body;
+
+
+/** Main **/
+$bg-home: "http://k32.kn3.net/taringa/1/B/6/D/4/B/hegel-21/27B.jpg";
+$bg-homeBrand: $primary-color;
+$cl-homeBrand: $white;
+$bg-about:$gray-light;
+$cl-about:$black;
+$bg-about:$white;
+$cl-about:$black;
+
+
+/** Post **/
+$mrgt-post: $parallax-header;
+
+
+/** Post/components/ Post Content **/
+$bg-post: $white;
+$cl-postContentTilte: $bg-back;
+
+
+/** Post/components/ Post Header **/
+$bg-postHeader: $gray-darker;
+$mrgt-postHeader: $parallax-header;
+
+
+/** Post/components/ Post Header Image **/
+$bg-postHeaderImage: $gray-darker;
+$bg-postHeaderImageBefore: $gray;

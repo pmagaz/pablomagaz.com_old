@@ -9,9 +9,6 @@
   z-index: 2;
   border-top: $bdr-mainHeader;
   color: $cl-mainHeader;
-  -webkit-transition: background-color 140ms ease-in;
-  -ms-transition: background-color 140ms ease-in;
-  transition: background-color 140ms ease-in;
   &Wrapper{
       @mixin mainFit; 
       margin: 0 auto;  
@@ -23,8 +20,6 @@
 }
 
 .mainHeaderActive {
-  background-image: url("../../assets/images/BlogHeaderBackground.png");;
-  -webkit-transition: background-color 140ms ease-in;
-  -ms-transition: background-color 140ms ease-in;
-  transition: background-color 140ms ease-in;
+  background-color: $bg-mainHeader;
+  background-image: $bgi-mainHeaderActive;
 }

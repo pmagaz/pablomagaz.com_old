@@ -1,3 +1,5 @@
+@import '../../styles/mixins/mixins.css';
+
 .SocialIcon{
   width: 40px;
   flex: 2;

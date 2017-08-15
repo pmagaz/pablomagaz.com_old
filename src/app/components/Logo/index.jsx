@@ -53,7 +53,7 @@ class Logo extends Component {
     
     const cx = classNames.bind(styles);
      const miniTitleStyle = cx({
-      'miniTitle': !this.state.show ? true : false,
+      'miniTitle': !this.state.show ? true : true,
       'miniTitleActive': (this.state.show ) ? true : false 
     });
 

@@ -12,7 +12,15 @@ const TagTitle = ({ tag, posts}) => {
     const numPosts = posts === 1 ? 'post' : 'posts';
     return (
       <div className={ styles.TagTitle } >
-        <h1>{ tag.toUpperCase() } : { posts } { numPosts } </h1>
+        <h1>
+          <span>
+            { tag.toUpperCase() }
+          </span>
+          :
+          <small>
+             { posts } { numPosts }
+          </small> 
+        </h1>
       </div>
     );
  };

@@ -7,7 +7,7 @@
 }
 
 .miniTitle {
-    margin-bottom: 0px;
+    margin-bottom: -13px;
     font-family: $fontFamilyMedium;
     font-size: 1em;
     letter-spacing: -0.02em;

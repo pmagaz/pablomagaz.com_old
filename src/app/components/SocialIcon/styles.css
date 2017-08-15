@@ -1,25 +1,21 @@
-
 .SocialIcon{
   width: 40px;
   flex: 2;
-  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
+  &:hover{
+    opacity: 1 !important;
+    transition: opacity .2s ease-in-out;  
+  }
+  &:nth-child(1){
+    @mixin socialIcon linkedin;
+  }
+  &:nth-child(2){
+    @mixin socialIcon twitter;
+  }
+  &:nth-child(3){
+    @mixin socialIcon email;
+  }
 }
 
-.SocialIcon:nth-child(1){
- background-image: src("../assets/icons/linkedin.svg");
-}
-.SocialIcon:nth-child(2){
- background-image: src("../assets/icons/twitter.svg");
-}
-.SocialIcon:nth-child(3){
- background-image: src("../assets/icons/email");
-}
-
-.SocialIcon:nth-child(1):hover,
-.SocialIcon:nth-child(2):hover,
-.SocialIcon:nth-child(3):hover{
-  opacity: 1 !important;
-  transition: opacity .2s ease-in-out; 
- }

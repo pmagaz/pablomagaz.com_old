@@ -1,4 +1,3 @@
-@define-mixin icon $name {
-  content: "";
-  background: url('../assets/icons/$name.svg');
+@define-mixin socialIcon $name {
+  background-image: src('../assets/icons/$name.svg');
 }

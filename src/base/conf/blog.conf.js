@@ -7,7 +7,7 @@ const BlogTitle = 'El Blog Isomórfico';
 const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
 const postOpeningChars= 46;
-const codeHighlightDelay = 200;
+const codeHighlightDelay = 300;
 const postOpeningSplitChar = '</h2>';
 const GoogleAnaliticsId = 'aaaaa';
 

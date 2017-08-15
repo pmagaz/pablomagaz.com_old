@@ -9,9 +9,9 @@ header.mainHeader{
   z-index: 2;
   border-top: $bdr-mainHeader;
   color: $cl-mainHeader;
-  -webkit-transition: background-color 140ms ease-in;
-  -ms-transition: background-color 140ms ease-in;
-  transition: background-color 140ms ease-in;
+  -webkit-transition: background-color 120ms ease-in;
+  -ms-transition: background-color 120ms ease-in;
+  transition: background-color 120ms ease-in;
   .mainHeaderWrapper{
       @mixin mainFit; 
       margin: 0 auto;  
@@ -24,7 +24,7 @@ header.mainHeader{
 
 .mainHeaderActive {
   background: $bg-mainHeader;
-  -webkit-transition: background-color 140ms ease-in;
-  -ms-transition: background-color 140ms ease-in;
-  transition: background-color 140ms ease-in;
+  -webkit-transition: background-color 120ms ease-in;
+  -ms-transition: background-color 120ms ease-in;
+  transition: background-color 120ms ease-in;
 }

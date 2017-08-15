@@ -10,6 +10,5 @@
     overflow: hidden;
     border: $bdrt-linkImage;
     img{
-      margin-top: -25%;
     }
 }

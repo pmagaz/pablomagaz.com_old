@@ -10,7 +10,7 @@
   background: $bg-blog;
   .blogContent{
     margin: 34px auto 100px;
-    background: $white;
+    background: $bg-blog;
     @mixin mainFit;
     @media (min-width: $sm){
       flex: 3;  

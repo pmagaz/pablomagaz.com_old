@@ -7,9 +7,9 @@ $black: #151515;
 
 
 /** Main colors **/
-$primary-color: #15C260;
-$secondary-color: #5A189E;
-$tertiary-color: #0c0b15;
+$primary-color: #f72354;
+$secondary-color: #552cd2;
+$tertiary-color: $gray-darker;
 
 
 /** Base **/

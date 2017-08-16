@@ -7,7 +7,7 @@ $bg-mainHeader: $tertiary-color;
 $bgi-mainHeaderActive: none;
 
 /** Footer **/
-$bg-footer: $bg-back;
+$bg-footer: $black;
 $cl-footer: $white;
 $h-footer: $parallax-footer;
 

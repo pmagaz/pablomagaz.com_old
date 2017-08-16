@@ -47,7 +47,6 @@ class Logo extends Component {
     const pathName = this.props.location.pathname;
     const hash = this.props.location.hash;
     const isHome = (pathName === '/') ? true : false; 
-    console.log(111, this.isHome())
     if (this.isHome()) value = '';
     else value = SiteConf.BlogTitle.toUpperCase(); 
     

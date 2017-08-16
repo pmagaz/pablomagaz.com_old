@@ -8,13 +8,13 @@
 }
 
 .SocialIcon:nth-child(1){
- background-image: src("../assets/icons/linkedin.svg");
+ background-image: url("../../assets/icons/linkedin.svg");
 }
 .SocialIcon:nth-child(2){
- background-image: src("../assets/icons/twitter.svg");
+ background-image: url("../../assets/icons/twitter.svg");
 }
 .SocialIcon:nth-child(3){
- background-image: src("../assets/icons/email");
+ background-image: url("../../assets/icons/email.svg");
 }
 
 .SocialIcon:nth-child(1):hover,

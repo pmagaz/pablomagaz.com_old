@@ -49,10 +49,10 @@ if (env === 'development') {
 } else {
   Ssl = false;
   Protocol = Ssl ? 'https://' : 'http://';
-  HostName = '188.166.49.134';
+  HostName = '172.104.136.180';
   ServerUrl = `http://${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
-  clientSecret = 'd7d4f5b6725d';
+  clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = 'http://localhost:2369'; 
   BlogUrl = `${ GhostUrl }/blog/`;

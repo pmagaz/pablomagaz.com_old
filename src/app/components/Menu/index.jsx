@@ -27,12 +27,6 @@ const Menu = (props) => {
             value="Sobre mi"
           />
           </li>
-        <li>
-        <LinkButton
-          location="#contact"
-          value="Contacto"
-        />  
-        </li>
       </ul>
     </nav>
   )

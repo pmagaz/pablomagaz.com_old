@@ -19,42 +19,7 @@
 }
 
 .blogTitle{
-  width: 100%;
-  height: $hgt-titleBlog;
-  margin: 0;
-  left: 0;
-  top: 0;
-  padding-top: 11px;
-  font-size: 1.4em;
-  line-height: 1;
-  position: fixed;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-color: $bg-titleBlog;
-  background-image: $bgi-titleBlog;
-  color: $cl-titleBlog;
-  &Wrap{
-    @mixin mainFit;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    h1{
-      font-family: $fontFamilyMedium;
-      color: $cl-titleBlog;
-      word-break: break-word;
-      width: 400px;
-      + div{
-        display: flex;
-        align-items: flex-end;
-        margin-bottom: 34px;
-        font-size: 17px;
-      }
-    }
-  }
+  @mixin blogTitle;
 }
 
 .titleBlogAnim {

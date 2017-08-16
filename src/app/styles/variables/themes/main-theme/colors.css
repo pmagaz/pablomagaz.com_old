@@ -9,11 +9,11 @@ $black: #151515;
 /** Main colors **/
 $primary-color: #f72354;
 $secondary-color: #3B6796;
-$tertiary-color: $gray-darker;
+$tertiary-color: #212430;
 
 
 /** Base **/
-$bg-back: $tertiary-color;
+$bg-back: $gray-darker;
 $bg-body: $white;
 $cl-body: $gray-darker;
 

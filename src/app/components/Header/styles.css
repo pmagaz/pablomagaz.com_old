@@ -22,4 +22,5 @@
 .mainHeaderActive {
   background-color: $bg-mainHeader;
   background-image: $bgi-mainHeaderActive;
+  border-bottom: $bdt-mainHeaderActive;
 }

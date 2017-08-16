@@ -20,6 +20,9 @@
 
 .blogTitle{
   @mixin blogTitle;
+  .socialBox{
+    margin-bottom: 20px;
+  }
 }
 
 .titleBlogAnim {

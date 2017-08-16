@@ -10,6 +10,7 @@ import * as Actions from './actions';
 import PostList from './components/PostList';
 import TagTitle from './components/TagTitle';
 import LinkButton from 'components/LinkButton';
+import Social from 'components/Social';
 import styles from './styles.css';
 
 class Blog extends Component {
@@ -71,9 +72,11 @@ class Blog extends Component {
                 { SiteConf.BlogTitle.toUpperCase() }
               </h1>
               </div>
+              <div className={ styles.socialBox }>
+                <Social />
+              </div>
             </div>
           </header>
-          <span className= { styles.band } ></span>
           { tagTitle }
           <PostList posts={ posts } />
         </div>

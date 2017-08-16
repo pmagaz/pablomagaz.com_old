@@ -19,5 +19,8 @@
   &:nth-child(3){
     @mixin socialIcon email;
   }
+  &:nth-child(4){
+    @mixin socialIcon github;
+  }
 }
 

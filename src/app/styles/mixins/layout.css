@@ -47,6 +47,7 @@
       height: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
       h1{
         font-family: $fontFamilyMedium;
         color: $cl-titleBlog;

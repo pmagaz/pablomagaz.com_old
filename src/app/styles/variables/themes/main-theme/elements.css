@@ -3,8 +3,9 @@
 /** Header **/
 $cl-mainHeader: $white;
 $bdr-mainHeader: 4px solid $bg-back;
-$bg-mainHeader: transparent;
-$bgi-mainHeaderActive: url("../../../../assets/images/BlogHeaderBackground.png");
+$bg-mainHeader: $tertiary-color;
+$bgi-mainHeaderActive: none;
+$bdt-mainHeaderActive:10px solid $white;
 
 /** Footer **/
 $bg-footer: $bg-back;

@@ -6,6 +6,10 @@ footer.container{
     padding: 20px 0;
     position: fixed;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background: $bg-footer;
     color: $cl-footer;
 
@@ -15,7 +19,7 @@ footer.container{
     }
 
     .copyright {
-        margin-top: 20px;
+        margin: 20px 0;
         text-align: center;
         display: block;
         span{

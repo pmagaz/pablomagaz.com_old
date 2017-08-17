@@ -16,7 +16,9 @@ const Footer = () => (
       <span> Pablo Magaz.</span>
       <span> All rights reserved. </span>
     </div>
-    <Social />
+    <div className={ styles.powered }>
+      powered by:
+    </div>
   </footer>
 );
 

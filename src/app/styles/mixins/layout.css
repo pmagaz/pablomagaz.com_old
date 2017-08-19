@@ -32,10 +32,8 @@
 
 @define-mixin postH2{
   font-family: $fontFamilyLight;
-  font-size: 1.2em;
-  line-height: 1.4em;
-  margin-bottom: .3em;
   color: $cl-postSumaryOpening; 
+  font-weight: 200;
 }
 
 @define-mixin blogTitle {

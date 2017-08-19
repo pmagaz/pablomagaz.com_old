@@ -15,6 +15,9 @@
     }
     h2 {
       @mixin postH2;
+      font-size: 1.2em;
+      line-height: 1.4em;
+      margin-bottom: .3em;
     }
     .postText{
       color: $cl-postText;

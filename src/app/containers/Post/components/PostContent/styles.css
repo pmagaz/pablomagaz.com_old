@@ -17,7 +17,10 @@
         @mixin postTitle;
     }
     h2 {
-        @mixin postH2; 
+        @mixin postH2;
+        font-size: 1.4em;
+        line-height: 1.4em;
+        margin: 1.5em 0 2.2em;
     }
     h3 {
         color: $gray-middark;

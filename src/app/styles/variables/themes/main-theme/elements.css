@@ -3,9 +3,12 @@
 /** Header **/
 $cl-mainHeader: $white;
 $bdr-mainHeader: 4px solid $bg-back;
-$bg-mainHeader: $tertiary-color;
+$bg-mainHeader: $primary-color;
 $bgi-mainHeaderActive: none;
 $bdt-mainHeaderActive:10px solid $white;
+
+/** Logo **/
+$cl-miniTitle: $white;
 
 /** Footer **/
 $bg-footer: $bg-back;
@@ -14,13 +17,14 @@ $h-footer: $parallax-footer;
 
 
 /** Post Info **/
-$cl-post-info-pipe: $secondary-color;
+$cl-post-info-pipe: $cl-body;
 $cl-infoWrited: $cl-body;
 
 
 /** Post Tag **/
 $bg-postTag: $white;
 $cl-postTag: $secondary-color;
+$cl-postTagHover: $primary-color; 
 $brd-postTag: 1px solid $secondary-color;
 
 
@@ -44,6 +48,7 @@ $hgt-titleBlog: $parallax-header;
 
 /** Blog/components/ Post Sumary **/
 $cl-postSumaryTilte: $bg-back;
+$cl-postSumaryTilteHover: $primary-color;
 $cl-postSumaryOpening : $gray-middark; 
 $bdrt-linkImage: 1px solid $gray-light;
 $bg-linkImage: $tertiary-color;

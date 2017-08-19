@@ -67,10 +67,10 @@ class Blog extends Component {
         <div className= { styles.blogContent } >
           <header className={ styles.blogTitle }>
             <div className={ styles.blogTitleWrap }>
-            <div className={ blogTitleStyle } > 
-              <h1>
-                { SiteConf.BlogTitle.toUpperCase() }
-              </h1>
+              <div className={ blogTitleStyle } > 
+                <h1>
+                  { SiteConf.BlogTitle.toUpperCase() }
+                </h1>
               </div>
               <div className={ styles.socialBox }>
                 <Social />

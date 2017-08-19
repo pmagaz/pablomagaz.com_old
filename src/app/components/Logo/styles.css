@@ -1,11 +1,6 @@
 @import '../../styles/variables/variables.css';
 @import '../../styles/mixins/mixins.css';
 
-.logo {
-  font-family: 'MontSerrat';
-  display: none;
-}
-
 .miniTitle {
     margin-bottom: -13px;
     font-family: $fontFamilyMedium;
@@ -14,11 +9,17 @@
     line-height: 1.2em;
     font-weight: bold;
     opacity: 0;
+    visibility: hidden;
     transition: all 110ms ease-out;
- }
+    a{
+        color: $cl-miniTitle;
+ 
+    }
+}
 
 .miniTitleActive {
     margin-bottom: 10px;
     opacity: 1;
+    visibility: visible;
     transition: all 110ms ease-in;
 }

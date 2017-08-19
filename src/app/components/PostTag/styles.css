@@ -6,4 +6,7 @@ mark{
     background-color: $bg-postTag;
     color: $cl-postTag;
     font-family: $fontFamilyMedium;
+    &:hover{
+        color: $cl-postTagHover;
+    }
 }

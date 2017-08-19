@@ -5,6 +5,7 @@
   flex: 2;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 24px;
   cursor: pointer;
   &:hover{
     opacity: 1 !important;

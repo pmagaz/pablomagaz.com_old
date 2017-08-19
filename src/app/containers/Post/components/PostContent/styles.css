@@ -9,47 +9,29 @@
 
     .postContent {
         @mixin mainFit;
-        margin-top: 4em;
-        line-height: 1.7;
-        padding-bottom: 300px;
         margin: 50px auto 100px;
         position: relative;
         z-index: 2;
-        font-size: 0.8em;
-        
     }
-
     h1 {
-        font-family: $fontFamilyMedium;
-        font-size: 2.8em;
-        letter-spacing: -0.02em;
-        line-height: 1.2em;
-        margin-bottom: .3em;
-        color: $cl-postSumaryTilte;
+        @mixin postTitle;
     }
-
     h2 {
-        font-family: $fontFamilyLight;
-        font-size: 1.4em;
-        line-height: 1.4em;
-        margin-bottom: .3em;
-        color: $cl-postSumaryOpening; 
-      }
-
-      b {
-        color: $gray-middark;
-        letter-spacing: 0.1em;
-        font-size: 0.8em;
-        text-transform: uppercase;
-        font-weight: bold;
-        
+        @mixin postH2; 
     }
-
+    h3 {
+        color: $gray-middark;
+        line-height: 1;
+        margin: 31px 0 0;
+        display: block;
+        letter-spacing: 0.1em;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-family: $fontFamilyMedium;
+    }
 }
 
 .postContentAnim {
-  -webkit-animation: fade-in-up 150ms;
   animation: fade-in-up 150ms both;
-  -webkit-animation-delay: 20ms;
   animation-delay: 20ms;
 }

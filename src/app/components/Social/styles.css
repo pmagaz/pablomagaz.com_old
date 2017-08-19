@@ -1,7 +1,7 @@
 .socialBoxWrap{   
     display: flex;
     justify-content: space-between;
-    width: 145px;
+    width: 130px;
     height: 30px;
     &:hover > div{
         opacity: .5;

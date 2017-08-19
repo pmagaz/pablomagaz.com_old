@@ -1,3 +1,4 @@
+@import '../../styles/variables/variables.css';
 .navMenu {
 	ul{
 		width: 205px;
@@ -9,6 +10,7 @@
         li{
 			position: relative;
 			a{
+				color: $white;
 				&::before,
 				&::after {
 					position: absolute;
@@ -21,6 +23,9 @@
 				&::after {
 					content: ']';
 					right: 0px;
+				}
+				&:hover{
+					color: $white;
 				}
 				&:hover::before,
 				&:focus::before{

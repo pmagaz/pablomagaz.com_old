@@ -9,7 +9,7 @@
   flex-direction: column;
   background: $bg-blog;
   .blogContent{
-    margin: 34px auto 100px;
+    margin: 26px auto 100px;
     background: $bg-blog;
     @mixin mainFit;
     @media (min-width: $sm){
@@ -26,6 +26,5 @@
 }
 
 .titleBlogAnim {
-  -webkit-animation: fade-in-down 140ms;
   animation: fade-in-down 140ms both;
 }

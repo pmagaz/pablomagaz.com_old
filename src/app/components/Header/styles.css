@@ -9,6 +9,7 @@
   z-index: 2;
   border-top: $bdr-mainHeader;
   color: $cl-mainHeader;
+  transition: background-color .3s cubic-bezier(.19,1,.22,1),left .62s cubic-bezier(.19,1,.22,1);
   &Wrapper{
       @mixin mainFit; 
       margin: 0 auto;  
@@ -23,4 +24,5 @@
   background-color: $bg-mainHeader;
   background-image: $bgi-mainHeaderActive;
   border-bottom: $bdt-mainHeaderActive;
+  transition: background-color .2s cubic-bezier(.19,1,.22,1),left .62s cubic-bezier(.19,1,.22,1);
 }

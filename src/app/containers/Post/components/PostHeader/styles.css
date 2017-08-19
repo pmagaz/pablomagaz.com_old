@@ -7,13 +7,12 @@
   justify-content: space-between;
   background-size: 221px;
   background-repeat: no-repeat;
-  background-position: 79px -19px;
+  background-position: 71px -19px;
 }
 
 
 
 .postTitleAnim {
-  -webkit-animation: fade-in-down 140ms;
   animation: fade-in-down 140ms both;
 }
 
@@ -23,6 +22,5 @@
   position: relative;
   overflow: hidden;
   background-size: cover;
-  -webkit-transform-style: inherit;
   transform-style: inherit;
 }

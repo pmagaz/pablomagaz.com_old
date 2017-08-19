@@ -26,9 +26,10 @@ const PostSummary = ({ post }) => {
 
   return (
     <div className={ postSummaryStyle } >
-      <Link to={ url }>
-        <h1> { post.title } </h1>
-      </Link>
+      <h1>
+        <Link to={ url }>
+      { post.title }
+      </Link></h1>
       <Link className={ styles.linkImage } to={ url }>
         <PostImage
           src={ imageSrc }

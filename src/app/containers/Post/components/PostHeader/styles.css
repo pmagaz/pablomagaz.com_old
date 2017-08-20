@@ -5,9 +5,11 @@
 .postHeader{
   @mixin blogTitle;
   justify-content: space-between;
-  background-size: 221px;
-  background-repeat: no-repeat;
-  background-position: 71px -19px;
+  &Wrap{
+    background-size: 221px;
+    background-repeat: no-repeat;
+    background-position: 0 -19px;
+  }
 }
 
 

@@ -68,6 +68,7 @@
       word-break: break-word;
       width: 400px;
       margin-top: 43px;
+      font-size: 2.8rem;
       + div{
         display: flex;
         align-items: flex-end;

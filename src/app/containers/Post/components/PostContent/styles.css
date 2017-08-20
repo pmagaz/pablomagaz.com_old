@@ -12,6 +12,7 @@
         margin: 50px auto 100px;
         position: relative;
         z-index: 2;
+        min-height: 279px;
     }
     h1 {
         @mixin postTitle;

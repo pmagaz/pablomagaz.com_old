@@ -1,5 +1,5 @@
 import needle from 'needle';
-import { SiteConf, getDate, env } from 'base';
+import { SiteConf, getDate } from 'base';
 
 export const postsApiHandler = (req, res)  => {
   needle('get', SiteConf.PostsApi)
@@ -9,7 +9,8 @@ export const postsApiHandler = (req, res)  => {
       const pagination = data.meta.pagination;
       const posts = PostList(data.posts, filter);
       const result = { posts, pagination };
-      res.json(result);
+      if (posts.length) res.json(result);
+      else res.status(404).json({ posts:[] });
     })
     .catch(err => {
       res.status(500).json(err);

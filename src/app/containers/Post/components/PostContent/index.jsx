@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
+import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import hljs from 'highlight.js/lib/highlight';
 import ReactHtmlParser from 'html-react-parser';
@@ -8,6 +8,7 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import { SiteConf, context, getDate } from 'base';
 import Loading from 'components/Loading';
 import PostInfo from 'components/PostInfo';
+import PostComments from '../PostComments';
 import styles from './styles.css';
 
 class PostContent extends Component {
@@ -48,6 +49,9 @@ class PostContent extends Component {
       //'postContentAnim': context.client ? true : false
     });
 
+    const postUrl = `${SiteConf.BlogUrl}${post.slug }`;
+    const identifier = `${post.slug}${post.id }`;
+
     return (
       <div className={ styles.post }>
         <div className={ postContentStyle }>
@@ -59,9 +63,10 @@ class PostContent extends Component {
            />
            <div className={ styles.postText }> 
             { ReactHtmlParser(post.html) }
-          </div>
+            <PostComments post={ post } />
         </div>
       </div>
+    </div>
     );
   };
 }

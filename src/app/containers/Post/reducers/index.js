@@ -11,6 +11,7 @@ const postSuccess = (state, { payload }) => (
     .set('id', payload.id)
     .set('tags', payload.tags)
     .set('html', payload.html)
+    .set('slug', payload.slug)
     .set('title', payload.title)
     .set('image', payload.image)
     .set('author', SiteConf.Author)

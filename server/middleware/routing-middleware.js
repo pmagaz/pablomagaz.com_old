@@ -3,7 +3,7 @@ import { match } from 'react-router';
 import { fetchRequiredActions, context } from 'base';
 import routes from '../../src/base/routes';
 import renderPage from '../lib/renderPage';
-import postNotFound from '../lib/postNotFound';
+import contentNotFound from '../lib/contentNotFound';
 import renderContainer from '../lib/renderContainer';
 import configureServerStore from '../lib/configureStore';
 
@@ -17,7 +17,7 @@ export default function routingMiddleware(req, res) {
     if (renderProps == null) return res.status(404).send('Not found');
     fetchRequiredActions(store.dispatch, renderProps.components, renderProps.params, context.context)
       .then(() => {
-        if (postNotFound(renderProps, store)) return res.status(404).send('Not found');
+        if (contentNotFound(renderProps, store)) return res.status(404).send('Not found');
         else {
           const routeMatch = renderProps.location.pathname;
           const renderedContainer = renderContainer(store, renderProps);

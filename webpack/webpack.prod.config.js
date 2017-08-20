@@ -54,8 +54,9 @@ export const module = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: (loader) => common.postcss.concat(
-                require('postcss-clean')()
+              plugins: () => common.postcss.concat(
+                require('postcss-clean')(),
+                require('autoprefixer')()
               )
             }
           }

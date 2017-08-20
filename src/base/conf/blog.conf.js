@@ -10,7 +10,9 @@ const postOpeningChars= 46;
 const codeHighlightDelay = 300;
 const postOpeningSplitChar = '</h2>';
 const GoogleAnaliticsId = 'aaaaa';
-
+const DisqusSettins = {
+  shortName: 'el-blog-isomorfico'
+};
 let HostName;
 let ServerUrl;
 let SiteUrl;
@@ -62,7 +64,8 @@ if (env === 'development') {
   PostsApiUrl = `${Protocol}${ HostName }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
-  uniqueImagePath = '/content/images/';
+  uniqueImagePath = '/assets/images/postcovers';
 } 
 
-export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath };
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, DisqusSettins };
+

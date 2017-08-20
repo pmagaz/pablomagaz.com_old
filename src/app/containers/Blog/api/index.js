@@ -11,6 +11,9 @@ export default {
     return fetch(`${ SiteConf.PostsApiUrl }${reqParams}`)
       .then(req => req.json())
       .then(payload => responseBlogModel(payload))
-      .catch(err => err);
+      .catch(err => {
+        console.log(44444, err);
+        return err;
+      });
   },
 };

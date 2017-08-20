@@ -24,7 +24,7 @@ class Header extends Component {
   }
 
   handleScroll(event) {
-    const maxScroll = 116;
+    const maxScroll = 109;
     const scrollTop = event.srcElement.body.scrollTop;
     if(scrollTop >= maxScroll && !this.state.show) { 
       this.setState({ show: true, scrollTop });
@@ -43,6 +43,7 @@ class Header extends Component {
 
     return (
       <header className={ headerStyle }>
+        <span className={ styles.mainHeaderSheet }></span>
         <div className={ styles.mainHeaderWrapper }>
         <Logo location= { this.props.location } />
         <Menu />

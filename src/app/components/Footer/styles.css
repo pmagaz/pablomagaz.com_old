@@ -27,17 +27,19 @@ footer.container{
         }
     }
 
-    .powered::after{
-        content: "";
-        margin-top: 14px;
-        margin-left: -97px;
-        background-image: url('../../assets/images/icons/base.png');
-        background-size: 97px;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        width: 100px;
-        height: 48px;
+    .powered{
+        margin: 1px 0 0;
+        &::after{
+            content: "";
+            margin: 10px 0 0 -81px;
+            background-image: url('../../assets/images/icons/base.png');
+            background-size: 73px;
+            background-repeat: no-repeat;
+            background-position: left;
+            position: absolute;
+            width: 76px;
+            height: 48px;
+        }
     }
 }
 

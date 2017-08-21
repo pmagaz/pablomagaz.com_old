@@ -39,8 +39,9 @@ class Post extends Component {
     const image = post.image || post.feature_image;
 
     return (
-      <div className={ styles.mainContent  }>
-        <div className={ styles.post  }>
+      <div className= { styles.post } >
+        <div className= { styles.content } >
+
           <PostHeader
             image={ image }
             title={ post.title }

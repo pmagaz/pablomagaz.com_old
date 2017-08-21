@@ -1,14 +1,8 @@
-.container {
-  max-width: 1024px;
-}
-
-.mainContent{
-  width: 100%;
-}
-
-.Post {
-  width: 100%;
-  font-size: 32px;
+@import '../../styles/variables/variables.css';
+@import '../../styles/mixins/mixins.css';
+@import '../../styles/anims.css';
+.post {
+  @mixin blogContent;
 }
 
 .PostAnim {

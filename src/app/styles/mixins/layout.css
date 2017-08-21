@@ -11,7 +11,7 @@
   overflow: hidden;
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
-  filter: grayscale(30%);
+  filter: grayscale(20%);
   img{
     transition: all .2s; 
   }

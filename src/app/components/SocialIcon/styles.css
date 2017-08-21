@@ -1,12 +1,10 @@
 @import '../../styles/mixins/mixins.css';
 
 .SocialIcon{
-  width: 40px;
   flex: 2;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 24px;
-  opacity: 0.7;
+  background-size: 20px;
   cursor: pointer;
   &:hover{
     opacity: 1 !important;

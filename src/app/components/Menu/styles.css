@@ -1,6 +1,7 @@
+@import '../../styles/variables/variables.css';
 .navMenu {
 	ul{
-		width: 291px;
+		width: 205px;
 		margin: 0;
 		padding: 0;
 		display: flex;
@@ -8,48 +9,40 @@
 		list-style: none;
         li{
 			position: relative;
+			a{
+				color: $white;
+				&::before,
+				&::after {
+					position: absolute;
+					opacity: 0;
+				}
+				&::before {
+					content: '[';
+					left: 0px;
+				}
+				&::after {
+					content: ']';
+					right: 0px;
+				}
+				&:hover{
+					color: $white;
+				}
+				&:hover::before,
+				&:focus::before{
+					left: -10px;	
+				}
+				&:hover::after,
+				&:focus::after {
+					right: -10px;
+				}
+				&:hover::before,
+				&:focus::before,
+				&:hover::after,
+				&:focus::after {
+					opacity: 1;
+					transition: all .3s ease;
+				}
+			}
         }
     }
-}
-
-.navMenu a::before,
-.navMenu a::after {
-	position: absolute;
-	opacity: 0;
-}
-
-.navMenu a::before {
-	content: '[';
-}
-
-.navMenu a::after {
-	content: ']';
-}
-
-.navMenu a::before,
-.navMenu a::before{
-	left: 0px;	
-}
-
-.navMenu a:hover::before,
-.navMenu a:focus::before{
-	left: -10px;	
-}
-
-.navMenu a::after,
-.navMenu a::after {
-	right: 0px;
-}
-
-.navMenu a:hover::after,
-.navMenu a:focus::after {
-	right: -10px;
-}
-
-.navMenu a:hover::before,
-.navMenu a:focus::before,
-.navMenu a:hover::after,
-.navMenu a:focus::after {
-	opacity: 1;
-	transition: all .3s ease;
 }

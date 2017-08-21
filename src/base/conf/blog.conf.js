@@ -40,7 +40,8 @@ if (env === 'development') {
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = 'http://localhost:2369'; 
   BlogUrl = `${ GhostUrl }/blog/`;
-  ImageUrl = `${Protocol}${ HostName }`;
+//  ImageUrl = `${Protocol}${ HostName }`;
+  ImageUrl = GhostUrl;
   ContentPath = '/Users/Pablo/js/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = `${Protocol}${ HostName }/api/post/`;

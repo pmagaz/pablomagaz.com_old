@@ -3,20 +3,21 @@
 
 .PostSummary {
   margin-bottom: 4em;
-    a h1 {
-      font-family: $fontFamilyMedium;
-      font-size: 2.2em;
-      letter-spacing: -0.02em;
-      line-height: 1.2em;
-      margin-bottom: .4em;
-      color: $cl-postSumaryTilte;
+    h1 {
+      @mixin postTitle;
+      padding-bottom: .4em;
+      a {
+        color: $cl-postSumaryTilte;
+        &:hover{
+          color: $cl-postSumaryTilteHover;
+        }
+      }
     }
     h2 {
-      font-family: $fontFamilyLight;
-      font-size: 1em;
+      @mixin postH2;
+      font-size: 1.2em;
       line-height: 1.4em;
       margin-bottom: .3em;
-      color: $cl-postSumaryOpening; 
     }
     .postText{
       color: $cl-postText;
@@ -24,10 +25,13 @@
 }
 
 .PostSummaryAnim {
-  -webkit-animation: fade-in-up 100ms;
   animation: fade-in-up 100ms both;
 }
 
 .linkImage{
   @mixin linkImage;
+  img{
+    margin-top: -13%;
+    width: 50%;
+  }
 }

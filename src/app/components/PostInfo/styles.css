@@ -7,18 +7,19 @@
   span {
     font-size: .8em;
     letter-spacing: 0.1em;
+    line-height: 1;
     padding: 0 0.8em;
     color: $cl-infoWrited;
 
-  }
-  span:first-child{
-    padding-left: 0;
-  }
-  span:nth-child(2) {
-    border-left: 2px solid $cl-post-info-pipe;
-  }
-  span + div {
-    flex: 3;
-    text-align: right;
+    &:first-child{
+      padding-left: 0;
+    }
+    &:nth-child(2) {
+      border-left: 2px solid $cl-post-info-pipe;
+    }
+    + div {
+      flex: 3;
+      text-align: right;
+    }
   }
 }

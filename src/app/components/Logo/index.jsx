@@ -32,7 +32,7 @@ class Logo extends Component {
   }
 
   handleScroll(event) {
-    const maxScroll = 120;
+    const maxScroll = 109;
     const scrollTop = event.srcElement.body.scrollTop;
     if(scrollTop >= maxScroll && !this.state.show && !this.isHome()) {
       this.setState({ show: true, scrollTop });
@@ -52,7 +52,7 @@ class Logo extends Component {
     
     const cx = classNames.bind(styles);
      const miniTitleStyle = cx({
-      'miniTitle': !this.state.show ? true : false,
+      'miniTitle': !this.state.show ? true : true,
       'miniTitleActive': (this.state.show ) ? true : false 
     });
 

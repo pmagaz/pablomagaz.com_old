@@ -1,26 +1,22 @@
 @import '../../styles/base.css';
 
 *{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 a{
     border: none;
     text-decoration: none;
-    color: inherit;
+    color: $primary-color;
+    cursor: pointer;
+    &:hover{
+        color: $secondary-color; 
+    }
 }
 
 p {
     font-size: 1.2em;
     margin: 0.8em 0;
-}
-
-.app{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
@@ -34,4 +30,13 @@ p {
 main.container {
     margin-bottom: $mrgb-mainContainer;
     background: $bg-mainContainer;
+}
+
+:global(.fade-appear) {
+    opacity: 0.01;
+}
+:global(.fade-appear.fade-appear-active) {
+    opacity: 1;
+    transition: opacity .2s ease-in;
+    animation-delay: 30ms;
 }

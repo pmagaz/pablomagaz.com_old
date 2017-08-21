@@ -1,22 +1,25 @@
+@import '../../styles/variables/variables.css';
 @import '../../styles/mixins/mixins.css';
 
-.logo {
-  font-family: 'MontSerrat';
-  display: none;
+.miniTitle {
+    margin-bottom: -13px;
+    font-family: $fontFamilyMedium;
+    font-size: 1em;
+    letter-spacing: -0.02em;
+    line-height: 1.2em;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 110ms ease-out;
+    a{
+        color: $cl-miniTitle;
+ 
+    }
 }
 
-.miniTitle {
-  font-family: $fontFamilyMedium;
-  opacity: 0;
-  
- }
-
-  .miniTitleActive {
-  font-family: $fontFamilyMedium;
-  font-size: 1em;
-  letter-spacing: -0.02em;
-  line-height: 1.2em;
-  color: $cl-postSumaryTilte;
-  font-weight: bold;
-   transition: opacity 110ms ease-in;
-  }
+.miniTitleActive {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 110ms ease-in;
+}

@@ -2,12 +2,18 @@
 @import '../../../../styles/mixins/mixins.css';
 
 .TagTitle {
-  margin-bottom: 2em;
+  margin-bottom: 36px;
     h1 {
-      font-family: $fontFamilyMedium;
       font-size: 2.2em;
       letter-spacing: -0.02em;
       line-height: 1.2em;
       color: $cl-postTag;
+      span{
+        margin-right: 3px;
+      }
+      small{
+        font-family: $fontFamilyMedium;
+        margin-left: 6px; 
+      }
     }
 }

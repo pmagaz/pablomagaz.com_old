@@ -18,6 +18,7 @@ const postSuccess = (state, { payload }) => (
     .set('updated_at', payload.updated_at)
     .set('published_at', payload.published_at)
     .set('feature_image', payload.feature_image)
+    .set('meta_description', payload.meta_description)
 );
 
 const cleanPost = state => (

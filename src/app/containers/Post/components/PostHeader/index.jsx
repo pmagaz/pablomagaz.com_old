@@ -25,11 +25,16 @@ const PostHeader = ({ image, title }) => {
   });
 
   return (
-    <div style={ style } className={ styles.postHeader }>
-        <h1 className={ postTitleStyle }>
-          { SiteConf.BlogTitle.toUpperCase() }
-        </h1>
-    </div>
+
+
+
+    <header className={ styles.postHeader }>
+      <div style={ style } className={ styles.postHeaderWrap }>
+          <h1 className={ postTitleStyle }>
+            { SiteConf.BlogTitle.toUpperCase() }
+          </h1>
+      </div>
+    </header>
   )
 };
 

@@ -2,15 +2,15 @@
 @import '../../styles/mixins/mixins.css';
 @import '../../styles/anims.css';
 
-.Blog {
+.blog {
   width: 100%;
   margin-top: $mrgt-blog;
   display: flex;
   flex-direction: column;
   background: $bg-blog;
-  .BlogContent{
-    margin: 34px auto 100px;
-    background: $white;
+  .blogContent{
+    margin: 26px auto 100px;
+    background: $bg-blog;
     @mixin mainFit;
     @media (min-width: $sm){
       flex: 3;  
@@ -18,45 +18,19 @@
   }
 }
 
-.titleBlog{
-  width: 100%;
-  height: $hgt-titleBlog;
-  margin: 0;
-  left: 0;
-  top: 0;
-  padding-top: 11px;
-  font-size: 1.4em;
-  line-height: 1;
-  position: fixed;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-image: url("../../assets/images/BlogHeaderBackground.png");
-  color: $cl-titleBlog;
-  .blogTitleWrap{
-    @mixin mainFit;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    h1{
-      font-family: $fontFamilyMedium;
-      color: $cl-titleBlog;
-      word-break: break-word;
-      width: 400px;
-    }
-    h1 + div{
-      display: flex;
-      align-items: flex-end;
-      margin-bottom: 34px;
-      font-size: 17px;
+.blogTitle{
+  @mixin blogTitle;
+  .socialBox{
+    margin-bottom: 20px;
+    -webkit-filter: invert(80%);
+    filter: invert(80%);
+    &:hover{
+      -webkit-filter: invert(70%);
+      filter: invert(70%);
     }
   }
 }
 
 .titleBlogAnim {
-  -webkit-animation: fade-in-down 140ms;
   animation: fade-in-down 140ms both;
 }

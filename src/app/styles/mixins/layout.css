@@ -86,7 +86,6 @@
   flex-direction: column;
   background: $bg-blog;
   .content{
-    margin: 26px auto 100px;
     background: $bg-blog;
     @mixin mainFit;
     @media (min-width: $sm){

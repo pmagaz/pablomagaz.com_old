@@ -28,10 +28,10 @@ footer.container{
     }
 
     .powered{
-        margin: 1px 0 0;
+        margin: 1px 0 0 -81px;
         &::after{
             content: "";
-            margin: 10px 0 0 -81px;
+            margin: -12px 0 0 5px;
             background-image: url('../../assets/images/icons/base.png');
             background-size: 73px;
             background-repeat: no-repeat;

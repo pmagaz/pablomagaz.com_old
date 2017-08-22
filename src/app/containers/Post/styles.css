@@ -3,6 +3,9 @@
 @import '../../styles/anims.css';
 .post {
   @mixin blogContent;
+  .content{
+    margin: 26px auto 200px;
+  }
 }
 
 .PostAnim {

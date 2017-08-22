@@ -64,7 +64,7 @@ class Blog extends Component {
 
     return (
       <div className= { styles.blog } >
-        <div className= { styles.blogContent } >
+        <div className= { styles.content } >
           <header className={ styles.blogTitle }>
             <div className={ styles.blogTitleWrap }>
               <div className={ blogTitleStyle } > 

@@ -3,19 +3,7 @@
 @import '../../styles/anims.css';
 
 .blog {
-  width: 100%;
-  margin-top: $mrgt-blog;
-  display: flex;
-  flex-direction: column;
-  background: $bg-blog;
-  .blogContent{
-    margin: 26px auto 100px;
-    background: $bg-blog;
-    @mixin mainFit;
-    @media (min-width: $sm){
-      flex: 3;  
-    }
-  }
+  @mixin blogContent;
 }
 
 .blogTitle{
@@ -24,10 +12,6 @@
     margin-bottom: 20px;
     -webkit-filter: invert(80%);
     filter: invert(80%);
-    &:hover{
-      -webkit-filter: invert(70%);
-      filter: invert(70%);
-    }
   }
 }
 

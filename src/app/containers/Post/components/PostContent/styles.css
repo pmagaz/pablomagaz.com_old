@@ -2,18 +2,6 @@
 @import '../../../../styles/mixins/mixins.css';
 
 .post{
-    width: 100%;
-    display: inline-block;
-    margin-top: $mrgt-post;
-    background-color: $bg-post; 
-
-    .postContent {
-        @mixin mainFit;
-        margin: 50px auto 100px;
-        position: relative;
-        z-index: 2;
-        min-height: 279px;
-    }
     h1 {
         @mixin postTitle;
     }
@@ -26,7 +14,7 @@
     h3 {
         color: $gray-middark;
         line-height: 1;
-        margin: 31px 0 0;
+        margin: 40px 0 20px;
         display: block;
         letter-spacing: 0.1em;
         font-size: 1em;

@@ -1,12 +1,17 @@
 @import '../../styles/variables/variables.css';
 
-mark{
-    font-size: 1em;
-    padding: .4em .6em;
-    background-color: $bg-postTag;
-    color: $cl-postTag;
-    font-family: $fontFamilyMedium;
-    &:hover{
-        color: $cl-postTagHover;
+a{
+    mark{
+        font-size: 1em;
+        padding: .4em .6em;
+        background-color: $bg-postTag;
+        color: $cl-postTag;
+        font-family: $fontFamilyMedium;
+    }
+    &:hover,
+    &:visited{
+        mark{
+            color: $cl-postTagHover;
+        }
     }
 }

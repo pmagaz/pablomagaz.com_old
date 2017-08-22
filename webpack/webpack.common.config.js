@@ -27,6 +27,7 @@ export const entry = {
     'react-redux',
     'react-router',
     'react-lazyload',
+    'babel-polyfill',
     'isomorphic-fetch',
     'html-react-parser',
     'react-router-scroll',

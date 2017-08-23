@@ -5,7 +5,7 @@ $cl-mainHeader: $white;
 $bdr-mainHeader: 4px solid $bg-back;
 $bg-mainHeader: $primary-color;
 $bgi-mainHeaderActive: none;
-$bdt-mainHeaderActive:10px solid $white;
+$bdt-mainHeaderActive:none;
 
 /** Logo **/
 $cl-miniTitle: $white;

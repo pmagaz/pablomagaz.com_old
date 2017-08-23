@@ -31,6 +31,7 @@ export const entry = {
     'isomorphic-fetch',
     'html-react-parser',
     'react-router-scroll',
+    'react-disqus-comments',
     'smoothscroll-polyfill',
     'highlight.js/lib/highlight',
     'react-addons-css-transition-group',

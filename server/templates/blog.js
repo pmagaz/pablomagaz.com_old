@@ -16,7 +16,6 @@ export default function blog(params) {
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="canonical" href="${ SiteConf.BlogUrl }" />
     
@@ -32,9 +31,6 @@ export default function blog(params) {
     <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
     ${ params.style }
     ${ params.vendorScript }
-    <script id=‘context’ type=‘application/json’>
-    var context = 'server';
-    </script>
     </head>
     <body>
       <div id="root">${ params.container }</div>

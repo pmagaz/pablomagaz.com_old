@@ -24,7 +24,6 @@ export default function post(params) {
     <meta property="article:modified_time" content="${ post.updated_at }" /> 
     <meta property="article:published_time" content="${ post.published_at }" />
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="canonical" href="${ postUrl }" />
     
@@ -34,7 +33,6 @@ export default function post(params) {
     <meta property="og:url" content="${ postUrl }" />
     <meta property="og:image" content="${ imageUrl }" />
     <meta property="og:description" content="${ post.meta_description }" />
-    ${ tagList }
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${ post.title }" />

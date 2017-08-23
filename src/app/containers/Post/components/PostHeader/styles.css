@@ -8,7 +8,8 @@
   &Wrap{
     background-size: 221px;
     background-repeat: no-repeat;
-    background-position: 0 -19px;
+    animation: fade-in-down-bgi 140ms both;
+    animation-delay: 70ms;
   }
 }
 

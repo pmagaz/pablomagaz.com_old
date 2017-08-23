@@ -1,4 +1,4 @@
-import * as path from 'path';
+import path from 'path';
 
 import { env } from '../../src/base/';
 import * as FileSystem from '../../src/base/shared/FileSystem';

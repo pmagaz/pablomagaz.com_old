@@ -5,10 +5,27 @@
 .postHeader{
   @mixin blogTitle;
   justify-content: space-between;
-  &Wrap{
+  .postHeaderWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: $layout-padding;
+    max-width: $layout-max-width;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
     background-size: 221px;
     background-repeat: no-repeat;
-    background-position: 0 -19px;
+    animation: fade-in-down-bgi 140ms both;
+    animation-delay: 70ms;
+    h1{
+      font-family: $fontFamilyMedium;
+      color: $cl-titleBlog;
+      word-break: break-word;
+      width: 400px;
+      margin-top: 43px;
+      font-size: 2.8rem;
+    }
   }
 }
 

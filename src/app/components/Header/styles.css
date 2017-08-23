@@ -9,14 +9,14 @@
   z-index: 2;
   border-top: $bdr-mainHeader;
   color: $cl-mainHeader;
-  &Sheet{
+  .mainHeaderSheet{
     min-height: 0;
     position: absolute;
     opacity: 0;
     width: 100%;
     transition: background-color .3s cubic-bezier(.19,1,.22,1),min-height .62s cubic-bezier(.19,1,.22,1);
   }
-  &Wrapper{
+  .mainHeaderWrapper{
       @mixin mainFit; 
       margin: 0 auto;  
       height: 50px;

@@ -30,6 +30,11 @@
         letter-spacing: 0.09em;
         font-size: 0.9em;
     }
+
+    .divider{
+        margin-top: 70px;
+        display: block;
+    }
 }
 
 .postContentAnim {

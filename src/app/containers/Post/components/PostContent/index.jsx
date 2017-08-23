@@ -63,6 +63,7 @@ class PostContent extends Component {
            />
            <div className={ styles.postText }> 
             { ReactHtmlParser(post.html) }
+            <span className={ styles.divider}></span>
             <PostComments post={ post } />
         </div>
       </div>

@@ -5,7 +5,6 @@ $cl-mainHeader: $white;
 $bdr-mainHeader: 4px solid $bg-back;
 $bg-mainHeader: $primary-color;
 $bgi-mainHeaderActive: none;
-$bdt-mainHeaderActive:10px solid $white;
 
 /** Logo **/
 $cl-miniTitle: $white;
@@ -26,9 +25,6 @@ $bg-postTag: $white;
 $cl-postTag: $secondary-color;
 $cl-postTagHover: $primary-color; 
 $brd-postTag: 1px solid $secondary-color;
-
-
-
 
 /***** CONTAINERS *****/
 

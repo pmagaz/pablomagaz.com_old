@@ -25,9 +25,6 @@ const PostHeader = ({ image, title }) => {
   });
 
   return (
-
-
-
     <header className={ styles.postHeader }>
       <div style={ style } className={ styles.postHeaderWrap }>
           <h1 className={ postTitleStyle }>

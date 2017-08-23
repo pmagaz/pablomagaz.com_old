@@ -48,7 +48,7 @@ class Header extends Component {
         <Logo location= { this.props.location } />
         <Menu />
         </div>
-  </header>
+      </header>
     );
   }
 };

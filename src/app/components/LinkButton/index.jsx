@@ -1,6 +1,8 @@
-import { Link, browserHistory } from 'react-router';
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { Link, browserHistory } from 'react-router';
+
+import { SiteConf, context } from 'base';
 import styles from './styles.css';
 
 const propTypes = {
@@ -9,7 +11,6 @@ const propTypes = {
 };
 
 const goTo = (location) => {
-  
   if(!!~location.indexOf('/')) browserHistory.push(location); 
   else {
     const section = document.querySelector(`${location}`);
@@ -19,13 +20,25 @@ const goTo = (location) => {
 }
 
 const LinkButton = ({ location, value }) => {
-  return (
+  let content;
+  if(context.server){
+    content = (
+    <div className={ styles.LinkButton } >
+     <Link to={ `${SiteConf.ServerUrl}${location}` }>
+      { value }
+     </Link>
+     </div>
+    );
+  } else {
+    content = (
     <div className={ styles.LinkButton }
-    onClick={() => goTo(location)}
+      onClick={() => goTo(location)}
     >
     <a href="javascript:void(0);">{value}</a>
     </div>
-  );
+    );
+  }
+  return content;
 };
 
 LinkButton.propTypes = propTypes;

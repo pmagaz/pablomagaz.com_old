@@ -36,7 +36,7 @@ class Post extends Component {
 
   render () {
     const post = this.props.Post;
-    const image = post.image || post.feature_image;
+    const image = post.feature_image || post.image;
 
     return (
       <div className= { styles.post } >

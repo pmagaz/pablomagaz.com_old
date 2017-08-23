@@ -28,7 +28,7 @@ class Logo extends Component {
   }
 
   isHome() {
-    return (this.props.location.pathName === '/') ? true : false; 
+    return (this.props.location.pathname === '/') ? true : false; 
   }
 
   handleScroll(event) {
@@ -47,7 +47,6 @@ class Logo extends Component {
     const pathName = this.props.location.pathname;
     const hash = this.props.location.hash;
     const isHome = (pathName === '/') ? true : false; 
-    
     if (this.isHome()) value = '';
     else value = SiteConf.BlogTitle.toUpperCase(); 
     

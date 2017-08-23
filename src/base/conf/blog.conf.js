@@ -7,10 +7,12 @@ const BlogTitle = 'El Blog Isomórfico';
 const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
 const postOpeningChars= 46;
-const codeHighlightDelay = 200;
+const codeHighlightDelay = 300;
 const postOpeningSplitChar = '</h2>';
 const GoogleAnaliticsId = 'aaaaa';
-
+const DisqusSettins = {
+  shortName: 'el-blog-isomorfico'
+};
 let HostName;
 let ServerUrl;
 let SiteUrl;
@@ -25,8 +27,8 @@ let PostsApi;
 let PostApi;
 let ContentPath;
 let Ssl;
-let keysPath;
 let Protocol;
+let uniqueImagePath;
 
 if (env === 'development') {
   Ssl = false;
@@ -46,14 +48,13 @@ if (env === 'development') {
   PostsApiUrl = `${Protocol}${ HostName }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
-  keysPath = '';
 } else {
   Ssl = false;
   Protocol = Ssl ? 'https://' : 'http://';
-  HostName = '188.166.49.134';
+  HostName = '172.104.136.180';
   ServerUrl = `http://${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
-  clientSecret = 'd7d4f5b6725d';
+  clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = 'http://localhost:2369'; 
   BlogUrl = `${ GhostUrl }/blog/`;
@@ -64,7 +65,8 @@ if (env === 'development') {
   PostsApiUrl = `${Protocol}${ HostName }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
-  keysPath = '';
+  uniqueImagePath = '/assets/images/postcovers';
 } 
 
-export const SiteConf = { Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, keysPath};
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, DisqusSettins };
+

@@ -9,8 +9,6 @@ export const postApiHandler = (req, res)  => {
       const data = resp.body;
       const post = data.posts[0];
       post.published_at = getDate(post.published_at);
-      //const html = post.html;
-      //post.html = html.replace(SiteConf.postOpeningSplitChar,'');
       res.json(post);
     })
     .catch(err => {

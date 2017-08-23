@@ -11,12 +11,14 @@ const postSuccess = (state, { payload }) => (
     .set('id', payload.id)
     .set('tags', payload.tags)
     .set('html', payload.html)
+    .set('slug', payload.slug)
     .set('title', payload.title)
     .set('image', payload.image)
     .set('author', SiteConf.Author)
     .set('updated_at', payload.updated_at)
     .set('published_at', payload.published_at)
     .set('feature_image', payload.feature_image)
+    .set('meta_description', payload.meta_description)
 );
 
 const cleanPost = state => (

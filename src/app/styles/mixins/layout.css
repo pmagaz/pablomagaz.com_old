@@ -83,7 +83,8 @@
   background: $bg-blog;
   .content{
     background: $bg-blog;
-    @mixin mainFit;
+    padding: $layout-padding;
+    max-width: $layout-max-width;
     @media (min-width: $sm){
       flex: 3;  
     }

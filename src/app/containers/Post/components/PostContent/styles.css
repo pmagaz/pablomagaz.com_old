@@ -1,6 +1,6 @@
 @import '../../../../styles/variables/variables.css';
 @import '../../../../styles/mixins/mixins.css';
-
+@import '../../../../styles/anims.css';
 .post{
     h1 {
         @mixin postTitle;
@@ -38,6 +38,6 @@
 }
 
 .postContentAnim {
-  animation: fade-in-up 150ms both;
+  animation: fade-up 120ms both;
   animation-delay: 20ms;
 }

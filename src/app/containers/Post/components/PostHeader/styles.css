@@ -17,7 +17,7 @@
     background-size: 221px;
     background-repeat: no-repeat;
     animation: fade-in-down-bgi 140ms both;
-    animation-delay: 70ms;
+    animation-delay: 60ms;
     h1{
       font-family: $fontFamilyMedium;
       color: $cl-titleBlog;
@@ -26,13 +26,14 @@
       margin-top: 43px;
       font-size: 2.8rem;
     }
+    a {
+      color: $cl-titleBlog;
+    }
   }
 }
 
-
-
 .postTitleAnim {
-  animation: fade-in-down 140ms both;
+  animation: fade-in-down 150ms both;
 }
 
 .postHeader::before {

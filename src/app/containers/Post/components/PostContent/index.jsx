@@ -46,7 +46,7 @@ class PostContent extends Component {
     const cx = classNames.bind(styles);
     const postContentStyle = cx({
       'postContent': true,
-      //'postContentAnim': context.client ? true : false
+      'postContentAnim': context.client ? true : false
     });
 
     const postUrl = `${SiteConf.BlogUrl}${post.slug }`;

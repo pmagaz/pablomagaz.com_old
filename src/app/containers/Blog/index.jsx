@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 
 import { fetchRequiredActions, SiteConf, context } from 'base';
 import * as Actions from './actions';
+import BlogTitle from 'components/BlogTitle';
 import PostList from './components/PostList';
 import TagTitle from './components/TagTitle';
 import LinkButton from 'components/LinkButton';
@@ -69,7 +70,7 @@ class Blog extends Component {
             <div className={ styles.blogTitleWrap }>
               <div className={ blogTitleStyle } > 
                 <h1>
-                  { SiteConf.BlogTitle.toUpperCase() }
+                  <BlogTitle /> 
                 </h1>
               </div>
               <div className={ styles.socialBox }>

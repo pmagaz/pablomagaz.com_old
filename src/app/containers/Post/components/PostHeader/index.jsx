@@ -1,8 +1,10 @@
 import React  from 'react';
+import { Link } from 'react-router';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames/bind';
 
 import { SiteConf, context } from 'base';
+import BlogTitle from 'components/BlogTitle';
 import styles from './styles.css';
 
 const propTypes= {
@@ -28,7 +30,7 @@ const PostHeader = ({ image, title }) => {
     <header className={ styles.postHeader }>
       <div style={ style } className={ styles.postHeaderWrap }>
           <h1 className={ postTitleStyle }>
-            { SiteConf.BlogTitle.toUpperCase() }
+             <BlogTitle /> 
           </h1>
       </div>
     </header>

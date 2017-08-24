@@ -34,6 +34,9 @@
         font-size: 17px;
       }
     }
+    a {
+      color: $cl-titleBlog;
+    }
   }
   .socialBox{
     margin-bottom: 20px;
@@ -43,5 +46,5 @@
 }
 
 .titleBlogAnim {
-  animation: fade-in-down 140ms both;
+  animation: fade-in-down 150ms both;
 }

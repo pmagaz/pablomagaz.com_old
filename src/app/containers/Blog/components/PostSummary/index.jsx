@@ -25,7 +25,7 @@ const PostSummary = ({ post }) => {
   });
 
   return (
-    <div className={ postSummaryStyle } >
+    <article className={ postSummaryStyle } >
       <h1>
         <Link to={ url }>
       { post.title }
@@ -46,7 +46,7 @@ const PostSummary = ({ post }) => {
         { ReactHtmlParser(post.opening) }
       </div>
 
-    </div>
+    </article>
   );
 };
 

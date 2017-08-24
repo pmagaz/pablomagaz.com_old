@@ -68,7 +68,7 @@ class Blog extends Component {
           <header className={ styles.blogTitle }>
             <div className={ styles.blogTitleWrap }>
               <div className={ blogTitleStyle } > 
-                <h1>
+                <h1 tab-tabIndex="1">
                   { SiteConf.BlogTitle.toUpperCase() }
                 </h1>
               </div>

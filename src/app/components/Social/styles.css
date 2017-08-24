@@ -3,9 +3,34 @@
     justify-content: space-between;
     width: 124px;
     height: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     &:hover > div{
         opacity: .5;
         transition: opacity .2s ease-in-out;
 
     }
+}
+
+ul li  {&:nth-child(1){
+    button{
+    @mixin socialIcon linkedin;
+    }
+}
+  &:nth-child(2){
+      button{
+    @mixin socialIcon twitter;
+}}
+
+  &:nth-child(3){
+      button{
+    @mixin socialIcon email;
+}}
+
+  &:nth-child(4){
+      button{
+    @mixin socialIcon github;
+}}
+
 }

@@ -22,12 +22,10 @@ export default function routingMiddleware(req, res) {
         else {
           const routeMatch = renderProps.location.pathname;
           const renderedContainer = renderContainer(store, renderProps);
-          return renderPage(routeMatch, renderedContainer, store);
+          const page = renderPage(routeMatch, renderedContainer, store);
+          return res.status(200).send(page);
         }
-      })
-      .then(page => res.status(200).send(page))
-      .catch(err => {
-        console.log('SERVER ERROR!', err);
+      }).catch(err => {
         res.status(500).send(errorPage(500));
       });
   });

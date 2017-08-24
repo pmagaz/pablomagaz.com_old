@@ -5,16 +5,17 @@ export const postsApiHandler = (req, res)  => {
   needle('get', SiteConf.PostsApi)
     .then(resp => {
       const data = resp.body;
-      const filter = req.params.filter;
-      const pagination = data.meta.pagination;
-      const posts = PostList(data.posts, filter);
-      const result = { posts, pagination };
-      if (posts.length) res.json(result);
-      else res.status(404).json({ posts:[] });
+      if (data.errors) res.status(404).json({ posts:[] });
+      else {
+        const filter = req.params.filter;
+        const pagination = data.meta.pagination;
+        const posts = PostList(data.posts, filter);
+        const result = { posts, pagination };
+        if (posts.length) res.json(result);
+        else res.status(404).json({ posts:[] });
+      }
     })
-    .catch(err => {
-      res.status(500).json(err);
-    });
+    .catch(err => res.status(500).send());
 }; 
 
 const resolveUniqueImage = image => {

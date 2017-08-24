@@ -9,11 +9,10 @@ export default {
     let reqParams = '';
     if (params && params.tag) reqParams += `tag:${params.tag}`
     return fetch(`${ SiteConf.PostsApiUrl }${reqParams}`)
-      .then(req => req.json())
-      .then(payload => responseBlogModel(payload))
-      .catch(err => {
-        console.log(44444, err);
-        return err;
-      });
+      .then(res => {
+        if (res.status !== 200) throw new Error('Bad response!');
+        return res.json();
+      })
+      .then(payload => responseBlogModel(payload));
   },
 };

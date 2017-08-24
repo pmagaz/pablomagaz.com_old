@@ -7,7 +7,7 @@ const BlogTitle = 'El Blog Isomórfico';
 const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
 const postOpeningChars= 46;
-const codeHighlightDelay = 300;
+const codeHighlightDelay = 350;
 const postOpeningSplitChar = '</h2>';
 const GoogleAnaliticsId = 'aaaaa';
 const DisqusSettins = {
@@ -69,4 +69,3 @@ if (env === 'development') {
 } 
 
 export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, DisqusSettins };
-

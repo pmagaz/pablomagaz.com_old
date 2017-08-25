@@ -33,7 +33,7 @@
 .linkImage{
   @mixin linkImage;
   img{
-    margin-top: -13%;
+    margin-top: -10%;
     width: 50%;
   }
 }

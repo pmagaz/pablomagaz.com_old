@@ -46,6 +46,40 @@ export default function post(params) {
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="${ SiteConf.Author }" />
     <meta name="twitter:creator" content="${ SiteConf.Author }" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "publisher": {
+            "@type": "Organization",
+            "name": "${ SiteConf.SiteDescription }",
+            "logo": "${ SiteConf.ServerUrl }/assets/images/BlogTitle.png"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "${ SiteConf.Author }",
+            "image": "${ SiteConf.ServerUrl }/assets/images/BlogTitle.png",
+            "url": "${ SiteConf.SiteUrl }/#about"
+            "sameAs": [
+                "${ SiteConf.SiteUrl }",
+                "https://twitter.com/pablo_magaz"
+            ]
+        },
+        "headline": "${ post.title }",
+        "url": "${ postUrl }",
+        "datePublished": "${ post.published_at }",
+        "dateModified": "${ post.updated_at }",
+        "image": "${ imageUrl }",
+        "keywords": "${ post.tags[0].name}",
+        "description": "${ post.meta_description }",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "${ SiteConf.SiteUrl }"
+        }
+    }
+    </script>
+
     ${ params.vendorScript }
     </head>
     <body>

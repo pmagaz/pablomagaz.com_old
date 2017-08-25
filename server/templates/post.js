@@ -6,9 +6,9 @@ export default function post(params) {
   const state = JSON.stringify(params.state);
   //const imageUrl = `${ SiteConf.ImageUrl }${ post.feature_image }`; 
   const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png`; 
-  const postUrl = `${ SiteConf.BlogUrl }${ post.slug }`;
+  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
   const tagList = post.tags.reduce((acc, tag) => (
-    acc + `    <meta property="article:tag" content="${ tag.name } " />\n`)
+    acc + `    <meta property="article:tag" content="${ tag.name }" />\n`)
     , '\n');
 
   return `
@@ -22,6 +22,7 @@ export default function post(params) {
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="description" content="${ SiteConf.SiteDescription }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
     ${ params.style }
     <link rel="icon" href="${ SiteConf.SiteUrl }assets/images/favicon.ico"/>
@@ -37,7 +38,6 @@ export default function post(params) {
     <meta property="article:modified_time" content="${ post.updated_at }" /> 
     <meta property="article:published_time" content="${ post.published_at }" />
     ${ tagList }
-    
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${ post.title }" />
     <meta name="twitter:url" content="${ postUrl }" />

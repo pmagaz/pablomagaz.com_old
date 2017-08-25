@@ -27,7 +27,8 @@ export default function post(params) {
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="canonical" href="${ postUrl }" />
-    
+   
+    <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="${ post.title }" />
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />

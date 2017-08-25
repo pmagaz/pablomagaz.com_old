@@ -4,8 +4,9 @@ export default function post(params) {
   
   const post = params.state.Post;
   const state = JSON.stringify(params.state);
-  const imageUrl = `${ SiteConf.ImageUrl }${ post.feature_image }`; 
-  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
+  //const imageUrl = `${ SiteConf.ImageUrl }${ post.feature_image }`; 
+  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png`; 
+  const postUrl = `${ SiteConf.BlogUrl }${ post.slug }`;
   const tagList = post.tags.reduce((acc, tag) => (
     acc + `    <meta property="article:tag" content="${ tag.name } " />\n`)
     , '\n');
@@ -21,19 +22,21 @@ export default function post(params) {
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="description" content="${ SiteConf.SiteDescription }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="article:modified_time" content="${ post.updated_at }" /> 
-    <meta property="article:published_time" content="${ post.published_at }" />
-
+  
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="canonical" href="${ postUrl }" />
     
-    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="${ post.title }" />
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
     <meta property="og:url" content="${ postUrl }" />
     <meta property="og:image" content="${ imageUrl }" />
     <meta property="og:description" content="${ post.meta_description }" />
+    <meta property="article:modified_time" content="${ post.updated_at }" /> 
+    <meta property="article:published_time" content="${ post.published_at }" />
+
     ${ tagList }
 
     <meta name="twitter:card" content="summary_large_image" />

@@ -20,6 +20,7 @@ export default function main(params) {
     <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="canonical" href="${ SiteConf.SiteUrl }" />
     
+    <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="${ SiteConf.SiteTitle }" />
     <meta property="og:site_name" content="${ SiteConf.SiteTitle }" />

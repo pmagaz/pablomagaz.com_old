@@ -45,7 +45,6 @@ const PostSummary = ({ post }) => {
       <div className={ styles.postText }>
         { ReactHtmlParser(post.opening) }
       </div>
-
     </article>
   );
 };

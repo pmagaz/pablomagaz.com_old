@@ -3,7 +3,8 @@ import { SiteConf } from 'base';
 export default function blog(params) {
 
   const state = JSON.stringify(params.state);
-
+  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png`; 
+  
   return `
   <!doctype html>
 	<html lang="utf-8">
@@ -20,11 +21,13 @@ export default function blog(params) {
     <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="canonical" href="${ SiteConf.BlogUrl }" />
     
+    <meta property="og:locale" content="es_ES" /> 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="${ SiteConf.BlogTitle }" />
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
     <meta property="og:url" content="${ SiteConf.BlogUrl }" />
     <meta property="og:description" content="${ SiteConf.BlogDescription }" />
+    <meta property="og:image" content="${ imageUrl }" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="${ SiteConf.BlogTitle }" />

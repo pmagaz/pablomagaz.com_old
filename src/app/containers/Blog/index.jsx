@@ -69,7 +69,7 @@ class Blog extends Component {
           <header className={ styles.blogTitle }>
             <div className={ styles.blogTitleWrap }>
               <div className={ blogTitleStyle } > 
-                <h1>
+                <h1> 
                   <BlogTitle /> 
                 </h1>
               </div>

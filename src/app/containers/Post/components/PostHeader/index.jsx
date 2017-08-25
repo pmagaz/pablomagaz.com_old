@@ -1,6 +1,7 @@
 import React  from 'react';
 import { Link } from 'react-router';
 import { PropTypes } from 'prop-types';
+import { pure } from 'recompose';
 import classNames from 'classnames/bind';
 
 import { SiteConf, context } from 'base';
@@ -23,7 +24,7 @@ const PostHeader = ({ image, title }) => {
 
   const cx = classNames.bind(styles);
   const postTitleStyle = cx({
-    'postTitleAnim': context.client ? true : false
+    'postTitleAnim': false,//context.client ? true : false
   });
 
   return (
@@ -39,4 +40,4 @@ const PostHeader = ({ image, title }) => {
 
 PostHeader.propTypes = propTypes;
 
-export default PostHeader;
+export default pure(PostHeader);

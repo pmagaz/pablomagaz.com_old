@@ -1,5 +1,5 @@
 import { Map, List } from 'immutable';
-import { SiteConf } from '../conf/blog.conf.js';
+import { SiteConf } from '../conf/site.conf';
 
 export const generateMap = (data, model) => (
   data.reduce((acc, item) => (

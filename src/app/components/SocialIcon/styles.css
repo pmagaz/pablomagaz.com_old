@@ -5,22 +5,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   &:hover{
     opacity: 1 !important;
     transition: opacity .2s ease-in-out;  
   }
-  &:nth-child(1){
-    @mixin socialIcon linkedin;
-  }
-  &:nth-child(2){
-    @mixin socialIcon twitter;
-  }
-  &:nth-child(3){
-    @mixin socialIcon email;
-  }
-  &:nth-child(4){
-    @mixin socialIcon github;
-  }
+
 }
 

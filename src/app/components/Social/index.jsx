@@ -5,12 +5,12 @@ import SocialIcon from 'components/SocialIcon';
 import styles from './styles.css';
 
 const Social = () => (
-    <div className={ styles.socialBoxWrap }>
-      <SocialIcon/>
-      <SocialIcon/>
-      <SocialIcon/>
-      <SocialIcon/>
-  </div>
+    <ul className={ styles.socialBoxWrap }>
+      <li><SocialIcon/></li>
+      <li><SocialIcon/></li>
+      <li><SocialIcon/></li>
+      <li><SocialIcon/></li>
+  </ul>
 );
 
 export default Social;

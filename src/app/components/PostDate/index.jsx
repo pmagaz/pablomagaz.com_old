@@ -6,9 +6,9 @@ const propTypes= {
 };
 
 const PostDate = ({ date }) => (
-  <span>
+  <time>
     { date }
-  </span>
+  </time>
 );
 
 PostDate.propTypes = propTypes;

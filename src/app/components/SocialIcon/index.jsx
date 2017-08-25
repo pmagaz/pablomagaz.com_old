@@ -5,8 +5,8 @@ import styles from './styles.css';
 
 const SocialIcon = () => {
   return (
-    <div className={ styles.SocialIcon }>
-    </div>
+    <button className={ styles.SocialIcon }>
+    </button>
   )
 };
 

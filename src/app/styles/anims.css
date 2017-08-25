@@ -20,7 +20,7 @@
 
 @keyframes fade-in-down {
   0% {
-      opacity: 0.5;
+      opacity: 0.2;
       transform: translateY(-10px);
   }
   100% {

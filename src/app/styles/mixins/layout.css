@@ -11,7 +11,7 @@
   overflow: hidden;
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
-  filter: grayscale(20%);
+  filter: grayscale(18%);
   img{
     transition: all .2s; 
   }
@@ -61,6 +61,7 @@
     background: $bg-blog;
     padding: $layout-padding;
     max-width: $layout-max-width;
+    width: 100%;
     @media (min-width: $sm){
       flex: 3;  
     }

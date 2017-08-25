@@ -16,8 +16,9 @@ export default function main(params) {
     <meta name="description" content="${ SiteConf.SiteDescription }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
-    <link rel="icon" href="assets/images/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
+    ${ params.style }
+    <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
     <link rel="canonical" href="${ SiteConf.SiteUrl }" />
     
     <meta property="og:locale" content="es_ES" />
@@ -31,7 +32,6 @@ export default function main(params) {
     <meta name="twitter:title" content="${ SiteConf.SiteTitle }" />
     <meta name="twitter:url" content="${ SiteConf.SiteUrl }" />
     <meta name="twitter:description" content="${ SiteConf.SiteDescription }" />
-    ${ params.style }
     ${ params.vendorScript }
     </head>
     <body>

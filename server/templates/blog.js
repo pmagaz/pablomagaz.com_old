@@ -19,8 +19,7 @@ export default function blog(params) {
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
     ${ params.style }
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/png" />
-    <link rel="icon" href="assets/images/favicon.ico"/>
+    <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
     <link rel="canonical" href="${ SiteConf.BlogUrl }" />
     
     <meta property="og:locale" content="es_ES" /> 

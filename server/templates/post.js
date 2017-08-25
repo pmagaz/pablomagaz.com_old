@@ -25,7 +25,7 @@ export default function post(params) {
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
     ${ params.style }
-    <link rel="icon" href="${ SiteConf.SiteUrl }assets/images/favicon.ico"/>
+    <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
     <link rel="canonical" href="${ postUrl }" />
     
     <meta property="og:locale" content="es_ES" />

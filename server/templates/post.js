@@ -22,9 +22,9 @@ export default function post(params) {
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="description" content="${ SiteConf.SiteDescription }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
-    <link rel="icon" href="assets/images/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
+    ${ params.style }
+    <link rel="icon" href="${ SiteConf.SiteUrl }assets/images/favicon.ico"/>
     <link rel="canonical" href="${ postUrl }" />
     
     <meta property="og:locale" content="es_ES" />
@@ -36,9 +36,8 @@ export default function post(params) {
     <meta property="og:description" content="${ post.meta_description }" />
     <meta property="article:modified_time" content="${ post.updated_at }" /> 
     <meta property="article:published_time" content="${ post.published_at }" />
-
     ${ tagList }
-
+    
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${ post.title }" />
     <meta name="twitter:url" content="${ postUrl }" />
@@ -47,7 +46,6 @@ export default function post(params) {
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="${ SiteConf.Author }" />
     <meta name="twitter:creator" content="${ SiteConf.Author }" />
-    ${ params.style }
     ${ params.vendorScript }
     </head>
     <body>

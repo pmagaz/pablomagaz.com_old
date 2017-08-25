@@ -16,8 +16,9 @@ export default function blog(params) {
     <meta name="description" content="${ SiteConf.BlogDescription }" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
+    ${ params.style }
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/png" />
     <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="canonical" href="${ SiteConf.BlogUrl }" />
     
@@ -33,7 +34,6 @@ export default function blog(params) {
     <meta name="twitter:title" content="${ SiteConf.BlogTitle }" />
     <meta name="twitter:url" content="${ SiteConf.BlogUrl }" />
     <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
-    ${ params.style }
     ${ params.vendorScript }
     </head>
     <body>

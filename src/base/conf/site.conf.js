@@ -39,7 +39,7 @@ if (env === 'development') {
   clientSecret = '285ee4eda6c3';
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = 'http://localhost:2369'; 
-  BlogUrl = `${ GhostUrl }/blog/`;
+  //BlogUrl = `${ SiteUrl }/blog/`;
   ImageUrl = GhostUrl;
   ContentPath = '/Users/Pablo/js/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
@@ -56,7 +56,6 @@ if (env === 'development') {
   clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = 'http://localhost:2369'; 
-  //BlogUrl = `${ GhostUrl }/blog/`;
   ImageUrl = `${Protocol}${ HostName }`;
   ContentPath = '/var/www/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;

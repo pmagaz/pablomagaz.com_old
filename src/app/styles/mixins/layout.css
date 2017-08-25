@@ -1,6 +1,12 @@
 @define-mixin mainFit {
-  padding: $layout-padding;
+  padding: 0 15px;
   max-width: $layout-max-width;
+
+  transition: padding 120ms ease;
+  @media (min-width: $sm){
+    padding: $layout-padding;
+    transition: padding 120ms ease;
+  } 
 }
 
 @define-mixin linkImage {
@@ -59,11 +65,14 @@
   background: $bg-blog;
   .content{
     background: $bg-blog;
-    padding: $layout-padding;
+    padding: 0 15px;
     max-width: $layout-max-width;
     width: 100%;
+    transition: padding 120ms ease;
     @media (min-width: $sm){
       flex: 3;  
+      padding: $layout-padding;
+      transition: padding 120ms ease;
     }
   }
 }

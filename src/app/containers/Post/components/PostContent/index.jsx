@@ -49,7 +49,6 @@ class PostContent extends Component {
       'postContentAnim': context.client ? true : false
     });
 
-    const postUrl = `${SiteConf.BlogUrl}${post.slug }`;
     const identifier = `${post.slug}${post.id }`;
 
     return (

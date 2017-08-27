@@ -1,50 +1,45 @@
 import { SiteConf } from 'base';
 
-export default function post(params) {
-  
-  const post = params.state.Post;
-  const state = JSON.stringify(params.state);
-  const imageUrl = `${ SiteConf.ImageUrl }${ post.feature_image }`; 
-  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
-  const tagList = post.tags.reduce((acc, tag) => (
-    acc + `    <meta property="article:tag" content="${ tag.name } " />\n`)
-    , '\n');
+export default function tag(params) {
 
+  const state = JSON.stringify(params.state);
+  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png`; 
+  const tags = params.routeMatch.substring(1).split('/');
+  let tagUrl, tagName;
+  if (tags.length > 0) {
+    tagName = tags[1];
+    tagUrl = `${ SiteConf.SiteUrl }/tag/${tagName}`;
+  }
+  
   return `
   <!doctype html>
 	<html lang="utf-8">
     <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>${ post.title }</title>
+    <title>${ SiteConf.BlogTitle }</title>
     <meta name="HandheldFriendly" content="True" />
+    <meta name="description" content="${ SiteConf.BlogDescription }" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <meta name="description" content="${ SiteConf.SiteDescription }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="article:modified_time" content="${ post.updated_at }" /> 
-    <meta property="article:published_time" content="${ post.published_at }" />
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
-    <link rel="icon" href="assets/images/favicon.ico"/>
-    <link rel="canonical" href="${ postUrl }" />
-   
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="${ post.title }" />
-    <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
-    <meta property="og:url" content="${ postUrl }" />
-    <meta property="og:image" content="${ imageUrl }" />
-    <meta property="og:description" content="${ post.meta_description }" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${ post.title }" />
-    <meta name="twitter:url" content="${ postUrl }" />
-    <meta name="twitter:image:src" content="${ imageUrl }" />
-    <meta name="twitter:description" content="${ post.meta_description  }" />
-    <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="${ SiteConf.Author }" />
-    <meta name="twitter:creator" content="${ SiteConf.Author }" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
     ${ params.style }
+    <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
+    <link rel="canonical" href="${ tagUrl }" />
+    <meta property="article:tag" content="${ tagName }" />
+    <meta property="og:locale" content="es_ES" /> 
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="${ SiteConf.BlogTitle }" />
+    <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
+    <meta property="og:url" content="${ tagUrl }" />
+    <meta property="og:description" content="${ SiteConf.BlogDescription }" />
+    <meta property="og:image" content="${ imageUrl }" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="${ SiteConf.BlogTitle }" />
+    <meta name="twitter:url" content="${ tagUrl }" />
+    <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
     ${ params.vendorScript }
     </head>
     <body>

@@ -33,7 +33,7 @@
     }
     h1{
       font-family: $fontFamilyMedium;
-      color: $cl-titleBlog;
+      color: #f93d69;
       word-break: break-word;
       width: 400px;
       margin-top: 43px;

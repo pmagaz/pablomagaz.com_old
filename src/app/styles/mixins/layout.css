@@ -1,3 +1,4 @@
+
 @define-mixin mainFit {
   padding: 0 15px;
   max-width: $layout-max-width;
@@ -17,7 +18,8 @@
   overflow: hidden;
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
-  filter: grayscale(18%);
+  filter: grayscale(30%);
+  border-radius: 4px;
   img{
     transition: all .2s; 
   }
@@ -31,10 +33,13 @@
 
 @define-mixin postTitle {
   font-family: $fontFamilyMedium;
-  font-size: 2.2em;
+  background-color: #f73360;
+  color: white;
+  font-size: 2.1em;
   letter-spacing: -0.02em;
   line-height: 1.2em;
   margin-bottom: 0;
+  border-radius: 4px;
 }
 
 @define-mixin blogTitle {

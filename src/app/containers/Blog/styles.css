@@ -21,6 +21,10 @@
     margin: 0;
     width: 100%;
     height: 100%;
+    background-repeat: no-repeat;
+    animation: fade-in-down-bgi 140ms both;
+    animation-delay: 60ms;
+    background-size: 221px;
     transition: padding 120ms ease;
     @media (min-width: $sm){
       padding: $layout-padding;

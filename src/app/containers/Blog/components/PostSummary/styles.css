@@ -3,17 +3,16 @@
 
 .PostSummary {
   margin-top: -20px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
     h1 {
       @mixin postTitle;
       position: relative;
-      top: 18px;
+      top: 48px;
       left: 14px;
-      width:650px;
       z-index: 90;
       padding-left: 20px;
       a {
-        color: white;
+        color :$lighter-gray;
         &:hover{
           color: $cl-postSumaryTilteHover;
         }
@@ -40,7 +39,7 @@
   @mixin linkImage;
   img{
     margin-top: -8%;
-    margin-left: 52%;
+    margin-left: 50%;
     width: 50%;
   }
 }

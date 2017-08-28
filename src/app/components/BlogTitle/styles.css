@@ -1,0 +1,11 @@
+@import '../../styles/variables/variables.css';
+@import '../../styles/anims.css';
+
+.blogTitle{
+  width: 100%;
+  height: 100%;
+  background-size: 221px;
+  background-repeat: no-repeat;
+  animation: fade-in-down-bgi 140ms both;
+  animation-delay: 60ms;
+}

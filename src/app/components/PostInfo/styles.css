@@ -19,6 +19,9 @@
     &:nth-child(2) {
       border-left: 2px solid $cl-post-info-pipe;
     }
+    &:nth-child(3) {
+      border-left: 2px solid $cl-post-info-pipe;
+    }
     + div {
       flex: 3;
       text-align: right;

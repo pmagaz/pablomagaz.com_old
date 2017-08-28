@@ -63,11 +63,13 @@ class Blog extends Component {
      tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />
     }
 
+    const style = { backgroundImage: 'url(assets/images/postcover/rectas/pm.svg)' }
+
     return (
       <div className= { styles.blog } >
         <div className= { styles.content } >
           <header className={ styles.blogTitle }>
-            <div className={ styles.blogTitleWrap }>
+            <div style={ style } className={ styles.blogTitleWrap }>
               <div className={ blogTitleStyle } > 
                 <h1> 
                   <BlogTitle /> 

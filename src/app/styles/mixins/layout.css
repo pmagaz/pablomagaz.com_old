@@ -20,6 +20,15 @@
   background-color: $bg-linkImage;
   filter: grayscale(16%);
   border-radius: 4px;
+
+  background: rgba(33,36,48,1);
+  background: -moz-linear-gradient(top, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(51,56,74,1) 97%, rgba(51,56,74,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,36,48,1)), color-stop(11%, rgba(35,38,51,1)), color-stop(97%, rgba(51,56,74,1)), color-stop(100%, rgba(51,56,74,1)));
+  background: -webkit-linear-gradient(top, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(51,56,74,1) 97%, rgba(51,56,74,1) 100%);
+  background: -o-linear-gradient(top, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(51,56,74,1) 97%, rgba(51,56,74,1) 100%);
+  background: -ms-linear-gradient(top, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(51,56,74,1) 97%, rgba(51,56,74,1) 100%);
+  background: linear-gradient(to bottom, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(51,56,74,1) 97%, rgba(51,56,74,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212430', endColorstr='#33384a', GradientType=0 );
   img{
     transition: all .2s; 
   }

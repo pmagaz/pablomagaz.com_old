@@ -65,12 +65,12 @@ class Blog extends Component {
 
     const style = { backgroundImage: 'url(assets/images/postcover/rectas/pm.svg)' }
 
-    return (
+return (
       <div className= { styles.blog } >
         <div className= { styles.content } >
           <header className={ styles.blogTitle }>
-            <div className={ styles.blogTitleWrap }>
-              <div style={ style } className={ blogTitleStyle } > 
+            <div style={ style } className={ styles.blogTitleWrap }>
+              <div className={ blogTitleStyle } > 
                 <h1> 
                   <BlogTitle /> 
                 </h1>

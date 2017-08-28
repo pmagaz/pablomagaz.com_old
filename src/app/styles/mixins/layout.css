@@ -18,7 +18,7 @@
   overflow: hidden;
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
-  filter: grayscale(30%);
+  filter: grayscale(16%);
   border-radius: 4px;
   img{
     transition: all .2s; 
@@ -27,7 +27,7 @@
     img{
       transform: scale(1.1);
     }
-    filter: grayscale(0%);
+    filter: grayscale(%);
   }
 }
 

@@ -1,9 +1,9 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
-
 import { SiteConf, ListToArray } from 'base';
 import Loading from 'components/Loading';
 import PostSummary from '../PostSummary';
+import styles from './styles.css';
 
 const isLoaded = (posts) => {
     return posts.size ? true : false;
@@ -27,7 +27,7 @@ const PostList = ({ posts }) => {
     const content = !postsLoaded ? <Loading /> : Posts; 
     
     return (
-      <div> { Posts } </div>
+      <div className={ styles.postList }> { Posts } </div>
     );
  };
 

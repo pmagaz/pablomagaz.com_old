@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { SiteConf } from 'base';
 
 const BlogTitle = () => (
-  <Link to="blog">
+  <Link to="/blog">
     { SiteConf.BlogTitle.toUpperCase() }
   </Link> 
 );

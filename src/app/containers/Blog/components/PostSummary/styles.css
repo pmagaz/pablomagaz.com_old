@@ -7,6 +7,7 @@
     h1 {
       @mixin postTitle;
       position: relative;
+      font-size: 1.9em;
       top: 48px;
       left: 14px;
       z-index: 90;
@@ -46,4 +47,10 @@
 
 .readMore {
   margin-top:26px;
+  font-family: $fontFamilyMedium;
+  color: $cl-postSumaryOpening;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  font-size: 0.9em;
 }

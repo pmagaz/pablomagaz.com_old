@@ -4,6 +4,9 @@
 .post{
     h1 {
         @mixin postTitle;
+        font-size: 2.2em;
+        color: $dark-gray;
+        
     }
 
     h2 {

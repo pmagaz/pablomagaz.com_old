@@ -48,7 +48,7 @@ const PostSummary = ({ post }) => {
       </div>
       <div className={ styles.readMore }>
         <Link to={ url }>
-         >> Continuar leyendo
+         Continuar leyendo
         </Link>
       </div>
     </article>

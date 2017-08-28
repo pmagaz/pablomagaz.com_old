@@ -3,9 +3,14 @@ import { PropTypes } from 'prop-types';
 
 import styles from './styles.css';
 
-const SocialIcon = () => {
+const propTypes= {
+  fn: PropTypes.function
+};
+
+
+const SocialIcon = ({ fn }) => {
   return (
-    <button className={ styles.SocialIcon }>
+    <button className={ styles.SocialIcon } onClick={ fn }>
     </button>
   )
 };

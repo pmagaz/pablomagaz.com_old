@@ -15,26 +15,24 @@
     }
 }
 
-ul li  {
+ul li {
     &:nth-child(1){
+        button{
+            @mixin socialIcon github;        }
+    }
+    &:nth-child(2){
         button{
             @mixin socialIcon linkedin;
         }
     }
-    &:nth-child(2){
+    &:nth-child(3){
         button{
             @mixin socialIcon twitter;
         }
     }
-    &:nth-child(3){
-        button{
-            @mixin socialIcon email;
-        }
-    }
     &:nth-child(4){
         button{
-            @mixin socialIcon github;
-        }
+            @mixin socialIcon email;        }
     }
     
 }

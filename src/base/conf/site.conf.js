@@ -13,6 +13,14 @@ const GoogleAnaliticsId = 'aaaaa';
 const DisqusSettins = {
   shortName: 'el-blog-isomorfico'
 };
+
+const socialLinks = {
+  linkedIn: 'https://es.linkedin.com/in/pablo-magaz-05b46763',
+  twitter: 'https://twitter.com/pablo_magaz',
+  gmail: 'magazpablo@gmail.com',
+  github: 'https://github.com/pmagaz'
+};
+
 let HostName;
 let ServerUrl;
 let SiteUrl;
@@ -66,4 +74,4 @@ if (env === 'development') {
   uniqueImagePath = '/assets/images/postcovers';
 } 
 
-export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, SiteUrl, GoogleAnaliticsId, Ssl, uniqueImagePath, DisqusSettins };
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, SiteUrl, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins };

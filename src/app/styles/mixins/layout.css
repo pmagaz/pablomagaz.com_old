@@ -42,8 +42,6 @@
 
 @define-mixin postTitle {
   font-family: $fontFamilyMedium;
-  color: $primary-color;
-  font-size: 1.9em;
   letter-spacing: -0.02em;
   line-height: 1.2em;
   margin-bottom: 0;

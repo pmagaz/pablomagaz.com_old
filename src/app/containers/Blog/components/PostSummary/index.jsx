@@ -46,6 +46,9 @@ const PostSummary = ({ post }) => {
       <div className={ styles.postText }>
         { ReactHtmlParser(post.opening) }
       </div>
+      <Link to={ url }>
+         >> Continuar leyendo
+       </Link> 
     </article>
   );
 };

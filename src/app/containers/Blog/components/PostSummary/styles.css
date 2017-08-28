@@ -37,3 +37,13 @@
     width: 50%;
   }
 }
+
+.readMore {
+  margin-top:26px;
+  font-family: $fontFamilyMedium;
+  color: $cl-postSumaryOpening;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  font-size: 0.9em;
+}

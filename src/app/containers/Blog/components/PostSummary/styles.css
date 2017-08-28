@@ -39,6 +39,7 @@
   @mixin linkImage;
   img{
     margin-top: -10%;
+    margin-left: 50%;
     width: 50%;
   }
 }

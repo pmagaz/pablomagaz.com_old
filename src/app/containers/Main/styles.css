@@ -1,4 +1,5 @@
 @import '../../styles/variables/variables.css';
+@import '../../styles/anims.css';
 
 :root section{
   min-height: 100vh;
@@ -18,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-image: url($bg-home);
+  background-image: $bg-home;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,11 +31,11 @@
   font-size: 3em;
   background-color: $bg-homeBrand;
   @media (min-width:$sm){
-    width: 573px;
+    width: 433px;
     margin: 133px 0 0 0;
   } 
   h1{
-    width: 100%;
+    width: 10%;
     padding: 22px 0;
     margin: 0;
     display: table;
@@ -48,7 +49,7 @@
     color: $cl-homeBrand;
     @media (min-width:$sm){
       width: auto;
-      padding: 22px 133px 20px 130px;
+      padding: 22px 133px 20px 110px;
       text-align: left;
     }
   }

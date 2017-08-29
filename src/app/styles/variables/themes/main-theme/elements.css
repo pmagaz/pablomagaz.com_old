@@ -52,7 +52,7 @@ $cl-postText: $cl-body;
 
 
 /** Main **/
-$bg-home: "http://k32.kn3.net/taringa/1/B/6/D/4/B/hegel-21/27B.jpg";
+$bg-home: url('../../../../assets/images/main.jpg'); 
 $bg-homeBrand: $primary-color;
 $cl-homeBrand: $white;
 $bg-about:$gray-light;

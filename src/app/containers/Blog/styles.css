@@ -5,7 +5,7 @@
 .blog {
   @mixin blogContent;
   .content{
-    margin: 26px auto 100px;
+    margin: 38px auto 100px;
   }
 }
 

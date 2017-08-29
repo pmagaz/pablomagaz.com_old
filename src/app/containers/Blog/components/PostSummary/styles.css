@@ -1,8 +1,9 @@
 @import '../../../../styles/variables/variables.css';
 @import '../../../../styles/mixins/mixins.css';
+@import '../../../../styles/anims.css';
 
 .PostSummary {
-  margin-top: -26px;
+  margin-top: -36px;
   margin-bottom: 40px;
     h1 {
       @mixin postTitle;
@@ -33,15 +34,15 @@
 }
 
 .PostSummaryAnim {
-  animation: fade-in-up 100ms both;
+  animation: fade-up 100ms both;
 }
 
 .linkImage{
   @mixin linkImage;
   img{
-    margin-top: -14%;
-    margin-left: 50%;
-    width: 50%;
+    margin-top: -12%;
+    margin-left: 52%;
+    width: 48%;
   }
   border-radius: 0px 85px 0px 85px;
 }

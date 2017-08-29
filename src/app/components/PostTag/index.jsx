@@ -25,7 +25,7 @@ static propTypes= {
 
   const tagList = this.props.tags.map(tag => {
     return (
-      <Link key={ tag.id } to={ 'tag/' + tag.slug}>
+      <Link key={ tag.id } to={ '/tag/' + tag.slug}>
         <mark key={ tag.id }> { tag.name } </mark>
     </Link>
     );

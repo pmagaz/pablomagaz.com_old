@@ -2,12 +2,18 @@
 @import '../../../../styles/mixins/mixins.css';
 
 .PostSummary {
-  margin-bottom: 4em;
+  margin-top: -26px;
+  margin-bottom: 40px;
     h1 {
       @mixin postTitle;
-      padding-bottom: .4em;
+      position: relative;
+      font-size: 2em;
+      top: 48px;
+      left: 14px;
+      z-index: 90;
+      padding-left: 20px;
       a {
-        color: $cl-postSumaryTilte;
+        color :$cl-postSumaryTilte;
         &:hover{
           color: $cl-postSumaryTilteHover;
         }
@@ -33,9 +39,11 @@
 .linkImage{
   @mixin linkImage;
   img{
-    margin-top: -11%;
+    margin-top: -14%;
+    margin-left: 50%;
     width: 50%;
   }
+  border-radius: 0px 85px 0px 85px;
 }
 
 .readMore {

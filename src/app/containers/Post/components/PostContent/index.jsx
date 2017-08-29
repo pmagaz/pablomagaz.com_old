@@ -6,6 +6,7 @@ import ReactHtmlParser from 'html-react-parser';
 import javascript from 'highlight.js/lib/languages/javascript';
 
 import { SiteConf, context, getDate } from 'base';
+import SharePost from '../SharePost';
 import Loading from 'components/Loading';
 import PostInfo from 'components/PostInfo';
 import PostComments from '../PostComments';
@@ -63,6 +64,7 @@ class PostContent extends Component {
            <div className={ styles.postText }> 
             { ReactHtmlParser(post.html) }
             <span className={ styles.divider}></span>
+            <SharePost post={ post } />
             <PostComments post={ post } />
         </div>
       </div>

@@ -41,7 +41,6 @@ class Post extends Component {
     return (
       <div className= { styles.post } >
         <div className= { styles.content } >
-
           <PostHeader
             image={ image }
             title={ post.title }

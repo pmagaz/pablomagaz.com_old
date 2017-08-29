@@ -1,11 +1,16 @@
-@import '../../styles/mixins/mixins.css';
+@import '../../../../styles/mixins/mixins.css';
+@import '../../../../styles/variables/variables.css';
 
+.share {
+  background-color: $secondary-color;
+}
 .socialBoxWrap{   
     display: flex;
     justify-content: space-between;
     width: 124px;
     height: 30px;
     margin: 0;
+    margin-bottom: 20px;
     padding: 0;
     list-style: none;
     &:hover > li button{

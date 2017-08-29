@@ -1,3 +1,4 @@
+
 @define-mixin mainFit {
   padding: 0 15px;
   max-width: $layout-max-width;
@@ -11,13 +12,23 @@
 
 @define-mixin linkImage {
   width:100%;
-  height:120px;
+  height:116px;
   position: relative;
   display:inline-block;
   overflow: hidden;
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
-  filter: grayscale(18%);
+  filter: grayscale(16%);
+  border-radius: 4px;
+
+  background: rgba(33,36,48,1);
+  background: -moz-linear-gradient(top, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(49,54,71,1) 97%, rgba(49,54,71,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,36,48,1)), color-stop(11%, rgba(35,38,51,1)), color-stop(97%, rgba(49,54,71,1)), color-stop(100%, rgba(49,54,71,1)));
+  background: -webkit-linear-gradient(top, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(49,54,71,1) 97%, rgba(49,54,71,1) 100%);
+  background: -o-linear-gradient(top, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(49,54,71,1) 97%, rgba(49,54,71,1) 100%);
+  background: -ms-linear-gradient(top, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(49,54,71,1) 97%, rgba(49,54,71,1) 100%);
+  background: linear-gradient(to bottom, rgba(33,36,48,1) 0%, rgba(35,38,51,1) 11%, rgba(49,54,71,1) 97%, rgba(49,54,71,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212430', endColorstr='#313647', GradientType=0 );
   img{
     transition: all .2s; 
   }
@@ -25,16 +36,16 @@
     img{
       transform: scale(1.1);
     }
-    filter: grayscale(0%);
+    filter: grayscale(%);
   }
 }
 
 @define-mixin postTitle {
   font-family: $fontFamilyMedium;
-  font-size: 2.2em;
   letter-spacing: -0.02em;
   line-height: 1.2em;
   margin-bottom: 0;
+  border-radius: 4px;
 }
 
 @define-mixin blogTitle {
@@ -48,6 +59,7 @@
   position: fixed;
   z-index: -1;
   display: flex;
+  -webkit-text-stroke-width: 1px;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;

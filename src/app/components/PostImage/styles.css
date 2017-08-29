@@ -1,5 +1,6 @@
 @import '../../styles/anims.css';
 @import '../../styles/mixins/mixins.css';
+@import '../../styles/variables/variables.css';
 
 .imageAnim {
   animation: fade-in 0.2s both;

@@ -7,13 +7,13 @@
     h1 {
       @mixin postTitle;
       position: relative;
-      font-size: 1.9em;
+      font-size: 2em;
       top: 48px;
       left: 14px;
       z-index: 90;
       padding-left: 20px;
       a {
-        color :$lighter-gray;
+        color :$cl-postSumaryTilte;
         &:hover{
           color: $cl-postSumaryTilteHover;
         }
@@ -39,10 +39,11 @@
 .linkImage{
   @mixin linkImage;
   img{
-    margin-top: -10%;
+    margin-top: -14%;
     margin-left: 50%;
     width: 50%;
   }
+  border-radius: 0px 85px 0px 85px;
 }
 
 .readMore {

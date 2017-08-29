@@ -9,7 +9,7 @@ const BlogTitle = ({ image }) => {
   if (image) {
     style = { backgroundImage: 'url(' + image + ')' }
   } else {
-    style = { backgroundImage: 'url(assets/images/postcover/rectas/pm.svg)' }
+    style = { backgroundImage: `url(${SiteConf.blogImage})`}
   }
 
  return(

@@ -63,8 +63,7 @@ class Blog extends Component {
      tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />
     }
 
-    const style = { backgroundImage: 'url(assets/images/postcover/rectas/pm.svg)' }
-
+    const style = { backgroundImage: `url(${SiteConf.blogImage})`}
     return (
       <div className= { styles.blog } >
         <div className= { styles.content } >

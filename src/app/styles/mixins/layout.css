@@ -59,6 +59,7 @@
   position: fixed;
   z-index: -1;
   display: flex;
+  -webkit-text-stroke-width: 1px;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;

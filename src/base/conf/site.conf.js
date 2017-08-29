@@ -6,6 +6,7 @@ const SiteDescription = Author;
 const BlogTitle = 'El Blog Isomórfico';
 const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
+const blogImage = 'assets/images/postcover/blog.svg';
 const postOpeningChars= 46;
 const codeHighlightDelay = 350;
 const postOpeningSplitChar = '</h2>';
@@ -74,4 +75,4 @@ if (env === 'development') {
   uniqueImagePath = '/assets/images/postcovers';
 } 
 
-export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, SiteUrl, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins };
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, blogImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, SiteUrl, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins };

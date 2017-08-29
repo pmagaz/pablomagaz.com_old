@@ -8,7 +8,6 @@
 
 .imageWrapper {
   @mixin linkImage;
-  z-index: 9999;
 }
 
 .fade-appear {

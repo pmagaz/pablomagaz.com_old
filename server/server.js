@@ -1,7 +1,7 @@
 import express from 'express';
 
 import base from 'base';
-import HttpServer from './HttpServer';
+import httpServer from './httpServer';
 import applyStaticsPaths from './statics';
 import applyServerRouting from './routing';
 import applyEnvMiddleWare from './middleware';
@@ -20,7 +20,7 @@ const launchServer = () => {
     })
     .then(() => {
       base.console.info(`Setting up server...`);
-      HttpServer(app);
+      httpServer(app);
     })
     .catch((e) => {
       base.console.error(`Server Error ${e}...`);

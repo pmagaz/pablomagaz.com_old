@@ -15,7 +15,7 @@ export const postsApiHandler = (req, res)  => {
         else res.status(404).json({ posts:[] });
       }
     })
-    .catch(err => res.status(500).send());
+    .catch(() => res.status(500).send());
 }; 
 
 const resolveUniqueImage = image => {

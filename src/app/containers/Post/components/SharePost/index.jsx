@@ -5,6 +5,10 @@ import { SiteConf } from 'base';
 import SocialIcon from 'components/SocialIcon';
 import styles from './styles.css';
 
+const propTypes= {
+  post: PropTypes.object.isRequired
+};
+
 const SharePost = ({ post }) => {
 
   const postUrl = `${SiteConf.BlogUrl}${post.slug }`;
@@ -12,19 +16,21 @@ const SharePost = ({ post }) => {
   const twitterUrl = `https://twitter.com/intent/tweet?text=[${SiteConf.BlogTitle}] ${post.title}&url=${postUrl}&related=${SiteConf.BlogTitle}`;
 
   return (<div className={ styles.share }>
-      <ul className={ styles.socialBoxWrap }>
+    <ul className={ styles.socialBoxWrap }>
       <li>
-        <a href={linkedInUrl} target="_blank">
-        <SocialIcon />
+        <a href={ linkedInUrl } target="_blank">
+          <SocialIcon />
         </a>
       </li>
       <li>
-        <a href={twitterUrl} target="_blank">
-        <SocialIcon />
+        <a href={ twitterUrl } target="_blank">
+          <SocialIcon />
         </a>
       </li>
-  </ul>
+    </ul>
   </div>);
 };
+
+SharePost.propTypes = propTypes;
 
 export default SharePost;

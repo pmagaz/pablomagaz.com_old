@@ -34,38 +34,35 @@ class Logo extends Component {
   handleScroll(event) {
     const maxScroll = 109;
     const scrollTop = event.srcElement.body.scrollTop;
-    if(scrollTop >= maxScroll && !this.state.show && !this.isHome()) {
+    if (scrollTop >= maxScroll && !this.state.show && !this.isHome()) {
       this.setState({ show: true, scrollTop });
     } 
-    else if(scrollTop <= maxScroll && this.state.show && !this.isHome()) {
+    else if (scrollTop <= maxScroll && this.state.show && !this.isHome()) {
       this.setState({ show: false, scrollTop });
     }
   }
 
   render() {
     let value;
-    const pathName = this.props.location.pathname;
-    const hash = this.props.location.hash;
-    const isHome = (pathName === '/') ? true : false; 
     if (this.isHome()) value = '';
     else value = SiteConf.BlogTitle.toUpperCase(); 
     
     const cx = classNames.bind(styles);
-     const miniTitleStyle = cx({
+    const miniTitleStyle = cx({
       'miniTitle': !this.state.show ? true : true,
-      'miniTitleActive': (this.state.show ) ? true : false 
+      'miniTitleActive': (this.state.show) ? true : false 
     });
 
     return (
       <h1 className={ miniTitleStyle }>
         <LinkButton
-         id="Logo"
+          id="Logo"
           location="/blog"
           value={ value }  
         />
       </h1>
     );
   }
-};
+}
 
-export default Logo;
+export default pure(Logo);

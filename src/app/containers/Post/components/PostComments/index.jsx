@@ -11,7 +11,7 @@ const propTypes= {
 
 const newCommentHandler = () => {
   console.log('new comment');
-}
+};
 
 const PostComments = ({ post }) => {
   const postUrl = `${SiteConf.BlogUrl}${post.slug }`;

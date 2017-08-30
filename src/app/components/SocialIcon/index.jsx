@@ -1,18 +1,11 @@
 import React  from 'react';
-import { PropTypes } from 'prop-types';
-
 import styles from './styles.css';
 
-const propTypes= {
-  fn: PropTypes.function
-};
-
-
-const SocialIcon = ({ fn }) => {
+const SocialIcon = () => {
   return (
-    <button className={ styles.SocialIcon } onClick={ fn }>
+    <button className={ styles.SocialIcon }> 
     </button>
-  )
+  );
 };
 
 export default SocialIcon;

@@ -1,10 +1,9 @@
 import React  from 'react';
-import { Link } from 'react-router';
 import { PropTypes } from 'prop-types';
 import { pure } from 'recompose';
 import classNames from 'classnames/bind';
 
-import { SiteConf, context } from 'base';
+import { SiteConf } from 'base';
 import BlogTitle from 'components/BlogTitle';
 import styles from './styles.css';
 
@@ -13,12 +12,12 @@ const propTypes= {
   title: PropTypes.string.isRequired,
 };
 
-const PostHeader = ({ image, title }) => {
+const PostHeader = ({ image }) => {
   let style;
   const postImage = `${ SiteConf.ImageUrl }${ image }`;
 
   if (image) {
-    style = { backgroundImage: 'url(' + postImage + ')' }
+    style = { backgroundImage: 'url(' + postImage + ')' };
   }
   else style = null;
 
@@ -30,12 +29,12 @@ const PostHeader = ({ image, title }) => {
   return (
     <header className={ styles.postHeader }>
       <div style={ style } className={ styles.postHeaderWrap }>
-          <h1 className={ postTitleStyle }>
-             <BlogTitle /> 
-          </h1>
+        <h1 className={ postTitleStyle }>
+          <BlogTitle /> 
+        </h1>
       </div>
     </header>
-  )
+  );
 };
 
 PostHeader.propTypes = propTypes;

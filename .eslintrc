@@ -1,7 +1,9 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "jsx-a11y",
+    "import"
   ],
   "extends": ["airbnb-base", "eslint:recommended", "plugin:react/recommended"],
   "globals": {

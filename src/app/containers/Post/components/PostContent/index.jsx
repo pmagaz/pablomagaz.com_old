@@ -5,16 +5,16 @@ import hljs from 'highlight.js/lib/highlight';
 import ReactHtmlParser from 'html-react-parser';
 import javascript from 'highlight.js/lib/languages/javascript';
 
-import { SiteConf, context, getDate } from 'base';
-import SharePost from '../SharePost';
+import { SiteConf, context } from 'base';
 import Loading from 'components/Loading';
 import PostInfo from 'components/PostInfo';
 import PostComments from '../PostComments';
+import SharePost from '../SharePost';
 import styles from './styles.css';
 
 class PostContent extends Component {
 
-  static proopTypes = {
+  static propTypes = {
     post: PropTypes.object.isRequired
   }
 
@@ -23,11 +23,10 @@ class PostContent extends Component {
   }
   
   componentDidMount() {
-    const post = this.props.post;
     this.highlightCode();
   }
 
-   highlightCode() {
+  highlightCode() {
     setTimeout(() => {
       hljs.initHighlighting.called = false;
       hljs.registerLanguage('javascript', javascript);
@@ -35,7 +34,7 @@ class PostContent extends Component {
     }, SiteConf.codeHighlightDelay);
   }
 
-  isLoaded(){
+  isLoaded() {
     return !~this.props.post.id ? true : false; 
   }
 
@@ -50,8 +49,6 @@ class PostContent extends Component {
       'postContentAnim': context.client ? true : false
     });
 
-    const identifier = `${post.slug}${post.id }`;
-
     return (
       <div className={ styles.post }>
         <div className={ postContentStyle }>
@@ -60,17 +57,17 @@ class PostContent extends Component {
             author={ post.author }
             tags={ post.tags }
             date={ post.published_at }
-           />
-           <div className={ styles.postText }> 
+          />
+          <div className={ styles.postText }> 
             { ReactHtmlParser(post.html) }
-            <span className={ styles.divider}></span>
+            <span className={ styles.divider }></span>
             <SharePost post={ post } />
             <PostComments post={ post } />
+          </div>
         </div>
       </div>
-    </div>
     );
-  };
+  }
 }
 
 export default PostContent;

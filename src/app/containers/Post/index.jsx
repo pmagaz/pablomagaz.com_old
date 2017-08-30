@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 
-import { fetchRequiredActions, context } from 'base';
+import { fetchRequiredActions } from 'base';
 import * as Actions from './actions';
 import PostHeader from './components/PostHeader';
 import PostContent from './components/PostContent';
@@ -12,7 +12,7 @@ import styles from './styles.css';
 
 class Post extends Component {
 
-  static proopTypes = {
+  static propTypes = {
     dispatch: PropTypes.func.isRequired,
     Post: PropTypes.instanceOf(Immutable.Record).isRequired 
   }

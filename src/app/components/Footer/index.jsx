@@ -1,16 +1,12 @@
 import React  from 'react';
 import { pure } from 'recompose';
-import { PropTypes } from 'prop-types';
-import styles from './styles.css';
 
 import Menu from 'components/Menu';
-import Social from 'components/Social';
-
-import LinkButton from 'components/LinkButton';
+import styles from './styles.css';
 
 const Footer = () => (
   <footer className={ styles.container }>
-      <Menu />
+    <Menu />
     <div className={ styles.copyright }>
       <span>© 2017</span>
       <span> Pablo Magaz.</span>

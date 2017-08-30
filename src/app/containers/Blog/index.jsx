@@ -6,18 +6,19 @@ import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 
 import { fetchRequiredActions, SiteConf, context } from 'base';
-import * as Actions from './actions';
+import Social from 'components/Social';
 import BlogTitle from 'components/BlogTitle';
 import PostList from './components/PostList';
 import TagTitle from './components/TagTitle';
-import LinkButton from 'components/LinkButton';
-import Social from 'components/Social';
+import * as Actions from './actions';
 import styles from './styles.css';
 
 class Blog extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
+    params: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
     Blog: PropTypes.shape({
       posts: PropTypes.instanceOf(Immutable.List).isRequired,
       pagination: PropTypes.instanceOf(Immutable.Record).isRequired,
@@ -36,14 +37,13 @@ class Blog extends Component {
     fetchRequiredActions(Blog.requiredActions, this.props, postsLoaded);
   }
 
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
     const prevParams = this.props.params;
     const nextParams = nextProps.params;
-    const params = { params: nextParams };
-    if(prevParams && prevParams.tag !== nextParams.tag ) this.actions.getPosts(nextParams);
+    if (prevParams && prevParams.tag !== nextParams.tag) this.actions.getPosts(nextParams);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     if (this.isTagFilter()) this.actions.cleanTagFilter();
   }
 
@@ -56,14 +56,14 @@ class Blog extends Component {
     const posts = this.props.Blog.posts;
     const cx = classNames.bind(styles);
     const blogTitleStyle = cx({
-    'titleBlogAnim': context.client ? true : false
+      'titleBlogAnim': context.client ? true : false
     });
 
-    if(this.isTagFilter()){
-     tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />
+    if (this.isTagFilter()) {
+      tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />;
     }
 
-    const style = { backgroundImage: `url(${SiteConf.blogImage})`}
+    const style = { backgroundImage: `url(${SiteConf.blogImage})` };
     
     return (
       <div className= { styles.blog } >

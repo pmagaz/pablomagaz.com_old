@@ -1,4 +1,4 @@
-import base, { SiteConf, env }  from '../src/base/';
+import base  from '../src/base/';
 import routingMiddleware from './middleware/routing-middleware';
 
 import { postApiHandler } from './api/post';

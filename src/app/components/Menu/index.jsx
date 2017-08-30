@@ -1,11 +1,10 @@
 import React  from 'react';
 import { pure } from 'recompose';
-import { PropTypes } from 'prop-types';
 
 import LinkButton from 'components/LinkButton';
 import styles from './styles.css';
   
-const Menu = (props) => {
+const Menu = () => {
   return (
     <nav className={ styles.navMenu }>
       <ul>
@@ -15,21 +14,21 @@ const Menu = (props) => {
             value="Home"
           />
         </li>
-         <li>
-         <LinkButton
-          location="/blog"
-          value="Blog"
-        />
+        <li>
+          <LinkButton
+            location="/blog"
+            value="Blog"
+          />
         </li>
         <li>
           <LinkButton
             location="#about"
             value="Sobre mi"
           />
-          </li>
+        </li>
       </ul>
     </nav>
-  )
+  );
 };
 
 export default pure(Menu);

@@ -8,23 +8,14 @@ const postError = state => state;
 
 const postSuccess = (state, { payload }) => ( 
   state
-    .set('id', payload.id)
-    .set('tags', payload.tags)
-    .set('html', payload.html)
-    .set('slug', payload.slug)
-    .set('title', payload.title)
-    .set('image', payload.image)
+    .merge(payload)
     .set('author', SiteConf.Author)
-    .set('updated_at', payload.updated_at)
-    .set('published_at', payload.published_at)
-    .set('feature_image', payload.feature_image)
-    .set('meta_description', payload.meta_description)
 );
 
 const cleanPost = state => (
   state
     .set('id', -1)
-    .set('tags',[])
+    .set('tags', [])
     .set('html', '')
     .set('title', '')
     .set('image', '')
@@ -37,7 +28,7 @@ const actionHandlers = {
   [ActionTypes.POST_REQUEST]: postRequest,
   [ActionTypes.POST_SUCCESS]: postSuccess,
   [ActionTypes.POST_ERROR]: postError,
-  [ActionTypes.CLEAN_POST]: cleanPost
+  [ActionTypes.CLEAN_POST]: cleanPost,
 };
 
 export default createReducer(actionHandlers, new PostModel());

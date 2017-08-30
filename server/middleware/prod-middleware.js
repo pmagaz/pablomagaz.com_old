@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import helmet from 'helmet';
 import compression from 'compression';
 
-import base, { SiteConf } from 'base';
+import base from 'base';
 
 const config = require('../../webpack/index.babel.js');
 

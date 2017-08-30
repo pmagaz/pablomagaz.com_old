@@ -1,15 +1,12 @@
-import Immutable from 'immutable';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
-import { fetchRequiredActions } from 'base';
 
 import { context } from 'base';
-import Logo from '../../components/Logo';
-import * as Actions from '../Blog/actions';
 import Social from 'components/Social';
+import * as Actions from '../Blog/actions';
 import styles from './styles.css';
 
 
@@ -17,6 +14,7 @@ class Main extends Component {
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
+    location: PropTypes.object.isRequired,
   };
 
   constructor (props) {
@@ -24,30 +22,31 @@ class Main extends Component {
     this.actions = bindActionCreators(Actions, props.dispatch);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     const smoothscroll = require('smoothscroll-polyfill').polyfill(); 
     const hash = this.props.location.hash; 
-    if(hash) this.scrollToHash(hash);
+    if (hash) this.scrollToHash(hash);
     this.actions.getPosts();
   }
 
-  scrollToHash(hash){
+  scrollToHash(hash) {
     const section = document.querySelector(`${hash}`);
-    if(section) section.scrollIntoView({ behavior: 'smooth' }); 
+    if (section) section.scrollIntoView({ behavior: 'smooth' }); 
   }
 
-  render () {
+  render() {
     const cx = classNames.bind(styles);
     const brandStyle = cx({
       'brand': true,
       'brandAnim': context.client ? true : false
     });
+
     return (
       <div className={ styles.mainWrapper }>
         <section className={ styles.home }>
-            <div className={ brandStyle }>
-              <h1>Pablo Magaz</h1>
-            </div>
+          <div className={ brandStyle }>
+            <h1>Pablo Magaz</h1>
+          </div>
         </section>
 
         <section id="about" className={ styles.about }>

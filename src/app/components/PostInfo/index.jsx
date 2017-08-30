@@ -14,7 +14,7 @@ const propTypes= {
 const PostInfo = ({ author, date, tags }) => (
   <div className={ styles.postInfo }>
     <span className={ styles.author } >
-    { author }
+      { author }
     </span> 
     <PostDate date={ date } />
     <PostTag tags={ tags } />

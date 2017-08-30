@@ -4,8 +4,7 @@ import { PropTypes } from 'prop-types';
 import classNames from 'classnames/bind';
 import ReactHtmlParser from 'html-react-parser';
 
-import { SiteConf, context } from 'base';
-import PostTag from 'components/PostTag';
+import { SiteConf } from 'base';
 import PostInfo from 'components/PostInfo';
 import PostImage from 'components/PostImage';
 import styles from './styles.css';
@@ -39,17 +38,17 @@ const PostSummary = ({ post }) => {
         />
       </Link>
       <PostInfo
-          tags={ post.tags }
-          author={ post.author }
-          date={ post.published_at }
+        tags={ post.tags }
+        author={ post.author }
+        date={ post.published_at }
       />
       <div className={ styles.postText }>
         { ReactHtmlParser(post.opening) }
       </div>
       <div className={ styles.readMore } >
-      <Link to={ url }>
-        Continuar leyendo
-       </Link> 
+        <Link to={ url }>
+          Continuar leyendo
+        </Link> 
       </div>
     </article>
   );

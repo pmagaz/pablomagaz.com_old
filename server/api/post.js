@@ -1,7 +1,7 @@
 import needle from 'needle';
 import { SiteConf, getDate } from '../../src/base/';
 
-export const postApiHandler = (req, res, next)  => {
+export const postApiHandler = (req, res)  => {
   const slug = req.params.slug;
   const url = `${ SiteConf.PostApi.replace(':slug', slug) }`;
   needle('get', url)
@@ -14,5 +14,5 @@ export const postApiHandler = (req, res, next)  => {
         res.json(post); 
       } 
     })
-    .catch(err => res.status(500).send());
+    .catch(() => res.status(500).send());
 }; 

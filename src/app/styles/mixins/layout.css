@@ -19,6 +19,7 @@
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
   filter: grayscale(16%);
+  border-radius: 4px;
   img{
     transition: all .2s; 
   }

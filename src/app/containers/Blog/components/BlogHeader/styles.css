@@ -1,0 +1,66 @@
+@import '../../../../styles/variables/variables.css';
+@import '../../../../styles/mixins/mixins.css';
+@import '../../../../styles/anims.css';
+
+.blogTitle{
+  @mixin blogTitle;
+  .blogTitleWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 15px;
+    max-width: $layout-max-width;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    animation: fade-in-down-bgi 140ms both;
+    animation-delay: 60ms;
+    background-size: 221px;
+    transition: padding 120ms ease;
+    @media (min-width: $sm){
+      padding: $layout-padding;
+      transition: padding 120ms ease;
+    }
+    @media (min-width: 585px){
+      flex-direction: row;
+      align-items: flex-end;
+      margin: 0 auto;
+    }
+    h1{
+      font-family: $fontFamilyMedium;
+      color: #f93d69;
+      word-break: break-word;
+      width: 400px;
+      margin-top: 43px;
+      font-size: 2.8rem;
+      margin-bottom: 0;
+      @media (min-width: 585px){
+        margin-bottom: 39px;
+      }
+      + div{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 34px;
+        font-size: 17px;
+      }
+    }
+    a {
+      color: $cl-titleBlog;
+    }
+  }
+  .socialBox{
+    margin-bottom: 20px;
+    align-items: end;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    -webkit-filter: invert(80%);
+    filter: invert(80%);
+  }
+}
+
+.titleBlogAnim {
+  animation: fade-in-down 150ms both;
+}

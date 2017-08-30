@@ -9,7 +9,7 @@ import styles from './styles.css';
 
 class Header extends Component {
   
-  static propTypes= {
+  static propTypes = {
     location: PropTypes.object,
   };
 

@@ -5,7 +5,7 @@ import { PostModel } from "../models/";
 
 export default {
   fetchPost(slug) {
-    return fetch(`${SiteConf.PostApiUrl}${slug}`)
+    return fetch(`${ SiteConf.PostApiUrl }${ slug }`)
       .then(req => req.json())
       .then(payload => new PostModel(payload));
   },

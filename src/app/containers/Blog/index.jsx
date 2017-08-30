@@ -2,12 +2,10 @@ import Immutable from 'immutable';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
-import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 
-import { fetchRequiredActions, SiteConf, context } from 'base';
-import Social from 'components/Social';
-import BlogTitle from 'components/BlogTitle';
+import { fetchRequiredActions } from 'base';
+import BlogHeader from './components/BlogHeader';
 import PostList from './components/PostList';
 import TagTitle from './components/TagTitle';
 import * as Actions from './actions';
@@ -54,32 +52,15 @@ class Blog extends Component {
   render () {
     let tagTitle;
     const posts = this.props.Blog.posts;
-    const cx = classNames.bind(styles);
-    const blogTitleStyle = cx({
-      'titleBlogAnim': context.client ? true : false
-    });
-
+    
     if (this.isTagFilter()) {
       tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />;
     }
 
-    const style = { backgroundImage: `url(${SiteConf.blogImage})` };
-    
     return (
-      <div className= { styles.blog } >
-        <div className= { styles.content } >
-          <header className={ styles.blogTitle }>
-            <div style={ style } className={ styles.blogTitleWrap }>
-              <div className={ blogTitleStyle } > 
-                <h1> 
-                  <BlogTitle /> 
-                </h1>
-              </div>
-              <div className={ styles.socialBox }>
-                <Social />
-              </div>
-            </div>
-          </header>
+      <div className={ styles.blog } >
+        <div className={ styles.content } >
+          <BlogHeader />
           { tagTitle }
           <PostList posts={ posts } />
         </div>

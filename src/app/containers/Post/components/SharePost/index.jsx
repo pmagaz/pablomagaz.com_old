@@ -18,12 +18,12 @@ const SharePost = ({ post }) => {
   return (<div className={ styles.share }>
     <ul className={ styles.socialBoxWrap }>
       <li>
-        <a href={ linkedInUrl } target="_blank">
+        <a href={ linkedInUrl } target="_blank" rel="noopener noreferrer">
           <SocialIcon />
         </a>
       </li>
       <li>
-        <a href={ twitterUrl } target="_blank">
+        <a href={ twitterUrl } target="_blank" rel="noopener noreferrer">
           <SocialIcon />
         </a>
       </li>

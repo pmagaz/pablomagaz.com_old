@@ -15,7 +15,7 @@ class Header extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { show: false, scrollTop: 0 }; 
+    this.state = { collapsed: false, scrollTop: 0 }; 
   }
 
   componentDidMount() {
@@ -25,11 +25,11 @@ class Header extends Component {
   handleScroll(event) {
     const maxScroll = 112;
     const scrollTop = event.srcElement.body.scrollTop;
-    if (scrollTop >= maxScroll && !this.state.show) { 
-      this.setState({ show: true, scrollTop });
+    if (scrollTop >= maxScroll && !this.state.collapsed) { 
+      this.setState({ collapsed: true, scrollTop });
     } 
-    else if (scrollTop <= maxScroll && this.state.show) {
-      this.setState({ show: false, scrollTop });
+    else if (scrollTop <= maxScroll && this.state.collapsed) {
+      this.setState({ collapsed: false, scrollTop });
     }
   }
 
@@ -37,15 +37,17 @@ class Header extends Component {
     const cx = classNames.bind(styles);
     const headerStyle = cx({
       mainHeader: true,
-      mainHeaderActive: this.state.show
+      mainHeaderActive: this.state.collapsed
     });
+
+    console.log(1111, this.state.collapsed);
 
     return (
       <header className={ headerStyle }>
         <span className={ styles.mainHeaderSheet }></span>
         <div className={ styles.mainHeaderWrapper }>
           <Logo location= { this.props.location } />
-          <Menu />
+          <Menu collapsed={ this.state.collapsed } />
         </div>
       </header>
     );

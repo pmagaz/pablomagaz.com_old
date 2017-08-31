@@ -30,8 +30,9 @@
   margin: 40px auto 0;  
   font-size: 3em;
   background-color: $bg-homeBrand;
+  border-radius: 0px 85px 0px 85px;
   @media (min-width:$sm){
-    width: 433px;
+    width: 390px;
     margin: 133px 0 0 0;
   } 
   h1{
@@ -91,6 +92,9 @@
       @media (min-width:600px){
         margin: 0;
       } 
+    }
+    h1{
+      font-size: 2.2em;
     }
     h3{
       text-transform: uppercase;

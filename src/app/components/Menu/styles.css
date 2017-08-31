@@ -19,6 +19,56 @@
 				&::before {
 					content: '[';
 					left: 0px;
+					color: $primary-color;
+				}
+				&::after {
+					content: ']';
+					right: 0px;
+					color: $primary-color;
+				}
+				&:hover{
+					color: $white;
+				}
+				&:hover::before,
+				&:focus::before{
+					left: -10px;	
+				}
+				&:hover::after,
+				&:focus::after {
+					right: -10px;
+				}
+				&:hover::before,
+				&:focus::before,
+				&:hover::after,
+				&:focus::after {
+					opacity: 1;
+					transition: all .3s ease;
+				}
+			}
+        }
+    }
+}
+
+.navMenuCollapsed {
+	ul{
+		width: 205px;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+        li{
+			position: relative;
+			a{
+				color: $white;
+				&::before,
+				&::after {
+					position: absolute;
+					opacity: 0;
+				}
+				&::before {
+					content: '[';
+					left: 0px;
 				}
 				&::after {
 					content: ']';

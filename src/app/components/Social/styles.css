@@ -18,7 +18,8 @@
 ul li {
     &:nth-child(1){
         button{
-            @mixin socialIcon linkedin;        }
+            @mixin socialIcon linkedin;
+        }
     }
     &:nth-child(2){
         button{

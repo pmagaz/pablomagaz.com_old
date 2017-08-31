@@ -12,8 +12,7 @@
     visibility: hidden;
     transition: all 110ms ease-out;
     a{
-        color: $cl-miniTitle;
- 
+     color: $cl-miniTitle;
     }
 }
 

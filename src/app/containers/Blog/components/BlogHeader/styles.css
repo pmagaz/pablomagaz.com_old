@@ -36,6 +36,7 @@
       margin-top: 43px;
       font-size: 2.8rem;
       margin-bottom: 0;
+      transform: skewY(2deg);
       @media (min-width: 585px){
         margin-bottom: 39px;
       }

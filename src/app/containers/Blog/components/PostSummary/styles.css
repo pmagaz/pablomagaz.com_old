@@ -9,7 +9,7 @@
       @mixin postTitle;
       position: relative;
       font-size: 2em;
-      top: 48px;
+      top: 62px;
       left: 14px;
       z-index: 90;
       padding-left: 20px;
@@ -44,10 +44,13 @@
     margin-left: 52%;
     width: 48%;
   }
-  border-radius: 0px 85px 0px 85px;
-}
 
-.readMore {
+
+
+  clip-path: polygon(88% 0, 100% 0, 100% 100%, 0 57%, 0 23%);
+
+}
+  .readMore {
   margin-top:26px;
   font-family: $fontFamilyMedium;
   color: $cl-postSumaryOpening;

@@ -43,7 +43,7 @@ $hgt-titleBlog: $parallax-header;
 
 
 /** Blog/components/ Post Sumary **/
-$cl-postSumaryTilte: $lighter-gray;
+$cl-postSumaryTilte: #e4e3e3;
 $cl-postSumaryTilteHover: $primary-color;
 $cl-postSumaryOpening : $gray-middark; 
 $bdrt-linkImage: 1px solid $gray-light;

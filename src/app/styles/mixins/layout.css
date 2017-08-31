@@ -58,6 +58,11 @@
   background-color: $bg-titleBlog;
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
+  background-image: linear-gradient($tertiary-color, $tertiary-color);
+  transform: skewY(-2deg);
+  transform-origin: top left;
+
+
 }
 
 @define-mixin blogContent {

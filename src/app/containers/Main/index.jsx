@@ -75,8 +75,8 @@ class Main extends Component {
               <li>
                 Codemotion 2017: Programación Reactiva con RxJs.
               </li>
-                <li>
-                 KeepCoding 2018: Proximamente 
+              <li>
+               KeepCoding 2018: Proximamente 
               </li>
             </ul>
             <h2>Mis otras affciones</h2>

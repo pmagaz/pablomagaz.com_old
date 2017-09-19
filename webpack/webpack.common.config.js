@@ -25,6 +25,7 @@ export const entry = {
     'prop-types',
     'classnames',
     'react-redux',
+    'react-share',
     'react-router',
     'react-lazyload',
     'babel-polyfill',

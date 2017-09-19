@@ -15,6 +15,8 @@ const DisqusSettins = {
   shortName: 'el-blog-isomorfico'
 };
 
+const addThisUrl = 'http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c0d1b1697ac737';
+
 const socialLinks = {
   linkedIn: 'https://es.linkedin.com/in/pablo-magaz-05b46763',
   twitter: 'https://twitter.com/pablo_magaz',
@@ -75,4 +77,4 @@ if (env === 'development') {
   uniqueImagePath = '/assets/images/postcovers';
 } 
 
-export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, blogImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins };
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, blogImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins, addThisUrl };

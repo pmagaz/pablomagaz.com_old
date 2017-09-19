@@ -5,6 +5,13 @@
   @mixin blogContent;
   .content{
     margin: 26px auto 200px;
+    :global(p img) {
+      display:block;
+      margin:auto;
+      width: 400px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
   }
 }
 

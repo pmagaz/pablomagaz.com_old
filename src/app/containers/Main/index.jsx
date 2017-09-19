@@ -54,7 +54,7 @@ class Main extends Component {
             <img src="../assets/images/about-me.jpg"/>
             <h1>Sobre mí</h1>
             <p>
-            Soy Pablo Magaz, Leonés afincado en Madrid desde muy temprana edad, llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, bases de datos, administración de servidores, etc hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
+            Soy Pablo Magaz, Leonés afincado en Madrid desde muy temprana edad, llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
               <br />
               <br />
             Actualmente trabajo en <a href="http://www.atsistemas.com" target="_blank" rel="noopener noreferrer">atSistemas</a> como Technical Leader del área de JavaScript y he desarrollado proyectos backend con NodeJs y Front-End con Polymer, AngularJs, Angular, React, Redux, RxJs etc en fin que no me caso con nada y me gusta todo, aunque logicamente ¡tengo mis preferencias!.
@@ -74,6 +74,9 @@ class Main extends Component {
               </li>
               <li>
                 Codemotion 2017: Programación Reactiva con RxJs.
+              </li>
+                <li>
+                 KeepCoding 2018: Proximamente 
               </li>
             </ul>
             <h2>Mis otras affciones</h2>

@@ -40,8 +40,6 @@ class Header extends Component {
       mainHeaderActive: this.state.collapsed
     });
 
-    console.log(1111, this.state.collapsed);
-
     return (
       <header className={ headerStyle }>
         <span className={ styles.mainHeaderSheet }></span>

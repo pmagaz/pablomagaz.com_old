@@ -17,6 +17,7 @@ const Footer = () => (
       <div className={ styles.powered }>
         powered by:
       </div>
+      
     </a>
   </footer>
 );

@@ -3,7 +3,7 @@ import { SiteConf } from 'base';
 export default function blog(params) {
 
   const state = JSON.stringify(params.state);
-  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png`; 
+  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.gif`; 
   
   return `
   <!doctype html>

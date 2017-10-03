@@ -8,16 +8,8 @@ import rootReducer from '../reducers';
 function configureStore(history, initialState) {
 
   let middleware;
-  const loggerMiddleware = store => next => action => {
-    // Mostramos en la consola el type de la accción y el timestamp
-    console.log(`Action dispatched: ${action.type}, Time: ${+new Date()}`);
-    // Devolvemos la acción para que continue el flujo habitual
-    return next(action);
-  };
-
   if (base.env === 'development') {
     middleware = applyMiddleware(
-      loggerMiddleware,
       reduxReqMiddleware(),
       createLogger({ level: 'info', collapsed: true }),
     );
@@ -27,7 +19,6 @@ function configureStore(history, initialState) {
     );
   }
 
-  const enhancer = compose(middleware);
   const store = createStore(rootReducer, initialState, middleware);
 
   if (module.hot) {

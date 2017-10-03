@@ -11,7 +11,10 @@ const propTypes = {
 };
 
 const goTo = (location) => {
-  if (!!~location.indexOf('/')) browserHistory.push(location); 
+
+  if (!!~location.indexOf('/')) {
+    browserHistory.push(location); 
+  }
   else {
     const section = document.querySelector(`${location}`);
     if (section) section.scrollIntoView({ behavior: 'smooth' });
@@ -20,7 +23,8 @@ const goTo = (location) => {
 };
 
 const LinkButton = ({ location, value }) => {
-  let content;
+  //let content;
+  /*
   if (context.server) {
     content = (
       <div className={ styles.LinkButton } >
@@ -36,8 +40,13 @@ const LinkButton = ({ location, value }) => {
         <a href="javascript:void(0);">{value}</a>
       </div>
     );
-  }
-  return content;
+  }*/
+  return (
+    <Link to={ `${location}` }>
+      { value }
+    </Link>
+  );
+
 };
 
 LinkButton.propTypes = propTypes;

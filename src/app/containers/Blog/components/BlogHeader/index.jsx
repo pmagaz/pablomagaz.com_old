@@ -10,7 +10,8 @@ const BlogHeader = () => {
   
   const cx = classNames.bind(styles);
   const blogTitleStyle = cx({
-    'titleBlogAnim': context.client ? true : false
+    //'titleBlogAnim': context.client ? true : false
+    'titleBlogAnim': true 
   });
 
   const style = { backgroundImage: `url(${ SiteConf.blogImage })` };

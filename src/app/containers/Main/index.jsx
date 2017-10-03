@@ -38,7 +38,8 @@ class Main extends Component {
     const cx = classNames.bind(styles);
     const brandStyle = cx({
       'brand': true,
-      'brandAnim': context.client ? true : false
+      //'brandAnim': context.client ? true : false
+      'brandAnim': true  
     });
 
     return (

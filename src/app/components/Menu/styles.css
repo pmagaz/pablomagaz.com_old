@@ -1,7 +1,7 @@
 @import '../../styles/variables/variables.css';
 .navMenu {
 	ul{
-		width: 205px;
+		width: 180px;
 		margin: 0;
 		padding: 0;
 		display: flex;
@@ -31,11 +31,11 @@
 				}
 				&:hover::before,
 				&:focus::before{
-					left: -10px;	
+					left: -8px;	
 				}
 				&:hover::after,
 				&:focus::after {
-					right: -10px;
+					right: -8px;
 				}
 				&:hover::before,
 				&:focus::before,
@@ -46,37 +46,11 @@
 				}
 			}
         }
-    }
-}
-
-.navMenuCollapsed {
-	ul{
-		width: 205px;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		justify-content: space-between;
-		list-style: none;
-        li{
-			position: relative;
-			a{
-				color: $white;
-				&::before,
-				&::after {
-					position: absolute;
-					opacity: 0;
-				}
-				&::before {
-					content: '[';
-					left: 0px;
-				}
-				&::after {
-					content: ']';
-					right: 0px;
-				}
-				&:hover{
-					color: $white;
-				}
+	}
+	@media (min-width: $sm){
+		ul{
+			width: 205px;
+			li a {
 				&:hover::before,
 				&:focus::before{
 					left: -10px;	
@@ -85,14 +59,7 @@
 				&:focus::after {
 					right: -10px;
 				}
-				&:hover::before,
-				&:focus::before,
-				&:hover::after,
-				&:focus::after {
-					opacity: 1;
-					transition: all .3s ease;
-				}
 			}
-        }
-    }
+		}
+	}
 }

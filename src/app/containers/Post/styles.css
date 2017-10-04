@@ -8,9 +8,12 @@
     :global(p img) {
       display:block;
       margin:auto;
-      width: 400px;
+      width: 100%;
       margin-top: 50px;
       margin-bottom: 50px;
+      @media (min-width: 430px){
+        width: 400px;
+      }
     }
   }
 }

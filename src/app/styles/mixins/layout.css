@@ -23,7 +23,13 @@
   img{
     transition: all .2s; 
   }
+  h1{
+    color: $white;
+  }
   &:hover{
+    h1{
+      color: $primary-color;
+    }
     img{
       transform: scale(1.1);
     }

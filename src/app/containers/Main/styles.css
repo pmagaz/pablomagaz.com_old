@@ -30,7 +30,6 @@
   margin: 40px auto 0;  
   font-size: 3em;
   background-color: $bg-homeBrand;
-  border-radius: 0px 85px 0px 85px;
   @media (min-width:$sm){
     width: 390px;
     margin: 133px 0 0 0;

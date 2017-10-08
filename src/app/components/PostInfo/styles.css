@@ -3,7 +3,7 @@
 .postInfo {
   display: flex;
   align-items: center;
-  padding: 0.8em 0 0;
+  margin: 15px 0 14px;
   span,
   time {
     font-size: .8em;

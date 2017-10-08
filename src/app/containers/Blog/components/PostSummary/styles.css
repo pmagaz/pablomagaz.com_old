@@ -3,15 +3,18 @@
 @import '../../../../styles/anims.css';
 
 .PostSummary {
-  margin-bottom: 40px;
+  margin-bottom: 68px;
     h1 {
       @mixin postTitle;
       position: absolute;
       font-size: 2em;
-      top: -18px;
-      left: 14px;
+      top: -21px;
+      left: 10px;
       z-index: 90;
       padding-left: 20px;
+      @media (min-width:$sm){
+        top: 4px;
+      }
       a {
         color :$cl-postSumaryTilte;
         &:hover{
@@ -43,7 +46,6 @@
     margin-left: 52%;
     width: 48%;
   }
-  border-radius: 0px 85px 0px 85px;
 }
 
 .readMore {

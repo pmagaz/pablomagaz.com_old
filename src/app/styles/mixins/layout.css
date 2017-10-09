@@ -21,10 +21,10 @@
   background-color: $bg-linkImage;
   filter: grayscale(16%);
   border-radius: 4px;
-  clip-path: polygon(-4% 8%,21% 2%, 44% -5%, 73% 0%, 93% 7%, 100% 58%, 87% 86%, 36% 83%, 2% 63%, 0% 4%);
+  clip-path: polygon(12% 3%,35% 6%, 73% 0%, 98% 7%, 100% 58%, 92% 86%, 36% 91%, 3% 82%, 4% 17%);
   transition: all 500ms ease-out;
   @media (min-width: $sm){
-    clip-path: polygon(2% 25%, 99% -3%, 94% 115%, 53% 83%, 1% 68%);
+    clip-path: polygon(2% 25%, 34% 8%, 67% 30%, 100% -8%, 99% 90%, 89% 100%, 35% 104%, 2% 80%);
     transition: all 500ms ease-out;
   }
   img{
@@ -63,7 +63,7 @@
   height: $hgt-titleBlog;
   margin: 0;
   left: 0;
-  top: 0;
+  top: -17px;
   font-size: 1.4em;
   line-height: 1;
   position: fixed;
@@ -77,25 +77,12 @@
   background-color: $bg-titleBlog;
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
-  @media (min-width: $sm){
-    clip-path: polygon(0% 0%, 100% 2%, 100% 99%, 100% 128%, 59% 98%, 35% 87%, 0% 97%); 
-  }
-  &:hover{
-    animation: polygons 4s alternate infinite;
-  }
+  transform: skewY(-2deg);
+  clip-path: polygon(0% 0%, 100% 2%, 100% 79%, 100% 100%, 63% 100%, 38% 86%, 0% 91%); 
+
 }
 
-@keyframes polygons {
-  25% {
-    clip-path: polygon(0% 0%, 100% 2%, 100% 99%, 100% 128%, 54% 95%, 32% 88%, 0% 92%); 
-  }
-  50% {
-    clip-path: polygon(0% 0%, 100% 2%, 100% 99%, 100% 128%, 63% 93%, 38% 92%, 0% 99%);
-  }
-  75% {
-    clip-path: polygon(0% 0%, 100% 2%, 100% 99%, 100% 128%, 54% 95%, 32% 88%, 0% 92%);
-  }
-}
+
 
 @define-mixin blogContent {
   width: 100%;

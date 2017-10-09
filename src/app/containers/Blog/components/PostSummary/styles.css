@@ -8,12 +8,12 @@
       @mixin postTitle;
       position: absolute;
       font-size: 2em;
-      top: -21px;
+      top: -11px;
       left: 10px;
       z-index: 90;
       padding-left: 20px;
       @media (min-width:$sm){
-        top: 4px;
+        top: 7px;
       }
       a {
         color :$cl-postSumaryTilte;

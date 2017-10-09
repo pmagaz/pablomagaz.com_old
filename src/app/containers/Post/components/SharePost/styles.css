@@ -6,38 +6,28 @@
 }
 .socialBoxWrap{   
     display: flex;
-    justify-content: space-between;
-    width: 124px;
-    height: 30px;
-    margin: 0;
-    margin-bottom: 80px;
-    padding: 0;
-    list-style: none;
-    &:hover > li button{
-        opacity: .5;
-        transition: opacity .2s ease-in-out;
-        
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 44px 0 106px;
+    border-top: 1px solid #ccc;
+    h4{
+        flex: 1 1 100%;
+        color: #6c6d6d;
+        padding-bottom: 7px;
     }
-}
-
-ul li {
-    &:nth-child(1){
-        button{
-            @mixin socialIcon linkedin;        }
+    &Links{
+        display: flex;
+        &:hover div{
+            opacity: .5;
+            transition: opacity .2s ease-in-out; 
+        }   
+        div{
+            cursor: pointer;
+            &:hover{
+                opacity: 1;
+                transition: opacity .2s ease-in-out; 
+            } 
+        }     
     }
-    &:nth-child(2){
-        button{
-            @mixin socialIcon github;
-        }
-    }
-    &:nth-child(3){
-        button{
-            @mixin socialIcon twitter;
-        }
-    }
-    &:nth-child(4){
-        button{
-            @mixin socialIcon email;        }
-    }
-    
 }

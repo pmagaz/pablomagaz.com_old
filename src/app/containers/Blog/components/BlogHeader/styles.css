@@ -37,12 +37,12 @@
       animation: fade-in-down 150ms both;
       h1{
         font-family: $fontFamilyMedium;
-        color: #f93d69;
         word-break: break-word;
         margin-bottom: 0;
         font-size: 1.6em;
         width: 214px;
         margin-top: 10px;
+        transform: skewY(-2deg);
 
         @media (min-width: $sm){
           width: 400px;
@@ -70,5 +70,6 @@
     justify-content: flex-end;
     -webkit-filter: invert(80%);
     filter: invert(80%);
+    transform: skewY(-2deg);
   }
 }

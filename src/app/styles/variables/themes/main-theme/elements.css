@@ -38,7 +38,7 @@ $bg-blog: $white;
 $bg-titleBlog: $tertiary-color;
 $bgi-titleBlog: url('../../../../assets/images/glitter.svg');
 $cl-titleBlog: $white;
-$mrgt-blog: $parallax-header;
+$mrgt-blog: 192px;;
 $hgt-titleBlog: $parallax-header;
 
 

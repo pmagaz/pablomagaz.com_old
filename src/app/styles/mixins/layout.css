@@ -21,12 +21,6 @@
   background-color: $bg-linkImage;
   filter: grayscale(16%);
   border-radius: 4px;
-  clip-path: polygon(12% 3%,35% 6%, 73% 0%, 98% 7%, 100% 58%, 92% 86%, 36% 91%, 3% 82%, 4% 17%);
-  transition: all 500ms ease-out;
-  @media (min-width: $sm){
-    clip-path: polygon(2% 25%, 34% 8%, 67% 30%, 100% -8%, 99% 90%, 89% 100%, 35% 104%, 2% 80%);
-    transition: all 500ms ease-out;
-  }
   img{
     transition: all .2s; 
   }
@@ -41,12 +35,6 @@
       transform: scale(1.1);
     }
     filter: grayscale(%);
-    clip-path: polygon(-4% 8%,21% 2%, 44% -5%, 73% 0%, 93% 7%, 100% 58%, 87% 86%, 36% 83%, 2% 63%, 0% 4%);
-    transition: all 500ms ease-out;
-    @media (min-width: $sm){
-      clip-path: polygon(2% 23%, 107% -15%, 93% 94%, 37% 76%, 1% 74%);
-      transition: all 500ms ease-out;
-    }
   }
 }
 
@@ -63,7 +51,7 @@
   height: $hgt-titleBlog;
   margin: 0;
   left: 0;
-  top: -17px;
+  top: 0;
   font-size: 1.4em;
   line-height: 1;
   position: fixed;
@@ -77,8 +65,7 @@
   background-color: $bg-titleBlog;
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
-  transform: skewY(-2deg);
-  clip-path: polygon(0% 0%, 100% 2%, 100% 79%, 100% 100%, 63% 100%, 38% 86%, 0% 91%); 
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 93%, 62% 96%, 38% 91.5%, 0% 99%); 
 
 }
 
@@ -103,4 +90,15 @@
       transition: padding 120ms ease;
     }
   }
+}
+
+@define-mixin shape {
+  background: #fefefe;
+  clip-path: polygon(0% 30%, 38% 6%, 62% 21%, 100% 10%, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+  width: 100%;
+  display: block;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 174px;
 }

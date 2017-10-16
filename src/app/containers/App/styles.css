@@ -30,6 +30,7 @@ p {
 main.container {
     margin-bottom: $mrgb-mainContainer;
     background: $bg-mainContainer;
+    overflow: hidden;
 }
 
 :global(.fade-appear) {

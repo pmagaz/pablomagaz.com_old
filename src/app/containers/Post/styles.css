@@ -17,7 +17,9 @@
     }
   }
 }
-
+.shape{
+  @mixin shape;
+}
 .PostAnim {
   animation: fade-in-down 0.2s both; 
 }

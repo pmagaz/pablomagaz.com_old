@@ -30,7 +30,7 @@ const PostHeader = ({ image }) => {
   return (
     <header className={ styles.postHeader }>
       <div style={ style } className={ styles.postHeaderWrap }>
-        <div className={ postTitleStyle } > 
+        <div className={ styles.postHeaderTitle }> 
           <h1>
             <BlogTitle /> 
           </h1>

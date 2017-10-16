@@ -4,9 +4,9 @@
 
 .blogTitle{
   @mixin blogTitle;
+
   .blogTitleWrap{
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     padding: 0 15px;
@@ -28,39 +28,48 @@
       align-items: flex-end;
       margin: 0 auto;
     }
-    h1{
-      font-family: $fontFamilyMedium;
-      color: #f93d69;
-      word-break: break-word;
-      width: 400px;
-      margin-top: 43px;
-      font-size: 2.8rem;
-      margin-bottom: 0;
-      @media (min-width: 585px){
-        margin-bottom: 39px;
+    .titleBlogAnim {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      flex: 2;
+      animation: fade-in-down 150ms both;
+      h1{
+        font-family: $fontFamilyMedium;
+        word-break: break-word;
+        margin-bottom: 0;
+        font-size: 1.6em;
+        width: 214px;
+        margin-top: 10px;
+        transform: skewY(-2deg);
+
+        @media (min-width: $sm){
+          width: 400px;
+          font-size: 2.8rem;
+        }
+        + div{
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 34px;
+          font-size: 17px;
+        }
       }
-      + div{
-        display: flex;
-        align-items: flex-end;
-        margin-bottom: 34px;
-        font-size: 17px;
+      a {
+        color: $cl-titleBlog;
       }
-    }
-    a {
-      color: $cl-titleBlog;
     }
   }
   .socialBox{
-    margin-bottom: 20px;
-    align-items: end;
+    height: 100%;
+    margin-bottom: 0;
+    flex: 1;
+    align-items: flex-end;
     display: flex;
     width: 100%;
     justify-content: flex-end;
     -webkit-filter: invert(80%);
     filter: invert(80%);
+    transform: skewY(-2deg);
   }
-}
-
-.titleBlogAnim {
-  animation: fade-in-down 150ms both;
 }

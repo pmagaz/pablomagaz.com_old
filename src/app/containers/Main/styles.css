@@ -1,5 +1,7 @@
 @import '../../styles/variables/variables.css';
 @import '../../styles/anims.css';
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
 
 :root section{
   min-height: 100vh;
@@ -30,7 +32,7 @@
   margin: 40px auto 0;  
   font-size: 3em;
   background-color: $bg-homeBrand;
-  border-radius: 0px 85px 0px 85px;
+  clip-path: polygon(10% 21%, 16% 11%, 104% -6%, 96% 90%, 33% 95%, 0% 118%);
   @media (min-width:$sm){
     width: 390px;
     margin: 133px 0 0 0;
@@ -50,8 +52,9 @@
     color: $cl-homeBrand;
     @media (min-width:$sm){
       width: auto;
-      padding: 22px 133px 20px 110px;
+      padding: 21px 133px 28px 110px;
       text-align: left;
+      transform: skew(-2deg);
     }
   }
 }
@@ -98,6 +101,9 @@
     }
     h3{
       text-transform: uppercase;
+    }
+    :global(.about .SocialIcon){
+      background-size: 36px;
     }
   }
 }

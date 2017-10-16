@@ -4,6 +4,7 @@ import { pure } from 'recompose';
 import classNames from 'classnames/bind';
 
 import { SiteConf } from 'base';
+import Social from 'components/Social';
 import BlogTitle from 'components/BlogTitle';
 import styles from './styles.css';
 
@@ -29,9 +30,14 @@ const PostHeader = ({ image }) => {
   return (
     <header className={ styles.postHeader }>
       <div style={ style } className={ styles.postHeaderWrap }>
-        <h1 className={ postTitleStyle }>
-          <BlogTitle /> 
-        </h1>
+        <div className={ styles.postHeaderTitle }> 
+          <h1>
+            <BlogTitle /> 
+          </h1>
+        </div>
+        <div className={ styles.socialBox }>
+          <Social />
+        </div>
       </div>
     </header>
   );

@@ -45,6 +45,7 @@ class Post extends Component {
             image={ image }
             title={ post.title }
           />
+          <span className={ styles.shape }></span>
           <PostContent post={ post } />
         </div>
       </div>

@@ -4,11 +4,10 @@ import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 
-import { context } from 'base';
+import Carousel from 'nuka-carousel';
 import Social from 'components/Social';
 import * as Actions from '../Blog/actions';
 import styles from './styles.css';
-
 
 class Main extends Component {
 
@@ -52,10 +51,10 @@ class Main extends Component {
 
         <section id="about" className={ styles.about }>
           <article className={ styles.content }>
-            <img src="../assets/images/about-me.jpg"/>
+            <img src="../assets/images/about/me.jpg"/>
             <h1>Sobre mí</h1>
             <p>
-            Soy Pablo Magaz, Leonés afincado en Madrid desde muy temprana edad, llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
+            Soy Pablo Magaz, Leonés afincado Madrid desde muy temprana edad, llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
               <br />
               <br />
             Actualmente trabajo en <a href="http://www.atsistemas.com" target="_blank" rel="noopener noreferrer">atSistemas</a> como Technical Leader del área de JavaScript y he desarrollado proyectos backend con NodeJs y Front-End con Polymer, AngularJs, Angular, React, Redux, RxJs etc en fin que no me caso con nada y me gusta todo, aunque logicamente ¡tengo mis preferencias!.
@@ -80,6 +79,10 @@ class Main extends Component {
                KeepCoding 2018: Proximamente 
               </li>
             </ul>
+              <img src="../assets/images/about/01.jpg"/>
+              <img src="../assets/images/about/02.png"/>
+              <img src="../assets/images/about/03.jpg"/>
+              <img src="../assets/images/about/04.jpg"/>
             <h2>Mis otras affciones</h2>
             <p>
               Aparte de la programación me encanta la música electronica. Dispongo de un pequeño estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la producción musical.

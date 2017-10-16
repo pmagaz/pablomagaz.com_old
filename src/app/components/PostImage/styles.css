@@ -6,9 +6,6 @@
   animation: fade-in 0.2s both;
 }
 
-.imageWrapper {
-  @mixin linkImage;
-}
 
 .fade-appear {
   opacity: 0.01;

@@ -3,10 +3,24 @@
 
 mark{
     font-size: 1em;
-    padding: .4em .6em;
+    padding: .4em .6em .4em 23px;
+    position: relative;
     background-color: $bg-postTag;
     color: $cl-postTag;
     font-family: $fontFamilyMedium;
+    
+    &:before{
+        content: "";
+        position: absolute;
+        background-image: url(../../assets/images/icons/tag.svg);
+        background-repeat: no-repeat;
+        background-size: 17px;
+        left: 0px;
+        top: 11px;
+        width: 17px;
+        height: 17px;
+
+    }
     
     &:hover{
         color: $cl-postTagHover;

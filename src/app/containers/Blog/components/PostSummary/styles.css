@@ -3,16 +3,18 @@
 @import '../../../../styles/anims.css';
 
 .PostSummary {
-  margin-top: -36px;
-  margin-bottom: 40px;
+  margin-bottom: 68px;
     h1 {
       @mixin postTitle;
-      position: relative;
+      position: absolute;
       font-size: 2em;
-      top: 48px;
-      left: 14px;
+      top: -11px;
+      left: 10px;
       z-index: 90;
       padding-left: 20px;
+      @media (min-width:$sm){
+        top: 7px;
+      }
       a {
         color :$cl-postSumaryTilte;
         &:hover{
@@ -31,6 +33,31 @@
     .postText{
       color: $cl-postText;
     }
+    .linkImage{
+      clip-path: polygon(-4% 8%,21% 2%, 44% -5%, 73% -3%, 93% 7%, 100% 23%, 100% 72%, 96% 83%, 36% 87%, 2% 90%, 0% 4%);
+      @media (min-width: $sm){
+        clip-path: polygon(0% 23%, 104% -11%, 94% 91%, 33% 82%, 1% 83%);
+        transition: all 500ms ease-out;
+      }
+    }
+  :nth-child(odd){
+    .linkImage{
+      clip-path: polygon(-4% 8%,21% 2%, 44% -5%, 73% -3%, 93% 7%, 100% 23%, 100% 72%, 96% 83%, 36% 87%, 2% 90%, 0% 4%);
+      @media (min-width: $sm){
+        clip-path: polygon(0% 23%, 104% -11%, 94% 91%, 33% 82%, 1% 83%);
+        transition: all 500ms ease-out;
+      }
+    }
+  }
+  :nth-child(even){
+    .linkImage{
+      clip-path: polygon(-2% 22%, 105% -14%, 94% 65%, 33% 77%, 3% 100%);
+      @media (min-width: $sm){
+        clip-path: polygon(0% 23%, 104% -11%, 94% 91%, 33% 82%, 1% 83%);
+        transition: all 500ms ease-out;
+      }
+    }
+  }
 }
 
 .PostSummaryAnim {
@@ -39,20 +66,37 @@
 
 .linkImage{
   @mixin linkImage;
+  transition: all 500ms ease-out;
+  @media (min-width: $sm){
+    transition: all 500ms ease-out;
+  }
   img{
     margin-top: -12%;
     margin-left: 52%;
     width: 48%;
   }
-  border-radius: 0px 85px 0px 85px;
 }
 
 .readMore {
   margin-top:26px;
+  padding-left: 24px;
   font-family: $fontFamilyMedium;
   color: $cl-postSumaryOpening;
   text-transform: uppercase;
   display: block;
   line-height: 1;
-  font-size: 0.9em;
+  font-size: 0.85em;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    background-image: url(../../../../assets/images/icons/see-more.svg);
+    background-repeat: no-repeat;
+    background-size: 19px;
+    left: 0;
+    top: -3px;
+    width: 19px;
+    height: 19px;
+
+  }
 }

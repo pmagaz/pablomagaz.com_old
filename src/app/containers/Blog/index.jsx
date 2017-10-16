@@ -61,6 +61,7 @@ class Blog extends Component {
       <div className={ styles.blog } >
         <div className={ styles.content } >
           <BlogHeader />
+          <span className={ styles.shape }></span>
           { tagTitle }
           <PostList posts={ posts } />
         </div>

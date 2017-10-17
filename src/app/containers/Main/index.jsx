@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 
-import Carousel from 'nuka-carousel';
 import Social from 'components/Social';
 import * as Actions from '../Blog/actions';
 import styles from './styles.css';
@@ -79,10 +78,20 @@ class Main extends Component {
                KeepCoding 2018: Proximamente 
               </li>
             </ul>
-              <img src="../assets/images/about/01.jpg"/>
-              <img src="../assets/images/about/02.png"/>
-              <img src="../assets/images/about/03.jpg"/>
-              <img src="../assets/images/about/04.jpg"/>
+            <ul className={ styles.photos }>
+              <li>
+                <img src="../assets/images/about/01.jpg"/>
+              </li>
+              <li>
+                <img src="../assets/images/about/02.png"/>
+              </li>
+              <li>
+                <img src="../assets/images/about/03.jpg"/>
+              </li>
+              <li>
+                <img src="../assets/images/about/04.jpg"/>
+              </li>
+            </ul>
             <h2>Mis otras affciones</h2>
             <p>
               Aparte de la programación me encanta la música electronica. Dispongo de un pequeño estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la producción musical.

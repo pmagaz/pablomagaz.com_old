@@ -1,5 +1,5 @@
 @import '../../styles/variables/variables.css';
-.navMenu {
+nav {
 	ul{
 		width: 180px;
 		margin: 0;
@@ -11,6 +11,9 @@
 			position: relative;
 			a{
 				color: $white;
+				&:hover{
+					color: $white;
+				}
 				&::before,
 				&::after {
 					position: absolute;
@@ -26,9 +29,7 @@
 					right: 0px;
 					color: $primary-color;
 				}
-				&:hover{
-					color: $white;
-				}
+
 				&:hover::before,
 				&:focus::before{
 					left: -8px;	

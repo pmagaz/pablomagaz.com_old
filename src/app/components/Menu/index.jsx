@@ -35,7 +35,7 @@ const Menu = ({ collapsed }) => {
         <li>
           <LinkButton
             location="#about"
-            value="Sobre mi"
+            value="Sobre mí"
           />
         </li>
       </ul>

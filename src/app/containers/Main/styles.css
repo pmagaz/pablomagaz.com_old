@@ -1,7 +1,5 @@
 @import '../../styles/variables/variables.css';
 @import '../../styles/anims.css';
-@import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.css';
 
 :root section{
   min-height: 100vh;

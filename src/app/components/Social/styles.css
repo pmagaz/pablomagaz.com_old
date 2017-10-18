@@ -5,9 +5,21 @@
     justify-content: space-between;
     width: 124px;
     height: 30px;
-    margin: 0 0 12px;
+    margin: 0 0 20px;
     padding: 0;
     list-style: none;
+    li {
+        flex: 1 1 100%;
+        display: flex;
+        a,
+        button{
+            width: 100%;
+            height: 100%;
+        }
+        button{
+            text-align: center;
+        }
+    }
     &:hover > li button{
         opacity: .5;
         transition: opacity .2s ease-in-out;

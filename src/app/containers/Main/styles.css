@@ -38,7 +38,7 @@
   h1{
     width: 10%;
     padding: 22px 0;
-    margin: 0;
+    margin: 0 auto;
     display: table;
     text-align: center;
     line-height: 40px;
@@ -50,6 +50,7 @@
     color: $cl-homeBrand;
     @media (min-width:$sm){
       width: auto;
+      margin: 0;
       padding: 21px 133px 28px 110px;
       text-align: left;
       transform: skew(-2deg);
@@ -73,8 +74,8 @@
   }
   .content{
     @mixin mainFit; 
-    margin:  0px auto;
-    img{
+    margin:  0px auto 60px;
+    > img{
       width: 100%;
       float: none;
       display: block;
@@ -102,6 +103,34 @@
     }
     :global(.about .SocialIcon){
       background-size: 36px;
+    }
+  }
+}
+
+
+
+.photos{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 30px 0 50px;
+  li{
+    flex: 1 1 100%;
+    height: 255px;
+    overflow: hidden;
+    padding: 13px 6px 36px 6px;
+    img {
+      width: 100%;
+    }
+    @media (min-width:600px){
+      flex: 1 1 50%;
+      height: 171px;
+    }
+    @media (min-width:850px){
+      height: 230px;
+    }
+    @media (min-width:1024px){
+      height: 276px;
     }
   }
 }

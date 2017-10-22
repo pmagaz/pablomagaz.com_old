@@ -59,7 +59,7 @@
 }
 
 .brandAnim {
-   animation: fade-in-down 0.4s both;
+   animation: fade-in-down 0.4s;
    animation-delay: 90ms;
 }
 
@@ -101,12 +101,11 @@
     h3{
       text-transform: uppercase;
     }
-    :global(.about .SocialIcon){
+    .SocialIcon{
       background-size: 36px;
     }
   }
 }
-
 
 
 .photos{
@@ -127,10 +126,11 @@
       height: 171px;
     }
     @media (min-width:850px){
-      height: 230px;
+      height: 117px;
+      flex: 1 1 25%;
     }
     @media (min-width:1024px){
-      height: 276px;
+      height: 150px;
     }
   }
 }

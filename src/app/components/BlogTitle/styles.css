@@ -6,6 +6,6 @@
   height: 100%;
   background-size: 221px;
   background-repeat: no-repeat;
-  animation: fade-in-down-bgi 140ms both;
+  animation: fade-in-down-bgi 140ms;
   animation-delay: 60ms;
 }

@@ -15,12 +15,14 @@
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    animation: fade-in-down-bgi 140ms both;
+    animation: fade-in-down-bgi 140ms;
     animation-delay: 60ms;
-    background-size: 221px;
+    background-size: 155px;
+    background-position: left center;
     transition: padding 120ms ease;
     @media (min-width: $sm){
       padding: $layout-padding;
+      background-size: 221px;
       transition: padding 120ms ease;
     }
     @media (min-width: 585px){
@@ -34,7 +36,7 @@
       justify-content: space-between;
       height: 100%;
       flex: 2;
-      animation: fade-in-down 150ms both;
+      animation: fade-in-down 150ms;
       h1{
         font-family: $fontFamilyMedium;
         word-break: break-word;

@@ -61,7 +61,7 @@
 }
 
 .PostSummaryAnim {
-  animation: fade-up 100ms both;
+  animation: fade-up 100ms;
 }
 
 .linkImage{

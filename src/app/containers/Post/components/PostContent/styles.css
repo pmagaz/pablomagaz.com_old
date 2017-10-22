@@ -11,17 +11,18 @@
 
     h2 {
         font-weight: 200;
-        font-size: 1.57em;
+        font-size: 1.47em;
         line-height: 1.4em;
         margin: 1.5em 0 2.2em;
         &::first-letter {
             font-weight: bold;
             color: $primary-color;
             text-transform: capitalize;
-            font-size: 4.4em;
+            font-size: 3.4em;
             float: left;
-            line-height: 0.4;
+            line-height: 0.7;
             margin-right: 9px;
+            margin-left: -5px;
           }
     }
     h3,
@@ -44,12 +45,12 @@
     }
 
     .divider{
-        margin-top: 70px;
+        margin-top: 40px;
         display: block;
     }
 }
 
 .postContentAnim {
-  animation: fade-up 120ms both;
+  animation: fade-up 120ms;
   animation-delay: 20ms;
 }

@@ -3,7 +3,7 @@
 @import '../../styles/variables/variables.css';
 
 .imageAnim {
-  animation: fade-in 0.2s both;
+  animation: fade-in 0.2s;
 }
 
 

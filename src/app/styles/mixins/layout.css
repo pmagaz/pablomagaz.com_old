@@ -65,8 +65,8 @@
   background-color: $bg-titleBlog;
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 93%, 62% 96%, 38% 91.5%, 0% 99%); 
-
+  -webkit-clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 178px, 62% 185px, 38% 176px, 0% 190px);
+  clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 178px, 62% 185px, 38% 176px, 0% 190px); 
 }
 
 

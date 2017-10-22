@@ -21,6 +21,7 @@
 
 .miniTitleActive {
     margin-bottom: 10px;
+    margin-top: 0; 
     opacity: 1;
     visibility: visible;
     transition: opacity 110ms ease-in, margin-bottom 110ms ease-in;

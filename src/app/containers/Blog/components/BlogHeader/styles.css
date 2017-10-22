@@ -17,7 +17,7 @@
     background-repeat: no-repeat;
     animation: fade-in-down-bgi 140ms;
     animation-delay: 60ms;
-    background-size: 155px;
+    background-size: 148px;
     background-position: left center;
     transition: padding 120ms ease;
     @media (min-width: $sm){

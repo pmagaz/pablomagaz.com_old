@@ -6,20 +6,22 @@
   left: 0;
   right: 0;
   position: fixed;
+  overflow: hidden;
   z-index: 2;
   border-top: $bdr-mainHeader;
   color: $cl-mainHeader;
   .mainHeaderSheet{
-    min-height: 0;
+    height: 65px;
     position: absolute;
     opacity: 0;
+    top: -65px;
     width: 100%;
-    transition: background-color .3s cubic-bezier(.19,1,.22,1),min-height .62s cubic-bezier(.19,1,.22,1);
+    transition: background-color .2s, top .5s;
   }
   .mainHeaderWrapper{
     @mixin mainFit; 
     margin: 0 auto;  
-    height: 50px;
+    height: 65px;
     display: flex;
     z-index: 2;
     position: relative;
@@ -29,13 +31,13 @@
 }
 
 .mainHeaderActive {
-  transition: background-color .2s cubic-bezier(.19,1,.22,1),min-height .5s cubic-bezier(.19,1,.22,1),opacity .2s cubic-bezier(.19,1,.22,1);
+  transition: background-color .2s,top .5s,opacity .2s;
   .mainHeaderSheet{
     background-color: $bg-mainHeader;
     background-image: $bgi-mainHeaderActive;
     opacity: 1;
-    min-height: 50px;
-    transition: background-color .2s cubic-bezier(.19,1,.22,1),min-height .5s cubic-bezier(.19,1,.22,1),opacity .2s cubic-bezier(.19,1,.22,1);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 93%, 62% 96%, 38% 91.5%, 0% 99%);  
+    top: 0;
+    transition: background-color .2s,top .5s,opacity .2s;
+    clip-path: polygon(0% 0px, 0% 65px, 67% 51px, 82% 61px, 100% 55px, 100% 0px);  
   }
 }

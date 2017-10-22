@@ -67,23 +67,16 @@
   background-color: $bg-about;
   color: $cl-about;
   padding-top: 65px;
-  transition: padding-top 120ms ease;
-  @media (min-width:$md){
-    padding-top: 90px;
-    transition: padding-top 120ms ease;
-  }
   .content{
     @mixin mainFit; 
     margin:  0px auto 60px;
     > img{
       width: 100%;
+      max-width: 200px;
       float: none;
       display: block;
       margin:  0px auto 25px;
       transition: margin 120ms ease;
-      @media (min-width:400px){
-        width: 400px;
-      }
       @media (min-width:600px){
         float: left;
         margin: 0px 20px 20px 0px;

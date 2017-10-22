@@ -64,8 +64,7 @@
   background-color: $bg-titleBlog;
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
-  -webkit-clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 178px, 62% 185px, 38% 176px, 0% 190px);
-  clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 178px, 62% 185px, 38% 176px, 0% 190px); 
+  clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 82% 185px, 67% 176px, 0% 190px); 
 }
 
 
@@ -93,7 +92,7 @@
 
 @define-mixin shape {
   background: #fefefe;
-  clip-path: polygon(0% 30%, 38% 6%, 62% 21%, 100% 10%, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+  clip-path: polygon(0% 17px, 67% 3px, 82% 13px, 100% 7px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
   width: 100%;
   display: block;
   height: 60px;

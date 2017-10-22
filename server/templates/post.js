@@ -32,7 +32,7 @@ export default function post(params) {
     <meta property="og:title" content="${ post.title }" />
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
     <meta property="og:url" content="${ postUrl }" />
-    <meta property="og:image" content="${ SiteConf.ServerUrl }${ SiteConf.blogTitleImage }" />
+    <meta property="og:image" content="${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }" />
     <meta property="og:description" content="${ post.meta_description }" />
     <meta property="article:modified_time" content="${ post.updated_at }" /> 
     <meta property="article:published_time" content="${ post.published_at }" />

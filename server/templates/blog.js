@@ -27,7 +27,7 @@ export default function blog(params) {
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
     <meta property="og:url" content="${ SiteConf.BlogUrl }" />
     <meta property="og:description" content="${ SiteConf.BlogDescription }" />
-    <meta property="og:image" content="${ SiteConf.ServerUrl }${ SiteConf.blogTitleImage }" />
+    <meta property="og:image" content="${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="${ SiteConf.BlogTitle }" />

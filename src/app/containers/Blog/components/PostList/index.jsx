@@ -4,6 +4,7 @@ import { PropTypes } from 'prop-types';
 import { ListToArray } from 'base';
 import Loading from 'components/Loading';
 import PostSummary from '../PostSummary';
+
 import styles from './styles.css';
 
 const isLoaded = (posts) => posts.size ? true : false;
@@ -23,10 +24,10 @@ const PostList = ({ posts }) => {
     />
   ));
 
-  const content = !postsLoaded ? <Loading /> : Posts; 
+  const Content = !postsLoaded ? <Loading /> : Posts; 
   
   return (
-    <div className={ styles.postList }> { Posts } </div>
+    <div className={ styles.postList }> { Content } </div>
   );
 };
 

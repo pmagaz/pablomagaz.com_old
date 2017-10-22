@@ -5,11 +5,12 @@ import hljs from 'highlight.js/lib/highlight';
 import ReactHtmlParser from 'html-react-parser';
 import javascript from 'highlight.js/lib/languages/javascript';
 
-import { SiteConf, context } from 'base';
+import { SiteConf } from 'base';
 import Loading from 'components/Loading';
 import PostInfo from 'components/PostInfo';
-import PostComments from '../PostComments';
 import SharePost from '../SharePost';
+import PostComments from '../PostComments';
+
 import styles from './styles.css';
 
 class PostContent extends Component {
@@ -41,13 +42,12 @@ class PostContent extends Component {
   render () {
     const post = this.props.post;
     const postLoaded = this.isLoaded(post);
-    const content = postLoaded ? <Loading /> : ReactHtmlParser(post.html); 
+    const Content = postLoaded ? <Loading /> : ReactHtmlParser(post.html); 
 
     const cx = classNames.bind(styles);
     const postContentStyle = cx({
       'postContent': true,
       'postContentAnim': true,
-      //'postContentAnim': context.client ? true : false
     });
 
     return (
@@ -60,7 +60,7 @@ class PostContent extends Component {
             date={ post.published_at }
           />
           <div className={ styles.postText }> 
-            { ReactHtmlParser(post.html) }
+            { Content }
             <span className={ styles.divider }></span>
             <SharePost post={ post } />
             <PostComments post={ post } />

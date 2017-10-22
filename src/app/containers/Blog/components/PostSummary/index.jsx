@@ -20,15 +20,14 @@ const PostSummary = ({ post }) => {
   const cx = classNames.bind(styles);
   const postSummaryStyle = cx({
     'PostSummary': true,
-    //'PostSummaryAnim': context.client ? true : false
   });
 
   return (
     <article className={ postSummaryStyle } >
       <Link className={ styles.linkImage } to={ url }>
-      <h1>
+        <h1>
           { post.title }
-      </h1>
+        </h1>
         <PostImage
           src={ imageSrc }
           alt={ post.slug }

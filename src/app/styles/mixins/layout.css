@@ -2,7 +2,6 @@
 @define-mixin mainFit {
   padding: 0 15px;
   max-width: $layout-max-width;
-
   transition: padding 120ms ease;
   @media (min-width: $sm){
     padding: $layout-padding;
@@ -19,10 +18,11 @@
   overflow: hidden;
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
-  filter: grayscale(16%);
   border-radius: 4px;
   img{
-    transition: all .2s; 
+    margin-top: -12%;
+    margin-left: 52%;
+    width: 48%;
   }
   h1{
     color: $white;
@@ -34,7 +34,6 @@
     img{
       transform: scale(1.1);
     }
-    filter: grayscale(%);
   }
 }
 

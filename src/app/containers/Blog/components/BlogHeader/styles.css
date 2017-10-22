@@ -70,7 +70,6 @@
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    -webkit-filter: invert(80%);
     filter: invert(80%);
     transform: skewY(-2deg);
   }

@@ -10,7 +10,7 @@
     font-weight: bold;
     opacity: 0;
     visibility: hidden;
-    transition: all 110ms ease-out;
+    transition: opacity 110ms ease-in, margin-bottom 110ms ease-in;
     a{
      color: $cl-miniTitle;
     }
@@ -23,5 +23,5 @@
     margin-bottom: 10px;
     opacity: 1;
     visibility: visible;
-    transition: all 110ms ease-in;
+    transition: opacity 110ms ease-in, margin-bottom 110ms ease-in;
 }

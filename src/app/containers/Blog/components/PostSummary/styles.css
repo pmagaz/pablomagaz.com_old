@@ -3,7 +3,7 @@
 @import '../../../../styles/anims.css';
 
 .PostSummary {
-  margin-bottom: 68px;
+  margin-bottom: 52px;
     h1 {
       @mixin postTitle;
       position: absolute;
@@ -82,7 +82,6 @@
   padding-left: 24px;
   font-family: $fontFamilyMedium;
   color: $cl-postSumaryOpening;
-  text-transform: uppercase;
   display: block;
   line-height: 1;
   font-size: 0.85em;

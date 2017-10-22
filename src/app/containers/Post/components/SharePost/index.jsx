@@ -21,7 +21,7 @@ const propTypes= {
 
 const SharePost = ({ post }) => {
 
-  const postUrl = `${ SiteConf.BlogUrl }${ post.slug }`;
+  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
   const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }`; 
   
   return (

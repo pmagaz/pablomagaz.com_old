@@ -14,8 +14,8 @@ const newCommentHandler = () => {
 };
 
 const PostComments = ({ post }) => {
-  const postUrl = `${SiteConf.BlogUrl}${post.slug }`;
-
+  const postUrl = `${SiteConf.BlogUrl}/${post.slug }`;
+  
   return (
     <Lazyload
       throttle={ 200 }
@@ -24,7 +24,7 @@ const PostComments = ({ post }) => {
       <ReactDisqusComments
         url={ postUrl }
         title={ post.title }
-        identifier={ post.slug }
+        identifier={ SiteConf.DisqusSettins.identifier }
         shortname={ SiteConf.DisqusSettins.shortName }
         onNewComment={ newCommentHandler }
       />

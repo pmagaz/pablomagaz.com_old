@@ -1,0 +1,8 @@
+:global(.quote) {
+  font-family: 'Montserrat-medium',sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+  font-size: 1.6em;
+  color: #515766;
+  text-align: center;
+}

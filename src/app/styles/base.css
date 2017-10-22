@@ -3,6 +3,7 @@
 @import 'anims.css';
 @import 'fonts.css';
 @import 'code.css';
+@import 'globals.css';
 
 html{
     height: 100%;

@@ -4,7 +4,7 @@
 .post{
     h1 {
         @mixin postTitle;
-        font-size: 2.2em;
+        font-size: 2.4em;
         color: $dark-gray;
         
     }
@@ -14,15 +14,6 @@
         font-size: 1.57em;
         line-height: 1.4em;
         margin: 1.5em 0 2.2em;
-        &::first-letter {
-            font-weight: bold;
-            color: $primary-color;
-            text-transform: capitalize;
-            font-size: 4.4em;
-            float: left;
-            line-height: 0.4;
-            margin-right: 9px;
-          }
     }
     h3,
     h4{

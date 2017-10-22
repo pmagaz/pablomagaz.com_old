@@ -5,7 +5,6 @@ export default function post(params) {
   const post = params.state.Post;
   const state = JSON.stringify(params.state);
   //const imageUrl = `${ SiteConf.ImageUrl }${ post.feature_image }`; 
-  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.gif`; 
   const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
   const tagList = post.tags.reduce((acc, tag) => (
     acc + `    <meta property="article:tag" content="${ tag.name }" />\n`)
@@ -33,7 +32,7 @@ export default function post(params) {
     <meta property="og:title" content="${ post.title }" />
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
     <meta property="og:url" content="${ postUrl }" />
-    <meta property="og:image" content="${ imageUrl }" />
+    <meta property="og:image" content="${ SiteConf.ServerUrl }${ SiteConf.blogTitleImage }" />
     <meta property="og:description" content="${ post.meta_description }" />
     <meta property="article:modified_time" content="${ post.updated_at }" /> 
     <meta property="article:published_time" content="${ post.published_at }" />
@@ -41,8 +40,6 @@ export default function post(params) {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${ post.title }" />
     <meta name="twitter:url" content="${ postUrl }" />
-    <meta name="twitter:image:src" content="${ imageUrl }" />
-    <meta name="twitter:description" content="${ post.meta_description  }" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="${ SiteConf.Author }" />
     <meta name="twitter:creator" content="${ SiteConf.Author }" />
@@ -70,7 +67,7 @@ export default function post(params) {
         "url": "${ postUrl }",
         "datePublished": "${ post.published_at }",
         "dateModified": "${ post.updated_at }",
-        "image": "${ imageUrl }",
+        "image": "${ SiteConf.ServerUrl }${ SiteConf.blogTitleImage }",
         "keywords": "${ post.tags[0].name}",
         "description": "${ post.meta_description }",
         "mainEntityOfPage": {

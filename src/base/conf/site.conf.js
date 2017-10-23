@@ -44,9 +44,9 @@ if (env === 'development') {
   HostName = 'localhost:8000';
   ServerUrl = `http://${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
-  clientSecret = '285ee4eda6c3';
+  clientSecret = '8628165087ba';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = 'http://localhost:2369'; 
+  GhostUrl = 'http://localhost:2368'; 
   ImageUrl = GhostUrl;
   ContentPath = '/Users/Pablo/js/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;

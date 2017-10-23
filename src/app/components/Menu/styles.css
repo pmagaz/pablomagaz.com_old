@@ -1,7 +1,7 @@
 @import '../../styles/variables/variables.css';
 nav {
 	ul{
-		width: 180px;
+		width: 205px;
 		margin: 0;
 		padding: 0;
 		display: flex;
@@ -11,9 +11,6 @@ nav {
 			position: relative;
 			a{
 				color: $white;
-				&:hover{
-					color: $white;
-				}
 				&::before,
 				&::after {
 					position: absolute;
@@ -29,14 +26,16 @@ nav {
 					right: 0px;
 					color: $primary-color;
 				}
-
+				&:hover{
+					color: $white;
+				}
 				&:hover::before,
 				&:focus::before{
-					left: -8px;	
+					left: -10px;	
 				}
 				&:hover::after,
 				&:focus::after {
-					right: -8px;
+					right: -10px;
 				}
 				&:hover::before,
 				&:focus::before,
@@ -46,7 +45,7 @@ nav {
 					transition: all .3s ease;
 				}
 			}
-        }
+    }
 	}
 	@media (min-width: $sm){
 		ul{

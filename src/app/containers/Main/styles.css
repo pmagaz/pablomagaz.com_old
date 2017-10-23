@@ -82,7 +82,7 @@
       margin:  0px auto 25px;
       transition: margin 120ms ease;
       @media (min-width:400px){
-        width: 400px;
+        width: 300px;
       }
       @media (min-width:600px){
         float: left;

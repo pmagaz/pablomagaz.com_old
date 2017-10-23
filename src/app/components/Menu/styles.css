@@ -62,4 +62,14 @@ nav {
 			}
 		}
 	}
+	&.navMenuCollapsed{
+		a {
+					&::before {
+						color: $white;
+					}
+					&::after {
+						color: $white;
+					}		
+		}
+	}
 }

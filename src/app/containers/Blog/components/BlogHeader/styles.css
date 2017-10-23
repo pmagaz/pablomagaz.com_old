@@ -71,6 +71,5 @@
     width: 100%;
     justify-content: flex-end;
     filter: invert(80%);
-    transform: skewY(-2deg);
   }
 }

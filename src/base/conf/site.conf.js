@@ -60,9 +60,9 @@ if (env === 'development') {
     identifier: 'el-blog-isomofico-dev'
   };
 } else {
-  Ssl = false;
+  Ssl = true;
   Protocol = Ssl ? 'https://' : 'http://';
-  HostName = '172.104.136.180';
+  HostName = 'pablomagaz.com';
   ServerUrl = `http://${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
   clientSecret = '113542417eed';

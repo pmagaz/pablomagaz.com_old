@@ -63,7 +63,7 @@ if (env === 'development') {
   Ssl = true;
   Protocol = Ssl ? 'https://' : 'http://';
   HostName = 'pablomagaz.com';
-  ServerUrl = `http://${ HostName }`;
+  ServerUrl = `${ Protocol }${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
   clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;

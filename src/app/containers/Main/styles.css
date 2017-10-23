@@ -59,7 +59,7 @@
 }
 
 .brandAnim {
-   animation: fade-in-down 0.4s both;
+   animation: fade-in-down 0.4s;
    animation-delay: 90ms;
 }
 
@@ -67,23 +67,16 @@
   background-color: $bg-about;
   color: $cl-about;
   padding-top: 65px;
-  transition: padding-top 120ms ease;
-  @media (min-width:$md){
-    padding-top: 90px;
-    transition: padding-top 120ms ease;
-  }
   .content{
     @mixin mainFit; 
     margin:  0px auto 60px;
     > img{
       width: 100%;
+      max-width: 200px;
       float: none;
       display: block;
       margin:  0px auto 25px;
       transition: margin 120ms ease;
-      @media (min-width:400px){
-        width: 300px;
-      }
       @media (min-width:600px){
         float: left;
         margin: 0px 20px 20px 0px;
@@ -101,12 +94,11 @@
     h3{
       text-transform: uppercase;
     }
-    :global(.about .SocialIcon){
+    .SocialIcon{
       background-size: 36px;
     }
   }
 }
-
 
 
 .photos{
@@ -127,10 +119,11 @@
       height: 171px;
     }
     @media (min-width:850px){
-      height: 230px;
+      height: 117px;
+      flex: 1 1 25%;
     }
     @media (min-width:1024px){
-      height: 276px;
+      height: 150px;
     }
   }
 }

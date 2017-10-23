@@ -11,7 +11,7 @@
 
     h2 {
         font-weight: 200;
-        font-size: 1.57em;
+        font-size: 1.47em;
         line-height: 1.4em;
         margin: 1.5em 0 2.2em;
     }
@@ -35,12 +35,12 @@
     }
 
     .divider{
-        margin-top: 70px;
+        margin-top: 40px;
         display: block;
     }
 }
 
 .postContentAnim {
-  animation: fade-up 120ms both;
+  animation: fade-up 120ms;
   animation-delay: 20ms;
 }

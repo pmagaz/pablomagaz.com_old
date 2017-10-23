@@ -14,10 +14,14 @@
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    background-size: 221px;
+    background-size: 155px;
+    background-position: left center;
     background-repeat: no-repeat;
-    animation: fade-in-down-bgi 140ms both;
+    animation: fade-in-down-bgi 140ms;
     animation-delay: 60ms;
+    @media (min-width:$sm){
+      background-size: 221px;
+    }
     .postHeaderTitle{
       display: flex;
       align-items: center;
@@ -57,7 +61,7 @@
 }
 
 .postTitleAnim {
-  animation: fade-in-down 150ms both;
+  animation: fade-in-down 150ms;
 }
 
 .postHeader::before {

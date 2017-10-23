@@ -13,7 +13,7 @@
       z-index: 90;
       padding-left: 20px;
       @media (min-width:$sm){
-        top: 7px;
+        top: 2px;
       }
       a {
         color :$cl-postSumaryTilte;
@@ -34,18 +34,19 @@
       color: $cl-postText;
     }
     .linkImage{
-      clip-path: polygon(-4% 8%,21% 2%, 44% -5%, 73% -3%, 93% 7%, 100% 23%, 100% 72%, 96% 83%, 36% 87%, 2% 90%, 0% 4%);
+      @mixin linkImage;
+      clip-path: polygon(0% 8px, 55% 4%, 76% 0px, 73% 0px, 98% 4px, 100% 19px, 100% 72px, 96% 92px, 36% 86px, 2% 87px, 0% 24px);
       @media (min-width: $sm){
-        clip-path: polygon(0% 23%, 104% -11%, 94% 91%, 33% 82%, 1% 83%);
-        transition: all 500ms ease-out;
+        clip-path: polygon(0% 15px, 68% 0px, 85% 10px, 99% 5px,100% 53px, 95% 99px, 74% 99px, 56% 76px, 1% 71px);
+        transition: clip-path 500ms ease-out;
       }
     }
   :nth-child(odd){
     .linkImage{
       clip-path: polygon(-4% 8%,21% 2%, 44% -5%, 73% -3%, 93% 7%, 100% 23%, 100% 72%, 96% 83%, 36% 87%, 2% 90%, 0% 4%);
       @media (min-width: $sm){
-        clip-path: polygon(0% 23%, 104% -11%, 94% 91%, 33% 82%, 1% 83%);
-        transition: all 500ms ease-out;
+        clip-path: polygon(0% 14px, 67% 0px, 90% 0px, 99% 10px, 99% 50px, 97% 97px, 57% 97px, 42% 78px, 1% 73px);
+        transition: clip-path 500ms ease-out;
       }
     }
   }
@@ -54,28 +55,16 @@
       clip-path: polygon(-2% 22%, 105% -14%, 94% 65%, 33% 77%, 3% 100%);
       @media (min-width: $sm){
         clip-path: polygon(0% 23%, 104% -11%, 94% 91%, 33% 82%, 1% 83%);
-        transition: all 500ms ease-out;
+        transition: clip-path 500ms ease-out;
       }
     }
   }
 }
 
 .PostSummaryAnim {
-  animation: fade-up 100ms both;
+  animation: fade-up 100ms;
 }
 
-.linkImage{
-  @mixin linkImage;
-  transition: all 500ms ease-out;
-  @media (min-width: $sm){
-    transition: all 500ms ease-out;
-  }
-  img{
-    margin-top: -12%;
-    margin-left: 52%;
-    width: 48%;
-  }
-}
 
 .readMore {
   margin-top:26px;

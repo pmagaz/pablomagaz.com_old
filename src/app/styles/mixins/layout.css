@@ -2,7 +2,6 @@
 @define-mixin mainFit {
   padding: 0 15px;
   max-width: $layout-max-width;
-
   transition: padding 120ms ease;
   @media (min-width: $sm){
     padding: $layout-padding;
@@ -19,10 +18,11 @@
   overflow: hidden;
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
-  filter: grayscale(16%);
   border-radius: 4px;
   img{
-    transition: all .2s; 
+    margin-top: -12%;
+    margin-left: 52%;
+    width: 48%;
   }
   h1{
     color: $white;
@@ -34,7 +34,6 @@
     img{
       transform: scale(1.1);
     }
-    filter: grayscale(%);
   }
 }
 
@@ -65,8 +64,7 @@
   background-color: $bg-titleBlog;
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 93%, 62% 96%, 38% 91.5%, 0% 99%); 
-
+  clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 82% 185px, 67% 176px, 0% 190px); 
 }
 
 
@@ -94,7 +92,7 @@
 
 @define-mixin shape {
   background: #fefefe;
-  clip-path: polygon(0% 30%, 38% 6%, 62% 21%, 100% 10%, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+  clip-path: polygon(0% 17px, 67% 3px, 82% 13px, 100% 7px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
   width: 100%;
   display: block;
   height: 60px;

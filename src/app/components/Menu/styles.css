@@ -1,13 +1,8 @@
 @import '../../styles/variables/variables.css';
 nav {
 	ul{
-<<<<<<< HEAD
-		width: 205px;
-		margin: 0;
-=======
 		width: 180px;
 		margin: -12px 0 0;
->>>>>>> skew-header
 		padding: 0;
 		display: flex;
 		justify-content: space-between;

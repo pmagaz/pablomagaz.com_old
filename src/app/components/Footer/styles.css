@@ -19,7 +19,16 @@ footer.container{
     }
 
     .copyright {
-        margin: 20px 0;
+        margin: 18px 0;
+        text-align: center;
+        display: block;
+        span{
+            margin: 0 .2em;
+        }
+    }
+
+    .sourceCode {
+        margin-bottom: 10px;
         text-align: center;
         display: block;
         span{
@@ -40,6 +49,7 @@ footer.container{
             width: 76px;
             height: 48px;
         }
+        color: $white;
     }
 }
 

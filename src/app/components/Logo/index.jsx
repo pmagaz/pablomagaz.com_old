@@ -46,7 +46,7 @@ class Logo extends Component {
     let value;
     if (this.isHome()) value = '';
     else value = SiteConf.BlogTitle.toUpperCase(); 
-    
+
     const cx = classNames.bind(styles);
     const miniTitleStyle = cx({
       'miniTitle': !this.state.show ? true : true,

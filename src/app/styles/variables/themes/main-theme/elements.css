@@ -47,9 +47,8 @@ $cl-postSumaryTilte: $lighter-gray;
 $cl-postSumaryTilteHover: $primary-color;
 $cl-postSumaryOpening : $gray-middark; 
 $bdrt-linkImage: 1px solid $gray-light;
-$bg-linkImage: $tertiary-color; 
+$bg-linkImage: $gray-blue; 
 $cl-postText: $cl-body;
-
 
 /** Main **/
 $bg-home: url('../../../../assets/images/main.jpg'); 

@@ -19,8 +19,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-image: url(../../assets/images/pattern.svg);
+  background-image: $bg-home;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .brand{

@@ -22,10 +22,10 @@ class Header extends Component {
     window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
-  handleScroll(event) {
+  handleScroll() {
     const maxScroll = 112;
     // FIX
-    const scrollTop = event.srcElement.scrollTop || document.documentElement.scrollTop;
+    const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop;
     if (scrollTop >= maxScroll && !this.state.collapsed) { 
       this.setState({ collapsed: true, scrollTop });
     } 

@@ -60,6 +60,7 @@
 
 .brandAnim {
    animation: fade-in-down 0.4s;
+   animation-fill-mode: both;
    animation-delay: 90ms;
 }
 

@@ -1,6 +1,6 @@
 @import '../../../../styles/variables/variables.css';
 @import '../../../../styles/mixins/mixins.css';
-@import '../../../../styles/anims.css';
+/**@import '../../../../styles/anims.css';**/
 
 .PostSummary {
   margin-bottom: 52px;
@@ -37,7 +37,7 @@
       @mixin linkImage;
       clip-path: polygon(0% 8px, 55% 4%, 76% 0px, 73% 0px, 98% 4px, 100% 19px, 100% 72px, 96% 92px, 36% 86px, 2% 87px, 0% 24px);
       @media (min-width: $sm){
-        clip-path: polygon(1% 33px, 2% 16px, 32% 5px, 48% 15px, 76.3% 0px, 86% 8px, 100% 8px,100% 39px, 95% 97px, 74% 97px, 27% 81px, 2% 78px);
+        clip-path: polygon(1% 33px, 2% 16px, 28% 20px, 48% 15px, 76.3% 0px, 86% 8px, 100% 8px,100% 39px, 95% 97px, 74% 97px, 27% 81px, 2% 78px);
         transition: clip-path 500ms ease-out;
       }
     }

@@ -38,6 +38,6 @@
     opacity: 1;
     top: 0;
     transition: background-color .2s,top .5s,opacity .2s;
-    clip-path: polygon(0% 0px, 0% 65px, 67% 51px, 82% 61px, 100% 55px, 100% 0px);  
+    clip-path: polygon(0% 0px, 0% 65px, 33% 48px, 48% 65px, 67% 35px, 85% 55px, 100% 55px, 100% 0px);  
   }
 }

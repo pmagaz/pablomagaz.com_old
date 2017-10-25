@@ -32,7 +32,7 @@ class Logo extends Component {
   }
 
   handleScroll(event) {
-    const maxScroll = 109;
+    const maxScroll = 112;
     // FIX
     const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop;
     if (scrollTop >= maxScroll && !this.state.show && !this.isHome()) {

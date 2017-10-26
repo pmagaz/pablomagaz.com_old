@@ -29,11 +29,20 @@
   }
 }
 
-@keyframes blogLogo {
+@keyframes blogLogo-mobile {
 	from {
-        background-position:0 0px;
+        background-position-y: 0%;
     }
     to {
-        background-position: 0 20px;
+        background-position-y: 50%;
+    }
+}
+
+@keyframes blogLogo-desktop {
+	from {
+        background-position-y: -50px;
+    }
+    to {
+        background-position-y: -13px;
     }
 }

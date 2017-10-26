@@ -31,9 +31,9 @@
       background-repeat: no-repeat;
       animation-delay: 60ms;
       background-size: 156px;
-      background-position: left center;
-      animation: blogLogo 150ms, fade-up 150ms;
+      animation: blogLogo-mobile 150ms both, fade-up 150ms;
       @media (min-width: $sm){
+        animation: blogLogo-desktop 150ms both, fade-up 150ms;
         background-size: 221px;
       }
       h1{
@@ -49,6 +49,8 @@
         @media (min-width: $sm){
           width: 400px;
           font-size: 2.8rem;
+          animation: titleBlog 150ms;
+          -webkit-backface-visibility: hidden;
         }
         + div{
           display: flex;

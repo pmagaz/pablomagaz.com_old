@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import { ListToArray } from 'base';
 import Loading from 'components/Loading';
 import PostSummary from '../PostSummary';
-
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 import styles from './styles.css';
 
 const isLoaded = (posts) => posts.size ? true : false;
@@ -27,7 +27,18 @@ const PostList = ({ posts }) => {
   const Content = !postsLoaded ? <Loading /> : Posts; 
   
   return (
-    <div className={ styles.postList }> { Content } </div>
+    <div className={ styles.postList }>
+      <CSSTransitionGroup
+            key="2"
+            transitionName="fade"
+            transitionAppear={ true }
+            transitionEnterTimeout={ 200 }
+            transitionAppearTimeout={ 200 }
+            transitionEnter={ true }
+            transitionLeave={ false }>
+      { Content }
+     </CSSTransitionGroup>
+    </div>
   );
 };
 

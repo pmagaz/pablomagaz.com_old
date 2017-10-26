@@ -32,12 +32,3 @@ main.container {
     background: $bg-mainContainer;
     overflow: hidden;
 }
-
-:global(.fade-appear) {
-    opacity: 0.01;
-}
-:global(.fade-appear.fade-appear-active) {
-    opacity: 1;
-    transition: opacity .2s ease-in;
-    animation-delay: 30ms;
-}

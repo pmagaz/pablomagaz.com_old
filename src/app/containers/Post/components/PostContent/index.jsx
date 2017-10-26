@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import hljs from 'highlight.js/lib/highlight';
 import ReactHtmlParser from 'html-react-parser';
 import javascript from 'highlight.js/lib/languages/javascript';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import { SiteConf } from 'base';
 import Loading from 'components/Loading';
@@ -47,24 +48,34 @@ class PostContent extends Component {
     const cx = classNames.bind(styles);
     const postContentStyle = cx({
       'postContent': true,
-      'postContentAnim': true,
+      //'postContentAnim': true,
     });
 
     return (
       <div className={ styles.post }>
         <div className={ postContentStyle }>
-          <h1>{ post.title }</h1>
-          <PostInfo
-            author={ post.author }
-            tags={ post.tags }
-            date={ post.published_at }
-          />
-          <div className={ styles.postText }> 
-            { Content }
-            <span className={ styles.divider }></span>
-            <SharePost post={ post } />
-            <PostComments post={ post } />
-          </div>
+          <CSSTransitionGroup
+            key="2"
+            transitionName="fade"
+            transitionAppear={ true }
+            transitionEnterTimeout={ 200 }
+            transitionAppearTimeout={ 200 }
+            transitionEnter={ true }
+            transitionLeave={ false }>
+            <h1>{ post.title }</h1>
+            <PostInfo
+              author={ post.author }
+              tags={ post.tags }
+              date={ post.published_at }
+            />
+            <div className={ styles.postText }>
+
+              { Content }
+              <span className={ styles.divider }></span>
+              <SharePost post={ post } />
+              <PostComments post={ post } />
+            </div>
+          </CSSTransitionGroup>
         </div>
       </div>
     );

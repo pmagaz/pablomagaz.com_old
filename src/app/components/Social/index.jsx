@@ -1,4 +1,5 @@
 import React  from 'react';
+import { pure } from 'recompose';
 
 import { SiteConf } from 'base';
 import SocialIcon from 'components/SocialIcon';
@@ -29,4 +30,4 @@ const Social = () => (
   </ul>
 );
 
-export default Social;
+export default pure(Social);

@@ -4,10 +4,10 @@ import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 
-import { fetchRequiredActions, SiteConf } from 'base';
+import { SiteConf } from 'base';
 import BlogHeader from 'components/BlogHeader';
-import * as Actions from './actions';
 import PostContent from './components/PostContent';
+import * as Actions from './actions';
 import styles from './styles.css';
 
 class Post extends Component {
@@ -24,12 +24,6 @@ class Post extends Component {
     this.actions = bindActionCreators(Actions, props.dispatch);
   }
 
-  componentDidMount() {
-    const post = this.props.Post;
-    const postLoaded = !~post.id ? true : false;  
-    //fetchRequiredActions(Post.requiredActions, this.props, postLoaded);
-  }
-
   componentWillUnmount() {
     this.actions.cleanPost();
   }
@@ -44,7 +38,7 @@ class Post extends Component {
         <div className={ styles.content } >
           <BlogHeader
             image={ postImage }
-            title={ post.title }
+            title={ SiteConf.BlogTitle }
           />
           <span className={ styles.shape }></span>
           <PostContent post={ post } />

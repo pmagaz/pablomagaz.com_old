@@ -103,7 +103,7 @@ class Main extends Component {
             <br />
             <br />
             <span>
-            <Social />
+              <Social />
             </span>
           </article>
         </section>

@@ -29,8 +29,8 @@ const PostHeader = ({ image }) => {
 
   return (
     <header className={ styles.postHeader }>
-      <div style={ style } className={ styles.postHeaderWrap }>
-        <div className={ styles.postHeaderTitle }> 
+      <div className={ styles.postHeaderWrap }>
+        <div style={ style } className={ styles.postHeaderTitle }> 
           <h1>
             <BlogTitle /> 
           </h1>

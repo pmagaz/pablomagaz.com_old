@@ -4,45 +4,61 @@
 
 .postHeader{
   @mixin blogTitle;
-  justify-content: space-between;
+
   .postHeaderWrap{
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: $layout-padding;
     max-width: $layout-max-width;
-    margin: 0 auto;
+    margin: 0;
     width: 100%;
     height: 100%;
-    background-size: 155px;
-    background-position: left center;
-    background-repeat: no-repeat;
-    animation: fade-in-down-bgi 140ms;
-    animation-delay: 60ms;
-    @media (min-width:$sm){
-      background-size: 221px;
+    @media (min-width: $sm){
+      padding: $layout-padding;
     }
+    @media (min-width: 585px){
+      flex-direction: row;
+      align-items: flex-end;
+      margin: 0 auto;
+    }
+
     .postHeaderTitle{
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 100%;
       flex: 2;
+      background-repeat: no-repeat;
+      animation-delay: 60ms;
+      background-size: 156px;
+      background-position: left center;
+      animation: fade-in-down 150ms both, blogLogo 150ms;
+      @media (min-width: $sm){
+        background-size: 221px;
+      }
       h1{
         font-family: $fontFamilyMedium;
         word-break: break-word;
         margin-bottom: 0;
+        padding-left: 15px;
         font-size: 1.6em;
-        width: 214px;
+        width: 224px;
         margin-top: 10px;
         transform: skewY(-2deg);
+
         @media (min-width: $sm){
           width: 400px;
           font-size: 2.8rem;
         }
-        a {
-          color: $cl-titleBlog;
+        + div{
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 34px;
+          font-size: 17px;
         }
+      }
+      a {
+        color: $cl-titleBlog;
       }
     }
   }
@@ -54,7 +70,6 @@
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    -webkit-filter: invert(80%);
     filter: invert(80%);
   }
 }

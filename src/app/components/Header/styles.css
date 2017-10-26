@@ -14,9 +14,8 @@
     height: 65px;
     position: absolute;
     opacity: 0;
-    top: -65px;
     width: 100%;
-    /**transition: background-color .2s, top .5s;**/
+    transition: background-color .2s;
   }
   .mainHeaderWrapper{
     @mixin mainFit; 
@@ -31,13 +30,11 @@
 }
 
 .mainHeaderActive {
-  transition: background-color .2s,top .5s,opacity .2s;
   .mainHeaderSheet{
+    transition: background-color .2s;
     background-color: $bg-mainHeader;
     background-image: $bgi-mainHeaderActive;
     opacity: 1;
-    top: 0;
-    /**transition: background-color .2s,top .5s,opacity .2s;**/
     clip-path: polygon(0% 0px, 0% 65px, 33% 48px, 48% 65px, 73.1% 35px, 85% 55px, 100% 55px, 100% 0px);  
   }
 }

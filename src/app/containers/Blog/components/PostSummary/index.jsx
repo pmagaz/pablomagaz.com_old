@@ -1,19 +1,35 @@
-import React  from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { PropTypes } from 'prop-types';
+import { store } from 'redux';
 import classNames from 'classnames/bind';
 import ReactHtmlParser from 'html-react-parser';
+import { connect } from 'react-redux';
 
 import { SiteConf } from 'base';
 import PostInfo from 'components/PostInfo';
 import PostImage from 'components/PostImage';
+import * as PostActions from '../../../Post/actions/';
 import styles from './styles.css';
 
-const propTypes= {
-  post: PropTypes.object.isRequired
-};
+class PostSummary extends Component {
 
-const PostSummary = ({ post }) => {
+  static propTypes= {
+    dispatch: PropTypes.func.isRequired,
+    post: PropTypes.object.isRequired
+  };
+
+   constructor(props) {
+    super(props);
+    //this.actions = bindActionCreators(Actions, props.dispatch);
+  }
+
+ leches(post) {
+  this.props.dispatch(PostActions.getPost(post));
+  }
+
+render() {
+  const post = this.props.post;
   const url = '/blog/' + post.slug;
   const imageSrc = `${ SiteConf.ImageUrl }${ post.image || post.feature_image }`;
 
@@ -24,7 +40,7 @@ const PostSummary = ({ post }) => {
 
   return (
     <article className={ postSummaryStyle } >
-      <Link className={ styles.linkImage } to={ url }>
+      <Link className={ styles.linkImage } onClick={ () => this.leches(post) } to={ url }>
         <h1>
           { post.title }
         </h1>
@@ -49,8 +65,7 @@ const PostSummary = ({ post }) => {
       </div>
     </article>
   );
+}
 };
 
-PostSummary.propTypes = propTypes;
-
-export default PostSummary;
+export default connect()(PostSummary);

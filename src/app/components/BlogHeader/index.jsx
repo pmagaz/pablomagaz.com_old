@@ -1,0 +1,48 @@
+import React, { Component }  from 'react';
+import { PropTypes } from 'prop-types';
+import { pure } from 'recompose';
+import classNames from 'classnames/bind';
+
+import { SiteConf } from 'base';
+import Social from 'components/Social';
+import BlogTitle from 'components/BlogTitle';
+import styles from './styles.css';
+
+class BlogHeader extends Component {
+
+ static propTypes= {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+  render () {
+  let style;
+
+  if (this.props.image) {
+    style = { backgroundImage: 'url(' + this.props.image + ')' };
+  }
+  else style = null;
+
+  const cx = classNames.bind(styles);
+  const postTitleStyle = cx({
+    'postTitleAnim': false,//context.client ? true : false
+  });
+
+  return (
+    <header className={ styles.postHeader }>
+      <div className={ styles.postHeaderWrap }>
+        <div style={ style } className={ styles.postHeaderTitle }> 
+          <h1>
+            <BlogTitle /> 
+          </h1>
+        </div>
+        <div className={ styles.socialBox }>
+          <Social />
+        </div>
+      </div>
+    </header>
+  );
+};
+}
+
+export default pure(BlogHeader);

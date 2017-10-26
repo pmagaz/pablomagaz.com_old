@@ -4,8 +4,8 @@ import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 
-import { fetchRequiredActions } from 'base';
-import BlogHeader from './components/BlogHeader';
+import { fetchRequiredActions, SiteConf } from 'base';
+import BlogHeader from 'components/BlogHeader';
 import PostList from './components/PostList';
 import TagTitle from './components/TagTitle';
 import * as Actions from './actions';
@@ -52,7 +52,6 @@ class Blog extends Component {
   render () {
     let tagTitle;
     const posts = this.props.Blog.posts;
-    
     if (this.isTagFilter()) {
       tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />;
     }
@@ -60,7 +59,10 @@ class Blog extends Component {
     return (
       <div className={ styles.blog } >
         <div className={ styles.content } >
-          <BlogHeader />
+          <BlogHeader
+            image={ SiteConf.blogImage }
+            title={ SiteConf.BlogTitle }
+          />
           <span className={ styles.shape }></span>
           { tagTitle }
           <PostList posts={ posts } />

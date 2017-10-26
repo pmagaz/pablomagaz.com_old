@@ -4,9 +4,9 @@ import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 
-import { fetchRequiredActions } from 'base';
+import { fetchRequiredActions, SiteConf } from 'base';
+import BlogHeader from 'components/BlogHeader';
 import * as Actions from './actions';
-import PostHeader from './components/PostHeader';
 import PostContent from './components/PostContent';
 import styles from './styles.css';
 
@@ -27,7 +27,7 @@ class Post extends Component {
   componentDidMount() {
     const post = this.props.Post;
     const postLoaded = !~post.id ? true : false;  
-    fetchRequiredActions(Post.requiredActions, this.props, postLoaded);
+    //fetchRequiredActions(Post.requiredActions, this.props, postLoaded);
   }
 
   componentWillUnmount() {
@@ -37,12 +37,13 @@ class Post extends Component {
   render () {
     const post = this.props.Post;
     const image = post.feature_image || post.image;
+    const postImage = `${ SiteConf.ImageUrl }${ image }`;
 
     return (
       <div className={ styles.post } >
         <div className={ styles.content } >
-          <PostHeader
-            image={ image }
+          <BlogHeader
+            image={ postImage }
             title={ post.title }
           />
           <span className={ styles.shape }></span>

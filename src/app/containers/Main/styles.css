@@ -96,8 +96,11 @@
     h3{
       text-transform: uppercase;
     }
-    .SocialIcon{
-      background-size: 36px;
+    span ul{
+      width: 155px;
+      button{
+        background-size: 30px;
+      }
     }
   }
 }

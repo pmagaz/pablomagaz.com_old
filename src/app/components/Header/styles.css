@@ -41,3 +41,9 @@
     clip-path: polygon(0% 0px, 0% 65px, 33% 48px, 48% 65px, 73.1% 35px, 85% 55px, 100% 55px, 100% 0px);  
   }
 }
+
+nav {
+	ul{
+    margin-top: -20px;
+  }
+}

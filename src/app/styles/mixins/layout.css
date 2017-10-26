@@ -2,10 +2,8 @@
 @define-mixin mainFit {
   padding: 0 15px;
   max-width: $layout-max-width;
-  transition: padding 120ms ease;
   @media (min-width: $sm){
     padding: $layout-padding;
-    transition: padding 120ms ease;
   } 
 }
 
@@ -64,7 +62,7 @@
   background-color: $bg-titleBlog;
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
-  clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 85% 180px, 67% 160px, 48% 190px, 33% 176px, 0% 190px); 
+  clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 85% 180px, 73.1% 160px, 48% 190px, 33% 176px, 0% 190px); 
 }
 
 
@@ -81,18 +79,16 @@
     padding: 0 15px;
     max-width: $layout-max-width;
     width: 100%;
-    transition: padding 120ms ease;
     @media (min-width: $sm){
       flex: 3;  
       padding: $layout-padding;
-      transition: padding 120ms ease;
     }
   }
 }
 
 @define-mixin shape {
   background: #fefefe;
-  clip-path: polygon(0% 30px, 33% 13px, 48% 30px, 67% 0px, 85% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+  clip-path: polygon(0% 30px, 33% 13px, 48% 30px, 73.1% 0px, 85% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
   width: 100%;
   display: block;
   height: 60px;

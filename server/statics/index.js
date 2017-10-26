@@ -14,8 +14,7 @@ const devStatics = () => [
 
 const prodStatics = () => [
   { route: '/', dir: path.join(__dirname, '../../dist') },
-  // { route: '/assets', dir: path.join(__dirname, '../../dist/assets'), cache: { maxage: 31557600 }},
-  // { route: '/content', dir: path.resolve(SiteConf.ContentPath), cache: { maxage: 31557600 } }
+  { route: '/tag/assets/', dir: path.join(__dirname, '../../dist/assets') },
 ];
 
 const envStatics = (base.env === 'development') ?

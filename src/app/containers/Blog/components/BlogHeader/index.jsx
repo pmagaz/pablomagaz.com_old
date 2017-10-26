@@ -18,8 +18,8 @@ const BlogHeader = () => {
 
   return (
     <header className={ styles.blogTitle }>
-      <div style={ style } className={ styles.blogTitleWrap }>
-        <div className={ blogTitleStyle } > 
+      <div className={ styles.blogTitleWrap }>
+        <div style={ style } className={ blogTitleStyle } > 
           <h1> 
             <BlogTitle /> 
           </h1>

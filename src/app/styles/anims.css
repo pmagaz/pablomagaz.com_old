@@ -18,25 +18,31 @@
   }
 }
 
-@keyframes fade-in-down {
+
+
+@keyframes titleBlog {
   0% {
-      opacity: 0.2;
-      transform: translateY(0px);
+      transform: translate(0px, 10px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(10px);
+      transform: translate(0, 0px) ;
   }
 }
 
-
-@keyframes fade-in-down-bgi {
+@keyframes blogLogo-mobile {
 	from {
-        background-position:0 -40px;
-        opacity: 0;
+        background-position-y: 0%;
     }
     to {
-        background-position: 0 -19px;
-        opacity: 1;
+        background-position-y: 50%;
+    }
+}
+
+@keyframes blogLogo-desktop {
+	from {
+        background-position-y: -50px;
+    }
+    to {
+        background-position-y: -13px;
     }
 }

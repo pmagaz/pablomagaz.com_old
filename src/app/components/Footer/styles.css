@@ -3,7 +3,7 @@
 footer.container{
     width: 100%;
     height: $h-footer;
-    padding: 20px 0 40px;
+    padding: 20px 0 16px;
     position: fixed;
     bottom: 0;
     display: flex;
@@ -12,11 +12,6 @@ footer.container{
     flex-direction: column;
     background: $bg-footer;
     color: $cl-footer;
-
-    nav{
-        display: flex;
-        justify-content: center;
-    }
 
     .copyright {
         margin: 18px 0;
@@ -33,6 +28,9 @@ footer.container{
         display: block;
         span{
             margin: 0 .2em;
+        }
+        &:hover{
+            color: $white;
         }
     }
 

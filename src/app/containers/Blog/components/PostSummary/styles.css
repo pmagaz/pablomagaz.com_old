@@ -1,6 +1,6 @@
 @import '../../../../styles/variables/variables.css';
 @import '../../../../styles/mixins/mixins.css';
-/**@import '../../../../styles/anims.css';**/
+@import '../../../../styles/anims.css';
 
 .PostSummary {
   margin-bottom: 52px;

@@ -20,22 +20,20 @@
 
 
 
-@keyframes fade-in-down {
+@keyframes titleBlog {
   0% {
-      opacity: 0.2;
-      transform: translate(0 10px);
+      transform: translate(0px, 10px);
   }
   100% {
-      opacity: 1;
-      transform: translate(0px);
+      transform: translate(0, 0px) ;
   }
 }
 
 @keyframes blogLogo {
 	from {
-        background-position:0 -100px;
+        background-position:0 0px;
     }
     to {
-        background-position: 0 -19px;
+        background-position: 0 20px;
     }
 }

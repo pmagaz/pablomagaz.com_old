@@ -1,5 +1,5 @@
 @import '../../../../styles/variables/variables.css';
-/** @import '../../../../styles/anims.css'; **/
+@import '../../../../styles/anims.css';
 
 
 .postHeader{
@@ -11,6 +11,7 @@
     justify-content: space-between;
     max-width: $layout-max-width;
     margin: 0;
+    padding: 0 15px;
     width: 100%;
     height: 100%;
     @media (min-width: $sm){
@@ -32,7 +33,8 @@
       animation-delay: 60ms;
       background-size: 156px;
       background-position: left center;
-      animation: fade-in-down 150ms both, blogLogo 150ms;
+      animation: blogLogo 150ms, fade-up 150ms;
+      
       @media (min-width: $sm){
         background-size: 221px;
       }
@@ -44,7 +46,8 @@
         font-size: 1.6em;
         width: 224px;
         margin-top: 10px;
-        transform: skewY(-2deg);
+        animation: titleBlog 150ms;
+        -webkit-backface-visibility: hidden;
 
         @media (min-width: $sm){
           width: 400px;

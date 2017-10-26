@@ -12,5 +12,21 @@
 }
 :global(.fade-appear.fade-appear-active) {
   opacity: 1;
-  transition: opacity .1s ease-in;
+  transition: opacity 80ms ease-in;
+}
+
+:global(.fade2-appear) {
+  opacity: 0.01;
+}
+:global(.fade2-appear.fade2-appear-active) {
+  opacity: 1;
+  transition: opacity 120ms ease-in;
+}
+
+:global(.fade3-appear) {
+  opacity: 0.01;
+}
+:global(.fade3-appear.fade3-appear-active) {
+  opacity: 1;
+  transition: opacity 720ms ease-in;
 }

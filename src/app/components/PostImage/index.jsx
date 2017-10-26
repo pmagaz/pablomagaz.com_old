@@ -13,7 +13,7 @@ const propTypes= {
 
 const PostImage = ({ src, alt, width }) => (
   <div className = { styles.imageWrapper } >
-        <img className={ styles.image } src={ src } alt={ alt } width={ width } />
+    <img className={ styles.image } src={ src } alt={ alt } width={ width } />
   </div>
 );
 

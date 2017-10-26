@@ -29,15 +29,15 @@ const PostList = ({ posts }) => {
   return (
     <div className={ styles.postList }>
       <CSSTransitionGroup
-            key="2"
-            transitionName="fade"
-            transitionAppear={ true }
-            transitionEnterTimeout={ 200 }
-            transitionAppearTimeout={ 200 }
-            transitionEnter={ true }
-            transitionLeave={ false }>
-      { Content }
-     </CSSTransitionGroup>
+        key="f1"
+        transitionName="fade"
+        transitionAppear={ true }
+        transitionEnterTimeout={ 200 }
+        transitionAppearTimeout={ 200 }
+        transitionEnter={ true }
+        transitionLeave={ false }>
+        { Content }
+      </CSSTransitionGroup>
     </div>
   );
 };

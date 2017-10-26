@@ -55,8 +55,8 @@ class PostContent extends Component {
       <div className={ styles.post }>
         <div className={ postContentStyle }>
           <CSSTransitionGroup
-            key="2"
-            transitionName="fade"
+            key="f2"
+            transitionName="fade2"
             transitionAppear={ true }
             transitionEnterTimeout={ 200 }
             transitionAppearTimeout={ 200 }

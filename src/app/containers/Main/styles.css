@@ -95,8 +95,10 @@
     }
     span ul{
       width: 155px;
-      button{
-        background-size: 30px;
+      height: 28px;
+      span{
+        background-size: 28px;
+        height: 28px;
       }
     }
   }

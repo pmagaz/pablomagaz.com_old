@@ -101,7 +101,6 @@ class Main extends Component {
               Puedes contactar conmigo en cualquiera de estos canales:
             </p>
             <br />
-            <br />
             <span>
               <Social />
             </span>

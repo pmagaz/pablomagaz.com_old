@@ -21,6 +21,7 @@
     margin-top: -12%;
     margin-left: 52%;
     width: 48%;
+    -webkit-user-drag: none;
   }
   h1{
     color: $white;

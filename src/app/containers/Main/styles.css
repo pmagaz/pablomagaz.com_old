@@ -65,7 +65,7 @@
 .about{
   background-color: $bg-about;
   color: $cl-about;
-  padding-top: 65px;
+  padding: 50px 0;
   .content{
     @mixin mainFit; 
     margin:  0px auto 60px;
@@ -75,6 +75,7 @@
       float: none;
       display: block;
       margin:  0px auto 25px;
+      -webkit-user-drag: none;
       transition: margin 120ms ease;
       @media (min-width:600px){
         float: left;
@@ -117,6 +118,7 @@
     padding: 13px 6px 36px 6px;
     img {
       width: 100%;
+      -webkit-user-drag: none;
     }
     @media (min-width:600px){
       flex: 1 1 50%;

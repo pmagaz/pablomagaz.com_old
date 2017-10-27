@@ -3,8 +3,8 @@ import styles from './styles.css';
 
 const SocialIcon = () => {
   return (
-    <button className={ styles.SocialIcon }> 
-    </button>
+    <span className={ styles.SocialIcon }> 
+    </span>
   );
 };
 

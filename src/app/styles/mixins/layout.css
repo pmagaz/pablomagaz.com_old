@@ -9,7 +9,7 @@
 
 @define-mixin linkImage {
   width: calc(100% + 33px);
-  height: 98px;
+  height: 124px;
   margin-left: -33px;
   position: relative;
   display:inline-block;
@@ -43,30 +43,6 @@
   border-radius: 4px;
 }
 
-@define-mixin blogTitle {
-  width: 100%;
-  height: $hgt-titleBlog;
-  margin: 0;
-  left: 0;
-  top: 0;
-  font-size: 1.4em;
-  line-height: 1;
-  position: fixed;
-  z-index: -1;
-  display: flex;
-  -webkit-text-stroke-width: 1px;
-  justify-content: center;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-color: $bg-titleBlog;
-  background-image: $bgi-titleBlog;
-  color: $cl-titleBlog;
-  clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 85% 180px, 73.1% 160px, 48% 190px, 33% 176px, 0% 190px); 
-}
-
-
-
 @define-mixin blogContent {
   width: 100%;
   margin-top: $mrgt-blog;
@@ -88,11 +64,28 @@
 
 @define-mixin shape {
   background: #fefefe;
-  clip-path: polygon(0% 30px, 33% 13px, 48% 30px, 73.1% 0px, 85% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
   width: 100%;
   display: block;
   height: 60px;
   position: absolute;
   left: 0px;
   top: 162px;
+  clip-path: polygon(0% 28px, 45% 18px, 55% 30px, 65.1% 9px, 73% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+  transition: clip-path 100ms ease-out;
+  @media (min-width: $xs){
+    clip-path: polygon(0% 30px, 33% 16px, 48% 30px, 73.1% 0px, 81% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+    transition: clip-path 100ms ease-out;
+  }
+  @media (min-width: $sm){
+    clip-path: polygon(0% 30px, 42% 17px, 59% 30px, 71.1% 5px, 79% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+    transition: clip-path 100ms ease-out;
+  }
+  @media (min-width: $lg){
+    clip-path: polygon(0% 30px, 33% 16px, 48% 30px, 67.1% 0px, 75% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+    transition: clip-path 100ms ease-out;
+  }
+  @media (min-width: $xlg){
+    clip-path: polygon(0% 30px, 41% 16px, 52% 30px, 64.1% 0px, 71% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
+    transition: clip-path 100ms ease-out;
+  }
 }

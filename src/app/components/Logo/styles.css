@@ -2,7 +2,7 @@
 @import '../../styles/mixins/mixins.css';
 
 .miniTitle {
-    margin-top: 0;
+    margin: 0 0 19px;
     font-family: $fontFamilyMedium;
     font-size: 1em;
     letter-spacing: -0.02em;

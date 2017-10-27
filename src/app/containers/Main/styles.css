@@ -26,7 +26,7 @@
 }
 
 .brand{
-  width: 400px;
+  width: 333px;
   margin: 40px auto 0;  
   font-size: 3em;
   background-color: $bg-homeBrand;
@@ -50,7 +50,7 @@
     @media (min-width:$sm){
       width: auto;
       margin: 0;
-      padding: 22px 133px 28px 110px;
+      padding: 22px 84px 28px;
       text-align: left;
     }
   }

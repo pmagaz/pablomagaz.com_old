@@ -35,10 +35,9 @@
     }
     .linkImage{
       @mixin linkImage;
-      clip-path: polygon(0% 7px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 100% 72px, 96% 92px, 36% 86px, 2% 87px, 0% 24px);
+      clip-path: polygon(0% 7px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 4% 87px, 0% 47px);
       @media (min-width: $sm){
-        clip-path: polygon(1% 33px, 2% 16px, 28% 20px, 48% 15px, 76.3% 0px, 86% 8px, 100% 8px,100% 39px, 95% 97px, 74% 97px, 27% 81px, 2% 78px);
-        transition: clip-path 500ms ease-out;
+        clip-path: polygon(0% 25px, 33% 17px, 48% 28px, 73.1% 0px, 85% 14px, 100% 21px, 99% 78px, 93% 123px, 50% 111px, 4% 114px, 1% 103px);
       }
     }
   :nth-child(odd){

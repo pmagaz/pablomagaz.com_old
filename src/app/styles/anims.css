@@ -22,10 +22,11 @@
 
 @keyframes titleBlog {
   0% {
-      transform: translate(0px, 10px);
+      transform: translate(0px, -30px) skewY(-2deg);
+
   }
   100% {
-      transform: translate(0, 0px) ;
+      transform: translate(0, 0px) skewY(-2deg);
   }
 }
 

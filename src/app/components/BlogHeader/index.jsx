@@ -15,7 +15,6 @@ class BlogHeader extends Component {
     title: PropTypes.string.isRequired,
   };
 
-
   render () {
     let style;
     style = { backgroundImage: 'url(' + this.props.image + ')' };
@@ -26,9 +25,9 @@ class BlogHeader extends Component {
     });
 
     return (
-      <header className={ styles.postHeader }>
-        <div className={ styles.postHeaderWrap }>
-          <div style={ style } className={ styles.postHeaderTitle }> 
+      <header className={ styles.blogHeader }>
+        <div className={ styles.blogHeaderWrap }>
+          <div style={ style } className={ styles.blogHeaderTitle }> 
             <h1>
               <BlogTitle /> 
             </h1>

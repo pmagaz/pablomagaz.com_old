@@ -2,10 +2,10 @@
 @import '../../styles/anims.css';
 
 
-.postHeader{
+.blogHeader{
   @mixin blogTitle;
 
-  .postHeaderWrap{
+  .blogHeaderWrap{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -22,7 +22,7 @@
       margin: 0 auto;
     }
 
-    .postHeaderTitle{
+    .blogHeaderTitle{
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -82,9 +82,9 @@
   animation: fade-in-down 150ms;
 }
 
-.postHeader::before {
+.blogHeader::before {
   width: 100%;
-  height: $mrgt-postHeader;
+  height: $mrgt-BlogHeader;
   position: relative;
   overflow: hidden;
   background-size: cover;

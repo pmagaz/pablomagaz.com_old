@@ -11,6 +11,7 @@ export default function blog(params) {
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>${ SiteConf.BlogTitle }</title>
+    <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
     <meta name="description" content="${ SiteConf.BlogDescription }" />
     <meta name="referrer" content="no-referrer-when-downgrade" />

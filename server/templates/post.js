@@ -17,6 +17,7 @@ export default function post(params) {
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>${ post.title }</title>
+    <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="description" content="${ SiteConf.SiteDescription }" />

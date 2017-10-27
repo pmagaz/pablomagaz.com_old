@@ -11,6 +11,7 @@ export default function main(params) {
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>${ SiteConf.SiteTitle }</title>
+    <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="description" content="${ SiteConf.SiteDescription }" />
@@ -25,6 +26,7 @@ export default function main(params) {
     <meta property="og:type" content="website" />
     <meta property="og:title" content="${ SiteConf.SiteTitle }" />
     <meta property="og:site_name" content="${ SiteConf.SiteTitle }" />
+    <meta property="og:image" content="${ SiteConf.ServerUrl }/${ SiteConf.brandTitleImage }" />
     <meta property="og:url" content="${ SiteConf.SiteUrl }" />
     <meta property="og:description" content="${ SiteConf.SiteDescription }" />
     

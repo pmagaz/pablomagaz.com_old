@@ -7,7 +7,8 @@ const BlogTitle = 'El Blog Isomórfico';
 const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
 const numPosts = 10;
 const blogImage = 'assets/images/postcover/blog.svg';
-const blogTitleImage = 'assets/images/BlogTitle.png';
+const blogTitleImage = 'assets/images/share/ElBlogIsomorfico.png';
+const brandTitleImage = 'assets/images/share/PabloMagaz.png';
 const postOpeningChars= 46;
 const codeHighlightDelay = 350;
 const postOpeningSplitChar = '</h2>';
@@ -83,4 +84,4 @@ if (env === 'development') {
   };
 } 
 
-export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, blogImage, blogTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins, addThisUrl };
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, blogImage, blogTitleImage, brandTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins, addThisUrl };

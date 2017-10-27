@@ -26,16 +26,13 @@
 }
 
 .brand{
-  width: 92%;
+  width: 400px;
   margin: 40px auto 0;  
   font-size: 3em;
   background-color: $bg-homeBrand;
   transform: rotate(-2deg);
+  text-align: center;
   
-  @media (min-width:$sm){
-    width: 390px;
-    margin: 133px -5px 0 0;
-  } 
   h1{
     width: 10%;
     padding: 22px 0;

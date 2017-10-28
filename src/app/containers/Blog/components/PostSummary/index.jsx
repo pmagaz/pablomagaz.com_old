@@ -61,6 +61,6 @@ class PostSummary extends Component {
       </article>
     );
   }
-};
+}
 
 export default connect()(PostSummary);

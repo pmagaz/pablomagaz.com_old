@@ -13,7 +13,7 @@
       z-index: 90;
       padding-left: 20px;
       @media (min-width:$sm){
-        top: 4px;
+        top: 12px;
       }
       a {
         color :$cl-postSumaryTilte;

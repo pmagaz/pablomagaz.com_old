@@ -2,7 +2,6 @@ import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import { pure } from 'recompose';
 import classNames from 'classnames/bind';
-
 import Menu from 'components/Menu';
 import Logo from 'components/Logo';
 import styles from './styles.css';
@@ -26,7 +25,7 @@ class Header extends Component {
     const maxScroll = 112;
     // FIX
     const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop;
-    if (scrollTop >= maxScroll && !this.state.collapsed) { 
+    if (scrollTop >= maxScroll && !this.state.collapsed) {
       this.setState({ collapsed: true, scrollTop });
     } 
     else if (scrollTop <= maxScroll && this.state.collapsed) {
@@ -35,6 +34,7 @@ class Header extends Component {
   }
 
   render() {
+
     const cx = classNames.bind(styles);
     const headerStyle = cx({
       mainHeader: true,

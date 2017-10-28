@@ -17,9 +17,6 @@ const PostComments = ({ post }) => {
   const postUrl = `${SiteConf.BlogUrl}/${post.slug }`;
   
   return (
-    <Lazyload
-      height={ 1200 }
-      offset={ 2200 }>
       <ReactDisqusComments
         url={ postUrl }
         title={ post.title }
@@ -27,7 +24,6 @@ const PostComments = ({ post }) => {
         shortname={ SiteConf.DisqusSettins.shortName }
         onNewComment={ newCommentHandler }
       />
-    </Lazyload>
   );
 };
 

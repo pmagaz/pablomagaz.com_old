@@ -1,8 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { ShareButtons, generateShareIcon } from 'react-share';
-import Lazyload from 'react-lazyload';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import { SiteConf } from 'base';
 import styles from './styles.css';

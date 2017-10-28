@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 
+import CSSTransitionGroup from 'react-addons-css-transition-group';
+
 import { SiteConf } from 'base';
 import Social from 'components/Social';
 import * as Actions from '../Blog/actions';

@@ -41,23 +41,23 @@
     background-color: $bg-mainHeader;
     background-image: $bgi-mainHeaderActive;
     opacity: 1;
-    transition: top .2s, clip-path 100ms ease-in; 
+    transition: background-color .3s;
     clip-path: polygon(0% 0px, 0% 58px, 45% 48px, 55% 61px, 65.1% 40px, 73% 53px, 100% 53px, 100% 0px);
     @media (min-width: $xs){
       clip-path: polygon(0% 0px, 0% 61px, 33% 51px, 48% 65px, 73.1% 46px, 81% 55px, 100% 55px, 100% 0px); 
-      transition: top .2s, clip-path 100ms ease-in;
+      transition: background-color .3s;
     }
     @media (min-width: $sm){
       clip-path: polygon(0% 0px, 0% 61px, 42% 51px, 59% 65px, 71.1% 46px, 81% 55px, 100% 55px, 100% 0px); 
-      transition: top .2s, clip-path 100ms ease-in;
+      transition: background-color .3s;
     }
     @media (min-width: $lg){
       clip-path: polygon(0% 0px, 0% 60px, 33% 46px, 48% 65px, 67.1% 44px, 75% 57px, 100% 57px, 100% 0px); 
-      transition: top .2s, clip-path 100ms ease-in;
+      transition: background-color .3s;
     }
     @media (min-width: $xlg){
       clip-path: polygon(0% 0px, 0% 60px, 41% 46px, 52% 65px, 64.1% 39px, 71% 55px, 100% 55px, 100% 0px);
-      transition: top .2s, clip-path 100ms ease-in;
+      transition: background-color .3s;
     } 
   }
 }

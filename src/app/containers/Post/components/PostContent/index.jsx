@@ -48,7 +48,6 @@ class PostContent extends Component {
     const cx = classNames.bind(styles);
     const postContentStyle = cx({
       'postContent': true,
-      //'postContentAnim': true,
     });
 
     return (

@@ -102,7 +102,6 @@
     "react-share": "^1.16.0",
     "redux-logger": "3.0.6",
     "rimraf": "2.6.1",
-    "smoothscroll-polyfill": "0.3.6",
     "style-loader": "0.18.2",
     "stylelint": "8.0.0",
     "supports-color": "4.2.1",

@@ -49,15 +49,16 @@
     }
     @media (min-width: $sm){
       clip-path: polygon(0% 0px, 0% 61px, 42% 51px, 59% 65px, 71.1% 46px, 81% 55px, 100% 55px, 100% 0px); 
-      transition: background-color .3s;
+      transition: background-color .3s, top .2s;
     }
     @media (min-width: $lg){
       clip-path: polygon(0% 0px, 0% 60px, 33% 46px, 48% 65px, 67.1% 44px, 75% 57px, 100% 57px, 100% 0px); 
-      transition: background-color .3s;
+      transition: background-color .3s, top .2s;
     }
     @media (min-width: $xlg){
       clip-path: polygon(0% 0px, 0% 60px, 41% 46px, 52% 65px, 64.1% 39px, 71% 55px, 100% 55px, 100% 0px);
-      transition: background-color .3s;
+      transition: background-color .3s, top .2s;
+      
     } 
   }
 }

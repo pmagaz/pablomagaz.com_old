@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import { bindActionCreators } from 'redux';
 
+import { SiteConf } from 'base';
 import Social from 'components/Social';
 import * as Actions from '../Blog/actions';
 import styles from './styles.css';
@@ -36,15 +37,13 @@ class Main extends Component {
     const cx = classNames.bind(styles);
     const brandStyle = cx({
       'brand': true,
-      //'brandAnim': context.client ? true : false
-      'brandAnim': true  
     });
 
     return (
       <div className={ styles.mainWrapper }>
         <section className={ styles.home }>
           <div className={ brandStyle }>
-            <h1>Pablo Magaz</h1>
+            <h1>{ SiteConf.Author }</h1>
           </div>
         </section>
 
@@ -53,7 +52,7 @@ class Main extends Component {
             <img src="../assets/images/about/me.jpg"/>
             <h1>Sobre mí</h1>
             <p>
-            Soy Pablo Magaz, Leonés afincado Madrid desde muy temprana edad, llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
+            Soy { SiteConf.Author }, Leonés afincado Madrid desde muy temprana edad, llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
               <br />
               <br />
             Actualmente trabajo en <a href="http://www.atsistemas.com" target="_blank" rel="noopener noreferrer">atSistemas</a> como Tech Lead del área de JavaScript y he desarrollado proyectos backend con NodeJs y Front-End con Polymer, AngularJs, Angular, React, Redux, RxJs etc en fin que no me caso con nada y me gusta todo, aunque logicamente ¡tengo mis preferencias!.

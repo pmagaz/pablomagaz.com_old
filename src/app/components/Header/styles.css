@@ -16,7 +16,7 @@
     position: absolute;
     opacity: 0;
     width: 100%;
-    transition: background-color .2s, top .5s;
+    
   }
   .mainHeaderWrapper{
     @mixin mainFit; 
@@ -37,27 +37,27 @@
 
 .mainHeaderActive {
   .mainHeaderSheet{
-    transition: background-color .2s, top .5s;
     top: 0;
     background-color: $bg-mainHeader;
     background-image: $bgi-mainHeaderActive;
     opacity: 1;
+    
     clip-path: polygon(0% 0px, 0% 58px, 45% 48px, 55% 61px, 65.1% 40px, 73% 53px, 100% 53px, 100% 0px);
     @media (min-width: $xs){
       clip-path: polygon(0% 0px, 0% 61px, 33% 51px, 48% 65px, 73.1% 46px, 81% 55px, 100% 55px, 100% 0px); 
-      transition: clip-path 100ms ease-out;
+      transition: top .5s, clip-path 100ms ease-in;
     }
     @media (min-width: $sm){
       clip-path: polygon(0% 0px, 0% 61px, 42% 51px, 59% 65px, 71.1% 46px, 81% 55px, 100% 55px, 100% 0px); 
-      transition: clip-path 100ms ease-out;
+      transition: top .5s, clip-path 100ms ease-in;
     }
     @media (min-width: $lg){
       clip-path: polygon(0% 0px, 0% 60px, 33% 46px, 48% 65px, 67.1% 44px, 75% 57px, 100% 57px, 100% 0px); 
-      transition: clip-path 100ms ease-out;
+      transition: top .4s, clip-path 100ms ease-in;
     }
     @media (min-width: $xlg){
       clip-path: polygon(0% 0px, 0% 60px, 41% 46px, 52% 65px, 64.1% 39px, 71% 55px, 100% 55px, 100% 0px);
-      transition: clip-path 100ms ease-out;
+      transition: top .5s, clip-path 100ms ease-in;
     } 
   }
 }

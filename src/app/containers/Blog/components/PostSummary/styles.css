@@ -13,7 +13,7 @@
       z-index: 90;
       padding-left: 20px;
       @media (min-width:$sm){
-        top: 2px;
+        top: 4px;
       }
       a {
         color :$cl-postSumaryTilte;
@@ -59,11 +59,6 @@
     }
   }
 }
-
-.PostSummaryAnim {
-  animation: fade-up 100ms;
-}
-
 
 .readMore {
   margin-top:26px;

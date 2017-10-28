@@ -18,9 +18,8 @@ const PostComments = ({ post }) => {
   
   return (
     <Lazyload
-      throttle={ 200 }
-      height={ 200 }
-      offset={ 800 }>
+      height={ 1200 }
+      offset={ 2200 }>
       <ReactDisqusComments
         url={ postUrl }
         title={ post.title }

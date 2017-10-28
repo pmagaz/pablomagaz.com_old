@@ -69,7 +69,7 @@
       animation-delay: 30ms;
       -webkit-backface-visibility: hidden;
       @media (min-width: $sm){
-        animation: blogLogo-desktop 220ms both;    
+        animation: blogLogo-desktop 220ms ease-in both;    
         animation-delay: 100ms;    
         background-size: 221px;
       }
@@ -88,8 +88,8 @@
         @media (min-width: $sm){
           width: 400px;
           font-size: 2.8rem;
-          animation: titleBlog 100ms both;
-          animation-delay: 100ms;
+          animation: titleBlog 100ms ease-in both;
+          animation-delay: 120ms;
         }
         + div{
           display: flex;
@@ -105,7 +105,7 @@
   }
   .socialBox{
     height: 100%;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     flex: 1;
     align-items: flex-end;
     display: flex;
@@ -120,11 +120,6 @@
       }
 
   }
-}
-
-
-.postTitleAnim {
-  animation: fade-in-down 150ms;
 }
 
 .blogHeader::before {

@@ -32,7 +32,7 @@
   background-color: $bg-homeBrand;
   transform: rotate(-2deg);
   text-align: center;
-  
+  animation: brannim 100ms ease-in both;
   h1{
     width: 10%;
     padding: 22px 0;
@@ -54,12 +54,6 @@
       text-align: left;
     }
   }
-}
-
-.brandAnim {
-   animation: fade-in-down 0.4s;
-   animation-fill-mode: both;
-   animation-delay: 90ms;
 }
 
 .about{

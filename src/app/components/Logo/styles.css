@@ -10,7 +10,6 @@
     font-weight: bold;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 110ms ease-in;
     a{
      color: $cl-miniTitle;
     }
@@ -22,5 +21,4 @@
 .miniTitleActive {
     opacity: 1;
     visibility: visible;
-    transition: opacity 110ms ease-in;
 }

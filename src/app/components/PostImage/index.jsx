@@ -1,7 +1,5 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import Lazyload from 'react-lazyload';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import styles from './styles.css';
 

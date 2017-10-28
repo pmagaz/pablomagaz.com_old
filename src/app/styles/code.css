@@ -19,14 +19,6 @@
   font-size: 14px;
 }
 
-:global(.fade-appear) {
-  opacity: 0.01;
-}
-:global(.fade-appear.fade-appear-active) {
-  opacity: 1;
-  transition: opacity .5s ease-in;
-}
-
 :global(.hljs-tag),
 :global(.hljs-keyword),
 :global(.hljs-selector-tag),

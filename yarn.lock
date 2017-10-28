@@ -5220,9 +5220,9 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-addons-css-transition-group@15.6.0:
-  version "15.6.0"
-  resolved "https://registry.yarnpkg.com/react-addons-css-transition-group/-/react-addons-css-transition-group-15.6.0.tgz#69887cf6e4874d25cd66e22a699e29f0d648aba0"
+react-addons-css-transition-group@15.6.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-css-transition-group/-/react-addons-css-transition-group-15.6.2.tgz#9e4376bcf40b5217d14ec68553081cee4b08a6d6"
   dependencies:
     react-transition-group "^1.2.0"
 
@@ -5230,9 +5230,9 @@ react-deep-force-update@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.1.tgz#bcd31478027b64b3339f108921ab520b4313dc2c"
 
-react-disqus-comments@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-disqus-comments/-/react-disqus-comments-1.0.3.tgz#4fe5e2fce381720ba804b55a83e81fa372e35e88"
+react-disqus-comments@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-disqus-comments/-/react-disqus-comments-1.1.1.tgz#439c47ed1746545a49c3224bd4bb32204f67cc29"
 
 react-dom-core@0.0.2:
   version "0.0.2"
@@ -5257,11 +5257,9 @@ react-ga@2.3.5:
   dependencies:
     object-assign "^4.1.1"
 
-react-lazyload@2.2.7:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.2.7.tgz#6adf0713f32240a21c630ab5d1e8cf62d0c264af"
-  dependencies:
-    prop-types "^15.5.6"
+react-lazyload@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.3.0.tgz#ccb134223012447074a96543954f44b055dc6185"
 
 react-proxy@^1.1.7:
   version "1.1.8"
@@ -5398,9 +5396,9 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-recompose@0.25.1:
-  version "0.25.1"
-  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.25.1.tgz#5eb9d6cf6e25a9ffad73cbbae5658b5b55d6e728"
+recompose@0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.26.0.tgz#9babff039cb72ba5bd17366d55d7232fbdfb2d30"
   dependencies:
     change-emitter "^0.1.2"
     fbjs "^0.8.1"
@@ -6451,9 +6449,9 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.6.0.tgz#a89a929fbee205d35a4fa2cc487be9cbec8898bc"
+webpack@3.8.1:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.8.1.tgz#b16968a81100abe61608b0153c9159ef8bb2bd83"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"

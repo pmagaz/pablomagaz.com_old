@@ -20,5 +20,5 @@
 }
 :global(.fade2-appear.fade2-appear-active) {
   opacity: 1;
-  transition: opacity 100ms ease-in;
+  transition: opacity 90ms ease-in;
 }

@@ -14,14 +14,14 @@ const newCommentHandler = () => {
 
 const PostComments = ({ post }) => {
   const postUrl = `${SiteConf.BlogUrl}/${post.slug }`;
-  
+
   return (
     <ReactDisqusComments
       url={ postUrl }
       title={ post.title }
-      identifier={ SiteConf.DisqusSettins.identifier }
-      shortname={ SiteConf.DisqusSettins.shortName }
       onNewComment={ newCommentHandler }
+      shortname={ SiteConf.DisqusSettins.shortName }
+      identifier={ SiteConf.DisqusSettins.identifier + post.slug }
     />
   );
 };

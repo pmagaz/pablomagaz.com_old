@@ -78,16 +78,16 @@ class Main extends Component {
             </ul>
             <ul className={ styles.photos }>
               <li>
-                <img src="../assets/images/about/01.jpg"/>
+                <img src="../assets/images/about/pablomagaz@codemotion_2017.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/02.png"/>
+                <img src="../assets/images/about/pablomagaz@react-redux-techday.png" alt="React/Redux Techday @ atSistemas 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/03.jpg"/>
+                <img src="../assets/images/about/codemotion2017.jpg" alt="Codemotion 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/04.jpg"/>
+                <img src="../assets/images/about/pablomagaz@openexpo_2017.jpg" alt="Open Expo 2017"/>
               </li>
             </ul>
             <h2>Mis otras affciones</h2>

@@ -1,18 +1,22 @@
 @keyframes titleBlog {
   0% {
+      opacity: 0.8;
       transform: translate(0px, -35px) skewY(-2deg);
 
   }
   100% {
+      opacity: 1;
       transform: translate(0, 0px) skewY(-2deg);
   }
 }
 
 @keyframes blogLogo-mobile {
 	from {
+        opacity: 0.8;
         background-position-y: 0%;
     }
     to {
+        opacity: 1;
         background-position-y: 50%;
     }
 }

@@ -28,6 +28,7 @@ export const entry = {
     'react-share',
     'react-router',
     'babel-polyfill',
+    'react-lazyload',
     'isomorphic-fetch',
     'html-react-parser',
     'react-router-scroll',

@@ -1,5 +1,6 @@
 import React  from 'react';
 import { PropTypes } from 'prop-types';
+import Lazyload from 'react-lazyload';
 import ReactDisqusComments from 'react-disqus-comments';
 
 import { SiteConf } from 'base';
@@ -14,15 +15,21 @@ const newCommentHandler = () => {
 
 const PostComments = ({ post }) => {
   const postUrl = `${SiteConf.BlogUrl}/${post.slug }`;
-
+  
   return (
-    <ReactDisqusComments
-      url={ postUrl }
-      title={ post.title }
-      onNewComment={ newCommentHandler }
-      shortname={ SiteConf.DisqusSettins.shortName }
-      identifier={ SiteConf.DisqusSettins.identifier + post.slug }
-    />
+    <Lazyload
+      throttle={ 1000 }
+      height={ 400 }
+      offset={ 3200 }>
+      <ReactDisqusComments
+        url={ postUrl }
+        title={ post.title }
+        onNewComment={ newCommentHandler }
+        shortname={ SiteConf.DisqusSettins.shortName }
+        identifier={ SiteConf.DisqusSettins.identifier + post.slug }
+      />
+    </Lazyload>
+
   );
 };
 

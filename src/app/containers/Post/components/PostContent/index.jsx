@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import hljs from 'highlight.js/lib/highlight';
 import ReactHtmlParser from 'html-react-parser';
 import javascript from 'highlight.js/lib/languages/javascript';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import { SiteConf } from 'base';
 import Loading from 'components/Loading';

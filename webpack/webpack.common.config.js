@@ -33,7 +33,6 @@ export const entry = {
     'react-router-scroll',
     'react-disqus-comments',
     'highlight.js/lib/highlight',
-    'react-addons-css-transition-group',
     'highlight.js/lib/languages/javascript',
   ]
 };

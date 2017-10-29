@@ -4,7 +4,6 @@ import { PropTypes } from 'prop-types';
 import { ListToArray } from 'base';
 import Loading from 'components/Loading';
 import PostSummary from '../PostSummary';
-import CSSTransitionGroup from 'react-addons-css-transition-group';
 import styles from './styles.css';
 
 const isLoaded = (posts) => posts.size ? true : false;

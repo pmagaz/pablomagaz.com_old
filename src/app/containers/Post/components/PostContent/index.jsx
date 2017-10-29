@@ -53,28 +53,19 @@ class PostContent extends Component {
     return (
       <div className={ styles.post }>
         <div className={ postContentStyle }>
-          <CSSTransitionGroup
-            key="f2"
-            transitionName="fade2"
-            transitionAppear={ true }
-            transitionEnterTimeout={ 100 }
-            transitionAppearTimeout={ 100 }
-            transitionEnter={ true }
-            transitionLeave={ false }>
-            <h1>{ post.title }</h1>
-            <PostInfo
-              author={ post.author }
-              tags={ post.tags }
-              date={ post.published_at }
-            />
-            <div className={ styles.postText }>
+          <h1>{ post.title }</h1>
+          <PostInfo
+            author={ post.author }
+            tags={ post.tags }
+            date={ post.published_at }
+          />
+          <div className={ styles.postText }>
 
-              { Content }
-              <span className={ styles.divider }></span>
-              <SharePost post={ post } />
-              <PostComments post={ post } />
-            </div>
-          </CSSTransitionGroup>
+            { Content }
+            <span className={ styles.divider }></span>
+            <SharePost post={ post } />
+            <PostComments post={ post } />
+          </div>
         </div>
       </div>
     );

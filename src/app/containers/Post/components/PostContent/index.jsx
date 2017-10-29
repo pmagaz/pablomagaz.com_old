@@ -57,8 +57,8 @@ class PostContent extends Component {
             key="f2"
             transitionName="fade2"
             transitionAppear={ true }
-            transitionEnterTimeout={ 200 }
-            transitionAppearTimeout={ 200 }
+            transitionEnterTimeout={ 100 }
+            transitionAppearTimeout={ 100 }
             transitionEnter={ true }
             transitionLeave={ false }>
             <h1>{ post.title }</h1>

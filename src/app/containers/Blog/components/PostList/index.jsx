@@ -32,8 +32,8 @@ const PostList = ({ posts }) => {
         key="f1"
         transitionName="fade"
         transitionAppear={ true }
-        transitionEnterTimeout={ 200 }
-        transitionAppearTimeout={ 200 }
+        transitionEnterTimeout={ 90 }
+        transitionAppearTimeout={ 90 }
         transitionEnter={ true }
         transitionLeave={ false }>
         { Content }

@@ -8,17 +8,17 @@
 }
 
 :global(.fade-appear) {
-  opacity: 0.2 !important;
+  opacity: 0.7; 
 }
 :global(.fade-appear.fade-appear-active) {
-  opacity: 1 !important;
-  transition: opacity 90ms ease-in !important;
+  opacity: 1; 
+  transition: opacity 100ms ease-in;
 }
 
 :global(.fade2-appear) {
-  opacity: 0.2 !important;
+  opacity: 0.7; 
 }
 :global(.fade2-appear.fade2-appear-active) {
   opacity: 1 !important;
-  transition: opacity 90ms ease-in !important;
+  transition: opacity 100ms; 
 }

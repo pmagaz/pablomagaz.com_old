@@ -9,6 +9,7 @@ import BlogHeader from 'components/BlogHeader';
 import PostList from './components/PostList';
 import TagTitle from './components/TagTitle';
 import * as Actions from './actions';
+import postApi from '../Post/api/';
 import styles from './styles.css';
 
 class Blog extends Component {
@@ -33,6 +34,12 @@ class Blog extends Component {
   componentDidMount() {
     const postsLoaded = (this.props.Blog.posts.size) ? false : true;
     fetchRequiredActions(Blog.requiredActions, this.props, postsLoaded);
+    postApi.warmPosts(this.props.Blog.posts);
+  }
+
+  shouldComponentUpdate(props) {
+    postApi.warmPosts(props.Blog.posts);
+    return true;
   }
 
   componentWillReceiveProps(nextProps) {

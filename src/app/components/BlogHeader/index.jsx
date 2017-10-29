@@ -1,9 +1,8 @@
 import React, { Component }  from 'react';
 import { PropTypes } from 'prop-types';
-import { pure, onlyUpdateForKeys } from 'recompose';
+import { onlyUpdateForKeys } from 'recompose';
 import classNames from 'classnames/bind';
 
-import { SiteConf } from 'base';
 import Social from 'components/Social';
 import BlogTitle from 'components/BlogTitle';
 import styles from './styles.css';

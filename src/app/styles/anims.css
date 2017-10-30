@@ -35,10 +35,10 @@
 @keyframes brandAnim {
 	from {
         opacity: 0;
-        background-position-y: -60px;
+        transform: translate(0px, -35px)
     }
     to {
         opacity: 1;
-        background-position-y: -13px;
+        transform: translate(0px, 0px)
     }
 }

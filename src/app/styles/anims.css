@@ -32,13 +32,25 @@
     }
 }
 
-@keyframes brandAnim {
+@keyframes brandTitle {
+    0% {
+        opacity: 0.8;
+        transform: translate(0px, -35px) skewY(-2deg) rotate(2deg);
+  
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px) skewY(-2deg) rotate(2deg);
+    }
+  }
+
+@keyframes brandBox {
 	from {
         opacity: 0;
-        transform: translate(0px, -35px)
+        transform: translate(0px, -35px) rotate(-2deg);
     }
     to {
         opacity: 1;
-        transform: translate(0px, 0px)
+        transform: translate(0px, 0px) rotate(-2deg);
     }
 }

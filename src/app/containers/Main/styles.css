@@ -26,18 +26,20 @@
 }
 
 .brand{
-  width: 333px;
+  width: 280px;
   margin: 40px auto 0;  
   font-size: 3em;
   background-color: $bg-homeBrand;
-  transform: rotate(-2deg);
   text-align: center;
+  animation: brandBox 100ms ease-in both;
+  @media (min-width:$sm){
+    width: 333px;
+  }
   h1{
     width: 10%;
     padding: 22px 0;
     margin: 0 auto;
     display: table;
-    text-align: center;
     line-height: 40px;
     font-size: 45px;
     font-family: $fontFamilyMedium;
@@ -45,7 +47,9 @@
     text-transform: uppercase;
     font-weight: bold;
     color: $cl-homeBrand;
-    transform: skew(-2deg);
+    animation: brandText 100ms ease-in both;
+    animation-delay: 100ms;
+    -webkit-backface-visibility: hidden;
     @media (min-width:$sm){
       width: auto;
       margin: 0;

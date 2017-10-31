@@ -8,15 +8,18 @@
 }
 
 @define-mixin linkImage {
-  width: calc(100% + 33px);
+  width: 100%;
   height: 124px;
-  margin-left: -33px;
   position: relative;
   display:inline-block;
   overflow: hidden;
   border: $bdrt-linkImage;
   background-color: $bg-linkImage;
   border-radius: 4px;
+  @media (min-width: $sm){
+    margin-left: -33px;
+    width: calc(100% + 33px);
+  }
   img{
     margin-top: -9%;
     margin-left: 60%;
@@ -47,7 +50,6 @@
 @define-mixin blogContent {
   width: 100%;
   margin-top: $mrgt-blog;
-  padding-left: 33px;
   display: flex;
   flex-direction: column;
   background: $bg-blog;
@@ -60,6 +62,9 @@
       flex: 3;  
       padding: $layout-padding;
     }
+  }
+  @media (min-width: $sm){
+    padding-left: 33px;
   }
 }
 

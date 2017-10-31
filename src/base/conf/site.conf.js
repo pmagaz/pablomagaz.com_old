@@ -2,9 +2,10 @@ import env from '../shared/Env';
 
 const Author = 'Pablo Magaz';
 const SiteTitle = Author; 
-const SiteDescription = Author;
+const SiteDescription = `Sitio web de ${ Author }`;
 const BlogTitle = 'El Blog Isomórfico';
-const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
+const BlogDescription = `${ BlogTitle }:JavaScript, JavaScript y más.`;
+const KeyWords = 'javascript, react, redux, rxjs, immutable, angular, webpack, es6, observables, programación reactiva, blog';
 const numPosts = 10;
 const blogImage = 'assets/images/postcover/blog.svg';
 const blogTitleImage = 'assets/images/share/ElBlogIsomorfico.png';
@@ -45,9 +46,9 @@ if (env === 'development') {
   HostName = 'localhost:8000';
   ServerUrl = `http://${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
-  clientSecret = '8628165087ba';
+  clientSecret = '285ee4eda6c3';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = 'http://localhost:2368'; 
+  GhostUrl = 'http://localhost:2369'; 
   ImageUrl = GhostUrl;
   ContentPath = '/Users/Pablo/js/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
@@ -84,4 +85,4 @@ if (env === 'development') {
   };
 } 
 
-export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, blogImage, blogTitleImage, brandTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins, addThisUrl };
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, KeyWords, BlogTitle, BlogUrl, blogImage, blogTitleImage, brandTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins, addThisUrl };

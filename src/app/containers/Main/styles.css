@@ -32,6 +32,7 @@
   background-color: $bg-homeBrand;
   text-align: center;
   animation: brandBox 100ms ease-in both;
+  animation-delay: 100ms;
   @media (min-width:$sm){
     width: 333px;
   }
@@ -48,7 +49,7 @@
     font-weight: bold;
     color: $cl-homeBrand;
     animation: brandText 100ms ease-in both;
-    animation-delay: 100ms;
+    animation-delay: 200ms;
     -webkit-backface-visibility: hidden;
     @media (min-width:$sm){
       width: auto;

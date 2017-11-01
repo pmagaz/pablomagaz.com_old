@@ -70,6 +70,7 @@
 }
 
 @define-mixin shape {
+  display: none\9;
   background: #fefefe;
   width: 100%;
   display: block;
@@ -95,4 +96,10 @@
     clip-path: polygon(0% 30px, 41% 16px, 52% 30px, 64.1% 0px, 71% 20px, 100% 20px, 100% 100%, 0% 100%, 0% 100%, 0% 100%);
     transition: clip-path 100ms ease-out;
   }
+  @media all and (-ms-high-contrast:none){
+    display: none;
+    *::-ms-backdrop{
+      display: none;
+    }
+  } 
 }

@@ -113,7 +113,7 @@
     justify-content: flex-end;
     filter: invert(80%);
     ul{
-        margin-right: 15px;
+        margin-right: 10px;
         @media (min-width: $sm){
           margin-right: 0px;
         }

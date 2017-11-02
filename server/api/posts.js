@@ -1,5 +1,5 @@
 import needle from 'needle';
-import { SiteConf, getDate } from 'base';
+import { SiteConf, formatDate } from 'base';
 
 export const postsApiHandler = (req, res)  => {
   needle('get', SiteConf.PostsApi)
@@ -48,7 +48,7 @@ const PostList = (posts, filter) => {
 
     post.html = null;
     post.markdown = null;
-    post.published_at = getDate(post.published_at);
+    post.published_at = formatDate(post.published_at);
     /*if (SiteConf.uniqueImagePath) {
     const image = post.feature_image || post.image;
       post.image = resolveUniqueImage(image);

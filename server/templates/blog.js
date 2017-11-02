@@ -50,6 +50,7 @@ export default function blog(params) {
         "image": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }",
         "mainEntityOfPage": {
             "@type": "WebPage",
+            "name": "${ SiteConf.BlogTitle }",
             "@id": "${ SiteConf.BlogUrl }"
         },
         "description": "${ SiteConf.BlogDescription }",

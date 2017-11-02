@@ -78,7 +78,8 @@ export default function post(params) {
           "description": "${ post.meta_description }",
           "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "${ SiteConf.SiteUrl }"
+              "name": "${ SiteConf.BlogTitle }",
+              "@id": "${ SiteConf.BlogUrl }"
             }
           }
         </script>

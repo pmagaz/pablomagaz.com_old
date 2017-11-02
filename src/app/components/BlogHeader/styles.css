@@ -21,25 +21,7 @@
   background-color: $bg-titleBlog;
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
-  clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 73% 180px, 65.1% 168px, 55% 190px, 45% 178px, 0% 187px);
-  transition: clip-path 100ms ease-out;
-  @media (min-width: $xs){
-    clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 81% 180px, 73.1% 160px, 48% 190px, 33% 176px, 0% 190px); 
-    transition: clip-path 100ms ease-out;
-  }
-  @media (min-width: $sm){
-    clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 79% 180px, 71.1% 165px, 59% 190px, 42% 177px, 0% 190px); 
-    transition: clip-path 100ms ease-out;
-  }
-  @media (min-width: $lg){
-    clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 75% 180px, 67.1% 160px, 48% 190px, 33% 176px, 0% 190px); 
-    transition: clip-path 100ms ease-out;
-  }
-  @media (min-width: $xlg){
-    clip-path: polygon(0% 0px, 100% 0px, 100% 0px, 100% 180px, 71% 180px, 64.1% 160px, 52% 190px, 41% 176px, 0% 190px);
-    transition: clip-path 100ms ease-out;
-  }
-    
+
   .blogHeaderWrap{
     display: flex;
     align-items: flex-start;
@@ -113,7 +95,7 @@
     justify-content: flex-end;
     filter: invert(80%);
     ul{
-        margin-right: 15px;
+        margin-right: 10px;
         @media (min-width: $sm){
           margin-right: 0px;
         }

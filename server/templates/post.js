@@ -61,7 +61,6 @@ export default function post(params) {
           "author": {
               "@type": "Person",
               "name": "${ SiteConf.Author }",
-              "image": "//www.gravatar.com/avatar/573cbe6e46797b20b6ef954966b4f929?s=250&d=mm&r=x",
               "url": "${ SiteConf.BlogUrl }",
               "sameAs": [
                   "${ SiteConf.SiteUrl }",

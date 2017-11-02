@@ -35,6 +35,7 @@ export default function blog(params) {
     <meta name="twitter:title" content="${ SiteConf.BlogTitle }" />
     <meta name="twitter:url" content="${ SiteConf.BlogUrl }" />
     <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
+    <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
     ${ params.vendorScript }
     </head>
     <body>

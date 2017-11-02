@@ -35,6 +35,7 @@ export default function main(params) {
     <meta name="twitter:title" content="${ SiteConf.SiteTitle }" />
     <meta name="twitter:url" content="${ SiteConf.SiteUrl }" />
     <meta name="twitter:description" content="${ SiteConf.SiteDescription }" />
+    <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
     ${ params.vendorScript }
     </head>
     <body>

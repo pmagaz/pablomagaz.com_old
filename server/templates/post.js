@@ -45,6 +45,7 @@ export default function post(params) {
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="${ SiteConf.Author }" />
     <meta name="twitter:creator" content="${ SiteConf.Author }" />
+    <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
     ${ params.vendorScript }
     </head>
     <body>

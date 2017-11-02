@@ -36,6 +36,26 @@ export default function main(params) {
     <meta name="twitter:url" content="${ SiteConf.SiteUrl }" />
     <meta name="twitter:description" content="${ SiteConf.SiteDescription }" />
     <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "publisher": {
+            "@type": "Organization",
+            "name": "${ SiteConf.Author } | ${ SiteConf.SiteDescription }",
+            "logo": "${ SiteConf.ServerUrl }/${ SiteConf.brandTitleImage }"
+        },
+        "url": "${ SiteConf.SiteUrl }",
+        "image": "${ SiteConf.ServerUrl }/${ SiteConf.brandTitleImage }",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "${ SiteConf.SiteUrl }"
+        },
+        "description": "${ SiteConf.SiteDescription }"
+      }
+    </script>
+
     ${ params.vendorScript }
     </head>
     <body>

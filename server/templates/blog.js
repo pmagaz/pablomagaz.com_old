@@ -36,6 +36,27 @@ export default function blog(params) {
     <meta name="twitter:url" content="${ SiteConf.BlogUrl }" />
     <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
     <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "publisher": {
+            "@type": "Organization",
+            "name": "${ SiteConf.BlogDescription }",
+            "logo": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }"
+        },
+        "url": "${ SiteConf.BlogUrl }",
+        "image": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "${ SiteConf.BlogUrl }"
+        },
+        "description": "${ SiteConf.BlogDescription }",
+        "keywords": "${ SiteConf.KeyWords }",
+      }
+    </script>
+
     ${ params.vendorScript }
     </head>
     <body>

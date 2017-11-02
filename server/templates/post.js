@@ -9,6 +9,7 @@ export default function post(params) {
   const tagList = post.tags.reduce((acc, tag) => (
     acc + `    <meta property="article:tag" content="${ tag.name }" />\n`)
     , '\n');
+  const tag = post.tags[0] ? post.tags[0].name : '';
 
   return `
   <!doctype html>
@@ -46,6 +47,42 @@ export default function post(params) {
     <meta name="twitter:data1" content="${ SiteConf.Author }" />
     <meta name="twitter:creator" content="${ SiteConf.Author }" />
     <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
+
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "publisher": {
+              "@type": "Organization",
+              "name": "${ SiteConf.Author }",
+              "name": "${ post.meta_description }",
+              "logo": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }"
+          },
+          "author": {
+              "@type": "Person",
+              "name": "${ SiteConf.Author }",
+              "image": "//www.gravatar.com/avatar/573cbe6e46797b20b6ef954966b4f929?s=250&d=mm&r=x",
+              "url": "${ SiteConf.BlogUrl }",
+              "sameAs": [
+                  "${ SiteConf.SiteUrl }",
+                  "${ SiteConf.socialLinks.twitter }",
+                  "${ SiteConf.socialLinks.linkedIn }",
+              ]
+          },
+          "headline": "${ post.title }",
+          "url": "${ postUrl }",
+          "datePublished": "${ post.published_at }",
+          "dateModified": "${ post.updated_at }",
+          "image": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }",
+          "keywords": "${ tag }",
+          "description": "${ post.meta_description }",
+          "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "${ SiteConf.SiteUrl }"
+            }
+          }
+        </script>
+
     ${ params.vendorScript }
     </head>
     <body>

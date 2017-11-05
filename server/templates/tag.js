@@ -10,7 +10,6 @@ export default function tag(params) {
     tagName = tags[1];
     tagUrl = `${ SiteConf.SiteUrl }/tag/${tagName}`;
   }
-  
   return `
   <!doctype html>
 	<html lang="utf-8">
@@ -20,7 +19,7 @@ export default function tag(params) {
     <title>${ SiteConf.BlogTitle }</title>
     <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
-    <meta name="description" content="${ SiteConf.BlogDescription }" />
+    <meta name="description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName }" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="${ SiteConf.KeyWords }"> 
@@ -35,13 +34,34 @@ export default function tag(params) {
     <meta property="og:title" content="${ SiteConf.BlogTitle }" />
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
     <meta property="og:url" content="${ tagUrl }" />
-    <meta property="og:description" content="${ SiteConf.BlogDescription }" />
+    <meta property="og:description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName } " />
     <meta property="og:image" content="${ imageUrl }" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="${ SiteConf.BlogTitle }" />
     <meta name="twitter:url" content="${ tagUrl }" />
-    <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
+    <meta name="twitter:description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName }" />
+    
+    <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
+    
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Series",
+            "publisher": {
+              "@type": "Organization",
+              "name": "${ SiteConf.BlogDescription } | Tag: ${ tagName }",
+              "logo": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }"
+            },
+            "url": "${ SiteConf.SiteUrl }/tag/${ tagName }",
+            "name": "${ tagName }",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "${ SiteConf.BlogUrl } "
+            }
+        }
+        </script>
+    
     ${ params.vendorScript }
     </head>
     <body>

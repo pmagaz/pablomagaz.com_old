@@ -4,75 +4,53 @@
 
 .PostSummary {
   margin-bottom: 52px;
-    h1 {
-      @mixin postTitle;
-      position: absolute;
-      font-size: 1.8em;
-      top: -4px;
-      z-index: 90;
-      left: 10px;
-      bottom: 0;
-      margin: 0 6px 0 0;
-      display: flex;
-      align-items: center;
-      @media (min-width: 340px){
-        top: -7px;
-      }
-      @media (min-width:$sm){
-        font-size: 2em;
-        left: 30px;
-      }
-      a {
-        color :$cl-postSumaryTilte;
-        &:hover{
-          color: $cl-postSumaryTilteHover;
-        }
-      }
+  h1 {
+    @mixin postTitle;
+    position: absolute;
+    font-size: 1.8em;
+    top: -4px;
+    z-index: 90;
+    left: 10px;
+    bottom: 0;
+    margin: 0 6px 0 0;
+    display: flex;
+    align-items: center;
+    @media (min-width: 340px){
+      top: -7px;
     }
-    h2 {
-      font-family: $fontFamilyLight;
-      color: $cl-postSumaryOpening;
-      font-size: 1.2em;
-      line-height: 1.4em;
-      margin-bottom: .3em;
-      font-weight: 200;
+    @media (min-width:$sm){
+      font-size: 2em;
+      left: 30px;
     }
-    > div{
-        margin-left: 10px;
-        @media (min-width: $sm){
-          margin-left: 0;
-        }
-    }
-    .postText{
-      color: $cl-postText;
-    }
-    .linkImage{
-      @mixin linkImage;
-      clip-path: polygon(0% 7px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 4% 87px, 0% 47px);
-      @media (min-width: $sm){
-        clip-path: polygon(0% 20px, 9% -1px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 7% 91px, 1% 68px);
-      }
-    }
-  &:nth-child(odd){
-    .linkImage{
-      clip-path: polygon(1% 23px, 7% -1px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 9% 91px, 0% 72px);
-    }
-  }
-  &:nth-child(even){
-    .linkImage{
-      clip-path: polygon(0% 29px, 1% 10px, 99% 0px, 100% 74px, 98% 92px, 55% 82px, 1% 92px);
-      @media (min-width: $sm){
-        clip-path: polygon(0% 29px, 1% 10px, 99% 0px, 100% 85px, 99% 105px, 41% 97px, 1% 83%);
-        transition: clip-path 500ms ease-out;
+    a {
+      color :$cl-postSumaryTilte;
+      &:hover{
+        color: $cl-postSumaryTilteHover;
       }
     }
   }
-  &:nth-child(3n+2){
-    .linkImage{
-      clip-path: polygon(1% 14px, 6% -1px, 33% 3px, 48% 6px, 73.1% 1px, 85% -13px, 100% 14px, 99% 78px, 93% 110px, 46% 104px, 9% 110px, 0% 93px);
-      @media (min-width: 340px){
+  h2 {
+    font-family: $fontFamilyLight;
+    color: $cl-postSumaryOpening;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin-bottom: .3em;
+    font-weight: 200;
+  }
+  > div{
+    margin-left: 10px;
+    @media (min-width: $sm){
+      margin-left: 0;
+    }
+  }
+  .postText{
+    color: $cl-postText;
+  }
+  .linkImage{
+    @mixin linkImage;
+    clip-path: polygon(1% 14px, 6% -1px, 33% 3px, 48% 6px, 73.1% 1px, 85% -13px, 100% 14px, 99% 78px, 93% 110px, 46% 104px, 9% 110px, 0% 93px);
+    @media (min-width: 340px){
       clip-path: polygon(0% 20px, 9% -1px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 7% 91px, 1% 68px);
-      }
     }
   }
 }
@@ -96,6 +74,5 @@
     top: -3px;
     width: 19px;
     height: 19px;
-
   }
 }

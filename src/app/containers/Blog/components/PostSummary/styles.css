@@ -8,9 +8,16 @@
       @mixin postTitle;
       position: absolute;
       font-size: 1.8em;
-      top: -11px;
+      top: -4px;
       z-index: 90;
       left: 10px;
+      bottom: 0;
+      margin: 0 6px 0 0;
+      display: flex;
+      align-items: center;
+      @media (min-width: 340px){
+        top: -7px;
+      }
       @media (min-width:$sm){
         font-size: 2em;
         left: 30px;
@@ -43,12 +50,12 @@
       @mixin linkImage;
       clip-path: polygon(0% 7px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 4% 87px, 0% 47px);
       @media (min-width: $sm){
-        clip-path: polygon(0% 25px, 33% 17px, 48% 28px, 73.1% 0px, 85% 14px, 100% 21px, 99% 78px, 93% 123px, 50% 111px, 4% 114px, 1% 103px);
+        clip-path: polygon(0% 20px, 9% -1px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 7% 91px, 1% 68px);
       }
     }
   &:nth-child(odd){
     .linkImage{
-      clip-path: polygon(0% 18px, 2% 5px, 29% 0px, 62% 7px, 73% 0px, 93% 7px, 100% 23px, 100% 74px, 96% 88px, 36% 87px, 2% 86px, 0% 70px);
+      clip-path: polygon(1% 23px, 7% -1px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 9% 91px, 0% 72px);
     }
   }
   &:nth-child(even){
@@ -62,9 +69,9 @@
   }
   &:nth-child(3n+2){
     .linkImage{
-      clip-path: polygon(0% 7px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 4% 87px, 0% 47px);
-      @media (min-width: $sm){
-        clip-path: polygon(0% 24px, 3% -1px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 4% 87px, 0% 64px);
+      clip-path: polygon(1% 14px, 6% -1px, 33% 3px, 48% 6px, 73.1% 1px, 85% -13px, 100% 14px, 99% 78px, 93% 110px, 46% 104px, 9% 110px, 0% 93px);
+      @media (min-width: 340px){
+      clip-path: polygon(0% 20px, 9% -1px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 7% 91px, 1% 68px);
       }
     }
   }

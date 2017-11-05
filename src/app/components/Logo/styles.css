@@ -18,6 +18,7 @@
     a{
      color: $cl-miniTitle;
      margin-top: -8px; 
+     transform: skewY(-2deg);
      @media (min-width:$sm) {
         margin-top: -10px; 
      }

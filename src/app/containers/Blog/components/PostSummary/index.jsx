@@ -35,7 +35,7 @@ class PostSummary extends Component {
 
     return (
       <article className={ postSummaryStyle } >
-        <Link className={ styles.linkImage } onClick={ () => this.getPost(post) } to={ url }>
+        <Link className={ styles.linkImage }  to={ url } onClick={ () => this.getPost(post) }>
           <h1>
             { post.title }
           </h1>
@@ -54,7 +54,7 @@ class PostSummary extends Component {
           { ReactHtmlParser(post.opening) }
         </div>
         <div className={ styles.readMore } >
-          <Link to={ url }>
+          <Link to={ url } onClick={ () => this.getPost(post) }>
             Continuar leyendo
           </Link> 
         </div>

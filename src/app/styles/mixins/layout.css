@@ -13,7 +13,6 @@
   position: relative;
   display:inline-block;
   overflow: hidden;
-  border: $bdrt-linkImage;
   background-color: $bg-linkImage;
   border-radius: 4px;
   @media (min-width: 340px){

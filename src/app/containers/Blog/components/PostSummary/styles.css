@@ -50,7 +50,7 @@
     @mixin linkImage;
     clip-path: polygon(1% 14px, 6% -1px, 33% 3px, 48% 6px, 73.1% 1px, 85% -13px, 100% 14px, 99% 78px, 93% 110px, 46% 104px, 9% 110px, 0% 93px);
     @media (min-width: 340px){
-      clip-path: polygon(0% 20px, 9% -1px, 33% 3px, 48% 11px, 73.1% 1px, 85% -13px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 7% 91px, 1% 68px);
+      clip-path: polygon(0% 20px, 9% -1px, 33% 3px, 48% 11px, 72.1% 1px, 91% 0px, 100% 20px, 99% 68px, 93% 91px, 46% 82px, 7% 91px, 1% 68px);
     }
   }
 }

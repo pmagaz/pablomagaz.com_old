@@ -90,7 +90,7 @@ class Main extends Component {
                 <img src="../assets/images/about/pablomagaz@openexpo_2017.jpg" alt="Open Expo 2017"/>
               </li>
             </ul>
-            <h2>Mis otras affciones</h2>
+            <h2>Mis otras afficiones</h2>
             <p>
               Aparte de la programación me encanta la música electronica. Dispongo de un pequeño estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la producción musical.
             </p>

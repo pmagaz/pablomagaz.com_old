@@ -3,7 +3,7 @@
 
 mark{
     font-size: 1em;
-    padding: .4em .6em .4em 23px;
+    padding: .4em 0 .4em 23px;
     position: relative;
     background-color: $bg-postTag;
     color: $cl-postTag;

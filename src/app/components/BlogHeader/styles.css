@@ -8,14 +8,8 @@
   margin: 0;
   left: 0;
   top: 0;
-  font-size: 1.4em;
-  line-height: 1;
-  position: fixed;
   z-index: -1;
-  display: flex;
-  -webkit-text-stroke-width: 1px;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-color: $bg-titleBlog;
@@ -60,7 +54,9 @@
         word-break: break-word;
         margin-bottom: 0;
         padding-left: 15px;
-        font-size: 1.6em;
+        font-size: 2.24em;
+        line-height: 1;
+        -webkit-text-stroke-width: 1px;
         width: 224px;
         margin-top: 10px;
         animation: titleBlog 100ms both;

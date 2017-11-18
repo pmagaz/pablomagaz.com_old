@@ -58,8 +58,10 @@ class PostContent extends Component {
             tags={ post.tags }
             date={ post.published_at }
           />
+          <div className={ styles.sharePost }>
+            <SharePost post={ post } />
+          </div>
           <div className={ styles.postText }>
-
             { Content }
             <span className={ styles.divider }></span>
             <SharePost post={ post } />

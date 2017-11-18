@@ -39,3 +39,29 @@
         display: block;
     }
 }
+
+.sharePost{
+    display: block;
+    article{
+        border-top: none;
+        justify-content: flex-end;
+        padding: 0;
+    }
+    h4{
+        display: none;
+    }
+    span{
+        div{
+            &:nth-child(2),
+            &:nth-child(5),
+            &:nth-child(6){
+                display: none;
+            }
+            > div,
+            > div svg{
+                width: 30px !important;
+                height: 30px !important;
+            }
+        }
+    }
+}

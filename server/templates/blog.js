@@ -16,8 +16,8 @@ export default function blog(params) {
     <meta name="description" content="${ SiteConf.BlogDescription }" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="${ SiteConf.KeyWords }"> 
     
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
     ${ params.style }
     <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
     <link rel="canonical" href="${ SiteConf.BlogUrl }" />
@@ -34,6 +34,29 @@ export default function blog(params) {
     <meta name="twitter:title" content="${ SiteConf.BlogTitle }" />
     <meta name="twitter:url" content="${ SiteConf.BlogUrl }" />
     <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
+    <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "publisher": {
+            "@type": "Organization",
+            "name": "${ SiteConf.BlogDescription }",
+            "logo": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }"
+        },
+        "url": "${ SiteConf.BlogUrl }",
+        "image": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "name": "${ SiteConf.BlogTitle }",
+            "@id": "${ SiteConf.BlogUrl }"
+        },
+        "description": "${ SiteConf.BlogDescription }",
+        "keywords": "${ SiteConf.KeyWords }",
+      }
+    </script>
+
     ${ params.vendorScript }
     </head>
     <body>

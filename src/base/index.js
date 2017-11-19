@@ -9,7 +9,7 @@ export default { console, env };
 export * from './conf/site.conf';
 export { context } from './shared/Context';
 export { trackGa } from './shared/TrackGa';
-export { getDate } from './shared/DateHelper';
+export { formatDate } from './shared/DateHelper';
 export { generateMap, ListToArray } from './shared/ModelHelper';
 export { actionCreator } from './shared/ActionCreator';
 export { fetchRequiredActions } from './shared/FetchData';

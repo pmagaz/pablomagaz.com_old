@@ -9,6 +9,7 @@ export default function post(params) {
   const tagList = post.tags.reduce((acc, tag) => (
     acc + `    <meta property="article:tag" content="${ tag.name }" />\n`)
     , '\n');
+  const tag = post.tags[0] ? post.tags[0].name : '';
 
   return `
   <!doctype html>
@@ -16,14 +17,13 @@ export default function post(params) {
     <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>${ post.title }</title>
+    <title>${ post.title } | ${ SiteConf.BlogTitle }</title>
     <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <meta name="description" content="${ SiteConf.SiteDescription }" />
+    <meta name="description" content="${ post.meta_description }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet"> 
+    <meta name="keywords" content="${ SiteConf.KeyWords }"> 
     ${ params.style }
     <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
     <link rel="canonical" href="${ postUrl }" />
@@ -44,6 +44,43 @@ export default function post(params) {
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="${ SiteConf.Author }" />
     <meta name="twitter:creator" content="${ SiteConf.Author }" />
+    <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
+
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "publisher": {
+              "@type": "Organization",
+              "name": "${ SiteConf.Author }",
+              "name": "${ post.meta_description }",
+              "logo": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }"
+          },
+          "author": {
+              "@type": "Person",
+              "name": "${ SiteConf.Author }",
+              "url": "${ SiteConf.BlogUrl }",
+              "sameAs": [
+                  "${ SiteConf.SiteUrl }",
+                  "${ SiteConf.socialLinks.twitter }",
+                  "${ SiteConf.socialLinks.linkedIn }",
+              ]
+          },
+          "headline": "${ post.title }",
+          "url": "${ postUrl }",
+          "datePublished": "${ post.published_at }",
+          "dateModified": "${ post.updated_at }",
+          "image": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }",
+          "keywords": "${ tag }",
+          "description": "${ post.meta_description }",
+          "mainEntityOfPage": {
+              "@type": "WebPage",
+              "name": "${ SiteConf.BlogTitle }",
+              "@id": "${ SiteConf.BlogUrl }"
+            }
+          }
+        </script>
+
     ${ params.vendorScript }
     </head>
     <body>

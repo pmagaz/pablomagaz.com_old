@@ -1,6 +1,6 @@
 import { createLogger } from 'redux-logger';
 import reduxReqMiddleware from 'redux-req-middleware';
-import { createStore, compose, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 
 import base from 'base/';
 import rootReducer from '../reducers';

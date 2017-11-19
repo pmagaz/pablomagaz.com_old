@@ -13,7 +13,7 @@ const Months = new Array(
   "Dec"
 );
 
-export const getDate = date => {
+export const formatDate = date => {
   if (!date) return null;
   const postDate = new Date(date.substring(0,10));
   const day = postDate.getDate();

@@ -51,16 +51,16 @@ class Main extends Component {
             <img src="../assets/images/about/me.jpg"/>
             <h1>Sobre mí</h1>
             <p>
-            Soy { SiteConf.Author }, Leonés afincado Madrid desde muy temprana edad, llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
+            Soy { SiteConf.Author }, Leonés afincado en Madrid desde muy temprana edad. Llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc, hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
               <br />
               <br />
-            Actualmente trabajo en <a href="http://www.atsistemas.com" target="_blank" rel="noopener noreferrer">atSistemas</a> como Tech Lead del área de JavaScript y he desarrollado proyectos backend con NodeJs y Front-End con Polymer, AngularJs, Angular, React, Redux, RxJs etc en fin que no me caso con nada y me gusta todo, aunque logicamente ¡tengo mis preferencias!.
+            Actualmente trabajo en <a href="http://www.atsistemas.com" target="_blank" rel="noopener noreferrer">atSistemas</a> como Tech Lead del área de JavaScript y he desarrollado proyectos backend con NodeJs y Front-End con Polymer, AngularJs, Angular, React, Redux, RxJs etc en fin que no me caso con nada y me gusta todo, aunque lógicamente ¡tengo mis preferencias!.
               <br />
               <br />
-            Algunas de las iniciativas interesantes que he llevado a cabo durante este tiempo ha sido la publicación de diferentes boilers para desarrollo  como <a href="https://github.com/atSistemas/angularjs-base" target="_blank" rel="noopener noreferrer">AngularJs Base</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">Angular Base</a> y <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">React Base</a>, boiler con el que está realizado este blog y del que puedes ver todo el <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">código fuente</a> en mi <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">github</a>.
+            Algunas de las iniciativas interesantes que he llevado a cabo durante este tiempo, ha sido la publicación de diferentes boilers para desarrollo  como: <a href="https://github.com/atSistemas/angularjs-base" target="_blank" rel="noopener noreferrer">AngularJs Base</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">Angular Base</a> y <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">React Base</a>, boiler con el que está realizado este blog y del que puedes ver todo el <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">código fuente</a> en mi <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">github</a>.
               <br />
               <br />
-            Aparte del desarrollo y supervisión técnica de proyectos he realizado talleres técnicos, formación a equipos de empresas y dado charlas en eventos como:
+            Aparte del desarrollo y supervisión técnica de proyectos, he realizado talleres técnicos, formación a equipos de empresas y dado charlas en eventos como:
             </p>
             <ul>
               <li>
@@ -73,26 +73,26 @@ class Main extends Component {
                 Codemotion 2017: Programación Reactiva con RxJs.
               </li>
               <li>
-               KeepCoding 2018: Proximamente 
+               KeepCoding 2018: Próximamente 
               </li>
             </ul>
             <ul className={ styles.photos }>
               <li>
-                <img src="../assets/images/about/01.jpg"/>
+                <img src="../assets/images/about/pablomagaz@codemotion_2017.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/02.png"/>
+                <img src="../assets/images/about/pablomagaz@react-redux-techday.png" alt="React/Redux Techday @ atSistemas 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/03.jpg"/>
+                <img src="../assets/images/about/codemotion2017.jpg" alt="Codemotion 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/04.jpg"/>
+                <img src="../assets/images/about/pablomagaz@openexpo_2017.jpg" alt="Open Expo 2017"/>
               </li>
             </ul>
-            <h2>Mis otras affciones</h2>
+            <h2>Mis otras aficiones</h2>
             <p>
-              Aparte de la programación me encanta la música electronica. Dispongo de un pequeño estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la producción musical.
+              Aparte de la programación, me encanta la música electrónica: Techno, Bass, D&B... Dispongo de un pequeño estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la producción musical.
             </p>
             <h2>Contacto</h2>
             <p>

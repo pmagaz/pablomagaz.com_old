@@ -1,5 +1,5 @@
 import needle from 'needle';
-import { SiteConf, getDate } from '../../src/base/';
+import { SiteConf } from '../../src/base/';
 
 export const postApiHandler = (req, res)  => {
   const slug = req.params.slug;
@@ -10,7 +10,6 @@ export const postApiHandler = (req, res)  => {
       if (data.errors)  res.status(404).json({});
       else {
         const post = data.posts[0];
-        post.published_at = getDate(post.published_at);
         res.json(post); 
       } 
     })

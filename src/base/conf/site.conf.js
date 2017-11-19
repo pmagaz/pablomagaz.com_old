@@ -2,9 +2,10 @@ import env from '../shared/Env';
 
 const Author = 'Pablo Magaz';
 const SiteTitle = Author; 
-const SiteDescription = Author;
+const SiteDescription = `Sitio web de ${ Author }`;
 const BlogTitle = 'El Blog Isomórfico';
-const BlogDescription = 'JavaScript, programaci&oacute;n y mas';
+const BlogDescription = `${ BlogTitle }: JavaScript, JavaScript y más JavaScript.`;
+const KeyWords = 'javascript, react, redux, rxjs, immutable, angular, angularjs, webpack, es6, observables, programación reactiva, blog, rxjs, vue';
 const numPosts = 10;
 const blogImage = 'assets/images/postcover/blog.svg';
 const blogTitleImage = 'assets/images/share/ElBlogIsomorfico.png';
@@ -84,4 +85,4 @@ if (env === 'development') {
   };
 } 
 
-export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, BlogTitle, BlogUrl, blogImage, blogTitleImage, brandTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins, addThisUrl };
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, KeyWords, BlogTitle, BlogUrl, blogImage, blogTitleImage, brandTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins, addThisUrl };

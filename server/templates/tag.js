@@ -16,7 +16,7 @@ export default function tag(params) {
     <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>${ SiteConf.BlogTitle }</title>
+    <title>Tag:${tagName} | ${ SiteConf.BlogTitle }</title>
     <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
     <meta name="description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName }" />
@@ -30,14 +30,14 @@ export default function tag(params) {
     <meta property="article:tag" content="${ tagName }" />
     <meta property="og:locale" content="es_ES" /> 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="${ SiteConf.BlogTitle }" />
+    <meta property="og:title" content="Tag:${tagName} | ${ SiteConf.BlogTitle }" />
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
     <meta property="og:url" content="${ tagUrl }" />
     <meta property="og:description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName } " />
     <meta property="og:image" content="${ imageUrl }" />
     
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="${ SiteConf.BlogTitle }" />
+    <meta name="twitter:title" content="Tag:${tagName} | ${ SiteConf.BlogTitle }" />
     <meta name="twitter:url" content="${ tagUrl }" />
     <meta name="twitter:description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName }" />
     

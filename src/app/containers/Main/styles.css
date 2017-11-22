@@ -110,7 +110,8 @@
   padding: 0;
   margin: 30px 0 50px;
   li{
-    flex: 1 1 100%;
+    flex-grow: 1;
+    width: calc(100% - 12px);
     height: 255px;
     overflow: hidden;
     padding: 13px 6px 36px 6px;
@@ -119,12 +120,12 @@
       -webkit-user-drag: none;
     }
     @media (min-width:600px){
-      flex: 1 1 50%;
+      width: calc(50% - 12px);
       height: 171px;
     }
     @media (min-width:850px){
+      width: calc(25% - 12px);
       height: 117px;
-      flex: 1 1 25%;
     }
     @media (min-width:1024px){
       height: 150px;

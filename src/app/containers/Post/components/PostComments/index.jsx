@@ -13,10 +13,10 @@ const newCommentHandler = () => {
 };
 
 const PostComments = ({ post }) => {
-  
+
   const postUrl = `${ SiteConf.BlogUrl}/${post.slug }`;
   const shortName = SiteConf.DisqusSettings.shortName;
-  const identifier = `${ SiteConf.DisqusSettings.identifier}@${post.slug }`;
+  const identifier = `${ SiteConf.DisqusSettings.identifier }@${ post.slug }`;
 
   return (
     <ReactDisqusComments

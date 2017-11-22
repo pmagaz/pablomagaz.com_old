@@ -57,7 +57,6 @@
       }
       h1{
         font-family: $fontFamilyMedium;
-        word-break: break-word;
         margin-bottom: 0;
         padding-left: 15px;
         font-size: 1.6em;

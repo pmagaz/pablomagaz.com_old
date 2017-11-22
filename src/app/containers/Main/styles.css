@@ -112,9 +112,9 @@
   li{
     flex-grow: 1;
     width: calc(100% - 12px);
-    height: 255px;
+    max-height: 255px;
     overflow: hidden;
-    padding: 13px 6px 36px 6px;
+    padding: 13px 6px 0px 6px;
     img {
       width: 100%;
       -webkit-user-drag: none;

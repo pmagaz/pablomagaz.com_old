@@ -41,7 +41,8 @@ export const module = {
   rules: [
     { test: /\.json$/, loader: 'json-loader', include: [mainPath] },
     { test: /\.html/, loader: 'raw-loader', include: [mainPath] },
-    { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file-loader', include: [mainPath], options: { name: 'assets/images/icons/[name].[ext]' } }
+    { test: /pattern\.svg$/, loader: 'url-loader?limit=100000&name=assets/images/[name].[ext]' },
+    { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file-loader', exclude:[/background/], include: [mainPath], options: { name: 'assets/images/icons/[name].[ext]' } }
   ]
 };
 

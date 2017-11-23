@@ -41,9 +41,7 @@ export const module = {
   rules: [
     { test: /\.json$/, loader: 'json-loader', include: [mainPath] },
     { test: /\.html/, loader: 'raw-loader', include: [mainPath] },
-    //{ test: /\.(woff|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'base64-font-loader' },
-    //{ test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url-loader?limit=100000&name=assets/images/[name].[ext]' },
-    { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file-loader', include: [mainPath], options: { name: 'assets/images/[name].[ext]' } }
+    { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'file-loader', include: [mainPath], options: { name: 'assets/images/icons/[name].[ext]' } }
   ]
 };
 

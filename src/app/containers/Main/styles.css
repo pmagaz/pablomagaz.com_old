@@ -3,6 +3,7 @@
 
 :root section{
   min-height: 100vh;
+  width: 100%;
 }
 
 .mainWrapper{
@@ -27,12 +28,16 @@
 
 .brand{
   width: 280px;
-  margin: 40px auto 0;  
+  margin: 0 auto 0;  
   font-size: 3em;
   background-color: $bg-homeBrand;
   text-align: center;
   animation: brandBox 100ms ease-in both;
   animation-delay: 100ms;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 44vh;
   @media (min-width:$sm){
     width: 333px;
   }

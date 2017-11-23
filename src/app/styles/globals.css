@@ -23,5 +23,5 @@
   transition: opacity 100ms; 
 }
 :global(#root) {
-  width: 100%;
+  height: 100%;
 }

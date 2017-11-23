@@ -57,11 +57,10 @@
       }
       h1{
         font-family: $fontFamilyMedium;
-        word-break: break-word;
         margin-bottom: 0;
         padding-left: 15px;
         font-size: 1.6em;
-        width: 224px;
+        width: 236px;
         margin-top: 10px;
         animation: titleBlog 100ms both;
         animation-delay: 100ms;

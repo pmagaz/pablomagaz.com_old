@@ -36,7 +36,7 @@ $mrgb-mainContainer: $parallax-footer;
 /** Blog **/
 $bg-blog: $white;
 $bg-titleBlog: $tertiary-color;
-$bgi-titleBlog: url('../../../../assets/images/glitter.svg');
+$bgi-titleBlog: url('../../../../assets/images/glitter.png');
 $cl-titleBlog: $white;
 $mrgt-blog: 192px;
 $hgt-titleBlog: $parallax-header;

@@ -22,3 +22,6 @@
   opacity: 1 !important;
   transition: opacity 100ms; 
 }
+:global(#root) {
+  width: 100%;
+}

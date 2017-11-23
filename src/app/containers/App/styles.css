@@ -24,11 +24,16 @@ p {
     margin: auto;
     display: flex;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    min-height: 100%;
 }
 
 main.container {
     margin-bottom: $mrgb-mainContainer;
     background: $bg-mainContainer;
-    overflow: hidden;
+
+}
+
+.app{
+    height: 100%;
 }

@@ -30,9 +30,9 @@ export const entry = {
     'babel-polyfill',
     'isomorphic-fetch',
     'html-react-parser',
-    'react-router-scroll',
     'react-disqus-comments',
     'highlight.js/lib/highlight',
+    'react-router-scroll/lib/useScroll',
     'highlight.js/lib/languages/javascript',
   ]
 };

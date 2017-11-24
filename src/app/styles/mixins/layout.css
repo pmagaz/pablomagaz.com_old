@@ -72,7 +72,6 @@
     max-width: $layout-max-width;
     width: 100%;
     @media (min-width: $sm){
-      flex: 3;  
       padding: $layout-padding;
     }
   }

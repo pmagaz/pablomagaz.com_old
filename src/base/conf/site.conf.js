@@ -38,7 +38,7 @@ let Ssl;
 let Protocol;
 let uniqueImagePath;
 let GoogleAnaliticsId;
-let DisqusSettins;
+let DisqusSettings;
 
 if (env === 'development') {
   Ssl = false;
@@ -57,7 +57,7 @@ if (env === 'development') {
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
   GoogleAnaliticsId = 'UA-104300440-3';
-  DisqusSettins = {
+  DisqusSettings = {
     shortName: 'el-blog-isomorfico',
     identifier: 'el-blog-isomofico-dev'
   };
@@ -79,10 +79,10 @@ if (env === 'development') {
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`;
   uniqueImagePath = '/assets/images/postcovers';
   GoogleAnaliticsId = 'UA-104300440-2';
-  DisqusSettins = {
+  DisqusSettings = {
     shortName: 'el-blog-isomorfico',
     identifier: 'el-blog-isomofico'
   };
 } 
 
-export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, KeyWords, BlogTitle, BlogUrl, blogImage, blogTitleImage, brandTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettins, addThisUrl };
+export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, KeyWords, BlogTitle, BlogUrl, blogImage, blogTitleImage, brandTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettings, addThisUrl };

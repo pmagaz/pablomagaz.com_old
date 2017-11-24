@@ -51,7 +51,7 @@ $bg-linkImage: $gray-blue;
 $cl-postText: $cl-body;
 
 /** Main **/
-$bg-home: url('../../../../assets/images/pattern.svg'); 
+$bg-home: url('../../../../assets/images/background/pattern.svg'); 
 $bg-homeBrand: $primary-color;
 $cl-homeBrand: $white;
 $bg-about:$gray-light;

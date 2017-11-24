@@ -30,9 +30,9 @@ export const entry = {
     'babel-polyfill',
     'isomorphic-fetch',
     'html-react-parser',
-    'react-router-scroll',
     'react-disqus-comments',
     'highlight.js/lib/highlight',
+    'react-router-scroll/lib/useScroll',
     'highlight.js/lib/languages/javascript',
   ]
 };
@@ -41,8 +41,8 @@ export const module = {
   rules: [
     { test: /\.json$/, loader: 'json-loader', include: [mainPath] },
     { test: /\.html/, loader: 'raw-loader', include: [mainPath] },
-    { test: /\.(woff|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'base64-font-loader' },
     { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url-loader?limit=100000&name=assets/images/[name].[ext]' },
+    
   ]
 };
 

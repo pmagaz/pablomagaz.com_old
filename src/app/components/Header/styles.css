@@ -7,7 +7,7 @@
   right: 0;
   position: fixed;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
   border-top: $bdr-mainHeader;
   color: $cl-mainHeader;
   .mainHeaderSheet{
@@ -23,7 +23,7 @@
     margin: 0 auto;  
     height: 65px;
     display: flex;
-    z-index: 2;
+    z-index: 3;
     position: relative;
     justify-content: space-between;
     align-items: center;

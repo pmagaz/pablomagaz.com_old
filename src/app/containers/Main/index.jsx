@@ -81,9 +81,11 @@ class Main extends Component {
               
             </ul>
             <h2>Programación Reactiva con RxJs @ Codemotion 2017</h2>
-            <iframe id="ytplayer" type="text/html" width="70%" height="400"
-              src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
-              frameBorder="0"/>
+            <div className={ styles.videoWrapper }>
+              <iframe id="ytplayer" type="text/html" width="70%" height="400"
+                src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
+                frameBorder="0"/>
+            </div>
             <ul className={ styles.photos }>
               <li>
                 <img src="../assets/images/about/pablomagaz@codemotion_2017.jpg" alt="Programación Reactiva con RxJs @ Codemotion 2017"/>

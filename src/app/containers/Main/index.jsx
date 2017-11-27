@@ -82,7 +82,7 @@ class Main extends Component {
             </ul>
             <h2>Programación Reactiva con RxJs @ Codemotion 2017</h2>
             <iframe id="ytplayer" type="text/html" width="50%" height="300"
-              src="http://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
+              src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
               frameBorder="0"/>
             <ul className={ styles.photos }>
               <li>

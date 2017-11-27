@@ -60,8 +60,11 @@ class Main extends Component {
             Algunas de las iniciativas interesantes que he llevado a cabo durante este tiempo ha sido la publicación de diferentes boilers para desarrollo  como: <a href="https://github.com/atSistemas/angularjs-base" target="_blank" rel="noopener noreferrer">AngularJs Base</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">Angular Base</a> y <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">React Base</a>, boiler con el que está realizado este blog y del que puedes ver todo el <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">código fuente</a> en mi <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">github</a>.
               <br />
               <br />
-            Aparte del desarrollo y supervisión técnica de proyectos, he realizado talleres técnicos, formación a equipos de empresas y dado charlas en eventos como:
+            Aparte del desarrollo y supervisión técnica de proyectos, he realizado talleres técnicos, formación a equipos de empresas y charlas en distintos eventos.
+         
             </p>
+            <h2>Charlas</h2>
+            
             <ul>
               <li>
                 Open Expo 2016: Presentación base.
@@ -70,24 +73,29 @@ class Main extends Component {
                 Codemotion 2016: Aplicaciones Isormoficas con React.
               </li>
               <li>
-                Codemotion 2017: Programación Reactiva con RxJs.
+                Codemotion 2017: Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Programacio%CC%81nReactivaConRxJs.pdf ">Slides</a>]
               </li>
               <li>
                KeepCoding 2018: Próximamente 
               </li>
+              
             </ul>
+            <h2>Programación Reactiva con RxJs @ Codemotion 2017</h2>
+            <iframe id="ytplayer" type="text/html" width="50%" height="300"
+              src="http://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
+              frameBorder="0"/>
             <ul className={ styles.photos }>
               <li>
-                <img src="../assets/images/about/pablomagaz@codemotion_2017.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2017"/>
+                <img src="../assets/images/about/pablomagaz@codemotion_2017.jpg" alt="Programación Reactiva con RxJs @ Codemotion 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/pablomagaz@react-redux-techday.png" alt="React/Redux Techday @ atSistemas 2017"/>
+                <img src="../assets/images/about/pablomagaz@react-redux-techday.jpg" alt="React/Redux Techday @ atSistemas 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/codemotion2017.jpg" alt="Codemotion 2017"/>
+                <img src="../assets/images/about/pablomagaz@codemotion_2016.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2016"/>
               </li>
               <li>
-                <img src="../assets/images/about/pablomagaz@openexpo_2017.jpg" alt="Open Expo 2017"/>
+                <img src="../assets/images/about/pablomagaz@openexpo_2016.jpg" alt="Open Expo 2016"/>
               </li>
             </ul>
             <h2>Mis otras aficiones</h2>

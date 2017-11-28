@@ -82,9 +82,11 @@ class Main extends Component {
             </ul>
             <h2>Programación Reactiva con RxJs</h2>
             <div className={ styles.videoWrapper }>
-              <iframe id="ytplayer" type="text/html" width="560" height="349"
-                src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
-                frameBorder="0"/>
+              <div className={ styles.video }>
+                <iframe id="ytplayer" type="text/html" width="560" height="349"
+                  src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
+                  frameBorder="0"/>
+              </div>
             </div>
             <ul className={ styles.photos }>
               <li>

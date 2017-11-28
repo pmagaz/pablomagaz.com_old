@@ -80,9 +80,9 @@ class Main extends Component {
               </li>
               
             </ul>
-            <h2>Programación Reactiva con RxJs @ Codemotion 2017</h2>
+            <h2>Programación Reactiva con RxJs</h2>
             <div className={ styles.videoWrapper }>
-              <iframe id="ytplayer" type="text/html" width="70%" height="400"
+              <iframe id="ytplayer" type="text/html" width="560" height="349"
                 src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
                 frameBorder="0"/>
             </div>

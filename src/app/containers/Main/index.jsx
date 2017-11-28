@@ -80,14 +80,7 @@ class Main extends Component {
               </li>
               
             </ul>
-            <h2>Programación Reactiva con RxJs</h2>
-            <div className={ styles.videoWrapper }>
-              <div className={ styles.video }>
-                <iframe id="ytplayer" type="text/html" width="560" height="349"
-                  src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
-                  frameBorder="0"/>
-              </div>
-            </div>
+        
             <ul className={ styles.photos }>
               <li>
                 <img src="../assets/images/about/pablomagaz@codemotion_2017.jpg" alt="Programación Reactiva con RxJs @ Codemotion 2017"/>
@@ -102,6 +95,14 @@ class Main extends Component {
                 <img src="../assets/images/about/pablomagaz@openexpo_2016.jpg" alt="Open Expo 2016"/>
               </li>
             </ul>
+                <h2>Programación Reactiva con RxJs</h2>
+            <div className={ styles.videoWrapper }>
+              <div className={ styles.video }>
+                <iframe id="ytplayer" type="text/html" width="560" height="349"
+                  src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
+                  frameBorder="0"/>
+              </div>
+            </div>
             <h2>Mis otras aficiones</h2>
             <p>
               Aparte de la programación, me encanta la música electrónica: Techno, Bass, D&B... Dispongo de un pequeño estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la producción musical.

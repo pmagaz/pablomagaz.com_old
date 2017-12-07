@@ -95,7 +95,7 @@ class Main extends Component {
                 <img src="../assets/images/about/pablomagaz@openexpo_2016.jpg" alt="Open Expo 2016"/>
               </li>
             </ul>
-                <h2>Programación Reactiva con RxJs</h2>
+            <h2>Programación Reactiva con RxJs</h2>
             <div className={ styles.videoWrapper }>
               <div className={ styles.video }>
                 <iframe id="ytplayer" type="text/html" width="560" height="349"

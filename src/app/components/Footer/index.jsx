@@ -1,9 +1,9 @@
-import React  from 'react';
-import { pure } from 'recompose';
+import React  from 'react'
+import { pure } from 'recompose'
 
-import { SiteConf } from 'base';
-import Menu from 'components/Menu';
-import styles from './styles.css';
+import { SiteConf } from 'base'
+import Menu from 'components/Menu'
+import styles from './styles.css'
 
 const Footer = () => (
   <footer className={ styles.container }>
@@ -22,6 +22,6 @@ const Footer = () => (
       </div>
     </a>
   </footer>
-);
+)
 
-export default pure(Footer);
+export default pure(Footer)

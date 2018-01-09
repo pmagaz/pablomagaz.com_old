@@ -1,21 +1,21 @@
-import React  from 'react';
-import { pure } from 'recompose';
-import { PropTypes } from 'prop-types';
-import classNames from 'classnames/bind';
+import React  from 'react'
+import { pure } from 'recompose'
+import { PropTypes } from 'prop-types'
+import classNames from 'classnames/bind'
 
-import LinkButton from 'components/LinkButton';
-import styles from './styles.css';
+import LinkButton from 'components/LinkButton'
+import styles from './styles.css'
 
 const propTypes = {
   collapsed: PropTypes.bool
-};
+}
 
 const Menu = ({ collapsed }) => {
-  const cx = classNames.bind(styles);
+  const cx = classNames.bind(styles)
   const menuStyle = cx({
     'navMenu': collapsed? false : true,
     'navMenuCollapsed': collapsed ? true: false
-  });
+  })
 
   return (
     <nav className={ menuStyle }>
@@ -40,9 +40,9 @@ const Menu = ({ collapsed }) => {
         </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-Menu.propTypes = propTypes;
+Menu.propTypes = propTypes
 
-export default pure(Menu);
+export default pure(Menu)

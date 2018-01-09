@@ -1,4 +1,4 @@
-import { Record } from 'immutable';
+import { Record } from 'immutable'
 
 const PaginationModel = Record({
   page: -1,
@@ -6,6 +6,6 @@ const PaginationModel = Record({
   pages: -1,
   total: -1,
   hasMorePosts: true,
-});
+})
 
-export default PaginationModel;
+export default PaginationModel

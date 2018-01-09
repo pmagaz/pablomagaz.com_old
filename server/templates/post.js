@@ -1,15 +1,15 @@
-import { SiteConf } from 'base';
+import { SiteConf } from 'base'
 
 export default function post(params) {
   
-  const post = params.state.Post;
-  const state = JSON.stringify(params.state);
+  const post = params.state.Post
+  const state = JSON.stringify(params.state)
   //const imageUrl = `${ SiteConf.ImageUrl }${ post.feature_image }`; 
-  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
+  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`
   const tagList = post.tags.reduce((acc, tag) => (
     acc + `    <meta property="article:tag" content="${ tag.name }" />\n`)
-    , '\n');
-  const tag = post.tags[0] ? post.tags[0].name : '';
+    , '\n')
+  const tag = post.tags[0] ? post.tags[0].name : ''
 
   return `
   <!doctype html>
@@ -89,5 +89,5 @@ export default function post(params) {
       ${ params.appScript }
     </body>
   </html>
-  `;
+  `
 }

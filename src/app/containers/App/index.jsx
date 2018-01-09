@@ -1,9 +1,9 @@
-import { PropTypes } from 'prop-types';
-import React, { Component } from 'react';
+import { PropTypes } from 'prop-types'
+import React, { Component } from 'react'
 
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import styles from './styles.css';
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import styles from './styles.css'
 
 class App extends Component {
 
@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   render() {
-    const location = this.props.location;
+    const location = this.props.location
     return (
       <div className={ styles.app  }>
         <Header location={ location }/>
@@ -22,8 +22,8 @@ class App extends Component {
         </main>
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

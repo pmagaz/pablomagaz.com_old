@@ -1,14 +1,14 @@
-import { SiteConf } from 'base';
+import { SiteConf } from 'base'
 
 export default function tag(params) {
 
-  const state = JSON.stringify(params.state);
-  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png`; 
-  const tags = params.routeMatch.substring(1).split('/');
-  let tagUrl, tagName;
+  const state = JSON.stringify(params.state)
+  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png` 
+  const tags = params.routeMatch.substring(1).split('/')
+  let tagUrl, tagName
   if (tags.length > 0) {
-    tagName = tags[1];
-    tagUrl = `${ SiteConf.SiteUrl }/tag/${tagName}`;
+    tagName = tags[1]
+    tagUrl = `${ SiteConf.SiteUrl }/tag/${tagName}`
   }
   return `
   <!doctype html>
@@ -69,5 +69,5 @@ export default function tag(params) {
       ${ params.appScript }
     </body>
   </html>
-  `;
+  `
 }

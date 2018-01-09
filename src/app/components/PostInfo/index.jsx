@@ -1,17 +1,17 @@
-import React  from 'react';
-import { PropTypes } from 'prop-types';
+import React  from 'react'
+import { PropTypes } from 'prop-types'
 
-import { formatDate } from 'base';
+import { formatDate } from 'base'
 
-import PostDate from 'components/PostDate';
-import PostTag from 'components/PostTag';
-import styles from './styles.css';
+import PostDate from 'components/PostDate'
+import PostTag from 'components/PostTag'
+import styles from './styles.css'
 
 const propTypes= {
   author: PropTypes.string,
   tags: PropTypes.array.isRequired,
   date: PropTypes.string
-};
+}
 
 const PostInfo = ({ author, date, tags }) => (
   <div className={ styles.postInfo }>
@@ -21,8 +21,8 @@ const PostInfo = ({ author, date, tags }) => (
     <PostDate date={ formatDate(date) } />
     <PostTag tags={ tags } />
   </div>
-);
+)
 
-PostInfo.propTypes = propTypes;
+PostInfo.propTypes = propTypes
 
-export default PostInfo;
+export default PostInfo

@@ -1,8 +1,8 @@
-import { SiteConf } from 'base';
+import { SiteConf } from 'base'
 
 export default function blog(params) {
 
-  const state = JSON.stringify(params.state);
+  const state = JSON.stringify(params.state)
 
   return `
   <!doctype html>
@@ -65,5 +65,5 @@ export default function blog(params) {
       ${ params.appScript }
     </body>
   </html>
-  `;
+  `
 }

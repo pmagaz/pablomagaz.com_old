@@ -1,9 +1,9 @@
-import React  from 'react';
-import { pure } from 'recompose';
+import React  from 'react'
+import { pure } from 'recompose'
 
-import { SiteConf } from 'base';
-import SocialIcon from 'components/SocialIcon';
-import styles from './styles.css';
+import { SiteConf } from 'base'
+import SocialIcon from 'components/SocialIcon'
+import styles from './styles.css'
 
 const Social = () => (
   <ul className={ styles.socialBoxWrap }>
@@ -28,6 +28,6 @@ const Social = () => (
       </a>
     </li>
   </ul>
-);
+)
 
-export default pure(Social);
+export default pure(Social)

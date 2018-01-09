@@ -46,7 +46,7 @@
     "indent": [2, 2, {"SwitchCase": 1}],
     "no-console": 0,
     "no-alert": 0,
-    "semi": 2,
+    "semi": ["error", "never"],
     "no-var": 2,
     "space-before-blocks": 2,
     "keyword-spacing": 2,

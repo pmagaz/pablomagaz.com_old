@@ -1,11 +1,11 @@
-import React, { Component }  from 'react';
-import { PropTypes } from 'prop-types';
-import { onlyUpdateForKeys } from 'recompose';
-import classNames from 'classnames/bind';
+import React, { Component }  from 'react'
+import { PropTypes } from 'prop-types'
+import { onlyUpdateForKeys } from 'recompose'
+import classNames from 'classnames/bind'
 
-import Social from 'components/Social';
-import BlogTitle from 'components/BlogTitle';
-import styles from './styles.css';
+import Social from 'components/Social'
+import BlogTitle from 'components/BlogTitle'
+import styles from './styles.css'
 
 class BlogHeader extends Component {
 
@@ -15,13 +15,13 @@ class BlogHeader extends Component {
   };
 
   render () {
-    let style;
-    style = { backgroundImage: 'url(' + this.props.image + ')' };
+    let style
+    style = { backgroundImage: 'url(' + this.props.image + ')' }
 
-    const cx = classNames.bind(styles);
+    const cx = classNames.bind(styles)
     const postTitleStyle = cx({
       'postTitleAnim': false,//context.client ? true : false
-    });
+    })
 
     return (
       <header className={ styles.blogHeader }>
@@ -36,8 +36,8 @@ class BlogHeader extends Component {
           </div>
         </div>
       </header>
-    );
-  };
+    )
+  }
 }
 
-export default onlyUpdateForKeys(['image'])(BlogHeader);
+export default onlyUpdateForKeys(['image'])(BlogHeader)

@@ -1,26 +1,26 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import { Link, browserHistory } from 'react-router';
+import React from 'react'
+import { PropTypes } from 'prop-types'
+import { Link, browserHistory } from 'react-router'
 
-import { SiteConf, context } from 'base';
-import styles from './styles.css';
+import { SiteConf, context } from 'base'
+import styles from './styles.css'
 
 const propTypes = {
   value: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-};
+}
 
 const goTo = (location) => {
 
-  if (!!~location.indexOf('/')) {
-    browserHistory.push(location); 
+  if (~location.indexOf('/')) {
+    browserHistory.push(location) 
   }
   else {
-    const section = document.querySelector(`${location}`);
-    if (section) section.scrollIntoView({ behavior: 'smooth' });
-    else browserHistory.push(`/${location}`); 
+    const section = document.querySelector(`${location}`)
+    if (section) section.scrollIntoView({ behavior: 'smooth' })
+    else browserHistory.push(`/${location}`) 
   }
-};
+}
 
 const LinkButton = ({ location, value }) => {
   //let content;
@@ -45,10 +45,10 @@ const LinkButton = ({ location, value }) => {
     <Link to={ `${location}` }>
       { value }
     </Link>
-  );
+  )
 
-};
+}
 
-LinkButton.propTypes = propTypes;
+LinkButton.propTypes = propTypes
 
-export default LinkButton;
+export default LinkButton

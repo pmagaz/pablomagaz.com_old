@@ -1,15 +1,15 @@
-import Immutable from 'immutable';
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
+import Immutable from 'immutable'
+import { connect } from 'react-redux'
+import { PropTypes } from 'prop-types'
+import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
 
-import { fetchRequiredActions, SiteConf } from 'base';
-import BlogHeader from 'components/BlogHeader';
-import PostList from './components/PostList';
-import TagTitle from './components/TagTitle';
-import * as Actions from './actions';
-import styles from './styles.css';
+import { fetchRequiredActions, SiteConf } from 'base'
+import BlogHeader from 'components/BlogHeader'
+import PostList from './components/PostList'
+import TagTitle from './components/TagTitle'
+import * as Actions from './actions'
+import styles from './styles.css'
 
 class Blog extends Component {
 
@@ -26,34 +26,34 @@ class Blog extends Component {
   static requiredActions = [Actions.getPosts];
 
   constructor(props) {
-    super(props);
-    this.actions = bindActionCreators(Actions, props.dispatch);
+    super(props)
+    this.actions = bindActionCreators(Actions, props.dispatch)
   }
 
   componentDidMount() {
-    const postsLoaded = (this.props.Blog.posts.size) ? false : true;
-    fetchRequiredActions(Blog.requiredActions, this.props, postsLoaded);
+    const postsLoaded = (this.props.Blog.posts.size) ? false : true
+    fetchRequiredActions(Blog.requiredActions, this.props, postsLoaded)
   }
 
   componentWillReceiveProps(nextProps) {
-    const prevParams = this.props.params;
-    const nextParams = nextProps.params;
-    if (prevParams && prevParams.tag !== nextParams.tag) this.actions.getPosts(nextParams);
+    const prevParams = this.props.params
+    const nextParams = nextProps.params
+    if (prevParams && prevParams.tag !== nextParams.tag) this.actions.getPosts(nextParams)
   }
 
   componentWillUnmount() {
-    if (this.isTagFilter()) this.actions.cleanTagFilter();
+    if (this.isTagFilter()) this.actions.cleanTagFilter()
   }
 
   isTagFilter() {
-    return ~this.props.location.pathname.indexOf('tag');
+    return ~this.props.location.pathname.indexOf('tag')
   }
 
   render () {
-    let tagTitle;
-    const posts = this.props.Blog.posts;
+    let tagTitle
+    const posts = this.props.Blog.posts
     if (this.isTagFilter()) {
-      tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />;
+      tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />
     }
 
     return (
@@ -68,10 +68,10 @@ class Blog extends Component {
           <PostList posts={ posts } />
         </div>
       </div>
-    );
+    )
   }
 }
 
 export default connect(state => ({
   Blog: state.Blog,
-}))(Blog);
+}))(Blog)

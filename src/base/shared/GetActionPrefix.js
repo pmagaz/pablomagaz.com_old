@@ -1,3 +1,3 @@
 export default function getActionPrefix(action) {
-  return action.substr(0, action.lastIndexOf('_'));
+  return action.substr(0, action.lastIndexOf('_'))
 }

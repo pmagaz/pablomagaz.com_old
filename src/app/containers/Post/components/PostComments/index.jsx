@@ -1,22 +1,22 @@
-import React  from 'react';
-import { PropTypes } from 'prop-types';
-import ReactDisqusComments from 'react-disqus-comments';
+import React  from 'react'
+import { PropTypes } from 'prop-types'
+import ReactDisqusComments from 'react-disqus-comments'
 
-import { SiteConf } from 'base';
+import { SiteConf } from 'base'
 
 const propTypes= {
   post: PropTypes.object.isRequired
-};
+}
 
 const newCommentHandler = () => {
-  console.log('new comment');
-};
+  console.log('new comment')
+}
 
 const PostComments = ({ post }) => {
 
-  const postUrl = `${ SiteConf.BlogUrl}/${post.slug }`;
-  const shortName = SiteConf.DisqusSettings.shortName;
-  const identifier = `${ SiteConf.DisqusSettings.identifier }@${ post.slug }`;
+  const postUrl = `${ SiteConf.BlogUrl}/${post.slug }`
+  const shortName = SiteConf.DisqusSettings.shortName
+  const identifier = `${ SiteConf.DisqusSettings.identifier }@${ post.slug }`
 
   return (
     <ReactDisqusComments
@@ -26,9 +26,9 @@ const PostComments = ({ post }) => {
       identifier={ identifier }
       onNewComment={ newCommentHandler }
     />
-  );
-};
+  )
+}
 
-PostComments.propTypes = propTypes;
+PostComments.propTypes = propTypes
 
-export default PostComments;
+export default PostComments

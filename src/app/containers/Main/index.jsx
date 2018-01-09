@@ -1,13 +1,13 @@
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
-import React, { Component } from 'react';
-import classNames from 'classnames/bind';
-import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux'
+import { PropTypes } from 'prop-types'
+import React, { Component } from 'react'
+import classNames from 'classnames/bind'
+import { bindActionCreators } from 'redux'
 
-import { SiteConf } from 'base';
-import Social from 'components/Social';
-import * as Actions from '../Blog/actions';
-import styles from './styles.css';
+import { SiteConf } from 'base'
+import Social from 'components/Social'
+import * as Actions from '../Blog/actions'
+import styles from './styles.css'
 
 class Main extends Component {
 
@@ -17,26 +17,26 @@ class Main extends Component {
   };
 
   constructor (props) {
-    super(props);
-    this.actions = bindActionCreators(Actions, props.dispatch);
+    super(props)
+    this.actions = bindActionCreators(Actions, props.dispatch)
   }
 
   componentDidMount() {
-    const hash = this.props.location.hash; 
-    if (hash) this.scrollToHash(hash);
-    this.actions.getPosts();
+    const hash = this.props.location.hash 
+    if (hash) this.scrollToHash(hash)
+    this.actions.getPosts()
   }
 
   scrollToHash(hash) {
-    const section = document.querySelector(`${hash}`);
-    if (section) section.scrollIntoView({ behavior: 'smooth' }); 
+    const section = document.querySelector(`${hash}`)
+    if (section) section.scrollIntoView({ behavior: 'smooth' }) 
   }
 
   render() {
-    const cx = classNames.bind(styles);
+    const cx = classNames.bind(styles)
     const brandStyle = cx({
       'brand': true,
-    });
+    })
 
     return (
       <div className={ styles.mainWrapper }>
@@ -75,10 +75,6 @@ class Main extends Component {
               <li>
                 Codemotion 2017: Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Programacio%CC%81nReactivaConRxJs.pdf ">Slides</a>]
               </li>
-              <li>
-               KeepCoding 2018: Próximamente 
-              </li>
-              
             </ul>
         
             <ul className={ styles.photos }>
@@ -118,8 +114,8 @@ class Main extends Component {
           </article>
         </section>
       </div>
-    );
+    )
   }
 }
 
-export default connect(null)(Main);
+export default connect(null)(Main)

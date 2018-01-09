@@ -11,7 +11,7 @@ class Logo extends Component {
   
   static propTypes= {
     location: PropTypes.object,
-  };
+  }
 
   constructor(props) {
     super(props)
@@ -31,7 +31,7 @@ class Logo extends Component {
     return (this.props.location.pathname === '/') ? true : false 
   }
 
-  handleScroll(event) {
+  handleScroll() {
     const maxScroll = 112
     // FIX
     const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop

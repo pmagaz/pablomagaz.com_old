@@ -4,7 +4,6 @@ export default function post(params) {
   
   const post = params.state.Post
   const state = JSON.stringify(params.state)
-  //const imageUrl = `${ SiteConf.ImageUrl }${ post.feature_image }`; 
   const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`
   const tagList = post.tags.reduce((acc, tag) => (
     acc + `    <meta property="article:tag" content="${ tag.name }" />\n`)

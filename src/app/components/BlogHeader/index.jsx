@@ -1,7 +1,6 @@
 import React, { Component }  from 'react'
 import { PropTypes } from 'prop-types'
 import { onlyUpdateForKeys } from 'recompose'
-import classNames from 'classnames/bind'
 
 import Social from 'components/Social'
 import BlogTitle from 'components/BlogTitle'
@@ -17,11 +16,6 @@ class BlogHeader extends Component {
   render () {
     let style
     style = { backgroundImage: 'url(' + this.props.image + ')' }
-
-    const cx = classNames.bind(styles)
-    const postTitleStyle = cx({
-      'postTitleAnim': false,//context.client ? true : false
-    })
 
     return (
       <header className={ styles.blogHeader }>

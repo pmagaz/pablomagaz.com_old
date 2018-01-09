@@ -40,6 +40,6 @@ const applyDevMiddleware = function() {
     webpackHotMiddleware(compiler, { log:false, noInfo: true, quiet: true}),
     webpackDevMiddleware(compiler, serverOptions),
   ]
-};
+}
 
 module.exports = applyDevMiddleware

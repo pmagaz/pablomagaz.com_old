@@ -6,6 +6,6 @@ const httpServer = app => {
     if (err) return base.console.error(`${err}`)
     base.console.success(`HTTP Server up on http://localhost:${envConf.port}`)
   })
-};
+}
 
 export default httpServer 

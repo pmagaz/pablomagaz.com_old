@@ -10,7 +10,7 @@ class Header extends Component {
   
   static propTypes = {
     location: PropTypes.object,
-  };
+  }
 
   constructor(props) {
     super(props)

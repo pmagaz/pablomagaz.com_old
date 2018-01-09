@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import  configureStore  from '../ConfigureStore';
+import { expect } from 'chai'
+import  configureStore  from '../ConfigureStore'
 
 describe('store / configureStore', () => {
 
@@ -7,14 +7,14 @@ describe('store / configureStore', () => {
 
     it('should return configureStore', () => {
 
-      let output = configureStore(null,{});
+      let output = configureStore(null,{})
 
-      let type = typeof(output.dispatch);
+      let type = typeof(output.dispatch)
 
-      expect(type).to.equal('function');
+      expect(type).to.equal('function')
 
-    });
-  });
+    })
+  })
 
 
-});
+})

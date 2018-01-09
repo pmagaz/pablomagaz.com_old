@@ -110,7 +110,7 @@
     "supports-color": "4.2.1",
     "url-loader": "^0.5.9",
     "webpack": "3.10.0",
-    "webpack-dev-middleware": "2.0.4",
+    "webpack-dev-middleware": "1.12.1",
     "webpack-dev-server": "2.10.0",
     "webpack-hot-middleware": "2.21.0"
   },

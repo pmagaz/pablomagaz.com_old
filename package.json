@@ -1,6 +1,6 @@
 {
   "name": "pablomagaz.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Made with React Base Isomorphic Redux",
   "author": "Pablo Magaz",
   "main": "client/client.js",

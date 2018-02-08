@@ -70,19 +70,29 @@ class Main extends Component {
                 Open Expo 2016: Presentación base.
               </li>
               <li>
-                Codemotion 2016: Aplicaciones Isormoficas con React.
+                Codemotion 2016: Aplicaciones Isormoficas con React & Redux.
               </li>
               <li>
                 Codemotion 2017: Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Programacio%CC%81nReactivaConRxJs.pdf ">Slides</a>]
+              </li>
+              <li>
+                Meetup En mi local funciona 2018: Introducción a la Programación Reactiva con RxJs.
               </li>
             </ul>
         
             <ul className={ styles.photos }>
               <li>
+                <img src="../assets/images/about/pablomagaz@meetupRxJs2018.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+              </li>
+              <li>
                 <img src="../assets/images/about/pablomagaz@codemotion_2017.jpg" alt="Programación Reactiva con RxJs @ Codemotion 2017"/>
               </li>
               <li>
                 <img src="../assets/images/about/pablomagaz@react-redux-techday.jpg" alt="React/Redux Techday @ atSistemas 2017"/>
+
+              </li>
+              <li>
+                <img src="../assets/images/about/pablomagaz@meetupRxJs22018.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
               </li>
               <li>
                 <img src="../assets/images/about/pablomagaz@codemotion_2016.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2016"/>

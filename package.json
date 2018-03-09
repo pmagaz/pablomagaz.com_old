@@ -43,7 +43,7 @@
     "helmet": "3.12.0",
     "html-react-parser": "0.4.1",
     "isomorphic-fetch": "2.2.1",
-    "needle": "2.2.1",
+    "needle": "2.2.0",
     "postcss-clean": "^1.0.3",
     "prop-types": "15.6.0",
     "react": "16.2.0",

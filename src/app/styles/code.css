@@ -65,7 +65,7 @@
  
  :global(.token.boolean),
  :global(.token.number) {
-   color: #AE81FF;
+   color: #FD971F;
  }
  
  :global(.token.selector),

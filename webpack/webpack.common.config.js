@@ -1,23 +1,24 @@
-import path from 'path';
-import chalk from 'chalk';
-import webpack from 'webpack';
-import AssetsPlugin from 'assets-webpack-plugin';
-import ProgressBarPlugin from 'progress-bar-webpack-plugin';
-import baseWpPlugins from '../src/base/wp-plugins';
+import path from 'path'
+import chalk from 'chalk'
+import webpack from 'webpack'
+import AssetsPlugin from 'assets-webpack-plugin'
+import ProgressBarPlugin from 'progress-bar-webpack-plugin'
+import baseWpPlugins from '../src/base/wp-plugins'
 
-export const mainPath = path.resolve(__dirname, '..');
-export const context = path.resolve(__dirname, '../');
-export const buildPath = path.resolve(__dirname, '../dist');
-export const basePath = path.resolve(__dirname, '../src/base');
-export const dllPath = path.resolve(__dirname, '../dist/dlls');
-export const assetsPath = path.resolve(__dirname, '../dist/assets');
-export const clientPath = path.resolve(__dirname, '../src/base/client/');
-export const manifestPath = buildPath;
+export const mainPath = path.resolve(__dirname, '..')
+export const context = path.resolve(__dirname, '../')
+export const buildPath = path.resolve(__dirname, '../dist')
+export const basePath = path.resolve(__dirname, '../src/base')
+export const dllPath = path.resolve(__dirname, '../dist/dlls')
+export const assetsPath = path.resolve(__dirname, '../dist/assets')
+export const clientPath = path.resolve(__dirname, '../src/base/client/')
+export const manifestPath = buildPath
 
 export const entry = {
   vendor: [
     'react',
     'redux',
+    'prismjs',
     'react-ga',
     'react-dom',
     'recompose',
@@ -31,11 +32,9 @@ export const entry = {
     'isomorphic-fetch',
     'html-react-parser',
     'react-disqus-comments',
-    'highlight.js/lib/highlight',
     'react-router-scroll/lib/useScroll',
-    'highlight.js/lib/languages/javascript',
   ]
-};
+}
 
 export const module = {
   rules: [
@@ -44,7 +43,7 @@ export const module = {
     { test: /\.(png|jpg|jpeg|gif|svg)$/, loader: 'url-loader?limit=100000&name=assets/images/[name].[ext]' },
     
   ]
-};
+}
 
 export const plugins = [
   new ProgressBarPlugin({
@@ -62,7 +61,7 @@ export const plugins = [
     /highlight\.js\/lib\/languages$/,
     new RegExp(`^./(${['javascript'].join('|')})$`),
   )
-];
+]
 
 export const postcss = [
   require('postcss-import')(),
@@ -72,7 +71,7 @@ export const postcss = [
   require('postcss-reporter')(),
   require('precss')(),
   require('postcss-mixins')(),
-];
+]
 
 export const resolve = {
   extensions: ['.js', '.jsx', '.css'],
@@ -86,4 +85,4 @@ export const resolve = {
     'containers': path.resolve(__dirname, '../src/app/containers'),
     'components': path.resolve(__dirname, '../src/app/components')
   }
-};
+}

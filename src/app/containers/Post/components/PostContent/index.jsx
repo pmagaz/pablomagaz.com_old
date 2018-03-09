@@ -1,14 +1,14 @@
+import prism from 'prismjs'
 import { PropTypes } from 'prop-types'
 import React, { Component } from 'react'
 import classNames from 'classnames/bind'
-import hljs from 'highlight.js/lib/highlight'
+import 'prismjs/components/prism-jsx.min'
 import ReactHtmlParser from 'html-react-parser'
-import javascript from 'highlight.js/lib/languages/javascript'
 
 import { SiteConf } from 'base'
+import SharePost from '../SharePost'
 import Loading from 'components/Loading'
 import PostInfo from 'components/PostInfo'
-import SharePost from '../SharePost'
 import PostComments from '../PostComments'
 
 import styles from './styles.css'
@@ -28,11 +28,7 @@ class PostContent extends Component {
   }
 
   highlightCode() {
-    setTimeout(() => {
-      hljs.initHighlighting.called = false
-      hljs.registerLanguage('javascript', javascript)
-      hljs.initHighlighting()
-    }, SiteConf.codeHighlightDelay)
+    setTimeout(() => (prism.highlightAll()), SiteConf.codeHighlightDelay)
   }
 
   isLoaded() {

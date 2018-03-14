@@ -1,3 +1,14 @@
+ :global(pre) {
+   background: #2d2e35;
+   padding: 1em;
+   margin: .5em 0;
+   overflow: auto;
+   border-radius: 0.3em;
+   color: #e0e0e0;
+   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+}
  code[class*="language-"],
  pre[class*="language-"] {
    color: #e0e0e0;

@@ -1,4 +1,5 @@
 import { SiteConf } from 'base'
+import serviceWorkerTemplate from './sw'
 
 export default function post(params) {
   
@@ -23,9 +24,20 @@ export default function post(params) {
     <meta name="description" content="${ post.meta_description }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="${ SiteConf.KeyWords }"> 
-    ${ params.style }
-    <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
     <link rel="canonical" href="${ postUrl }" />
+
+    ${ params.style }
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#f72354">
+    <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="${ SiteConf.SiteUrl }/assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="${ SiteConf.SiteUrl }/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="${ SiteConf.SiteUrl }/assets/images/icons/favicon-32x32.png">
+    <link rel="mask-icon" href="${ SiteConf.SiteUrl }/assets/images/icons/safari-pinned-tab.svg" color="#f72354">
+    <meta name="msapplication-TileColor" content="#f72354">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f72354">
+    <meta name="apple-mobile-web-app-title" content="${ SiteConf.BlogTitle }">
     
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="article" />
@@ -86,6 +98,7 @@ export default function post(params) {
       <div id="root">${ params.container }</div>
       <script>window.$REACTBASE_STATE = ${ state }</script>
       ${ params.appScript }
+      ${ serviceWorkerTemplate }
     </body>
   </html>
   `

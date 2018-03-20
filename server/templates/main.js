@@ -1,4 +1,5 @@
 import { SiteConf } from 'base'
+import serviceWorkerTemplate from './sw'
 
 export default function main(params) {
   
@@ -11,16 +12,25 @@ export default function main(params) {
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>${ SiteConf.SiteTitle }</title>
-    <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="description" content="${ SiteConf.SiteDescription }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="${ SiteConf.KeyWords }"> 
+    <link rel="canonical" href="${ SiteConf.SiteUrl }" />
     
     ${ params.style }
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#f72354">
     <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
-    <link rel="canonical" href="${ SiteConf.SiteUrl }" />
+    <link rel="apple-touch-icon" sizes="180x180" href="${ SiteConf.SiteUrl }/assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="${ SiteConf.SiteUrl }/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="${ SiteConf.SiteUrl }/assets/images/icons/favicon-32x32.png">
+    <link rel="mask-icon" href="${ SiteConf.SiteUrl }/assets/images/icons/safari-pinned-tab.svg" color="#f72354">
+    <meta name="msapplication-TileColor" content="#f72354">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f72354">
+    <meta name="apple-mobile-web-app-title" content="${ SiteConf.BlogTitle }">
     
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
@@ -61,6 +71,7 @@ export default function main(params) {
       <div id="root">${ params.container }</div>
       <script>window.$REACTBASE_STATE = ${ state }</script>
       ${ params.appScript }
+      ${ serviceWorkerTemplate }
     </body>
   </html>
   `

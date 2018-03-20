@@ -1,0 +1,33 @@
+{
+  "short_name": "El Blog Isomorfico",
+  "name": "El Blog Isomorfico",
+  "Description": "JavaScript y más, mucho más",
+  "scope": ".",
+  "start_url": "/blog",
+  "background_color": "#222",
+  "theme_color": "#f72354",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src":"/assets/images/icons/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src":"/assets/images/icons/logo256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src":"/assets/images/icons/logo384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src":"/assets/images/icons/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-let staticCache = 'react-base'
-let dynamicCache = 'react-base'
-let webpackAssets = '/dist/webpack-assets.json'
+const staticCache = 'react-base'
+const dynamicCache = 'react-base'
+const webpackAssets = '/dist/webpack-assets.json'
 
 self.addEventListener('install', function(event) {
   event.waitUntil(

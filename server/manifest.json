@@ -1,8 +1,7 @@
 {
-  "short_name": "El Blog Isomorfico",
-  "name": "El Blog Isomorfico",
+  "short_name": "El Blog Isomórfico",
+  "name": "El Blog Isomórfico",
   "Description": "JavaScript y más, mucho más",
-  "scope": ".",
   "start_url": "/blog",
   "background_color": "#222",
   "theme_color": "#f72354",
@@ -12,6 +11,11 @@
     {
       "src":"/assets/images/icons/logo192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src":"/assets/images/icons/logo192.png",
+      "sizes": "144x144",
       "type": "image/png"
     },
     {

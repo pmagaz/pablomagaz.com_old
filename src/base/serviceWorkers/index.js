@@ -15,7 +15,13 @@ workbox.core.setCacheNameDetails({
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
   workbox.strategies.cacheFirst({
-    cacheName: staticCache 
+    cacheName: staticCache,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 20,
+        maxAgeSeconds: timeCache 
+      }),
+    ],
   }),
 )
 

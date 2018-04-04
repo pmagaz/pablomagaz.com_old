@@ -1,8 +1,10 @@
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js')
+
 const staticCache = 'react-base-static-v1'
 const dynamicCache = 'react-base-dynamic-v1'
 const timeCache = 30 * 24 * 60 * 60
+/*
 const webpackAssets = '/dist/webpack-assets.json'
-
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(staticCache).then(function(cache) {
@@ -11,7 +13,7 @@ self.addEventListener('install', function(event) {
       }).then(assets => {
         return cache.addAll([
           "/offline.html",
-          '/manifest.json',
+          '/manifest.json'
           'assets' + assets.app.js,
           'assets' + assets.app.css,
           'assets' + assets.vendor.js,
@@ -24,7 +26,6 @@ self.addEventListener('install', function(event) {
     })
   )
 })
-
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
@@ -43,7 +44,6 @@ self.addEventListener('fetch', function(event) {
     })
   )
 })
-
 self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
@@ -57,3 +57,59 @@ self.addEventListener('activate', function(event) {
     })
   )
 })
+*/
+//self.workbox.skipWaiting()
+//self.workbox.clientsClaim()
+
+workbox.core.setCacheNameDetails({
+  precache: staticCache,
+  runtime:  dynamicCache
+})
+
+workbox.precaching.precacheAndRoute([
+  "/offline.html",
+  '/manifest.json',
+])
+
+workbox.routing.registerRoute(
+  ({ event }) => event.request.mode === 'navigate',
+  ({ url }) => fetch(url.href).catch(() => caches.match('/offline.html'))
+)
+
+workbox.routing.registerRoute(
+  /\.(?:js|css)$/,
+  workbox.strategies.cacheFirst({
+    cacheName: staticCache,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 20,
+        maxAgeSeconds: timeCache 
+      }),
+    ],
+  }),
+)
+
+workbox.routing.registerRoute(
+  new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
+  workbox.strategies.cacheFirst({
+    cacheName: staticCache,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 10,
+      }),
+    ],
+  }),
+)
+
+workbox.routing.registerRoute(
+  new RegExp('/content/(.*)'),
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: dynamicCache,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: timeCache 
+      }),
+    ],
+  }),
+)

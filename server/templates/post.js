@@ -49,8 +49,9 @@ export default function post(params) {
     <meta property="article:modified_time" content="${ post.updated_at }" /> 
     <meta property="article:published_time" content="${ post.published_at }" />
     ${ tagList }
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="${ post.title }" />
+    <meta name="twitter:site" content="${ SiteConf.BlogTitle }">
     <meta name="twitter:url" content="${ postUrl }" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="${ SiteConf.Author }" />

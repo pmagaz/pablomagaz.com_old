@@ -12,6 +12,11 @@ workbox.core.setCacheNameDetails({
   runtime:  dynamicCache
 })
 
+workbox.precaching.precacheAndRoute([
+  "/offline.html",
+  '/manifest.json',
+])
+
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
   workbox.strategies.cacheFirst({

@@ -53,8 +53,8 @@ export default function post(params) {
     <meta name="twitter:title" content="${ post.title }" />
     <meta name="twitter:site" content="${ SiteConf.BlogTitle }">
     <meta name="twitter:url" content="${ postUrl }" />
-    <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="${ SiteConf.Author }" />
+    <meta name="twitter:description" content="${ post.meta_description }" />
+    <meta name="twitter:image" content="${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }" />
     <meta name="twitter:creator" content="${ SiteConf.Author }" />
     <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
 

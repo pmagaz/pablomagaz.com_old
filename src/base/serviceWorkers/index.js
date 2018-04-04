@@ -3,7 +3,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox
 const staticCache = 'react-base-static-v1'
 const dynamicCache = 'react-base-dynamic-v1'
 const timeCache = 30 * 24 * 60 * 60
-
+/*
 const webpackAssets = '/dist/webpack-assets.json'
 
 self.addEventListener('install', function(event) {
@@ -14,7 +14,7 @@ self.addEventListener('install', function(event) {
       }).then(assets => {
         return cache.addAll([
           "/offline.html",
-          '/manifest.json',
+          '/manifest.json'
           'assets' + assets.app.js,
           'assets' + assets.app.css,
           'assets' + assets.vendor.js,
@@ -61,9 +61,9 @@ self.addEventListener('activate', function(event) {
   )
 })
 
-/*
-self.workbox.skipWaiting()
-self.workbox.clientsClaim()
+*/
+//self.workbox.skipWaiting()
+//self.workbox.clientsClaim()
 
 workbox.core.setCacheNameDetails({
   precache: staticCache,
@@ -74,6 +74,11 @@ workbox.precaching.precacheAndRoute([
   "/offline.html",
   '/manifest.json',
 ])
+
+workbox.router.registerRoute(
+  ({ event }) => event.request.mode === 'navigate',
+  ({ url }) => fetch(url.href).catch(() => caches.match('/offline.html'))
+)
 
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
@@ -111,4 +116,4 @@ workbox.routing.registerRoute(
       }),
     ],
   }),
-)*/
+)

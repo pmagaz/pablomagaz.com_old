@@ -27,7 +27,7 @@ export default function post(params) {
     <link rel="canonical" href="${ postUrl }" />
 
     ${ params.style }
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="${ SiteConf.SiteUrl }/manifest.json" />
     <meta name="theme-color" content="#f72354">
     <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="${ SiteConf.SiteUrl }/assets/images/icons/apple-touch-icon.png">

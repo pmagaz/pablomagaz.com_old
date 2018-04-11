@@ -2,8 +2,7 @@
 
 .postInfo {
   display: flex;
-  align-items: center;
-  margin: 15px 0 14px;
+  margin: 10px 0 14px;
   span,
   time {
     font-size: .8em;
@@ -11,6 +10,9 @@
     line-height: 1;
     padding: 0 0.8em;
     color: $cl-infoWrited;
+    height: 21px;
+    align-items: center;
+    display: flex;
 
     &:first-child{
       padding-left: 19px;
@@ -34,9 +36,12 @@
     &:nth-child(3) {
       border-left: 2px solid $cl-post-info-pipe;
     }
-    + div {
-      flex: 3;
-      text-align: right;
-    }
+  }
+  time + div {
+    flex: 3;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
   }
 }

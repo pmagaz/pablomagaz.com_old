@@ -3,7 +3,7 @@
 
 mark{
     font-size: 1em;
-    padding: .4em .6em .4em 23px;
+    padding: 0 .6em 0 20px;
     position: relative;
     background-color: $bg-postTag;
     color: $cl-postTag;
@@ -14,11 +14,11 @@ mark{
         position: absolute;
         background-image: url(../../assets/images/icons/tag.svg);
         background-repeat: no-repeat;
-        background-size: 17px;
+        background-size: 15px;
         left: 0px;
-        top: 11px;
-        width: 17px;
-        height: 17px;
+        top: 4px;
+        width: 15px;
+        height: 15px;
 
     }
     

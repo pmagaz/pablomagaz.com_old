@@ -68,7 +68,6 @@ workbox.core.setCacheNameDetails({
 
 workbox.precaching.precacheAndRoute([
   "/offline.html",
-  '/manifest.json',
 ])
 
 workbox.routing.registerRoute(

@@ -13,6 +13,8 @@ export default function blog(params) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>${ SiteConf.BlogTitle }</title>
     <meta name="HandheldFriendly" content="True" />
+    <link rel="alternate" hreflang="es" href="https://pablomagaz.com" />
+
     <meta name="description" content="${ SiteConf.BlogDescription }" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,7 +49,6 @@ export default function blog(params) {
     <meta name="twitter:description" content="${ SiteConf.BlogDescription }" />
     <meta name="twitter:image" content="${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }" />
     <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

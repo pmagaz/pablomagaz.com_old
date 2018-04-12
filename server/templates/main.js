@@ -12,6 +12,7 @@ export default function main(params) {
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>${ SiteConf.SiteTitle }</title>
+    <link rel="alternate" hreflang="es" href="https://pablomagaz.com" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="description" content="${ SiteConf.SiteDescription }" />
@@ -45,7 +46,6 @@ export default function main(params) {
     <meta name="twitter:url" content="${ SiteConf.SiteUrl }" />
     <meta name="twitter:description" content="${ SiteConf.SiteDescription }" />
     <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

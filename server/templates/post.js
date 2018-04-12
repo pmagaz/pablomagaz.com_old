@@ -20,6 +20,8 @@ export default function post(params) {
     <title>${ post.title } | ${ SiteConf.BlogTitle }</title>
     <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
+    <link rel="alternate" hreflang="es" href="https://pablomagaz.com" />
+
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="description" content="${ post.meta_description }" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +59,6 @@ export default function post(params) {
     <meta name="twitter:image" content="${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }" />
     <meta name="twitter:creator" content="${ SiteConf.Author }" />
     <meta name="google-site-verification" content="WPquQ1N8IxHd4sXYLzqumAtex4IlcULtupjrsaCZT7s" />
-
     <script type="application/ld+json">
       {
           "@context": "https://schema.org",

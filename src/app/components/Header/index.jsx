@@ -21,11 +21,15 @@ class Header extends Component {
     window.addEventListener('scroll', this.handleScroll.bind(this))
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll.bind(this))
+  }
+
   handleScroll() {
     const maxScroll = 112
     // FIX
     const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop
-    if (scrollTop >= maxScroll && !this.state.collapsed) {
+    if (!this.state.collapsed && scrollTop >= maxScroll) {
       this.setState({ collapsed: true, scrollTop })
     } 
     else if (scrollTop <= maxScroll && this.state.collapsed) {

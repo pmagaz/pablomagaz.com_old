@@ -1,9 +1,18 @@
-import { SiteConf } from 'base'
+import { env } from 'base'
 
-export default `<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/serviceWorker.js');
-  });
+let template
+
+if (env === 'production') {
+  template = `<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/serviceWorker.js');
+    });
+  }
+  </script>`
+} else {
+  template = ''
 }
-</script>`
+
+
+export default template

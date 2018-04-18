@@ -47,13 +47,16 @@
       flex: 2;
       background-repeat: no-repeat;
       background-size: 156px;
-      // animation: blogLogo-mobile 220ms both;
-      // animation-delay: 30ms;
+      animation: blogLogo-mobile 220ms both;
+      animation-delay: 30ms;
       -webkit-backface-visibility: hidden;
       background-position-y: 50%;
       @media (min-width: $sm){ 
         background-size: 221px;
-      }
+        animation: blogLogo-tablet 220ms ease-in both;    
+        animation-delay: 100ms;   
+      } 
+
       @media (min-width: $lg){
         animation: blogLogo-desktop 220ms ease-in both;    
         animation-delay: 100ms;
@@ -66,9 +69,6 @@
         width: 236px;
         margin-top: 10px;
         transform: skewY(-2deg);
-        // animation: titleBlog 100ms both;
-        // animation-delay: 100ms;
-        // -webkit-backface-visibility: hidden;
 
         @media (min-width: $sm){
           width: 400px;

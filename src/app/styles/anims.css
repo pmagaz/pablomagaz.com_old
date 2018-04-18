@@ -1,12 +1,12 @@
 @keyframes titleBlog {
   0% {
       opacity: 0.8;
-      transform: translate(0px, -35px) skewY(-2);
+      margin-top: -35px;
 
   }
   100% {
       opacity: 1;
-      transform: translate(0, 0px) skewY(-2);
+      margin-top: 10px;
   }
 }
 
@@ -21,6 +21,16 @@
     }
 }
 
+@keyframes blogLogo-tablet {
+	from {
+        opacity: 0.8;
+        background-position-y: -60px;
+    }
+    to {
+        opacity: 1;
+        background-position-y: -13px;
+    }
+}
 @keyframes blogLogo-desktop {
 	from {
         opacity: 0.8;

@@ -1,12 +1,12 @@
 @keyframes titleBlog {
   0% {
       opacity: 0.8;
-      transform: translate(0px, -35px);
+      transform: translate(0px, -35px) skewY(-2);
 
   }
   100% {
       opacity: 1;
-      transform: translate(0, 0px);
+      transform: translate(0, 0px) skewY(-2);
   }
 }
 

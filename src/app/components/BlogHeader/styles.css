@@ -55,6 +55,10 @@
         animation-delay: 100ms;    
         background-size: 221px;
       }
+      @media (min-width: $sm){
+        animation: blogLogo-desktop 220ms ease-in both;    
+        animation-delay: 100ms;    
+      }
       h1{
         font-family: $fontFamilyMedium;
         margin-bottom: 0;
@@ -70,8 +74,10 @@
         @media (min-width: $sm){
           width: 400px;
           font-size: 2.8rem;
-          // animation: titleBlog 100ms ease-in both;
-          // animation-delay: 120ms;
+        }
+        @media (min-width: $lg){
+          animation: titleBlog 100ms ease-in both;
+          animation-delay: 120ms;
         }
         + div{
           display: flex;

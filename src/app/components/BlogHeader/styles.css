@@ -62,7 +62,7 @@
         font-size: 1.6em;
         width: 236px;
         margin-top: 10px;
-        transform: skewY(-2deg)
+        transform: skewY(-2deg);
         // animation: titleBlog 100ms both;
         // animation-delay: 100ms;
         // -webkit-backface-visibility: hidden;

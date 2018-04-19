@@ -1,13 +1,12 @@
 import { PropTypes } from 'prop-types'
-import React, { Component } from 'react'
-import { pure } from 'recompose'
+import React, { PureComponent } from 'react'
 import classNames from 'classnames/bind'
 
 import { SiteConf } from 'base'
 import LinkButton from 'components/LinkButton'
 import styles from './styles.css'
 
-class Logo extends Component {
+class Logo extends PureComponent {
   
   static propTypes= {
     location: PropTypes.object,
@@ -66,4 +65,4 @@ class Logo extends Component {
   }
 }
 
-export default pure(Logo)
+export default Logo

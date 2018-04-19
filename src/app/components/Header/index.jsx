@@ -1,12 +1,11 @@
 import { PropTypes } from 'prop-types'
-import React, { Component } from 'react'
-import { pure } from 'recompose'
+import React, { PureComponent } from 'react'
 import classNames from 'classnames/bind'
 import Menu from 'components/Menu'
 import Logo from 'components/Logo'
 import styles from './styles.css'
 
-class Header extends Component {
+class Header extends PureComponent {
   
   static propTypes = {
     location: PropTypes.object,
@@ -38,7 +37,6 @@ class Header extends Component {
   }
 
   render() {
-
     const cx = classNames.bind(styles)
     const headerStyle = cx({
       mainHeader: true,
@@ -56,4 +54,4 @@ class Header extends Component {
   }
 }
 
-export default pure(Header)
+export default Header

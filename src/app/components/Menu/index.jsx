@@ -16,7 +16,6 @@ const Menu = ({ collapsed }) => {
     'navMenu': collapsed? false : true,
     'navMenuCollapsed': collapsed ? true: false
   })
-
   return (
     <nav className={ menuStyle }>
       <ul>

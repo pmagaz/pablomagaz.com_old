@@ -8,7 +8,7 @@ export { createReducer }
 export default { console, env }
 export * from './conf/site.conf'
 export { context } from './shared/Context'
-export { trackGa } from './shared/TrackGa'
+export { sendAnalitics } from './shared/TrackGa'
 export { formatDate } from './shared/DateHelper'
 export { generateMap, ListToArray } from './shared/ModelHelper'
 export { actionCreator } from './shared/ActionCreator'

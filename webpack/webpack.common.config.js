@@ -19,7 +19,6 @@ export const entry = {
     'react',
     'redux',
     'prismjs',
-    'react-ga',
     'react-dom',
     'recompose',
     'immutable',

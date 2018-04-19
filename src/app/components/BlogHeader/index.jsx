@@ -1,6 +1,5 @@
-import React, { Component }  from 'react'
+import React, { Component, PureComponent }  from 'react'
 import { PropTypes } from 'prop-types'
-import { onlyUpdateForKeys } from 'recompose'
 
 import Social from 'components/Social'
 import BlogTitle from 'components/BlogTitle'
@@ -34,4 +33,4 @@ class BlogHeader extends Component {
   }
 }
 
-export default onlyUpdateForKeys(['image'])(BlogHeader)
+export default BlogHeader

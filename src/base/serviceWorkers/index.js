@@ -1,12 +1,12 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js')
 
-const staticCache = 'react-base-static-v1'
-const dynamicCache = 'react-base-dynamic-v1'
 const timeCache = 30 * 24 * 60 * 60
 
 workbox.core.setCacheNameDetails({
-  precache: staticCache,
-  runtime:  dynamicCache
+  prefix: 'react-base',
+  suffix: 'v1',
+  precache: 'static',
+  runtime: 'dynamic'
 })
 
 workbox.precaching.precacheAndRoute([
@@ -21,7 +21,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
   workbox.strategies.cacheFirst({
-    cacheName: staticCache,
+    cacheName: workbox.core.cacheNames.precache,
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 20,
@@ -34,7 +34,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
   workbox.strategies.cacheFirst({
-    cacheName: staticCache,
+    cacheName: workbox.core.cacheNames.precache,
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 10,
@@ -46,7 +46,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   new RegExp('/content/(.*)'),
   workbox.strategies.staleWhileRevalidate({
-    cacheName: dynamicCache,
+    cacheName: workbox.core.cacheNames.runtime,
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 60,

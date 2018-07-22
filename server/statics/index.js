@@ -5,7 +5,8 @@ import base, { SiteConf } from 'base'
 
 const commonStatics = () => [
   { route: '/dist', dir: path.join(__dirname, '../../dist') },
-  { route: '/serviceWorker.js', dir: path.join(__dirname, '../../src/base/serviceWorkers/index.js') },
+  { route: '/registerSwV1.js', dir: path.join(__dirname, '../serviceWorker/register.js') },
+  { route: '/serviceWorker.js', dir: path.join(__dirname, '../serviceWorker/serviceWorker.js') },
   { route: '/manifest.json', dir: path.join(__dirname, '../manifest.json') },
   { route: '/offline.html', dir: path.join(__dirname, '../templates/offline.html') },
 ]

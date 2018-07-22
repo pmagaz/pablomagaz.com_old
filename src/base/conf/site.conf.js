@@ -40,7 +40,7 @@ let uniqueImagePath
 let GoogleAnaliticsId
 let DisqusSettings
 
-if (env === 'development') {
+if (env === 'developmenti') {
   Ssl = false
   Protocol = Ssl ? 'https://' : 'http://'
   HostName = 'localhost:8000'

@@ -57,7 +57,7 @@ class Main extends Component {
             Actualmente trabajo en <a href="http://www.cognizant.com" target="_blank" rel="noopener noreferrer">Cognizant</a> como Domain Lead del área de JavaScript. A lo largo de mi carrera he desarrollado proyectos backend con NodeJs y Front-End con Polymer, AngularJs, Angular, React, Redux, RxJs, @ngRxStore, Vue, Vuex etc. En fin que no me caso con nada y me gusta todo, aunque lógicamente ¡tengo mis preferencias!
               <br />
               <br />
-            Algunas de las iniciativas interesantes que he llevado a cabo durante este tiempo ha sido la publicación de diferentes boilers para desarrollo  como: <a href="https://github.com/atSistemas/angularjs-base" target="_blank" rel="noopener noreferrer">AngularJs Base</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">Angular Base</a> y <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">React Base</a>, boiler con el que está realizado este blog y del que puedes ver todo el <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">código fuente</a> en mi <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">github</a>.
+            Algunas de las iniciativas interesantes que he llevado a cabo durante este tiempo ha sido la publicación de diferentes boilers para desarrollo  como: <a href="https://github.com/atSistemas/vue-base" target="_blank" rel="noopener noreferrer">Vue Base</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">Angular Base</a> y <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">React Base</a>, boiler con el que está realizado este blog y del que puedes ver todo el <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">código fuente</a> en mi <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">github</a>.
               <br />
               <br />
             Aparte del desarrollo y supervisión técnica de proyectos, he realizado talleres técnicos, formación a equipos de empresas y charlas en distintos eventos.
@@ -77,6 +77,12 @@ class Main extends Component {
               </li>
               <li>
                 Meetup En mi local funciona 2018: Introducción a la Programación Reactiva con RxJs.
+              </li>
+              <li>
+                JsDayES 2018 (proximamente): Escribiendo Serviceworkers con Workbox. 
+              </li>
+              <li>
+                Commit (proximamente): ECMAScript 2018 y más allá
               </li>
             </ul>
         

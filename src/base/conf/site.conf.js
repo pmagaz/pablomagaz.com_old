@@ -54,7 +54,7 @@ if (env === 'development') {
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`
   PostApiUrl = `${Protocol}${ HostName }/api/post/`
   PostsApiUrl = `${Protocol}${ HostName }/api/posts/`
-  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limit=${numPosts}`
+  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limt=${numPosts}`
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${clientSecret}&include=tags`
   GoogleAnaliticsId = 'UA-104300440-3'
   DisqusSettings = {

@@ -1,12 +1,5 @@
 import { env } from 'base'
 
-let template
-
-if (env === 'development') {
-  template = '<script src="/registerSwV1.js"></script>'
-} else {
-  template = ''
-}
-
+const  template = '<script src="/registerSwV1.js"></script>'
 
 export default template

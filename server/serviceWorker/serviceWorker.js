@@ -76,7 +76,7 @@ self.addEventListener('push', (event) => {
         .then(() => {
           resolve()
         })
-    }, 500)
+    }, 5000)
   })
   
   event.waitUntil(promiseChain)

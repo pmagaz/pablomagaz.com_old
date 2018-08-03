@@ -69,7 +69,16 @@ self.addEventListener('push', (event) => {
     vibrate : [ 100 ],
     data: { url: url }
   }
-  const promiseChain = self.registration.showNotification(res.title, options)
+  
+  const promiseChain = new Promise((resolve) => {
+    setTimeout(() => {
+      self.registration.showNotification(res.title, options)
+        .then(() => {
+          resolve()
+        })
+    }, 500)
+  })
+  
   event.waitUntil(promiseChain)
 })
 

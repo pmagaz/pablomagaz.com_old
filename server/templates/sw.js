@@ -46,7 +46,7 @@ if (env === 'development') {
     });
   }
   </script>`*/
-  template = '<script src="registerSwV1.js"></script>'
+  template = '<script src="/registerSwV1.js"></script>'
 } else {
   template = ''
 }

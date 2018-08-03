@@ -56,20 +56,28 @@ workbox.routing.registerRoute(
   }),
 )
 
+self.addEventListener('push', (event) => {
+  const res = JSON.parse(event.data.text())
+  const body = (!res.body) ? '' : 'Ver en el Blog Isomórfico.'
+  let url
+  if (res.data) url = res.data.url
+  else url = false
+  const options = {
+    title : res.title,
+    body: body, 
+    icon: '/assets/images/icons/logo512.png',
+    vibrate : [ 100 ],
+    data: { url: url }
+  }
+  const promiseChain = self.registration.showNotification(res.title, options)
+  event.waitUntil(promiseChain)
+})
 
-function askPermission() {
-  return new Promise(function(resolve, reject) {
-    const permissionResult = Notification.requestPermission(function(result) {
-      resolve(result);
-    });
-
-    if (permissionResult) {
-      permissionResult.then(resolve, reject);
-    }
-  })
-  .then(function(permissionResult) {
-    if (permissionResult !== 'granted') {
-      throw new Error('We weren\'t granted permission.');
-    }
-  });
-}
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close()
+  const data = event.notification.data
+  if (data.url) {
+    const promiseChain = clients.openWindow(data.url)
+    event.waitUntil(promiseChain)
+  }
+})

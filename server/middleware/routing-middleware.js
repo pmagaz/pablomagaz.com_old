@@ -26,7 +26,6 @@ export default function routingMiddleware(req, res) {
           return res.status(200).send(page)
         }
       }).catch(err => {
-        console.log(2222, err)
         res.status(500).send(errorPage(500))
       })
   })

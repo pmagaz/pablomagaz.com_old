@@ -38,6 +38,8 @@ class Main extends Component {
       'brand': true,
     })
 
+    console.log(99999999)
+
     return (
       <div className={ styles.mainWrapper }>
         <section className={ styles.home }>
@@ -77,6 +79,12 @@ class Main extends Component {
               </li>
               <li>
                 Meetup En mi local funciona 2018: Introducción a la Programación Reactiva con RxJs.
+              </li>
+              <li>
+                JsDay2018 (proximamente): Escribiendo Serviceworkers con Workbox. 
+              </li>
+              <li>
+                Commit (proximamente): ECMAScript 2018 y más allá
               </li>
             </ul>
         

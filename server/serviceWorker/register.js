@@ -1,11 +1,24 @@
-const publicVapidKey = 'BJZ79JYphdaAWWw0CyXmA6sUqxMSAaixNewwWBh-SZI6nxXgiF0U4hpfHXp7aOt79ohaLOUWDvkqNL4oSAZrR8s'
-const vpaidServerKey = urlBase64ToUint8Array(publicVapidKey) 
+const registerUrl = 'https://pablomagaz.com/webpush/register'
+const publicVapidKey = 'BFdszVeNLXOP_BtqQn1o4-g-pV4BMMFHjrkKKn9OSDqiHVUp52GIGw4HEKJv2jpGiPGkaIpFyHk8zZv93J6-bc8'
+const applicationServerKey = urlBase64ToUint8Array(publicVapidKey) 
 
-function sendSubscription(subscription) {
-  console.log(77777777, subscription)
+const registerSubscription = subscription => {
+  console.log(222222, subscription)
+  return fetch(registerUrl, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(subscription)
+  })
+    .then(response => {
+      if (!response.ok) throw new Error('Bad status code from server.')
+      return response
+    })
 }
 
-function webpushSubscribe(swRegistration) {
+const webpushSubscribe = swRegistration => {
   return swRegistration
     .pushManager
     .getSubscription()
@@ -15,14 +28,13 @@ function webpushSubscribe(swRegistration) {
           .pushManager
           .subscribe({
             userVisibleOnly: true,
-            applicationServerKey: vpaidServerKey 
+            applicationServerKey: applicationServerKey 
           })
-          .then(sendSubscription)
+          .then(registerSubscription)
       }
+      return registerSubscription(subscription)
     })
-    .catch(err => {
-      console.log('No subscription!', err)
-    })
+    .catch(err => console.log('No subscription!', err))
 }
 
 if ('serviceWorker' in navigator) {

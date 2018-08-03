@@ -3,7 +3,6 @@ const publicVapidKey = 'BFdszVeNLXOP_BtqQn1o4-g-pV4BMMFHjrkKKn9OSDqiHVUp52GIGw4H
 const applicationServerKey = urlBase64ToUint8Array(publicVapidKey) 
 
 const registerSubscription = subscription => {
-  console.log(222222, subscription)
   return fetch(registerUrl, {
     method: 'POST',
     headers: {
@@ -32,7 +31,6 @@ const webpushSubscribe = swRegistration => {
           })
           .then(registerSubscription)
       }
-      return registerSubscription(subscription)
     })
     .catch(err => console.log('No subscription!', err))
 }

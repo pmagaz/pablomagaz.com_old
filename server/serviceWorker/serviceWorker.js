@@ -2,7 +2,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox
 
 const staticCache = 'react-base-static-v1'
 const dynamicCache = 'react-base-dynamic-v1'
-const timeCache = 30 * 24 * 60 * 60
+const timeCache = 10 * 24 * 60 * 60
 
 workbox.core.setCacheNameDetails({
   precache: staticCache,

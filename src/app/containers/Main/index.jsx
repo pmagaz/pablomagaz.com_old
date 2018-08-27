@@ -48,7 +48,7 @@ class Main extends Component {
 
         <section id="about" className={ styles.about }>
           <article className={ styles.content }>
-            <img src="../assets/images/about/me.jpg"/>
+            <img src="../assets/images/about/Pablo_Magaz.jpg"/>
             <h1>Sobre mí</h1>
             <p>
             Soy { SiteConf.Author }, leonés afincado en Madrid desde muy temprana edad. Llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc., hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.

@@ -69,6 +69,8 @@
         width: 236px;
         margin-top: 10px;
         transform: skewY(-2deg);
+        animation: titleBlog 100ms ease-in both;
+        animation-delay: 120ms;
 
         @media (min-width: $sm){
           width: 400px;

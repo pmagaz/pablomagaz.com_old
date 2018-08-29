@@ -16,6 +16,13 @@ class App extends Component {
     const location = this.props.location
     return (
       <div className={ styles.app  }>
+        <div className={ styles.cookieBox  }>
+          <span className={ styles.cookieBoxMessage  }>
+            Hi! We use cookies, just to track visits to our website, we store no personal details. 
+            <a aria-label="learn more about cookies" role="button" tabindex="0" href="https://cookiesandyou.com" target="_blank">More info</a>
+          </span>
+          <button aria-label="dismiss cookie message" role="button" tabindex="0">Ok, I got it!</button>
+        </div>
         <Header location={ location }/>
         <main className={ styles.container  }>
           { this.props.children }

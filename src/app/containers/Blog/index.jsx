@@ -65,7 +65,31 @@ class Blog extends Component {
           />
           <span className={ styles.shape }></span>
           { tagTitle }
-          <PostList posts={ posts } />
+          <div className={ styles.blogContent }>
+            <PostList posts={ posts } />
+            <aside>
+              <div className={ styles.sendMail }>
+              <h3>Mail list
+                  <small></small>
+                </h3>
+                <div className={ styles.sendMailInput }>
+                  <input type="text" placeholder="Escribe tu e-mail"></input>
+                  <button>»</button>
+                </div>
+              </div>
+              <div  className={ styles.tagBox }>
+                <h3>Tagging
+                  <small></small>
+                </h3>
+
+                <ul>
+                  <li><a><mark>Javascript</mark></a></li>
+                  <li><a><mark>pwa</mark></a></li>
+                  <li><a><mark>Vue</mark></a></li>
+                </ul>  
+              </div>
+              </aside>
+          </div>
         </div>
       </div>
     )

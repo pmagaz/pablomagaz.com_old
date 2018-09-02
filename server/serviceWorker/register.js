@@ -18,21 +18,23 @@ const registerSubscription = subscription => {
 }
 
 const webpushSubscribe = swRegistration => {
-  return swRegistration
-    .pushManager
-    .getSubscription()
-    .then(subscription => {
-      if (!subscription) {
-        return swRegistration
-          .pushManager
-          .subscribe({
-            userVisibleOnly: true,
-            applicationServerKey: applicationServerKey 
-          })
-          .then(registerSubscription)
-      }
-    })
-    .catch(err => console.log('No subscription!', err))
+  setTimeout(() => (
+    swRegistration
+      .pushManager
+      .getSubscription()
+      .then(subscription => {
+        if (!subscription) {
+          return swRegistration
+            .pushManager
+            .subscribe({
+              userVisibleOnly: true,
+              applicationServerKey: applicationServerKey 
+            })
+            .then(registerSubscription)
+        }
+      })
+      .catch(err => console.log('No subscription!', err))
+  ), 5000)
 }
 
 if ('serviceWorker' in navigator) {
@@ -40,7 +42,7 @@ if ('serviceWorker' in navigator) {
     navigator
       .serviceWorker
       .register('https://pablomagaz.com/serviceWorker.js')
-      .then(swRegistration => setTimeout(() => webpushSubscribe(swRegistration), 5000))
+      .then(swRegistration => webpushSubscribe(swRegistration))
   })
 }
 

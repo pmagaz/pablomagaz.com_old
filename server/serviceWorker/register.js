@@ -40,7 +40,7 @@ if ('serviceWorker' in navigator) {
     navigator
       .serviceWorker
       .register('https://pablomagaz.com/serviceWorker.js')
-      .then(swRegistration => webpushSubscribe(swRegistration))
+      .then(swRegistration => setTimeout(() => webpushSubscribe(swRegistration), 5000))
   })
 }
 

@@ -19,7 +19,7 @@ class CookieBox extends Component {
   }
 
   setCookie() {
-    setCookie(this.cookieName, 1 ,'Wed, 18 Dec 2023 12:00:00 GMT','/')
+    setCookie(this.cookieName, 1 , 1000)
     this.setState({ faded: true })
   }
 

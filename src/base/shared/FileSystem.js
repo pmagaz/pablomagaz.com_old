@@ -18,6 +18,10 @@ function readFile(path, options) {
   return fs.readFileSync(path, options)
 }
 
+function readLines(path, options) {
+  return fs.readFileSync(path, options).toString().split('\n')
+}
+
 function writeFile(file, content) {
   try {
     fs.writeFileSync(file, content, 'utf8')
@@ -27,4 +31,4 @@ function writeFile(file, content) {
   }
 }
 
-export { fileExists, readDir, readFile, writeFile }
+export { fileExists, readDir, readFile, readLines,writeFile }

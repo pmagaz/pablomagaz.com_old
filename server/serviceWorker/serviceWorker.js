@@ -1,16 +1,21 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js')
 
-const staticCache = 'react-base-static-v1'
-const dynamicCache = 'react-base-dynamic-v1'
+const appName = 'react-base'
+const suffix = 'v1'
+const staticCache = `${ appName }-static-${ suffix }`
+const dynamicCache = `${ appName }-dynamic-${ suffix }`
 const timeCache = 10 * 24 * 60 * 60
 
 workbox.core.setCacheNameDetails({
-  precache: staticCache,
-  runtime:  dynamicCache
+  prefix: appName,
+  suffix: suffix
 })
 
 workbox.precaching.precacheAndRoute([
-  "/offline.html",
+  'offline.html',
+  '/assets/app.e70fafb30620b43d8ef9.js',
+  '/assets/vendor.e70fafb30620b43d8ef9.js',
+  '/assets/styles.d62ba9e609caae10782159dc7b3a905e.css'
 ])
 
 workbox.routing.registerRoute(
@@ -20,8 +25,8 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
-  workbox.strategies.cacheFirst({
-    cacheName: staticCache,
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: staticCache, 
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 20,
@@ -32,7 +37,7 @@ workbox.routing.registerRoute(
 )
 
 workbox.routing.registerRoute(
-  new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
+  /.*(?:googleapis|gstatic).com.*$/,
   workbox.strategies.cacheFirst({
     cacheName: staticCache,
     plugins: [
@@ -90,3 +95,6 @@ self.addEventListener('notificationclick', (event) => {
     event.waitUntil(promiseChain)
   }
 })
+
+
+

@@ -41,7 +41,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator
       .serviceWorker
-      .register('http://localhost:8000/serviceWorker.js')
+      .register('https://pablomagaz.com/serviceWorker.js')
       .then(swRegistration => webpushSubscribe(swRegistration))
   })
 }

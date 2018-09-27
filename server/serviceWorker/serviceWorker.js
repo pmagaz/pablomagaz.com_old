@@ -4,24 +4,22 @@ const appName = 'react-base'
 const suffix = 'v1'
 const staticCache = `${ appName }-static-${ suffix }`
 const dynamicCache = `${ appName }-dynamic-${ suffix }`
-const timeCache = 10 * 24 * 60 * 60
 
 workbox.core.setCacheNameDetails({
   prefix: appName,
   suffix: suffix
 })
 
-workbox.precaching.precacheAndRoute([
-  'offline.html',
-  '/assets/app.e70fafb30620b43d8ef9.js',
-  '/assets/vendor.e70fafb30620b43d8ef9.js',
-  '/assets/styles.d62ba9e609caae10782159dc7b3a905e.css'
-])
+workbox.precaching.suppressWarnings()
 
-workbox.routing.registerRoute(
-  ({ event }) => event.request.mode === 'navigate',
-  ({ url }) => fetch(url.href).catch(() => caches.match('/offline.html'))
-)
+self._precacheManifest = [
+  'https://pablomagaz.com/blog',
+  '/assets/app.7f9418722b42fd55b5e4.js',
+  '/assets/vendor.7f9418722b42fd55b5e4.js',
+  '/assets/styles.d62ba9e609caae10782159dc7b3a905e.css'
+]
+
+workbox.precaching.precacheAndRoute(self._precacheManifest, {})
 
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
@@ -29,8 +27,21 @@ workbox.routing.registerRoute(
     cacheName: staticCache, 
     plugins: [
       new workbox.expiration.Plugin({
-        maxEntries: 20,
-        maxAgeSeconds: timeCache 
+        maxEntries: 10,
+        maxAgeSeconds: 10 * 24 * 60 * 60 
+      }),
+    ],
+  }),
+)
+
+workbox.routing.registerRoute(
+  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  workbox.strategies.cacheFirst({
+    cacheName: dynamicCache,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60 
       }),
     ],
   }),
@@ -43,19 +54,7 @@ workbox.routing.registerRoute(
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 10,
-      }),
-    ],
-  }),
-)
-
-workbox.routing.registerRoute(
-  new RegExp('/content/(.*)'),
-  workbox.strategies.staleWhileRevalidate({
-    cacheName: dynamicCache,
-    plugins: [
-      new workbox.expiration.Plugin({
-        maxEntries: 60,
-        maxAgeSeconds: timeCache 
+        maxAgeSeconds: 90 * 24 * 60 * 6 
       }),
     ],
   }),
@@ -95,6 +94,9 @@ self.addEventListener('notificationclick', (event) => {
     event.waitUntil(promiseChain)
   }
 })
+
+
+
 
 
 

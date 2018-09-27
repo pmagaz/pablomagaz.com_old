@@ -11,11 +11,10 @@ if (fs.fileExists(swPath) && fs.fileExists(assetsPath)) {
   const content = fs.readLines(swPath, { encoding: 'utf-8' })
   const assetsContent = JSON.parse(fs.readFile(assetsPath, { encoding: 'utf-8' }))
 
-  content[13] = `workbox.precaching.precacheAndRoute([`
-  content[14] = `  'offline.html',`
-  content[15] = `  '/assets${ assetsContent.app.js }',`
-  content[16] = isProd ? `  '/assets${ assetsContent.vendor.js }',` : ''
-  content[17] = isProd ? `  '/assets${ assetsContent.app.css }'` : ''
+  content[15] = `  'https://pablomagaz.com/blog',`
+  content[16] = `  '/assets${ assetsContent.app.js }',`
+  content[17] = isProd ? `  '/assets${ assetsContent.vendor.js }',` : ''
+  content[18] = isProd ? `  '/assets${ assetsContent.app.css }'` : ''
   const fileContent = content.map(line =>  line + '\n')
   fs.writeFile(swPath, fileContent.join(''))
 }

@@ -73,13 +73,16 @@ class Main extends Component {
                 Codemotion 2017: Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Programacio%CC%81nReactivaConRxJs.pdf ">Slides</a>]
               </li>
               <li>
-                Meetup En mi local funciona 2018: Introducción a la Programación Reactiva con RxJs.
+                Meetup En mi local funciona 2018: Introducción a la Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Programacio%CC%81nReactivaConRxJs.pdf ">Slides</a>]
               </li>
               <li>
-                JsDayES 2018 (próximamente): Escribiendo Serviceworkers con Workbox. 
+                JSDayES 2018: Escribiendo Serviceworkers con Workbox. [<a href="https://pablomagaz.com/static/slides/EscribiendoServicesWorkersConWorkbox.pdf">Slides</a>]
               </li>
               <li>
-                Commit (próximamente): ECMAScript 2018 y más allá
+                Commit 2008: ECMAScript 2018 y más allá.
+              </li>
+              <li>
+                Codemotion 2018: ECMAScript 2018 y más allá.
               </li>
             </ul>
         

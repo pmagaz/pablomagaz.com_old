@@ -88,26 +88,37 @@ class Main extends Component {
         
             <ul className={ styles.photos }>
               <li>
-                <img src="../assets/images/about/pablomagaz@meetupRxJs2018.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+                <img src="../assets/images/about/pablo_magaz@JSDayES2018.jpg" alt="Escribiendo service workers con Workbox"/>
               </li>
               <li>
-                <img src="../assets/images/about/pablomagaz@codemotion_2017.jpg" alt="Programación Reactiva con RxJs @ Codemotion 2017"/>
+                <img src="../assets/images/about/pablo_magaz@meetupRxJs22018.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
               </li>
               <li>
-                <img src="../assets/images/about/pablomagaz@react-redux-techday.jpg" alt="React/Redux Techday @ atSistemas 2017"/>
+                <img src="../assets/images/about/pablo_magaz@codemotion_2017.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+              </li>
+              <li>
+                <img src="../assets/images/about/pablo_magaz@openexpo_22016.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+              </li>
+              <li>
+                <img src="../assets/images/about/pablo_magaz@react-redux-techday.jpg" alt="React/Redux Techday @ atSistemas 2017"/>
+              </li>
 
+              <li>
+                <img src="../assets/images/about/pablo_magaz@codemotion_2016.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2016"/>
               </li>
               <li>
-                <img src="../assets/images/about/pablomagaz@meetupRxJs22018.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
-              </li>
-              <li>
-                <img src="../assets/images/about/pablomagaz@codemotion_2016.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2016"/>
-              </li>
-              <li>
-                <img src="../assets/images/about/pablomagaz@openexpo_2016.jpg" alt="Open Expo 2016"/>
+                <img src="../assets/images/about/pablo_magaz@openexpo_2016.jpg" alt="Open Expo 2016"/>
               </li>
             </ul>
-            <h2>Programación Reactiva con RxJs</h2>
+            <h2>Escribiendo Service Workers con Workbox @ JSDayES</h2>
+            <div className={ styles.videoWrapper }>
+              <div className={ styles.video }>
+                <iframe id="ytplayer" type="text/html" width="560" height="349"
+                  src="https://www.youtube.com/embed/GjXwJdYa3J4?autoplay=0&origin=http://pablomagaz.com"
+                  frameBorder="0"/>
+              </div>
+            </div>
+            <h2>Programación Reactiva con RxJs @ Codemotion</h2>
             <div className={ styles.videoWrapper }>
               <div className={ styles.video }>
                 <iframe id="ytplayer" type="text/html" width="560" height="349"

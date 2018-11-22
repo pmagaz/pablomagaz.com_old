@@ -29,7 +29,7 @@ class Main extends Component {
 
   scrollToHash(hash) {
     const section = document.querySelector(`${hash}`)
-    if (section) section.scrollIntoView({ behavior: 'smooth' }) 
+    if (section) setTimeout(() => (section.scrollIntoView({ behavior: 'smooth' }), 500)) 
   }
 
   render() {
@@ -60,8 +60,8 @@ class Main extends Component {
             Aparte del desarrollo y supervisión técnica de proyectos, he realizado talleres técnicos, formación a equipos y charlas en distintos eventos.
          
             </p>
+            <a id="talks"></a>
             <h2>Talks</h2>
-            
             <ul>
               <li>
                 Open Expo 2016: Presentación base.
@@ -79,7 +79,7 @@ class Main extends Component {
                 JSDayES 2018: Escribiendo Serviceworkers con Workbox. [<a href="https://pablomagaz.com/static/slides/EscribiendoServicesWorkersConWorkbox.pdf">Slides</a>]
               </li>
               <li>
-                Commit 2008: ECMAScript 2018 y más allá.
+                Commit Conf 2018: ECMAScript 2018 y más allá. [<a href="https://pablomagaz.com/static/slides/ECMAScript2018YMasAlla.pdf">Slides</a>]
               </li>
               <li>
                 Codemotion 2018: ECMAScript 2018 y más allá.

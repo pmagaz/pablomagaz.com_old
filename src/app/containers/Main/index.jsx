@@ -70,19 +70,19 @@ class Main extends Component {
                 Codemotion 2016: Aplicaciones Isormoficas con React & Redux.
               </li>
               <li>
-                Codemotion 2017: Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Programacio%CC%81nReactivaConRxJs.pdf ">Slides</a>]
+                Codemotion 2017: Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">Slides</a>]
               </li>
               <li>
-                Meetup En mi local funciona 2018: Introducción a la Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Programacio%CC%81nReactivaConRxJs.pdf ">Slides</a>]
+                Meetup En mi local funciona 2018: Introducción a la Programación Reactiva con RxJs. [<a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">Slides</a>]
               </li>
               <li>
-                JSDayES 2018: Escribiendo Serviceworkers con Workbox. [<a href="https://pablomagaz.com/static/slides/EscribiendoServicesWorkersConWorkbox.pdf">Slides</a>]
+                JSDayES 2018: Escribiendo Serviceworkers con Workbox. [<a href="https://pablomagaz.com/static/slides/Pablo_Magaz_EscribiendoServicesWorkersConWorkbox_JSDayES2018.pdf">Slides</a>]
               </li>
               <li>
-                Commit Conf 2018: ECMAScript 2018 y más allá. [<a href="https://pablomagaz.com/static/slides/ECMAScript2018YMasAlla.pdf">Slides</a>]
+                Commit Conf 2018: ECMAScript 2018 y más allá. [<a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ECMAScript2018YMasAlla_CommitConf2018.pdf">Slides</a>]
               </li>
               <li>
-                Codemotion 2018: ECMAScript 2018 y más allá.
+                Codemotion 2018: ECMAScript 2018 y más allá. [<a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ECMAScript2018YMasAlla_Codemotion2018.pdf">Slides</a>]
               </li>
             </ul>
         

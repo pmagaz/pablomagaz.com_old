@@ -112,6 +112,14 @@ class Main extends Component {
                 <img src="../assets/images/about/pablo_magaz@codemotion_2016.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2016"/>
               </li>
             </ul>
+            <h2>Entrevista JSDayES 2018</h2>
+            <div className={ styles.videoWrapper }>
+              <div className={ styles.video }>
+                <iframe id="ytplayer" type="text/html" width="560" height="349"
+                  src="https://www.youtube.com/embed/OszTUkhU1vQ?autoplay=0&origin=http://pablomagaz.com"
+                  frameBorder="0"/>
+              </div>
+            </div>
             <h2>Escribiendo Service Workers con Workbox @ JSDayES</h2>
             <div className={ styles.videoWrapper }>
               <div className={ styles.video }>

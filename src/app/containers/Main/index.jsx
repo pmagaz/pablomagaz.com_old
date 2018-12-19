@@ -88,7 +88,13 @@ class Main extends Component {
         
             <ul className={ styles.photos }>
               <li>
+                <img src="../assets/images/about/pablo_magaz@codemotion_2018.jpg" alt="Pablo Magaz @ Codemotion 2018 ECMAScript 2018 y mas alla"/>
+              </li>
+              <li>
                 <img src="../assets/images/about/pablo_magaz@JSDayES2018.jpg" alt="Escribiendo service workers con Workbox"/>
+              </li>
+              <li>
+                <img src="../assets/images/about/pablo_magaz@codemotion_2018_2.jpg" alt="ECMAScript 2018 y mas alla"/>
               </li>
               <li>
                 <img src="../assets/images/about/pablo_magaz@meetupRxJs22018.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
@@ -102,12 +108,8 @@ class Main extends Component {
               <li>
                 <img src="../assets/images/about/pablo_magaz@react-redux-techday.jpg" alt="React/Redux Techday @ atSistemas 2017"/>
               </li>
-
               <li>
                 <img src="../assets/images/about/pablo_magaz@codemotion_2016.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2016"/>
-              </li>
-              <li>
-                <img src="../assets/images/about/pablo_magaz@openexpo_2016.jpg" alt="Open Expo 2016"/>
               </li>
             </ul>
             <h2>Escribiendo Service Workers con Workbox @ JSDayES</h2>

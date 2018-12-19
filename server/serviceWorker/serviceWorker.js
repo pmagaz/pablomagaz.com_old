@@ -14,8 +14,8 @@ workbox.precaching.suppressWarnings()
 
 self._precacheManifest = [
   'https://pablomagaz.com/blog',
-  '/assets/app.7f9418722b42fd55b5e4.js',
-  '/assets/vendor.7f9418722b42fd55b5e4.js',
+  '/assets/app.3285b74c8d01f66e3b2b.js',
+  '/assets/vendor.3285b74c8d01f66e3b2b.js',
   '/assets/styles.d62ba9e609caae10782159dc7b3a905e.css'
 ]
 
@@ -35,13 +35,26 @@ workbox.routing.registerRoute(
 )
 
 workbox.routing.registerRoute(
-  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  /\.(?:png|gif|svg)$/,
   workbox.strategies.cacheFirst({
     cacheName: dynamicCache,
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60 
+      }),
+    ],
+  }),
+)
+
+workbox.routing.registerRoute(
+  /\.(?:jpg|jpeg)$/,
+  workbox.strategies.cacheFirst({
+    cacheName: dynamicCache,
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 10 * 24 * 60 * 60 
       }),
     ],
   }),
@@ -94,6 +107,8 @@ self.addEventListener('notificationclick', (event) => {
     event.waitUntil(promiseChain)
   }
 })
+
+
 
 
 

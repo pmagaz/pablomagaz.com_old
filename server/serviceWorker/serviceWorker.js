@@ -36,7 +36,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
   /\.(?:png|gif|svg)$/,
-  workbox.strategies.cacheFirst({
+  workbox.strategies.staleWhileRevalidate({
     cacheName: dynamicCache,
     plugins: [
       new workbox.expiration.Plugin({
@@ -49,12 +49,12 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
   /\.(?:jpg|jpeg)$/,
-  workbox.strategies.cacheFirst({
+  workbox.strategies.staleWhileRevalidate({
     cacheName: dynamicCache,
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 60,
-        maxAgeSeconds: 10 * 24 * 60 * 60 
+        maxAgeSeconds: 20 * 24 * 60 * 60 
       }),
     ],
   }),
@@ -107,11 +107,3 @@ self.addEventListener('notificationclick', (event) => {
     event.waitUntil(promiseChain)
   }
 })
-
-
-
-
-
-
-
-

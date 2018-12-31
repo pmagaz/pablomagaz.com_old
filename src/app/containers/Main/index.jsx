@@ -51,7 +51,7 @@ class Main extends Component {
             <img src="../assets/images/about/Pablo_Magaz.jpg"/>
             <h1>Sobre mí</h1>
             <p>
-            Soy { SiteConf.Author }, residente en Madrid y llevo trabajando como desarrollador en diferentes tecnologías más de 15 años: Desde Php o Python pasando por Android, Pl/Sql, administración de Unix, etc., hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
+            Soy { SiteConf.Author } y llevo trabajando como desarrollador en diferentes tecnologías más de 17 años: Desde JavaScript, Php o Python pasando por Android, Pl/Sql, administración de Unix, etc., hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
               <br />
               <br />
             Actualmente trabajo como Lead del área de JavaScript y a lo largo de mi carrera he desarrollado proyectos con NodeJs,  <a href="https://github.com/atSistemas/vue-base" target="_blank" rel="noopener noreferrer">Vue</a>, <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">React</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">Angular</a>, Redux, <a href="https://github.com/pmagaz/rextore" target="_blank" rel="noopener noreferrer">RxJs</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">@ngRxStore</a>, etc. En fin que no me caso con nada y me gusta todo, aunque lógicamente tengo mis preferencias, como podrás comprobar en mi <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">github</a>, donde ademas se encuentra todo el  <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">código</a> de este blog.
@@ -142,7 +142,7 @@ class Main extends Component {
             </p>
             <h2>Contacto</h2>
             <p>
-              Puedes contactar conmigo en cualquiera de estos canales:
+              Puedes contactar conmigo en cualquiera de los siguientes canales:
             </p>
             <br />
             <span>

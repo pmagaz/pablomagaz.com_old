@@ -10,7 +10,7 @@ if (fs.fileExists(swPath) && fs.fileExists(assetsPath)) {
   const content = fs.readLines(swPath, { encoding: 'utf-8' })
   const assetsContent = JSON.parse(fs.readFile(assetsPath, { encoding: 'utf-8' }))
 
-  content[15] = `  'https://pablomagaz.com/blog',`
+  content[15] = `  'https://pablomagaz.com/offline.html',`
   content[16] = `  'https://pablomagaz.com/assets${ assetsContent.app.js }',`
   content[17] = isProd ? `  'https://pablomagaz.com/assets${ assetsContent.vendor.js }',` : ''
   content[18] = isProd ? `  'https://pablomagaz.com/assets${ assetsContent.app.css }'` : ''

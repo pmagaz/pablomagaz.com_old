@@ -48,7 +48,9 @@ class Main extends Component {
 
         <section id="about" className={ styles.about }>
           <article className={ styles.content }>
-            <img src="../assets/images/about/Pablo_Magaz.jpg"/>
+            <a href="../assets/images/about/pablo_magaz@codemotion_2018_3.jpg">
+              <img src="../assets/images/about/Pablo_Magaz.jpg" alt="Pablo Magaz"/>
+            </a>
             <h1>Sobre mí</h1>
             <p>
             Soy { SiteConf.Author } y llevo trabajando como desarrollador en diferentes tecnologías más de 17 años: Desde JavaScript, Php o Python pasando por Android, Pl/Sql, administración de Unix, etc., hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
@@ -88,28 +90,44 @@ class Main extends Component {
         
             <ul className={ styles.photos }>
               <li>
-                <img src="../assets/images/about/pablo_magaz@codemotion_2018.jpg" alt="Pablo Magaz @ Codemotion 2018 ECMAScript 2018 y mas alla"/>
+                <a href="../assets/images/about/pablo_magaz@codemotion_2018.jpg">
+                  <img src="../assets/images/about/pablo_magaz@codemotion_2018.jpg" alt="Pablo Magaz @ Codemotion 2018 ECMAScript 2018 y mas alla"/>
+                </a>
               </li>
               <li>
-                <img src="../assets/images/about/pablo_magaz@JSDayES2018.jpg" alt="Escribiendo service workers con Workbox"/>
+                <a href="../assets/images/about/pablo_magaz@JSDayES2018.jpg">
+                  <img src="../assets/images/about/pablo_magaz@JSDayES2018.jpg" alt="Escribiendo service workers con Workbox"/>
+                </a>
               </li>
               <li>
-                <img src="../assets/images/about/pablo_magaz@codemotion_2018_2.jpg" alt="ECMAScript 2018 y mas alla"/>
+                <a href="../assets/images/about/pablo_magaz@codemotion_2018_2.jpg">
+                  <img src="../assets/images/about/pablo_magaz@codemotion_2018_2.jpg" alt="ECMAScript 2018 y mas alla"/>
+                </a>
               </li>
               <li>
-                <img src="../assets/images/about/pablo_magaz@meetupRxJs22018.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+                <a href="../assets/images/about/pablo_magaz@meetupRxJs22018.jpg"> 
+                  <img src="../assets/images/about/pablo_magaz@meetupRxJs22018.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+                </a>
               </li>
               <li>
-                <img src="../assets/images/about/pablo_magaz@codemotion_2017.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+                <a href="../assets/images/about/pablo_magaz@codemotion_2017.jpg"> 
+                  <img src="../assets/images/about/pablo_magaz@codemotion_2017.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+                </a>
               </li>
               <li>
-                <img src="../assets/images/about/pablo_magaz@openexpo_22016.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+                <a href="../assets/images/about/pablo_magaz@openexpo_22016.jpg"> 
+                  <img src="../assets/images/about/pablo_magaz@openexpo_22016.jpg" alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"/>
+                </a>
               </li>
               <li>
-                <img src="../assets/images/about/pablo_magaz@react-redux-techday.jpg" alt="React/Redux Techday @ atSistemas 2017"/>
+                <a href="../assets/images/about/pablo_magaz@react-redux-techday.jpg"> 
+                  <img src="../assets/images/about/pablo_magaz@react-redux-techday.jpg" alt="React/Redux Techday @ atSistemas 2017"/>
+                </a>
               </li>
               <li>
-                <img src="../assets/images/about/pablo_magaz@codemotion_2016.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2016"/>
+                <a href="../assets/images/about/pablo_magaz@codemotion_2016.jpg"> 
+                  <img src="../assets/images/about/pablo_magaz@codemotion_2016.jpg" alt="Aplicaciones Isomorficas con React @ Codemotion 2016"/>
+                </a>
               </li>
             </ul>
             <h2>Entrevista JSDayES 2018</h2>

@@ -49,7 +49,7 @@ class Main extends Component {
         <section id="about" className={ styles.about }>
           <article className={ styles.content }>
             <a href="../assets/images/about/pablo_magaz@codemotion_2018_3.jpg">
-              <img src="../assets/images/about/Pablo_Magaz.jpg" alt="Pablo Magaz"/>
+              <img src="../assets/images/about/Pablo-Magaz.jpg" alt="Pablo Magaz"/>
             </a>
             <h1>Sobre mí</h1>
             <p>

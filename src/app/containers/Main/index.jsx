@@ -130,6 +130,14 @@ class Main extends Component {
                 </a>
               </li>
             </ul>
+            <h2>ECMASCript 2018 y más allá @ Codemotion 2018</h2>
+            <div className={ styles.videoWrapper }>
+              <div className={ styles.video }>
+                <iframe id="ytplayer" type="text/html" width="560" height="349"
+                  src="https://www.youtube.com/embed/ax83aGg5Vu4?autoplay=0&origin=http://pablomagaz.com"
+                  frameBorder="0"/>
+              </div>
+            </div>
             <h2>Entrevista JSDayES 2018</h2>
             <div className={ styles.videoWrapper }>
               <div className={ styles.video }>

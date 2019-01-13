@@ -1,9 +1,17 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
-import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon} from 'react-share'
+import { ShareButtons, generateShareIcon } from 'react-share'
 
 import { SiteConf } from 'base'
 import styles from './styles.css'
+
+const { FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton, EmailShareButton, GooglePlusShareButton } = ShareButtons
+const FacebookIcon = generateShareIcon('facebook')
+const TwitterIcon = generateShareIcon('twitter')
+const LinkedinIcon = generateShareIcon('linkedin')
+const WhatsappIcon = generateShareIcon('whatsapp')
+const GooglePlusIcon = generateShareIcon('google')
+const EmailIcon = generateShareIcon('email')
 
 const propTypes= {
   post: PropTypes.object.isRequired
@@ -17,7 +25,7 @@ const SharePost = ({ post }) => {
   return (
     <article className={ styles.socialBoxWrap }>
       <h4>¿Te gustaría compartir este post?</h4>
-      <span  className={ styles.socialBoxWrapLinks }>
+      <span className={ styles.socialBoxWrapLinks }>
         <TwitterShareButton title={ post.title } via={ SiteConf.BlogTitle } description={ post.meta_description } url={ postUrl } > 
           <TwitterIcon round={ false } size={ 44 } />
         </TwitterShareButton>
@@ -30,6 +38,9 @@ const SharePost = ({ post }) => {
         <FacebookShareButton url={ postUrl } quote={ shareTitle } >
           <FacebookIcon round={ false } size={ 44 }/>
         </FacebookShareButton>
+        <GooglePlusShareButton subject={ shareTitle } body={ post.meta_description } url={ postUrl } > 
+          <GooglePlusIcon round={ false } size={ 44 } />
+        </GooglePlusShareButton>
         <EmailShareButton subject={ shareTitle } body={ post.meta_description } url={ postUrl } > 
           <EmailIcon round={ false } size={ 44 } />
         </EmailShareButton>

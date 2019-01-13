@@ -50,9 +50,7 @@ class PostContent extends Component {
         <div className={ postContentStyle }>
           <h1>{ post.title }</h1>
           <PostInfo
-            author={ post.author }
-            tags={ post.tags }
-            date={ post.published_at }
+            post={ post }
           />
           <div className={ styles.postText }>
             { Content }

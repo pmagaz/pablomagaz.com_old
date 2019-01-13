@@ -33,9 +33,6 @@
     &:nth-child(2) {
       border-left: 2px solid $cl-post-info-pipe;
     }
-    &:nth-child(3) {
-      border-left: 2px solid $cl-post-info-pipe;
-    }
   }
   time + div {
     flex: 3;
@@ -43,5 +40,24 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+  }
+}
+.socialBoxWrapLinks{
+  display: flex;
+  flex: 3;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  &:hover div{
+      opacity: .5;
+      transition: opacity .2s ease-in-out; 
+  }   
+  div{
+      cursor: pointer;
+      &:hover{
+          opacity: 1;
+          transition: opacity .2s ease-in-out; 
+      } 
   }
 }

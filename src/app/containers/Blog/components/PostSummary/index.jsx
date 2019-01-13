@@ -46,9 +46,7 @@ class PostSummary extends Component {
           />
         </Link>
         <PostInfo
-          tags={ post.tags }
-          author={ post.author }
-          date={ post.published_at }
+          post={ post }
         />
         <div className={ styles.postText }>
           { ReactHtmlParser(post.opening) }

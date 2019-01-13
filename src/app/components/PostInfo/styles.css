@@ -43,6 +43,8 @@
   }
 }
 .socialBoxWrapLinks{
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
   display: flex;
   flex: 3;
     text-align: right;

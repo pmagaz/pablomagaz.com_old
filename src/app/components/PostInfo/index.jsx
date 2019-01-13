@@ -22,14 +22,14 @@ const PostInfo = ({ post }) => {
     share = (
       <div className={ styles.socialBoxWrapLinks }>
       <TwitterShareButton title={ post.title } via={ SiteConf.BlogTitle } description={ post.meta_description } url={ postUrl } > 
-        <TwitterIcon round={ true } size={ 24 } />
+        <TwitterIcon iconBgStyle={{fill: true, color: '#333333'} } round={ true } size={ 24 } />
       </TwitterShareButton>
-      <LinkedinShareButton title={ shareTitle } description={ post.meta_description } url={ postUrl } > 
-        <LinkedinIcon round={ true } size={ 24 } />
-      </LinkedinShareButton>
       <WhatsappShareButton title={ shareTitle } url={ postUrl } > 
         <WhatsappIcon round={ true } size={ 24 } />
       </WhatsappShareButton>
+      <LinkedinShareButton title={ shareTitle } description={ post.meta_description } url={ postUrl } > 
+        <LinkedinIcon round={ true } size={ 24 } />
+      </LinkedinShareButton>
       <FacebookShareButton url={ postUrl } quote={ shareTitle } >
       <FacebookIcon round={ true } size={ 24 }/>
       </FacebookShareButton>

@@ -56,7 +56,7 @@ class Main extends Component {
             Soy { SiteConf.Author } y llevo trabajando como desarrollador en diferentes tecnologías más de 17 años: Desde JavaScript, Php o Python pasando por Android, Pl/Sql, administración de Unix, etc., hasta llegar al lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
               <br />
               <br />
-            Actualmente trabajo como Lead del área de JavaScript y a lo largo de mi carrera he desarrollado proyectos con NodeJs,  <a href="https://github.com/atSistemas/vue-base" target="_blank" rel="noopener noreferrer">Vue</a>, <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">React</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">Angular</a>, Redux, <a href="https://github.com/pmagaz/rextore" target="_blank" rel="noopener noreferrer">RxJs</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">@ngRxStore</a>, etc. En fin que no me caso con nada y me gusta todo, aunque lógicamente tengo mis preferencias, como podrás comprobar en mi <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">github</a>, donde ademas se encuentra todo el  <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">código</a> de este blog.
+            Actualmente trabajo como Lead del área de JavaScript y a lo largo de mi carrera he desarrollado proyectos con NodeJs,  <a href="https://github.com/atSistemas/vue-base" target="_blank" rel="noopener noreferrer">Vue</a>, <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">React</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">Angular</a>, Redux, <a href="https://github.com/pmagaz/rextore" target="_blank" rel="noopener noreferrer">RxJs</a>, <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">@ngRxStore</a>, etc. En fin que no me caso con nada y me gusta todo, aunque lógicamente tengo mis preferencias, como podrás comprobar en mi <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">github</a>, donde además se encuentra todo el  <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">código</a> de este blog.
               <br />
               <br />
             Aparte del desarrollo y supervisión técnica de proyectos, he realizado talleres técnicos, formación a equipos y charlas en distintos eventos.
@@ -164,7 +164,7 @@ class Main extends Component {
             </div>
             <h2>Mis otras aficiones</h2>
             <p>
-              Aparte de la programación, me encanta la música electrónica: Techno, Bass, D&B... Dispongo de un pequeño estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la producción musical.
+              A parte de la programación, me encanta la música electrónica: Techno, Bass, D&B... Dispongo de un pequeño estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la producción musical.
             </p>
             <h2>Contacto</h2>
             <p>

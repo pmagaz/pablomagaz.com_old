@@ -78,7 +78,6 @@ workbox.routing.registerRoute(
   ({ url }) => fetch(url.href).catch(() => caches.match('/offline.html'))
 )
 
-
 self.addEventListener('push', (event) => {
   const res = JSON.parse(event.data.text())
   const body = (!res.body) ? '' : 'Ver en el Blog Isomórfico.'
@@ -96,10 +95,8 @@ self.addEventListener('push', (event) => {
   const promiseChain = new Promise((resolve) => {
     setTimeout(() => {
       self.registration.showNotification(res.title, options)
-        .then(() => {
-          resolve()
-        })
-    }, 5000)
+        .then(() => resolve())
+    }, 10000)
   })
   
   event.waitUntil(promiseChain)

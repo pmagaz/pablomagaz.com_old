@@ -34,7 +34,7 @@ const webpushSubscribe = swRegistration => {
         }
       })
       .catch(err => console.log('No subscription!', err))
-  ), 7500)
+  ), 9500)
 }
 
 if ('serviceWorker' in navigator) {

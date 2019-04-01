@@ -1,5 +1,9 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js')
 
+const registerUrl = 'https://pablomagaz.com/webpush/register'
+const publicVapidKey = 'BFdszVeNLXOP_BtqQn1o4-g-pV4BMMFHjrkKKn9OSDqiHVUp52GIGw4HEKJv2jpGiPGkaIpFyHk8zZv93J6-bc8'
+const applicationServerKey = urlBase64ToUint8Array(publicVapidKey)
+
 const appName = 'react-base'
 const suffix = 'v1'
 const staticCache = `${ appName }-static-${ suffix }`
@@ -78,35 +82,61 @@ workbox.routing.registerRoute(
   ({ url }) => fetch(url.href).catch(() => caches.match('/offline.html'))
 )
 
-self.addEventListener('push', (event) => {
-  const res = JSON.parse(event.data.text())
-  const body = (!res.body) ? '' : 'Ver en el Blog Isomórfico.'
-  let url
-  if (res.data) url = res.data.url
-  else url = false
-  const options = {
-    title : res.title,
-    body: body, 
-    icon: '/assets/images/icons/logo512.png',
-    vibrate : [ 100 ],
-    data: { url: url }
-  }
-  
-  const promiseChain = new Promise((resolve) => {
-    setTimeout(() => {
-      self.registration.showNotification(res.title, options)
-        .then(() => resolve())
-    }, 10000)
+self.addEventListener('activate', async () => {
+  const subscription = await self.registration.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey
   })
-  
-  event.waitUntil(promiseChain)
+  await registerSubscription(subscription)
 })
 
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close()
-  const data = event.notification.data
-  if (data.url) {
-    const promiseChain = clients.openWindow(data.url)
-    event.waitUntil(promiseChain)
+self.addEventListener('push', async event => {
+  const res = JSON.parse(event.data.text())
+  const { title, body, url, icon } = res.payload
+  const options = {
+    body,
+    icon,
+    vibrate: [100],
+    data: { url }
   }
+
+  event.waitUntil(showNotification(title, options))
 })
+
+self.addEventListener('notificationclick', event => {
+  event.notification.close()
+  const { url } = event.notification.data
+  if (url) event.waitUntil(clients.openWindow(url))
+})
+
+const registerSubscription = async subscription => {
+  const res = await fetch(registerUrl, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(subscription)
+  })
+  return res.json()
+}
+
+const showNotification = (title, options) =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      self.registration.showNotification(title, options).then(() => resolve())
+    }, 12000)
+  })
+
+function urlBase64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - (base64String.length % 4)) % 4)
+  const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/')
+
+  const rawData = atob(base64)
+  const outputArray = new Uint8Array(rawData.length)
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i)
+  }
+  return outputArray
+}

@@ -17,10 +17,10 @@ workbox.core.setCacheNameDetails({
 workbox.precaching.suppressWarnings()
 
 self._precacheManifest = [
-  'https://pablomagaz.com/offline.html',
-  '/assets/app.3285b74c8d01f66e3b2b.js',
-  '/assets/vendor.3285b74c8d01f66e3b2b.js',
-  '/assets/styles.d62ba9e609caae10782159dc7b3a905e.css'
+
+
+
+
 ]
 
 workbox.precaching.precacheAndRoute(self._precacheManifest, {})

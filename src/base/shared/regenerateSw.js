@@ -10,10 +10,10 @@ if (fs.fileExists(swPath) && fs.fileExists(assetsPath)) {
   const content = fs.readLines(swPath, { encoding: 'utf-8' })
   const assetsContent = JSON.parse(fs.readFile(assetsPath, { encoding: 'utf-8' }))
 
-  content[20] = `  'https://pablomagaz.com/offline.html',`
-  content[21] = `  'https://pablomagaz.com/assets${ assetsContent.app.js }',`
-  content[22] = isProd ? `  'https://pablomagaz.com/assets${ assetsContent.vendor.js }',` : ''
-  content[23] = isProd ? `  'https://pablomagaz.com/assets${ assetsContent.app.css }'` : ''
+  content[19] = `  'https://pablomagaz.com/offline.html',`
+  content[20] = `  'https://pablomagaz.com/assets${ assetsContent.app.js }',`
+  content[21] = isProd ? `  'https://pablomagaz.com/assets${ assetsContent.vendor.js }',` : ''
+  content[22] = isProd ? `  'https://pablomagaz.com/assets${ assetsContent.app.css }'` : ''
   const fileContent = content.map(line =>  line + '\n')
   fs.writeFile(swPath, fileContent.join(''))
 }

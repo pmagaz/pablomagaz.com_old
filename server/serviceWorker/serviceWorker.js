@@ -1,13 +1,10 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js')
 
-const registerUrl = 'https://pablomagaz.com/webpush/register'
-const publicVapidKey = 'BFdszVeNLXOP_BtqQn1o4-g-pV4BMMFHjrkKKn9OSDqiHVUp52GIGw4HEKJv2jpGiPGkaIpFyHk8zZv93J6-bc8'
-const applicationServerKey = urlBase64ToUint8Array(publicVapidKey)
-
 const appName = 'react-base'
 const suffix = 'v1'
 const staticCache = `${ appName }-static-${ suffix }`
 const dynamicCache = `${ appName }-dynamic-${ suffix }`
+const notificationDelay = 12000
 
 workbox.core.setCacheNameDetails({
   prefix: appName,
@@ -82,14 +79,6 @@ workbox.routing.registerRoute(
   ({ url }) => fetch(url.href).catch(() => caches.match('/offline.html'))
 )
 
-self.addEventListener('activate', async () => {
-  const subscription = await self.registration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey
-  })
-  await registerSubscription(subscription)
-})
-
 self.addEventListener('push', async event => {
   const res = JSON.parse(event.data.text())
   const { title, body, url, icon } = res.payload
@@ -99,44 +88,18 @@ self.addEventListener('push', async event => {
     vibrate: [100],
     data: { url }
   }
-
   event.waitUntil(showNotification(title, options))
 })
+
+const showNotification = (title, options) =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      self.registration.showNotification(title, options).then(() => resolve())
+    }, notificationDelay)
+  })
 
 self.addEventListener('notificationclick', event => {
   event.notification.close()
   const { url } = event.notification.data
   if (url) event.waitUntil(clients.openWindow(url))
 })
-
-const registerSubscription = async subscription => {
-  const res = await fetch(registerUrl, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(subscription)
-  })
-  return res.json()
-}
-
-const showNotification = (title, options) =>
-  new Promise(resolve => {
-    setTimeout(() => {
-      self.registration.showNotification(title, options).then(() => resolve())
-    }, 12000)
-  })
-
-function urlBase64ToUint8Array(base64String) {
-  const padding = '='.repeat((4 - (base64String.length % 4)) % 4)
-  const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/')
-
-  const rawData = atob(base64)
-  const outputArray = new Uint8Array(rawData.length)
-
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i)
-  }
-  return outputArray
-}

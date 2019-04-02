@@ -1,7 +1,7 @@
 
 
 /* eslint-disable no-restricted-syntax */
-const permissionDelay = 10000
+const permissionDelay = 8000
 const registerUrl = 'https://pablomagaz.com/webpush/register'
 const serviceWorkerUrl = 'https://pablomagaz.com/serviceWorker.js'
 const publicVapidKey = 'BFdszVeNLXOP_BtqQn1o4-g-pV4BMMFHjrkKKn9OSDqiHVUp52GIGw4HEKJv2jpGiPGkaIpFyHk8zZv93J6-bc8'

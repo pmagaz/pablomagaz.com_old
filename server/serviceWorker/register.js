@@ -1,6 +1,5 @@
 
 
-/* eslint-disable no-restricted-syntax */
 const permissionDelay = 10000
 const registerUrl = 'https://pablomagaz.com/webpush/register'
 const serviceWorkerUrl = 'https://pablomagaz.com/serviceWorker.js'

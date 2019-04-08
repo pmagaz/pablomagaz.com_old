@@ -29,19 +29,26 @@ const saveSubscription = async subscription => {
   return res.status === 200 ? res.json() : false
 }
 
-const generateSubscription = swRegistration =>
+const askPermision = () =>
   new Promise((resolve, reject) => {
-    setTimeout(async () => {
-      await window.Notification.requestPermission()
-      const subscription = await swRegistration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
-      })
-      const saved = await saveSubscription(subscription)
-      if (saved) resolve(saved)
-      else reject(new Error('Subscription not saved!'))
-    }, permissionDelay)
+    const { permission } = Notification
+    if (permission === 'granted') resolve(Notification)
+    else {
+      setTimeout(async () => {
+        const permision = await window.Notification.requestPermission()
+        if (permision) resolve(permision)
+        else reject(permision)
+      }, permissionDelay)
+    }
   })
+
+const generateSubscription = async swRegistration => {
+  const subscription = await swRegistration.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
+  })
+  return await saveSubscription(subscription)
+}
 
 const registerServiceWorker = async () => {
   return await navigator.serviceWorker.register(serviceWorkerUrl)
@@ -50,6 +57,7 @@ const registerServiceWorker = async () => {
 const register = async () => {
   if ('serviceWorker' in navigator) {
     const swRegistration = await registerServiceWorker()
+    await askPermision()
     await generateSubscription(swRegistration)
   } else throw new Error('ServiceWorkers are not supported by your browser!')
 }

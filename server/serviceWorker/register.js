@@ -33,17 +33,13 @@ const generateSubscription = swRegistration =>
   new Promise((resolve, reject) => {
     setTimeout(async () => {
       await window.Notification.requestPermission()
-      const subscribed = await swRegistration.pushManager.getSubscription()
-      if (!subscribed) {
-        const subscription = await swRegistration.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
-        })
-        const saved = await saveSubscription(subscription)
-        if (saved) resolve(saved)
-        else reject(new Error('Subscription not saved!'))
-      }
-      resolve(subscribed)
+      const subscription = await swRegistration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
+      })
+      const saved = await saveSubscription(subscription)
+      if (saved) resolve(saved)
+      else reject(new Error('Subscription not saved!'))
     }, permissionDelay)
   })
 

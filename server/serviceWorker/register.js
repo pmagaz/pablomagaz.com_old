@@ -35,9 +35,9 @@ const askPermision = () =>
     if (permission === 'granted') resolve(Notification)
     else {
       setTimeout(async () => {
-        const permision = await window.Notification.requestPermission()
-        if (permision) resolve(permision)
-        else reject(permision)
+        const asked = await window.Notification.requestPermission()
+        if (asked) resolve(asked)
+        else reject(asked)
       }, permissionDelay)
     }
   })

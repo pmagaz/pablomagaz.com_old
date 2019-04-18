@@ -73,7 +73,7 @@ class SnackBars extends Component {
   render() {
     const snackCookieBar = (
       <SnackBar position="bottom" exit={ this.state.hideSnackCookieBar }>
-        Este sitio usa cookies para analíticas. Al continuar navegando aceptas los terminos.
+        Este sitio usa cookies para analíticas. Al continuar navegando aceptas los términos.
       </SnackBar>
     );
 

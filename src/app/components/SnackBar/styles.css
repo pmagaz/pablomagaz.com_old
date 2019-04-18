@@ -54,15 +54,15 @@
 .snackBarTop {
   color: rgb(255, 255, 255);
   background-color: #282c38;
-  max-width: 32em;
+  max-width: 33em;
   max-height: 14.5em;
   animation: SnackBarEnterDown 300ms both;
   flex-direction: column;
-  right: 0.3em;
+  right: 1em;
   position: fixed;
   overflow: hidden;
   box-sizing: border-box;
-  font-size: 0.9em;
+  font-size: 1em;
   top: 0.4em;
   line-height: 1.5em;
   display: flex;
@@ -106,6 +106,7 @@
 .content {
   display: flex;
   padding: 0.4rem;
+  margin-top: 0.5rem;
   justify-content: flex-end;
 }
 

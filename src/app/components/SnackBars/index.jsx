@@ -57,7 +57,7 @@ class SnackBars extends Component {
   showCookieMsg() {
     setTimeout(() => {
       this.setState({ showSnackCookieBar: true });
-    }, 1000);
+    }, 800);
   }
 
   async notificationPermission() {

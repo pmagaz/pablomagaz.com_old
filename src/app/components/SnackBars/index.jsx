@@ -76,10 +76,10 @@ class SnackBars extends Component {
         ¿Quieres recivir notificaciones sobre las novedades del blog?. Nunca recibiras más de una al mes. Tambien puedes
         estar seguir el blog en
         <a
-          aria-label="learn more about cookies"
+          aria-label="Pablo Magaz Twitter"
           role="button"
           tabIndex="0"
-          href="https://cookiesandyou.com"
+          href="https://twitter.com/pablo_magaz"
           target="_blank"
           rel="noopener noreferrer"
         >

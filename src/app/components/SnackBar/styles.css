@@ -5,8 +5,7 @@
   color: rgb(255, 255, 255);
   background-color: #282c38;
   max-width: 32em;
-  animation: SnackBarEnterUp 180ms both;
-  animation-delay: 200ms;
+  animation: SnackBarEnterUp 300ms both;
   flex-direction: column;
   right: 1em;
   position: fixed;
@@ -57,14 +56,14 @@
   background-color: #282c38;
   max-width: 36em;
   max-height: 14.5em;
-  animation: SnackBarEnterDown 380ms both;
+  animation: SnackBarEnterDown 300ms both;
   flex-direction: column;
   right: 0.3em;
   position: fixed;
   overflow: hidden;
   box-sizing: border-box;
   font-size: 0.9em;
-  top: 0em;
+  top: 0.4em;
   line-height: 1.5em;
   display: flex;
   flex-wrap: nowrap;
@@ -110,7 +109,12 @@
   justify-content: flex-end;
 }
 
-.exitAnim {
+.exitDown {
+  animation: SnackBarExitUp 200ms ease-in both;
+  animation-delay: 50ms;
+}
+
+.exitUp {
   animation: SnackBarExitDown 200ms ease-in both;
   animation-delay: 50ms;
 }

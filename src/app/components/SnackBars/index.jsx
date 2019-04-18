@@ -8,7 +8,7 @@ class SnackBars extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      permisionDelay: 1000,
+      permisionDelay: 12000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
@@ -34,7 +34,7 @@ class SnackBars extends Component {
   async regenerateSubscription() {
     setTimeout(() => {
       generateSubscription();
-    }, 1000);
+    }, 2000);
   }
 
   aceptCookies() {
@@ -43,7 +43,7 @@ class SnackBars extends Component {
   }
 
   denyPermision() {
-    setCookie(this.denyNotifications, true, 1000);
+    setCookie(this.denyNotifications, true, 600);
     this.setState({ hideSnackNotificationBar: true });
   }
 

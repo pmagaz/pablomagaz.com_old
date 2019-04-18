@@ -18,7 +18,8 @@ class SnackBar extends Component {
     const snackBarStyle = cx({
       snackBarTop: this.props.position === 'top',
       snackBarBottom: this.props.position === 'bottom',
-      exitAnim: this.props.exit
+      exitDown: this.props.position === 'top' && this.props.exit,
+      exitUp: this.props.position === 'bottom' && this.props.exit
     });
 
     let buttons;
@@ -48,10 +49,11 @@ class SnackBar extends Component {
       );
     }
 
+    const logoUrl = `${ SiteConf.SiteUrl }/${ SiteConf.blogImage }`;
     const snackBar = (
       <div className={ snackBarStyle }>
         <div className={ styles.content }>
-          <img className={ styles.snackLogo } src={ SiteConf.blogImage } />
+          <img className={ styles.snackLogo } src={ logoUrl } />
           <span className={ styles.snackMessage }>{ this.props.children }</span>
         </div>
       </div>

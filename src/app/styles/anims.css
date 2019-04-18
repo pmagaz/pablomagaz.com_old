@@ -1,136 +1,126 @@
 @keyframes titleBlog {
   0% {
-      opacity: 0.8;
-      margin-top: -35px;
-
+    opacity: 0.8;
+    margin-top: -35px;
   }
   100% {
-      opacity: 1;
-      margin-top: 10px;
+    opacity: 1;
+    margin-top: 10px;
   }
 }
 
 @keyframes blogLogo-mobile {
-	from {
-        opacity: 0.8;
-        background-position-y: 0%;
-    }
-    to {
-        opacity: 1;
-        background-position-y: 50%;
-    }
+  from {
+    opacity: 0.8;
+    background-position-y: 0%;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 50%;
+  }
 }
 
 @keyframes blogLogo-tablet {
-	from {
-        opacity: 0.8;
-        background-position-y: -60px;
-    }
-    to {
-        opacity: 1;
-        background-position-y: -13px;
-    }
+  from {
+    opacity: 0.8;
+    background-position-y: -60px;
+  }
+  to {
+    opacity: 1;
+    background-position-y: -13px;
+  }
 }
 @keyframes blogLogo-desktop {
-	from {
-        opacity: 0.8;
-        background-position-y: -60px;
-    }
-    to {
-        opacity: 1;
-        background-position-y: -13px;
-    }
+  from {
+    opacity: 0.8;
+    background-position-y: -60px;
+  }
+  to {
+    opacity: 1;
+    background-position-y: -13px;
+  }
 }
 
 @keyframes brandText {
-    0% {
-        opacity: 0.8;
-        transform: translate(0px, -30px) skewY(-2deg) rotate(2deg);
-  
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0, 0px) skewY(-2deg) rotate(2deg);
-    }
+  0% {
+    opacity: 0.8;
+    transform: translate(0px, -30px) skewY(-2deg) rotate(2deg);
   }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px) skewY(-2deg) rotate(2deg);
+  }
+}
 
 @keyframes brandBox {
-	from {
-        opacity: 0;
-        transform: translate(0px, -35px) rotate(-2deg);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0px, 0px) rotate(-2deg);
-    }
+  from {
+    opacity: 0;
+    transform: translate(0px, -35px) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(-2deg);
+  }
 }
 
 @keyframes fadeOut {
-	from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeIn {
-	from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes SnackBarEnterDown {
-    0% {
-        opacity: 0;
-        margin-bottom : -335px;
-  
-    }
-    100% {
-        opacity: 1;
-        margin-top: 10px;
-    }
+  0% {
+    opacity: 0;
+    margin-bottom: -335px;
   }
-
+  100% {
+    opacity: 1;
+    margin-top: 10px;
+  }
+}
 
 @keyframes SnackBarEnterUp {
-    0% {
-        opacity: 0;
-        margin-bottom : -335px;
-  
-    }
-    100% {
-        opacity: 1;
-        margin-top: 10px;
-    }
+  0% {
+    opacity: 0;
+    margin-bottom: -335px;
   }
-
-  @keyframes SnackBarExitDown {
-    0% {
-        opacity: 0.9;
-        margin-top: 10px;
-  
-    }
-    100% {
-        opacity: 0;
-        margin-bottom : -335px;
-
-    }
-
+  100% {
+    opacity: 1;
+    margin-top: 10px;
   }
+}
 
-  @keyframes SnackBarExitUp {
-    0% {
-        opacity: 0.9;
-        margin-top: 10px;
-  
-    }
-    100% {
-        opacity: 0;
-        margin-bottom : -335px;
-
-    }
+@keyframes SnackBarExitUp {
+  0% {
+    opacity: 0.9;
+    margin-top: 10px;
   }
+  100% {
+    opacity: 0;
+    margin-top: -335px;
+  }
+}
+
+@keyframes SnackBarExitDown {
+  0% {
+    opacity: 0.9;
+    margin-top: 10px;
+  }
+  100% {
+    opacity: 0;
+    margin-bottom: -335px;
+  }
+}

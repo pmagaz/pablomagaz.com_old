@@ -1,11 +1,12 @@
 import { SiteConf } from 'base';
+import serviceWorkerTemplate from './sw';
 
 export default function tag(params) {
   const state = JSON.stringify(params.state);
   const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png`;
   const tags = params.routeMatch.substring(1).split('/');
-  let tagUrl; let 
-    tagName;
+  let tagUrl;
+  let tagName;
   if (tags.length > 0) {
     tagName = tags[1];
     tagUrl = `${ SiteConf.SiteUrl }/tag/${ tagName }`;
@@ -67,7 +68,8 @@ export default function tag(params) {
       <div id="root">${ params.container }</div>
       <script>window.$REACTBASE_STATE = ${ state }</script>
       ${ params.appScript }
-    </body>
+      ${ serviceWorkerTemplate }
+      </body>
   </html>
   `;
 }

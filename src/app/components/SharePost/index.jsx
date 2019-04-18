@@ -1,26 +1,26 @@
-import React from 'react'
-import { PropTypes } from 'prop-types'
-import { ShareButtons, generateShareIcon } from 'react-share'
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import { ShareButtons, generateShareIcon } from 'react-share';
 
-import { SiteConf } from 'base'
-import styles from './styles.css'
+import { SiteConf } from 'base';
+import styles from './styles.css';
 
-const { FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton, EmailShareButton, GooglePlusShareButton } = ShareButtons
-const FacebookIcon = generateShareIcon('facebook')
-const TwitterIcon = generateShareIcon('twitter')
-const LinkedinIcon = generateShareIcon('linkedin')
-const WhatsappIcon = generateShareIcon('whatsapp')
-const GooglePlusIcon = generateShareIcon('google')
-const EmailIcon = generateShareIcon('email')
+const { FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton, EmailShareButton, GooglePlusShareButton } = ShareButtons;
+const FacebookIcon = generateShareIcon('facebook');
+const TwitterIcon = generateShareIcon('twitter');
+const LinkedinIcon = generateShareIcon('linkedin');
+const WhatsappIcon = generateShareIcon('whatsapp');
+const GooglePlusIcon = generateShareIcon('google');
+const EmailIcon = generateShareIcon('email');
 
-const propTypes= {
+const propTypes = {
   post: PropTypes.object.isRequired
-}
+};
 
 const SharePost = ({ post }) => {
 
-  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`
-  const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }` 
+  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
+  const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }`; 
   
   return (
     <article className={ styles.socialBoxWrap }>
@@ -46,9 +46,9 @@ const SharePost = ({ post }) => {
         </EmailShareButton>
       </span>
     </article>
-  )
-}
+  );
+};
 
-SharePost.propTypes = propTypes
+SharePost.propTypes = propTypes;
 
-export default SharePost
+export default SharePost;

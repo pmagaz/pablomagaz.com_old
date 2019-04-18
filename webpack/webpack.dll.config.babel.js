@@ -6,15 +6,15 @@ import * as common from './webpack.common.config';
 
 export const cache = true;
 export const devtool = 'eval';
-export const entry = common.entry;
-export const context = common.context;
-export const resolve = common.resolve;
+export const { entry } = common;
+export const { context } = common;
+export const { resolve } = common;
 
-export const output =  {
+export const output = {
   path: common.buildPath,
   publicPath: '/',
   library: '[name]',
-  filename: '[name].dll.js',
+  filename: '[name].dll.js'
 };
 
 export const module = {
@@ -34,13 +34,12 @@ export const module = {
 
 export const plugins = [
   new webpack.DllPlugin({
-    path: path.join(common.dllPath, "[name]-manifest.json"),
-    name: "[name]",
+    path: path.join(common.dllPath, '[name]-manifest.json'),
+    name: '[name]'
   }),
   new AssetsPlugin({
     path: common.buildPath,
     filename: 'webpack-assets.json',
     prettyPrint: true
-  }),
-]
-.concat(common.plugins);
+  })
+].concat(common.plugins);

@@ -1,14 +1,14 @@
-import console from '../../../src/base/shared/console'
+import console from '../shared/console';
 
 export default class compileInfoPlugin {
 
   apply(compiler) {
-    compiler.plugin('done', function(stats) {
+    compiler.plugin('done', (stats) => {
       if (stats.compilation.errors && stats.compilation.errors.length && process.argv.indexOf('--watch') == -1) {
-        console.error(stats.compilation.errors)
+        console.error(stats.compilation.errors);
       } else {
-        console.success('Compilation completed without errors!')
+        console.success('Compilation completed without errors!');
       }
-    })
+    });
   }
 }

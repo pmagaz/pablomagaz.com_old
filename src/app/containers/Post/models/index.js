@@ -1,5 +1,5 @@
-import { Record } from 'immutable'
-import { SiteConf } from 'base'
+import { Record } from 'immutable';
+import { SiteConf } from 'base';
 
 export const PostModel = Record({
   id: -1,
@@ -14,8 +14,8 @@ export const PostModel = Record({
   feature_image: '',
   meta_description: '',
   author: SiteConf.Author,
-})
+});
 
 export const setInitialState = initialState => (
   initialState.Post = new PostModel(initialState.Post)
-)
+);

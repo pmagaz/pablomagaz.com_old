@@ -1,0 +1,116 @@
+@import "../../styles/base.css";
+@import "../../styles/anims.css";
+
+.snackBarBottom {
+  color: rgb(255, 255, 255);
+  background-color: #282c38;
+  max-width: 32em;
+  animation: SnackBarEnterUp 180ms both;
+  animation-delay: 200ms;
+  flex-direction: column;
+  right: 1em;
+  position: fixed;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  bottom: 1em;
+  line-height: 1.5em;
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+  a {
+    opacity: 0.8;
+    display: inline-block;
+    padding: 0.2em;
+    text-decoration: underline;
+    transition: all 0.3s;
+    &:hover {
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+  }
+  .snackLogo {
+    align-items: flex-end;
+    margin: -2.5em 0.5em;
+    width: 60px;
+    @media screen and (max-width: 414px) and (orientation: portrait) {
+      width: 45px;
+    }
+  }
+  .snackMessage {
+    margin: 2em 0.5em 1.5em;
+    display: block;
+  }
+  @media screen and (max-width: 414px) and (orientation: portrait),
+    screen and (max-width: 736px) and (orientation: landscape) {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+  }
+}
+
+.snackBarTop {
+  color: rgb(255, 255, 255);
+  background-color: #282c38;
+  max-width: 36em;
+  max-height: 14.5em;
+  animation: SnackBarEnterDown 380ms both;
+  flex-direction: column;
+  right: 0.3em;
+  position: fixed;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  top: 0em;
+  line-height: 1.5em;
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+  a {
+    opacity: 0.8;
+    display: inline-block;
+    padding: 0.2em;
+    text-decoration: underline;
+    transition: all 0.3s;
+    &:hover {
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+  }
+  .snackMessage {
+    margin: 0.7em 0.5em 1em;
+    display: block;
+  }
+  .snackLogo {
+    align-items: center;
+    margin: 1em;
+    height: 70px;
+
+    @media screen and (max-width: 414px) and (orientation: portrait) {
+      height: px;
+    }
+  }
+  @media screen and (max-width: 414px) and (orientation: portrait),
+    screen and (max-width: 736px) and (orientation: landscape) {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+  }
+}
+
+.content {
+  display: flex;
+  padding: 0.4rem;
+  justify-content: flex-end;
+}
+
+.exitAnim {
+  animation: SnackBarExitDown 200ms ease-in both;
+  animation-delay: 50ms;
+}

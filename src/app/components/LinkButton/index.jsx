@@ -1,11 +1,11 @@
-import React from 'react'
-import { PropTypes } from 'prop-types'
-import { Link } from 'react-router'
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import { Link } from 'react-router';
 
 const propTypes = {
   value: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-}
+};
 /*
 const goTo = (location) => {
 
@@ -17,14 +17,14 @@ const goTo = (location) => {
     if (section) section.scrollIntoView({ behavior: 'smooth' })
     else browserHistory.push(`/${location}`) 
   }
-}*/
+} */
 
 const LinkButton = ({ location, value }) => (
-  <Link to={ `${location}` }>
+  <Link to={ `${ location }` }>
     { value }
   </Link>
-)
+);
 
-LinkButton.propTypes = propTypes
+LinkButton.propTypes = propTypes;
 
-export default LinkButton
+export default LinkButton;

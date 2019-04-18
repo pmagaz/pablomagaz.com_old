@@ -1,15 +1,15 @@
-import React from 'react'
-import { hydrate } from 'react-dom'
-import { Provider } from 'react-redux'
-import useScroll from 'react-router-scroll/lib/useScroll'
-import { Router, browserHistory, applyRouterMiddleware } from 'react-router'
+import React from 'react';
+import { hydrate } from 'react-dom';
+import { Provider } from 'react-redux';
+import useScroll from 'react-router-scroll/lib/useScroll';
+import { Router, browserHistory, applyRouterMiddleware } from 'react-router';
 
-import { sendAnalitics } from 'base'
-import InitialState from 'store/InitialState'
-import ConfigureStore from 'store/ConfigureStore'
-import routes from '../routes'
+import { sendAnalitics } from 'base';
+import InitialState from 'store/InitialState';
+import ConfigureStore from 'store/ConfigureStore';
+import routes from '../routes';
 
-const store = ConfigureStore(browserHistory, InitialState)
+const store = ConfigureStore(browserHistory, InitialState);
 
 hydrate(
   <Provider store={ store }>
@@ -21,4 +21,4 @@ hydrate(
     />
   </Provider>,
   document.getElementById('root')
-)
+);

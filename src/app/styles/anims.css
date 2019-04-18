@@ -73,3 +73,64 @@
         opacity: 0;
     }
 }
+
+@keyframes fadeIn {
+	from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes SnackBarEnterDown {
+    0% {
+        opacity: 0;
+        margin-bottom : -335px;
+  
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10px;
+    }
+  }
+
+
+@keyframes SnackBarEnterUp {
+    0% {
+        opacity: 0;
+        margin-bottom : -335px;
+  
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10px;
+    }
+  }
+
+  @keyframes SnackBarExitDown {
+    0% {
+        opacity: 0.9;
+        margin-top: 10px;
+  
+    }
+    100% {
+        opacity: 0;
+        margin-bottom : -335px;
+
+    }
+
+  }
+
+  @keyframes SnackBarExitUp {
+    0% {
+        opacity: 0.9;
+        margin-top: 10px;
+  
+    }
+    100% {
+        opacity: 0;
+        margin-bottom : -335px;
+
+    }
+  }

@@ -1,5 +1,5 @@
-import { Record } from 'immutable'
-import { SiteConf } from 'base'
+import { Record } from 'immutable';
+import { SiteConf } from 'base';
 
 const PostModel = Record({
   id: -1,
@@ -13,6 +13,6 @@ const PostModel = Record({
   published_at: '',
   feature_image: '',
   author: SiteConf.Author
-})
+});
 
-export default PostModel
+export default PostModel;

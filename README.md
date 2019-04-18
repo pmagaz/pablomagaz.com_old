@@ -2,7 +2,6 @@
 
 # React-Base
 
-
 ![Build-Status](https://travis-ci.org/atSistemas/react-base.svg?branch=master)
 ![Build-Status](https://ci.appveyor.com/api/projects/status/github/atSistemas/react-base?branch=master&svg=true)
 ![Coverage](https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_91.svg)
@@ -11,7 +10,7 @@
 
 **A modular platform for Redux Isomorphic applications**
 
-This repository is a modular abstraction to build a [ReactJS](https://facebook.github.io/react/) web application based on [Redux](http://redux.js.org/)  paradigm.
+This repository is a modular abstraction to build a [ReactJS](https://facebook.github.io/react/) web application based on [Redux](http://redux.js.org/) paradigm.
 You can use it to quickly scaffold your React web application projects and development environments for these projects.
 
 This seed should clarify how to wire up all the modules of your application, even when we understand that in some cases
@@ -24,10 +23,10 @@ there must be some changes needed by the structure to fit your needs correctly
 - [Redux](http://redux.js.org/) based architecture
 - Isomorphic / Universal Javascript Apps
 - Separate build configurations depending on target environment
-- [Webpack](https://webpack.github.io/) for the build toolchain  
+- [Webpack](https://webpack.github.io/) for the build toolchain
 - Development & Production server using [express](https://github.com/expressjs/express) and [webpack-dev-server](https://webpack.github.io/)
 - JSX and ES6 transpilation using [Babel](https://babeljs.io/)
-- Hot Reload/Live Reload support for Js & Css using  [Webpack HMR](https://webpack.github.io/docs/hot-module-replacement.html)
+- Hot Reload/Live Reload support for Js & Css using [Webpack HMR](https://webpack.github.io/docs/hot-module-replacement.html)
 - Container and component generators using [Yeoman](https://github.com/yeoman/yo)
 - Persistent data modeling using [ImmutableJS](https://facebook.github.io/immutable-js/)
 - [Mocha](https://mochajs.org/) as testing framework
@@ -39,7 +38,6 @@ there must be some changes needed by the structure to fit your needs correctly
 - Code Linting using [Eslint](https://github.com/eslint/eslint)
 - Css Linting using [CssLint](https://github.com/stylelint/stylelint)
 - [Airbnb](https://github.com/airbnb/javascript/tree/master/react) React Style Guide
-
 
 ## Getting Started
 
@@ -68,34 +66,32 @@ This command will install all the required dependencies and start your developme
 
 Please note that `npm install` is only required on your first start, or in case of updated dependencies.
 
-
 ### Initializing development server
 
-  Once all the dependencies are installed, you can run `$ npm run start` to initialize your development server using [webpack-dev-server](https://webpack.github.io/) express middleware.
+Once all the dependencies are installed, you can run `$ npm run start` to initialize your development server using [webpack-dev-server](https://webpack.github.io/) express middleware.
 
-  The dev server uses  [HMR](https://webpack.github.io/docs/hot-module-replacement.html) (Hot module replacement) that injects updated modules into the bundle in runtime. It's like LiveReload
-
+The dev server uses [HMR](https://webpack.github.io/docs/hot-module-replacement.html) (Hot module replacement) that injects updated modules into the bundle in runtime. It's like LiveReload
 
 ## Architecture
 
-React-base is based on [Redux](http://redux.js.org/)  paradigm so you can find all the typical entities of an Redux project like [reducers](http://redux.js.org/docs/basics/Reducers.html) , [store](http://redux.js.org/docs/basics/Store.html), [actions](http://redux.js.org/docs/basics/Actions.html) , etc.
+React-base is based on [Redux](http://redux.js.org/) paradigm so you can find all the typical entities of an Redux project like [reducers](http://redux.js.org/docs/basics/Reducers.html) , [store](http://redux.js.org/docs/basics/Store.html), [actions](http://redux.js.org/docs/basics/Actions.html) , etc.
 
 There are four main folders:
 
-* `server` contains React-Base development & production server based in express with Universal/Isomorphic support and custom middlewares like Gzip.
+- `server` contains React-Base development & production server based in express with Universal/Isomorphic support and custom middlewares like Gzip.
 
 ```javascript
-server
-  api/ //Api mocks
-  lib/ //Universal rendering files
-  middleware/ //enviroment middleware
-  statics/ //definition of  statics path
-  templates/ //universal templates
-    server  //Server  
-    routing  //Routing middleware  
+server;
+api / //Api mocks
+lib / //Universal rendering files
+middleware / //enviroment middleware
+statics / //definition of  statics path
+templates / //universal templates
+  server; //Server
+routing; //Routing middleware
 ```
 
-* `webpack` contains Angular2-Base Webpack2 configuration separated by enviroment that allows to use different plugins and loaders in each target enviroment.
+- `webpack` contains Angular2-Base Webpack2 configuration separated by enviroment that allows to use different plugins and loaders in each target enviroment.
 
 ```javascript
 webpack
@@ -106,7 +102,7 @@ webpack
   webpack.dll.config/ //Dll config
 ```
 
-* `src/base/` contains React-Base platform bootstrapping code.
+- `src/base/` contains React-Base platform bootstrapping code.
 
 ```javascript
 base
@@ -134,11 +130,12 @@ base
   ...
 ```
 
-* `src/app/` is the place where to put your application source code.
+- `src/app/` is the place where to put your application source code.
 
 Angular2-Base uses a "featured based" distribution, so all the necessary code for each page/features is located in its own folder inside containers folder as in `src/app/containers/myContainer`
 
 A container is an Angular2 Module who contains other components, Redux entities, functions and store subscriptions. Each container is self-contained and represents a feature like "clients" or "products" and it contains all the necessary stuff.
+
 ```javascript
 app/
   containers/
@@ -153,25 +150,26 @@ app/
 ```
 
 ## Action Types
+
 ActionTypes it's a representation using constants of your possible actions:
 
 ```javascript
-import { createActionType } from 'base';
+import { createActionType } from "base";
 
 export const ActionTypes = createActionType([
-  'CLICK',
-  'MAIN_CONTAINER',
-  'MAIN_ERROR',
-  'MAIN_REQUEST',
-  'MAIN_SUCCESS',
-  'LAZY_CONTAINER',
-  'LOGIN',
+  "CLICK",
+  "MAIN_CONTAINER",
+  "MAIN_ERROR",
+  "MAIN_REQUEST",
+  "MAIN_SUCCESS",
+  "LAZY_CONTAINER",
+  "LOGIN"
 ]);
-
 ```
 
 ## Actions
-Actions are payloads of information witch represent that something happend in your application and  send data from your application to your store:
+
+Actions are payloads of information witch represent that something happend in your application and send data from your application to your store:
 
 ```javascript
 public clickHandler(id) {
@@ -191,15 +189,15 @@ this.store.dispatch(this.mainActions.clickHandler(rowId));
 
 Yo can wrap functions or service call into the payload of your actions.
 
-
 ## Reducers
+
 Reducers describe how the state of your application changes in response to a new Action. Angular-2 uses a custom CreateReducer that allows to use separated reducers functions instead of "switch based" reducers.
 
 ```javascript
-import { createReducer } from 'base';
+import { createReducer } from "base";
 
 const click = (state, action) => {
-  return state.update('mainData', (value) => action.payload);
+  return state.update("mainData", value => action.payload);
 };
 
 const request = (state, action) => {
@@ -210,39 +208,38 @@ const actionHandlers = {
   [ActionTypes.CLICK]: click,
   [ActionTypes.LOGIN]: login,
   [ActionTypes.MAIN_REQUEST]: request,
-  [ActionTypes.MAIN_SUCCESS]: success,
+  [ActionTypes.MAIN_SUCCESS]: success
 };
 
 export default CreateReducer(actionHandlers, new MainModel());
 
-export { MainReducer }
+export { MainReducer };
 ```
 
 ## Models
+
 Represents your model data using ImmutableJS Data Types and sets its initial state using setInitialState() function.
 
-
 ```javascript
-import { Record } from 'immutable';
+import { Record } from "immutable";
 
 const MainModel = new Record({
-  display:0,
-  operator:'',
-  operation:'',
+  display: 0,
+  operator: "",
+  operation: "",
   prevValue: 0,
   nextValue: 0,
   newValue: false,
-  resetDisplay: false,
+  resetDisplay: false
 });
 
 function setInitialState(initialState) {
-  return initialState.Maiin = new MainModel();
+  return (initialState.Maiin = new MainModel());
 }
 
 export { MainModel, setInitialState };
-
-
 ```
+
 ### Generating a new container
 
 React-base uses Yeoman to generate new application containers or components.
@@ -279,7 +276,6 @@ You can generate a complete distribution source ready for production enviroments
 
 `$ npm run start:prod` will run production enviroment of your application serving content from dist directory.
 
-
 ## Testing your application
 
 React base uses - [Enzyme](https://github.com/airbnb/enzyme) a testing utillity created by [Airbnb](https://github.com/airbnb/) for unit testing and Ui testing using [Airbnb](https://github.com/tmpvar/jsdom) so you can run your ui testing without a browser.
@@ -300,9 +296,9 @@ React base uses [Nyc](https://github.com/bcoe/nyc) for code coverage and you can
 
 Anyone and everyone is welcome to contribute, however, if you decide to get involved, please take a moment to review the [guidelines](CONTRIBUTING.md):
 
-* [Bug reports](CONTRIBUTING.md#bugs)
-* [Feature requests](CONTRIBUTING.md#features)
-* [Pull requests](CONTRIBUTING.md#pull-requests)
+- [Bug reports](CONTRIBUTING.md#bugs)
+- [Feature requests](CONTRIBUTING.md#features)
+- [Pull requests](CONTRIBUTING.md#pull-requests)
 
 ## License
 

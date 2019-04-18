@@ -1,23 +1,23 @@
 /* eslint-disable indent */
-import React  from 'react'
-import { PropTypes } from 'prop-types'
-import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon} from 'react-share'
-import { formatDate, SiteConf } from 'base'
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon } from 'react-share';
+import { formatDate, SiteConf } from 'base';
 
-import PostDate from 'components/PostDate'
-import PostTag from 'components/PostTag'
-import styles from './styles.css'
+import PostDate from 'components/PostDate';
+import PostTag from 'components/PostTag';
+import styles from './styles.css';
 
-const propTypes= {
+const propTypes = {
   post: PropTypes.object
-}
+};
 
 const PostInfo = ({ post }) => {
 
-  let share 
+  let share; 
   if (post.html) {
-    const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`
-    const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }` 
+    const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
+    const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }`; 
     
     share = (
       <div className={ styles.socialBoxWrapLinks }>
@@ -34,7 +34,7 @@ const PostInfo = ({ post }) => {
       <FacebookIcon round={ true } size={ 26 }/>
       </FacebookShareButton>
       </div>
-    )
+    );
   }
   
   return ( 
@@ -47,9 +47,9 @@ const PostInfo = ({ post }) => {
       <PostTag tags={ post.tags } />
       </div>
        { share }
-    </div>)
-}
+    </div>);
+};
 
-PostInfo.propTypes = propTypes
+PostInfo.propTypes = propTypes;
 
-export default PostInfo
+export default PostInfo;

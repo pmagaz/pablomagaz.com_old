@@ -1,22 +1,22 @@
-import React  from 'react'
-import { PropTypes } from 'prop-types'
-import ReactDisqusComments from 'react-disqus-comments'
-import RenderOnScroll from 'components/RenderOnScroll'
-import { SiteConf } from 'base'
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import ReactDisqusComments from 'react-disqus-comments';
+import RenderOnScroll from 'components/RenderOnScroll';
+import { SiteConf } from 'base';
 
-const propTypes= {
+const propTypes = {
   post: PropTypes.object.isRequired
-}
+};
 
 const newCommentHandler = () => {
-  console.log('new comment')
-}
+  console.log('new comment');
+};
 
 const PostComments = ({ post }) => {
 
-  const postUrl = `${ SiteConf.BlogUrl}/${post.slug }`
-  const shortName = SiteConf.DisqusSettings.shortName
-  const identifier = `${ SiteConf.DisqusSettings.identifier }@${ post.slug }`
+  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
+  const { shortName } = SiteConf.DisqusSettings;
+  const identifier = `${ SiteConf.DisqusSettings.identifier }@${ post.slug }`;
 
   return (
     <RenderOnScroll scroll={ 2000 } >
@@ -28,9 +28,9 @@ const PostComments = ({ post }) => {
         onNewComment={ newCommentHandler }
       />
     </RenderOnScroll>
-  )
-}
+  );
+};
 
-PostComments.propTypes = propTypes
+PostComments.propTypes = propTypes;
 
-export default PostComments
+export default PostComments;

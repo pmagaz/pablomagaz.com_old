@@ -1,9 +1,9 @@
-import { PropTypes } from 'prop-types'
-import React, { PureComponent } from 'react'
-import classNames from 'classnames/bind'
-import Menu from 'components/Menu'
-import Logo from 'components/Logo'
-import styles from './styles.css'
+import { PropTypes } from 'prop-types';
+import React, { PureComponent } from 'react';
+import classNames from 'classnames/bind';
+import Menu from 'components/Menu';
+import Logo from 'components/Logo';
+import styles from './styles.css';
 
 class Header extends PureComponent {
   
@@ -12,36 +12,35 @@ class Header extends PureComponent {
   }
 
   constructor(props) {
-    super(props)
-    this.state = { collapsed: false, scrollTop: 0 } 
+    super(props);
+    this.state = { collapsed: false, scrollTop: 0 }; 
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll.bind(this))
+    window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll.bind(this))
+    window.removeEventListener('scroll', this.handleScroll.bind(this));
   }
 
   handleScroll() {
-    const maxScroll = 112
+    const maxScroll = 112;
     // FIX
-    const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop
+    const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop;
     if (!this.state.collapsed && scrollTop >= maxScroll) {
-      this.setState({ collapsed: true, scrollTop })
-    } 
-    else if (scrollTop <= maxScroll && this.state.collapsed) {
-      this.setState({ collapsed: false, scrollTop })
+      this.setState({ collapsed: true, scrollTop });
+    } else if (scrollTop <= maxScroll && this.state.collapsed) {
+      this.setState({ collapsed: false, scrollTop });
     }
   }
 
   render() {
-    const cx = classNames.bind(styles)
+    const cx = classNames.bind(styles);
     const headerStyle = cx({
       mainHeader: true,
       mainHeaderActive: this.state.collapsed
-    })
+    });
     return (
       <header className={ headerStyle }>
         <span className={ styles.mainHeaderSheet }></span>
@@ -50,8 +49,8 @@ class Header extends PureComponent {
           <Menu collapsed={ this.state.collapsed } />
         </div>
       </header>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;

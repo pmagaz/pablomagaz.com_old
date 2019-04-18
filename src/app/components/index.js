@@ -1,3 +1,3 @@
-import * as PostDate from './PostDate'
+import * as PostDate from './PostDate';
 
-export { PostDate }
+export { PostDate };

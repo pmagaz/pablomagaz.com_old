@@ -1,10 +1,9 @@
-import { SiteConf } from 'base'
-import serviceWorkerTemplate from './sw'
+import { SiteConf } from 'base';
+import serviceWorkerTemplate from './sw';
 
 export default function main(params) {
-  
-  const state = JSON.stringify(params.state)
-  
+  const state = JSON.stringify(params.state);
+
   return `
   <!doctype html>
 	<html lang="utf-8">
@@ -74,5 +73,5 @@ export default function main(params) {
       ${ serviceWorkerTemplate }
     </body>
   </html>
-  `
+  `;
 }

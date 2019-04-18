@@ -1,4 +1,4 @@
-import { createActionType } from 'base'
+import { createActionType } from 'base';
 
 export default createActionType([
   'BLOG_REQUEST',
@@ -6,4 +6,4 @@ export default createActionType([
   'BLOG_ERROR',
   'CLEAN_POST',
   'CLEAN_TAG_FILTER',
-])
+]);

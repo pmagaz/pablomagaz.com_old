@@ -1,14 +1,14 @@
-import { SiteConf } from 'base'
+import { SiteConf } from 'base';
 
 export default function tag(params) {
-
-  const state = JSON.stringify(params.state)
-  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png` 
-  const tags = params.routeMatch.substring(1).split('/')
-  let tagUrl, tagName
+  const state = JSON.stringify(params.state);
+  const imageUrl = `${ SiteConf.ServerUrl }/assets/images/BlogTitle.png`;
+  const tags = params.routeMatch.substring(1).split('/');
+  let tagUrl; let 
+    tagName;
   if (tags.length > 0) {
-    tagName = tags[1]
-    tagUrl = `${ SiteConf.SiteUrl }/tag/${tagName}`
+    tagName = tags[1];
+    tagUrl = `${ SiteConf.SiteUrl }/tag/${ tagName }`;
   }
   return `
   <!doctype html>
@@ -16,7 +16,7 @@ export default function tag(params) {
     <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Tag:${tagName} | ${ SiteConf.BlogTitle }</title>
+    <title>Tag:${ tagName } | ${ SiteConf.BlogTitle }</title>
     <meta name="theme-color" content="#f72354">
     <meta name="HandheldFriendly" content="True" />
     <meta name="description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName }" />
@@ -30,14 +30,14 @@ export default function tag(params) {
     <meta property="article:tag" content="${ tagName }" />
     <meta property="og:locale" content="es_ES" /> 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Tag:${tagName} | ${ SiteConf.BlogTitle }" />
+    <meta property="og:title" content="Tag:${ tagName } | ${ SiteConf.BlogTitle }" />
     <meta property="og:site_name" content="${ SiteConf.BlogTitle }" />
     <meta property="og:url" content="${ tagUrl }" />
     <meta property="og:description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName } " />
     <meta property="og:image" content="${ imageUrl }" />
     
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Tag:${tagName} | ${ SiteConf.BlogTitle }" />
+    <meta name="twitter:title" content="Tag:${ tagName } | ${ SiteConf.BlogTitle }" />
     <meta name="twitter:url" content="${ tagUrl }" />
     <meta name="twitter:description" content="${ SiteConf.BlogDescription } | Tag: ${ tagName }" />
     
@@ -69,5 +69,5 @@ export default function tag(params) {
       ${ params.appScript }
     </body>
   </html>
-  `
+  `;
 }

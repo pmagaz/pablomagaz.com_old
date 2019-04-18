@@ -1,22 +1,22 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js')
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0/workbox-sw.js');
 
-const staticCache = 'react-base-static-v1'
-const dynamicCache = 'react-base-dynamic-v1'
-const timeCache = 10 * 24 * 60 * 60
+const staticCache = 'react-base-static-v1';
+const dynamicCache = 'react-base-dynamic-v1';
+const timeCache = 10 * 24 * 60 * 60;
 
 workbox.core.setCacheNameDetails({
   precache: staticCache,
-  runtime:  dynamicCache
-})
+  runtime: dynamicCache
+});
 
 workbox.precaching.precacheAndRoute([
-  "/offline.html",
-])
+  '/offline.html',
+]);
 
 workbox.routing.registerRoute(
   ({ event }) => event.request.mode === 'navigate',
   ({ url }) => fetch(url.href).catch(() => caches.match('/offline.html'))
-)
+);
 
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
@@ -29,7 +29,7 @@ workbox.routing.registerRoute(
       }),
     ],
   }),
-)
+);
 
 workbox.routing.registerRoute(
   new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
@@ -41,7 +41,7 @@ workbox.routing.registerRoute(
       }),
     ],
   }),
-)
+);
 
 workbox.routing.registerRoute(
   new RegExp('/content/(.*)'),
@@ -54,22 +54,22 @@ workbox.routing.registerRoute(
       }),
     ],
   }),
-)
+);
 
 
 function askPermission() {
-  return new Promise(function(resolve, reject) {
-    const permissionResult = Notification.requestPermission(function(result) {
+  return new Promise(((resolve, reject) => {
+    const permissionResult = Notification.requestPermission((result) => {
       resolve(result);
     });
 
     if (permissionResult) {
       permissionResult.then(resolve, reject);
     }
-  })
-  .then(function(permissionResult) {
-    if (permissionResult !== 'granted') {
-      throw new Error('We weren\'t granted permission.');
-    }
-  });
+  }))
+    .then((permissionResult) => {
+      if (permissionResult !== 'granted') {
+        throw new Error('We weren\'t granted permission.');
+      }
+    });
 }

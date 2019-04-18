@@ -1,4 +1,4 @@
-import { SiteConf, context  } from 'base'
+import { SiteConf, context } from 'base';
 
 if (context.client) {
   const initGoogleAnalitics = () => {
@@ -14,14 +14,14 @@ if (context.client) {
     m.parentNode.insertBefore(a, m);
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   /* eslint-enable */
-    ga('create', SiteConf.GoogleAnaliticsId, 'auto')
-  }
-  initGoogleAnalitics()
+    ga('create', SiteConf.GoogleAnaliticsId, 'auto');
+  };
+  initGoogleAnalitics();
 }
 
 export const sendAnalitics = () => {
   if (context.client) {
-    const url = window.location.pathname + window.location.search 
-    setTimeout(() =>  ga('send', 'pageview', url), 200)
+    const url = window.location.pathname + window.location.search; 
+    setTimeout(() => ga('send', 'pageview', url), 200);
   }
-}
+};

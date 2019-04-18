@@ -1,18 +1,18 @@
-import path from 'path'
-import webpack from 'webpack'
-import copyWebpackPlugin from 'copy-webpack-plugin'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import path from 'path';
+import webpack from 'webpack';
+import copyWebpackPlugin from 'copy-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-import * as common from './webpack.common.config'
+import * as common from './webpack.common.config';
 
-export const cache = true
-export const devtool = 'cheap-module-source-map'
-export const context = common.context
-export const resolve = common.resolve
+export const cache = true;
+export const devtool = 'cheap-module-source-map';
+export const { context } = common;
+export const { resolve } = common;
 export const entry = {
-  app: common.clientPath,
+  app: ['babel-polyfill', common.clientPath],
   vendor: common.entry.vendor
-}
+};
 
 export const output = {
   path: common.assetsPath,
@@ -20,9 +20,8 @@ export const output = {
   library: '[name]',
   filename: '[name].[hash].js',
   sourceMapFilename: '[name].map',
-  chunkFilename: '[name].[hash].chunk.js',
-}
-
+  chunkFilename: '[name].[hash].chunk.js'
+};
 
 export const module = {
   rules: common.module.rules.concat([
@@ -39,7 +38,7 @@ export const module = {
     {
       test: /\.css/,
       exclude: /node_modules/,
-     
+
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [
@@ -54,20 +53,17 @@ export const module = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => common.postcss.concat(
-                require('postcss-clean')(),
-                require('autoprefixer')()
-              )
+              plugins: () => common.postcss.concat(require('postcss-clean')(), require('autoprefixer')())
             }
           }
         ]
       })
     }
   ])
-}
+};
 
 export const plugins = [
-  new webpack.DefinePlugin({'process.env': { NODE_ENV: JSON.stringify('production')}}),
+  new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }),
   new webpack.DllReferencePlugin({
     context: path.join(__dirname),
     manifest: require('../dist/dlls/vendor-manifest.json')
@@ -79,6 +75,6 @@ export const plugins = [
   }),
   new copyWebpackPlugin([{ from: 'src/app/assets', to: '../assets' }]),
   new webpack.NoEmitOnErrorsPlugin(),
-  new webpack.optimize.UglifyJsPlugin({compressor: { warnings: false }, output: { comments: false }}),
+  new webpack.optimize.UglifyJsPlugin({ compressor: { warnings: false }, output: { comments: false } }),
   new ExtractTextPlugin({ filename: 'styles.[contenthash].css', allChunks: true })
-].concat(common.plugins)
+].concat(common.plugins);

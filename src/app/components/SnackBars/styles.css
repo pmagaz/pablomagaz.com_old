@@ -1,0 +1,56 @@
+@import "../../styles/base.css";
+@import "../../styles/anims.css";
+
+.buttonOk {
+  display: block;
+  color: #fff;
+  height: 36px;
+  padding: 0.4em 0.9em;
+  font-size: 0.9em;
+  font-weight: 700;
+  border-style: solid;
+  margin: 0.3rem;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  background: $primary-color;
+  transition: all 0.3s;
+  margin-left: 2.2em;
+  @media screen and (max-width: 414px) and (orientation: portrait),
+    screen and (max-width: 736px) and (orientation: landscape) {
+    margin-left: 2.6em;
+  }
+  &:hover {
+    background: #f94c74;
+    transition: all 0.3s;
+  }
+}
+.buttonKo {
+  width: 20%;
+  display: block;
+  color: $primary-color;
+  height: 40px;
+  padding: 0.5em 0.4em;
+  font-size: 0.9em;
+  font-weight: 700;
+  border-width: 2px;
+  border-style: solid;
+  margin: 0.3rem;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  background: $tertiary-color;
+  transition: all 0.3s;
+  &:hover {
+    background: $tertiary-color;
+    transition: all 0.3s;
+  }
+}
+
+.content {
+  display: flex;
+  padding: 0.4rem;
+  justify-content: flex-end;
+}

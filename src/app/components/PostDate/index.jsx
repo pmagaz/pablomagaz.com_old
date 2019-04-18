@@ -1,16 +1,16 @@
-import React  from 'react'
-import { PropTypes } from 'prop-types'
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
-const propTypes= {
+const propTypes = {
   date: PropTypes.string
-}
+};
 
 const PostDate = ({ date }) => (
   <time>
     { date }
   </time>
-)
+);
 
-PostDate.propTypes = propTypes
+PostDate.propTypes = propTypes;
 
-export default PostDate
+export default PostDate;

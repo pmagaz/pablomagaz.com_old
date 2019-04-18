@@ -1,23 +1,23 @@
-import React from 'react'
-import { PropTypes } from 'prop-types'
-import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon} from 'react-share'
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon } from 'react-share';
 
-import { SiteConf } from 'base'
-import styles from './styles.css'
+import { SiteConf } from 'base';
+import styles from './styles.css';
 
-const propTypes= {
+const propTypes = {
   post: PropTypes.object.isRequired
-}
+};
 
 const SharePost = ({ post }) => {
 
-  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`
-  const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }` 
+  const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
+  const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }`; 
   
   return (
     <article className={ styles.socialBoxWrap }>
       <h4>¿Te gustaría compartir este post?</h4>
-      <span  className={ styles.socialBoxWrapLinks }>
+      <span className={ styles.socialBoxWrapLinks }>
         <TwitterShareButton title={ post.title } via={ SiteConf.BlogTitle } description={ post.meta_description } url={ postUrl } > 
           <TwitterIcon round={ false } size={ 44 } />
         </TwitterShareButton>
@@ -35,9 +35,9 @@ const SharePost = ({ post }) => {
         </EmailShareButton>
       </span>
     </article>
-  )
-}
+  );
+};
 
-SharePost.propTypes = propTypes
+SharePost.propTypes = propTypes;
 
-export default SharePost
+export default SharePost;

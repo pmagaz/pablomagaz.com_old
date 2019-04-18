@@ -1,9 +1,9 @@
-import React, { Component, PureComponent }  from 'react'
-import { PropTypes } from 'prop-types'
+import React, { Component, PureComponent } from 'react';
+import { PropTypes } from 'prop-types';
 
-import Social from 'components/Social'
-import BlogTitle from 'components/BlogTitle'
-import styles from './styles.css'
+import Social from 'components/Social';
+import BlogTitle from 'components/BlogTitle';
+import styles from './styles.css';
 
 class BlogHeader extends Component {
 
@@ -12,9 +12,9 @@ class BlogHeader extends Component {
     title: PropTypes.string.isRequired,
   };
 
-  render () {
-    let style
-    style = { backgroundImage: 'url(' + this.props.image + ')' }
+  render() {
+    let style;
+    style = { backgroundImage: `url(${ this.props.image })` };
 
     return (
       <header className={ styles.blogHeader }>
@@ -29,8 +29,8 @@ class BlogHeader extends Component {
           </div>
         </div>
       </header>
-    )
+    );
   }
 }
 
-export default BlogHeader
+export default BlogHeader;

@@ -1,9 +1,8 @@
-import { SiteConf } from 'base'
-import serviceWorkerTemplate from './sw'
+import { SiteConf } from 'base';
+import serviceWorkerTemplate from './sw';
 
 export default function blog(params) {
-
-  const state = JSON.stringify(params.state)
+  const state = JSON.stringify(params.state);
 
   return `
   <!doctype html>
@@ -79,5 +78,5 @@ export default function blog(params) {
       ${ serviceWorkerTemplate }
     </body>
   </html>
-  `
+  `;
 }

@@ -1,10 +1,10 @@
-import { PropTypes } from 'prop-types'
-import React, { PureComponent } from 'react'
-import classNames from 'classnames/bind'
+import { PropTypes } from 'prop-types';
+import React, { PureComponent } from 'react';
+import classNames from 'classnames/bind';
 
-import { SiteConf } from 'base'
-import LinkButton from 'components/LinkButton'
-import styles from './styles.css'
+import { SiteConf } from 'base';
+import LinkButton from 'components/LinkButton';
+import styles from './styles.css';
 
 class Logo extends PureComponent {
   
@@ -13,45 +13,44 @@ class Logo extends PureComponent {
   }
 
   constructor(props) {
-    super(props)
-    this.state = { show: false, scrollTop: 0, reset: false }
+    super(props);
+    this.state = { show: false, scrollTop: 0, reset: false };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll.bind(this))
+    window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
   isPost() {
-    const location = this.props.location
-    return (!!~location.pathname.indexOf('tag') || location.pathname.length < 6) ? false : true
+    const { location } = this.props;
+    return !((!!~location.pathname.indexOf('tag') || location.pathname.length < 6));
   }
 
   isHome() {
-    return (this.props.location.pathname === '/') ? true : false 
+    return (this.props.location.pathname === '/'); 
   }
 
   handleScroll() {
-    const maxScroll = 112
+    const maxScroll = 112;
     // FIX
-    const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop
+    const scrollTop = document.scrollingElement.scrollTop || document.documentElement.scrollTop;
     if (scrollTop >= maxScroll && !this.state.show && !this.isHome()) {
-      this.setState({ show: true, scrollTop })
-    } 
-    else if (scrollTop <= maxScroll && this.state.show && !this.isHome()) {
-      this.setState({ show: false, scrollTop })
+      this.setState({ show: true, scrollTop });
+    } else if (scrollTop <= maxScroll && this.state.show && !this.isHome()) {
+      this.setState({ show: false, scrollTop });
     }
   }
 
   render() {
-    let value
-    if (this.isHome()) value = ''
-    else value = SiteConf.BlogTitle.toUpperCase() 
+    let value;
+    if (this.isHome()) value = '';
+    else value = SiteConf.BlogTitle.toUpperCase(); 
 
-    const cx = classNames.bind(styles)
+    const cx = classNames.bind(styles);
     const miniTitleStyle = cx({
-      'miniTitle': !this.state.show ? true : true,
-      'miniTitleActive': (this.state.show) ? true : false 
-    })
+      miniTitle: !this.state.show ? true : true,
+      miniTitleActive: !!(this.state.show) 
+    });
 
     return (
       <h1 className={ miniTitleStyle }>
@@ -61,8 +60,8 @@ class Logo extends PureComponent {
           value={ value }  
         />
       </h1>
-    )
+    );
   }
 }
 
-export default Logo
+export default Logo;

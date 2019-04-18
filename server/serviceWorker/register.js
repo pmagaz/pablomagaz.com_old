@@ -1,21 +1,20 @@
+// const registerUrl = 'https://pablomagaz.com/webpush/register';
+// const serviceWorkerUrl = 'https://pablomagaz.com/serviceWorker.js';
+const registerUrl = 'https://pablomagaz.com/webpush/register';
+const serviceWorkerUrl = 'http://localhost:8000/serviceWorker.js';
+const publicVapidKey = 'BFdszVeNLXOP_BtqQn1o4-g-pV4BMMFHjrkKKn9OSDqiHVUp52GIGw4HEKJv2jpGiPGkaIpFyHk8zZv93J6-bc8';
 
-
-const permissionDelay = 14000
-const registerUrl = 'https://pablomagaz.com/webpush/register'
-const serviceWorkerUrl = 'https://pablomagaz.com/serviceWorker.js'
-const publicVapidKey = 'BFdszVeNLXOP_BtqQn1o4-g-pV4BMMFHjrkKKn9OSDqiHVUp52GIGw4HEKJv2jpGiPGkaIpFyHk8zZv93J6-bc8'
-
-const urlBase64ToUint8Array = (base64String) => {
-  const padding = '='.repeat((4 - (base64String.length % 4)) % 4)
-  const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/')
-  const rawData = atob(base64)
-  const outputArray = new Uint8Array(rawData.length)
+const urlBase64ToUint8Array = base64String => {
+  const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+  const rawData = atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
 
   for (let i = 0; i < rawData.length; i += 1) {
-    outputArray[i] = rawData.charCodeAt(i)
+    outputArray[i] = rawData.charCodeAt(i);
   }
-  return outputArray
-}
+  return outputArray;
+};
 
 const saveSubscription = async subscription => {
   const res = await fetch(registerUrl, {
@@ -25,41 +24,40 @@ const saveSubscription = async subscription => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(subscription)
-  })
-  return res.status === 200 ? res.json() : false
-}
+  });
+  return res.status === 200 ? res.json() : false;
+};
 
-const askPermision = () =>
-  new Promise((resolve, reject) => {
-    const { permission } = Notification
-    if (permission === 'granted') resolve(Notification)
-    else {
-      setTimeout(async () => {
-        const asked = await window.Notification.requestPermission()
-        if (asked) resolve(asked)
-        else reject(asked)
-      }, permissionDelay)
+const askPermission = async () => {
+  const { permission } = Notification;
+  if (permission !== 'granted') {
+    const requestPermission = await Notification.requestPermission();
+    if (requestPermission === 'granted') {
+      return true;
     }
-  })
+    return false;
+  }
+};
 
-const generateSubscription = async swRegistration => {
+const generateSubscription = async () => {
   const subscription = await swRegistration.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
-  })
-  return await saveSubscription(subscription)
-}
+  });
+  const saved = await saveSubscription(subscription);
+  return saved;
+};
 
 const registerServiceWorker = async () => {
-  return await navigator.serviceWorker.register(serviceWorkerUrl)
-}
+  const swRegistration = await navigator.serviceWorker.register(serviceWorkerUrl);
+  window.swRegistration = swRegistration;
+  return swRegistration;
+};
 
 const register = async () => {
   if ('serviceWorker' in navigator) {
-    const swRegistration = await registerServiceWorker()
-    await askPermision()
-    await generateSubscription(swRegistration)
-  } else throw new Error('ServiceWorkers are not supported by your browser!')
-}
+    await registerServiceWorker();
+  } else throw new Error('ServiceWorkers are not supported by your browser!');
+};
 
-register()
+register();

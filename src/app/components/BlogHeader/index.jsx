@@ -6,10 +6,9 @@ import BlogTitle from 'components/BlogTitle';
 import styles from './styles.css';
 
 class BlogHeader extends Component {
-
-  static propTypes= {
+  static propTypes = {
     image: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
   };
 
   render() {
@@ -19,9 +18,9 @@ class BlogHeader extends Component {
     return (
       <header className={ styles.blogHeader }>
         <div className={ styles.blogHeaderWrap }>
-          <div style={ style } className={ styles.blogHeaderTitle }> 
+          <div style={ style } className={ styles.blogHeaderTitle }>
             <h1>
-              <BlogTitle /> 
+              <BlogTitle />
             </h1>
           </div>
           <div className={ styles.socialBox }>

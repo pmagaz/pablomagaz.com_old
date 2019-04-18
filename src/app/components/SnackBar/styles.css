@@ -54,7 +54,7 @@
 .snackBarTop {
   color: rgb(255, 255, 255);
   background-color: #282c38;
-  max-width: 36em;
+  max-width: 32em;
   max-height: 14.5em;
   animation: SnackBarEnterDown 300ms both;
   flex-direction: column;

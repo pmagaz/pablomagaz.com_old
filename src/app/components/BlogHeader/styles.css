@@ -1,8 +1,7 @@
-@import '../../styles/variables/variables.css';
-@import '../../styles/anims.css';
+@import "../../styles/variables/variables.css";
+@import "../../styles/anims.css";
 
-
-.blogHeader{
+.blogHeader {
   width: 100%;
   height: $hgt-titleBlog;
   margin: 0;
@@ -22,7 +21,7 @@
   background-image: $bgi-titleBlog;
   color: $cl-titleBlog;
 
-  .blogHeaderWrap{
+  .blogHeaderWrap {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -30,16 +29,16 @@
     margin: 0;
     width: 100%;
     height: 100%;
-    @media (min-width: $sm){
+    @media (min-width: $sm) {
       padding: $layout-padding;
     }
-    @media (min-width: 585px){
+    @media (min-width: 585px) {
       flex-direction: row;
       align-items: flex-end;
       margin: 0 auto;
     }
 
-    .blogHeaderTitle{
+    .blogHeaderTitle {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -47,21 +46,21 @@
       flex: 2;
       background-repeat: no-repeat;
       background-size: 156px;
-      animation: blogLogo-mobile 220ms both;
-      animation-delay: 30ms;
+      animation: blogLogo-mobile 280ms ease-in-out both;
+      animation-delay: 100ms;
       -webkit-backface-visibility: hidden;
       background-position-y: 50%;
-      @media (min-width: $sm){ 
+      @media (min-width: $sm) {
         background-size: 221px;
-        animation: blogLogo-tablet 220ms ease-in both;    
-        animation-delay: 100ms;   
-      } 
-
-      @media (min-width: $lg){
-        animation: blogLogo-desktop 220ms ease-in both;    
+        animation: blogLogo-tablet 280ms ease-in-out both;
         animation-delay: 100ms;
       }
-      h1{
+
+      @media (min-width: $lg) {
+        animation: blogLogo-desktop 280ms ease-in-out both;
+        animation-delay: 100ms;
+      }
+      h1 {
         font-family: $fontFamilyMedium;
         margin-bottom: 0;
         padding-left: 15px;
@@ -69,18 +68,16 @@
         width: 236px;
         margin-top: 10px;
         transform: skewY(-2deg);
-        animation: titleBlog 100ms ease-in both;
-        animation-delay: 120ms;
 
-        @media (min-width: $sm){
+        @media (min-width: $sm) {
           width: 400px;
           font-size: 2.8rem;
         }
-        @media (min-width: $lg){
-          animation: titleBlog 100ms ease-in both;
+        @media (min-width: $lg) {
+          animation: titleBlog 100ms ease-in-out both;
           animation-delay: 120ms;
         }
-        + div{
+        + div {
           display: flex;
           align-items: flex-end;
           margin-bottom: 34px;
@@ -92,7 +89,7 @@
       }
     }
   }
-  .socialBox{
+  .socialBox {
     height: 100%;
     margin-bottom: 10px;
     flex: 1;
@@ -101,13 +98,12 @@
     width: 100%;
     justify-content: flex-end;
     filter: invert(80%);
-    ul{
-        margin-right: 10px;
-        @media (min-width: $sm){
-          margin-right: 0px;
-        }
+    ul {
+      margin-right: 10px;
+      @media (min-width: $sm) {
+        margin-right: 0px;
       }
-
+    }
   }
 }
 

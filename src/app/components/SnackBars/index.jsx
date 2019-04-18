@@ -20,21 +20,28 @@ class SnackBars extends Component {
     this.denyNotifications = 'EBISODenyNotifications';
   }
 
+  eventHandler = e => {
+    const { permission } = Notification;
+    this.acceptAndRequest(permission);
+  };
+
   componentDidMount() {
     if (!getCookie(this.aceptedCookies)) this.showCookieMsg();
     const { permission } = Notification;
     if (permission === 'granted') this.regenerateSubscription();
+    window.addEventListener('click', this.eventHandler);
+    window.addEventListener('scroll', this.eventHandler);
+  }
 
-    window.addEventListener('click', e => {
-      if (!getCookie(this.aceptedCookies)) this.aceptCookies();
-      if (permission === 'default') this.showNoticationBar();
-    });
+  acceptAndRequest(permission) {
+    if (!getCookie(this.aceptedCookies)) this.aceptCookies();
+    if (permission === 'default') this.showNoticationBar();
+    window.removeEventListener('click', this.eventHandler);
+    window.removeEventListener('scroll', this.eventHandler);
   }
 
   async regenerateSubscription() {
-    setTimeout(() => {
-      generateSubscription();
-    }, 2000);
+    setTimeout(() => generateSubscription(), 2000);
   }
 
   aceptCookies() {
@@ -77,8 +84,8 @@ class SnackBars extends Component {
 
     const snackNotificationBar = (
       <SnackBar buttons={ true } position="top" exit={ this.state.hideSnackNotificationBar }>
-        ¿Quieres recibir notificaciones sobre las novedades del blog?. Nunca recibirás más de una al mes. También puedes
-        seguir las novedades del blog en
+        ¿Quieres recibir notificaciones de los nuevos posts?. Nunca recibirás más de una al mes. También puedes seguir
+        el blog en
         <a
           aria-label="Pablo Magaz Twitter"
           role="button"

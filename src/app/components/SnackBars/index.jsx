@@ -8,7 +8,7 @@ class SnackBars extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      permisionDelay: 10000,
+      permisionDelay: 1000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
@@ -21,7 +21,7 @@ class SnackBars extends Component {
   }
 
   componentDidMount() {
-    if (!getCookie(this.aceptedCookies)) this.setState({ showSnackCookieBar: true });
+    if (!getCookie(this.aceptedCookies)) this.showCookieMsg();
     const { permission } = Notification;
     if (permission === 'granted') this.regenerateSubscription();
 
@@ -45,6 +45,12 @@ class SnackBars extends Component {
   denyPermision() {
     setCookie(this.denyNotifications, true, 1000);
     this.setState({ hideSnackNotificationBar: true });
+  }
+
+  showCookieMsg() {
+    setTimeout(() => {
+      this.setState({ showSnackCookieBar: true });
+    }, 2000);
   }
 
   async notificationPermission() {
@@ -73,8 +79,8 @@ class SnackBars extends Component {
 
     const snackNotificationBar = (
       <SnackBar buttons={ true } position="top" exit={ this.state.hideSnackNotificationBar }>
-        ¿Quieres recivir notificaciones sobre las novedades del blog?. Nunca recibiras más de una al mes. Tambien puedes
-        estar seguir el blog en
+        ¿Quieres recibir notificaciones sobre las novedades del blog?. Nunca recibirás más de una al mes. También puedes
+        seguir las novedades del blog en
         <a
           aria-label="Pablo Magaz Twitter"
           role="button"

@@ -50,7 +50,6 @@ class SnackBars extends Component {
   async notificationPermission() {
     const permission = await askPermission();
     if (permission) {
-      console.log(1111, permission);
       const subscription = await generateSubscription();
     }
     this.setState({ hideSnackNotificationBar: true });

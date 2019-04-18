@@ -31,7 +31,6 @@ const askPermission = async () => {
   if (permission !== 'granted') {
     const requestPermission = await Notification.requestPermission();
     if (requestPermission === 'granted') return true;
-
     return false;
   }
 };

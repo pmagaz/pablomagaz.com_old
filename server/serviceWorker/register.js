@@ -1,7 +1,5 @@
-// const registerUrl = 'https://pablomagaz.com/webpush/register';
-// const serviceWorkerUrl = 'https://pablomagaz.com/serviceWorker.js';
 const registerUrl = 'https://pablomagaz.com/webpush/register';
-const serviceWorkerUrl = 'http://localhost:8000/serviceWorker.js';
+const serviceWorkerUrl = 'https://pablomagaz.com/serviceWorker.js';
 const publicVapidKey = 'BFdszVeNLXOP_BtqQn1o4-g-pV4BMMFHjrkKKn9OSDqiHVUp52GIGw4HEKJv2jpGiPGkaIpFyHk8zZv93J6-bc8';
 
 const urlBase64ToUint8Array = base64String => {

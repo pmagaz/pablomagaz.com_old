@@ -49,7 +49,7 @@ class SnackBars extends Component {
 
   async notificationPermission() {
     const permission = await askPermission();
-    if (permission === 'granted') {
+    if (permission) {
       console.log(1111, permission);
       const subscription = await generateSubscription();
     }

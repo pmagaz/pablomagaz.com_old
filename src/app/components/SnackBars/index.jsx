@@ -78,14 +78,13 @@ class SnackBars extends Component {
   render() {
     const snackCookieBar = (
       <SnackBar position="bottom" exit={ this.state.hideSnackCookieBar }>
-        Este sitio usa cookies para analíticas. Al continuar navegando aceptas los términos.
+        Este sitio usa cookies para analíticas. Al continuar navegando aceptas su uso.
       </SnackBar>
     );
 
     const snackNotificationBar = (
       <SnackBar buttons={ true } position="top" exit={ this.state.hideSnackNotificationBar }>
-        ¿Quieres recibir notificaciones de los nuevos posts?. Nunca recibirás más de una al mes. También puedes seguir
-        el blog en
+        ¿Quieres recibir notificaciones de los nuevos posts?. También puedes seguir el blog en
         <a
           aria-label="Pablo Magaz Twitter"
           role="button"
@@ -96,6 +95,7 @@ class SnackBars extends Component {
         >
           Twitter
         </a>
+        .
         <div className={ styles.content }>
           <button className={ styles.buttonKo } role="button" tabIndex="0" onClick={ () => this.denyPermision() }>
             No gracias

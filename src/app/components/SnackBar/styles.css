@@ -58,12 +58,12 @@
   max-height: 14.5em;
   animation: SnackBarEnterDown 300ms both;
   flex-direction: column;
-  right: 1em;
+  right: 0.5em;
   position: fixed;
   overflow: hidden;
   box-sizing: border-box;
   font-size: 1em;
-  top: 0.4em;
+  top: -0.3em;
   line-height: 1.5em;
   display: flex;
   flex-wrap: nowrap;
@@ -99,7 +99,9 @@
     left: 0;
     right: 0;
     bottom: 0;
+    top: -0.4em;
     max-width: none;
+    max-height: 12em;
   }
 }
 

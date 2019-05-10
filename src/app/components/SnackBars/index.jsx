@@ -8,7 +8,7 @@ class SnackBars extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      permisionDelay: 10000,
+      permisionDelay: 9500,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,

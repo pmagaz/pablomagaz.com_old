@@ -2,12 +2,12 @@ export function fetchRequiredActions(...args) {
   const serverContext = ~args.indexOf('server');
   if (serverContext) {
     return fetchServerData.apply(this, args);
-  } 
+  }
   return fetchClientData.apply(this, args);
-  
 }
 
-function fetchServerData(dispatch, components, params) {
+function fetchServerData(dispatch, renderProps) {
+  const { components, params } = renderProps;
   const actions = components.reduce((prev, component) => {
     return Object.keys(component).reduce((acc, key) => {
       const hasRequiredActions = component[key].hasOwnProperty('requiredActions');

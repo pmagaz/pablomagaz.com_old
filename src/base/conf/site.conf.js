@@ -1,12 +1,12 @@
 import env from '../shared/Env';
 
 const Author = 'Pablo Magaz';
-const SiteTitle = Author; 
+const SiteTitle = Author;
 const SiteDescription = `Sitio web de ${ Author }`;
 const BlogTitle = 'El Blog Isomórfico';
 const BlogDescription = `${ BlogTitle }: JavaScript, JavaScript y más JavaScript.`;
 const KeyWords = 'javascript, react, redux, rxjs, immutable, angular, angularjs, webpack, es6, observables, programación reactiva, blog, rxjs, vue, serviceworker, ecma 2018, pwa, progressive web app';
-const numPosts = 15;
+const numPosts = 10;
 const blogImage = 'assets/images/postcover/blog.svg';
 const blogTitleImage = 'assets/images/share/ElBlogIsomorfico.png';
 const brandTitleImage = 'assets/images/share/PabloMagaz.png';
@@ -48,12 +48,12 @@ if (env === 'development') {
   SiteUrl = `${ ServerUrl }`;
   clientSecret = '285ee4eda6c3';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = 'http://pablomagaz.com/'; 
+  GhostUrl = 'http://pablomagaz.com/';
   ImageUrl = GhostUrl;
   ContentPath = '/Users/Pablo/js/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = 'https://pablomagaz.com/api/post/';
-  PostsApiUrl = 'https://pablomagaz.com/api/posts/';
+  PostsApiUrl = `${ Protocol }${ HostName }/api/posts/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limt=${ numPosts }`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags`;
   GoogleAnaliticsId = 'UA-104300440-3';
@@ -69,7 +69,7 @@ if (env === 'development') {
   SiteUrl = `${ ServerUrl }`;
   clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = 'http://localhost:2369'; 
+  GhostUrl = 'http://localhost:2369';
   ImageUrl = `${ Protocol }${ HostName }`;
   ContentPath = '/var/www/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
@@ -83,6 +83,35 @@ if (env === 'development') {
     shortName: 'el-blog-isomorfico',
     identifier: 'el-blog-isomofico'
   };
-} 
+}
 
-export const SiteConf = { ServerUrl, Author, SiteTitle, SiteUrl, BlogDescription, KeyWords, BlogTitle, BlogUrl, blogImage, blogTitleImage, brandTitleImage, SiteDescription, ImageUrl, ContentPath, PostApi, PostsApi, PostApiUrl, PostsApiUrl, postOpeningChars, postOpeningSplitChar, codeHighlightDelay, GoogleAnaliticsId, Ssl, uniqueImagePath, socialLinks, DisqusSettings, addThisUrl };
+export const SiteConf = {
+  ServerUrl,
+  Author,
+  SiteTitle,
+  SiteUrl,
+  numPosts,
+  BlogDescription,
+  KeyWords,
+  BlogTitle,
+  BlogUrl,
+  blogImage,
+  blogTitleImage,
+  brandTitleImage,
+  SiteDescription,
+  ImageUrl,
+  ContentPath,
+  PostApi,
+  PostsApi,
+  PostApiUrl,
+  PostsApiUrl,
+  postOpeningChars,
+  postOpeningSplitChar,
+  codeHighlightDelay,
+  GoogleAnaliticsId,
+  Ssl,
+  uniqueImagePath,
+  socialLinks,
+  DisqusSettings,
+  addThisUrl
+};

@@ -1,35 +1,28 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import classNames from 'classnames/bind';
 
 import { ListToArray } from 'base';
-import Loading from 'components/Loading';
+import { context } from 'base';
 import PostSummary from '../PostSummary';
 import styles from './styles.css';
-
-const isLoaded = (posts) => (!!posts.size);
 
 const propTypes = {
   posts: PropTypes.object.isRequired
 };
 
 const PostList = ({ posts }) => {
+  const cx = classNames.bind(styles);
 
-  const postsLoaded = isLoaded(posts);
+  const postListStyles = cx({
+    postList: true,
+    fadeIn: context.client
+  });
+
   const postList = ListToArray(posts);
-  const Posts = postList.map(post => (
-    <PostSummary
-      post={ post }
-      key={ post.id }
-    />
-  ));
+  const Posts = postList.map(post => <PostSummary post={ post } key={ post.id } />);
 
-  const Content = !postsLoaded ? <Loading /> : Posts; 
-  
-  return (
-    <div className={ styles.postList }>
-      { Content }
-    </div>
-  );
+  return <div className={ postListStyles }>{ Posts }</div>;
 };
 
 PostList.propTypes = propTypes;

@@ -1,3 +1,10 @@
+@import "../../../../styles/anims.css";
+
 .postList {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+
+.fadeIn {
+  animation: fadeIn 800ms ease-in-out both;
+  animation-delay: 400ms;
 }

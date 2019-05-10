@@ -11,14 +11,13 @@ import * as Actions from './actions';
 import styles from './styles.css';
 
 class Post extends Component {
-
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
-    Post: PropTypes.instanceOf(Immutable.Record).isRequired 
-  }
+    Post: PropTypes.instanceOf(Immutable.Record).isRequired
+  };
 
   static requiredActions = [Actions.getPost];
-  
+
   constructor(props) {
     super(props);
     this.actions = bindActionCreators(Actions, props.dispatch);
@@ -34,13 +33,10 @@ class Post extends Component {
     const postImage = `${ SiteConf.ImageUrl }${ image }`;
 
     return (
-      <div className={ styles.post } >
-        <div className={ styles.content } >
-          <BlogHeader
-            image={ postImage }
-            title={ SiteConf.BlogTitle }
-          />
-          <span className={ styles.shape }></span>
+      <div className={ styles.post }>
+        <div className={ styles.content }>
+          <BlogHeader image={ postImage } title={ SiteConf.BlogTitle } />
+          <span className={ styles.shape } />
           <PostContent post={ post } />
         </div>
       </div>

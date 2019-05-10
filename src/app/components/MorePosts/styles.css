@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.morePosts {
+  display: block;
+  color: #fff;
+  height: 36px;
+  padding: 0.2em 0.8em;
+  font-size: 0.9em;
+  font-weight: 700;
+  border-style: solid;
+  margin: 0.3rem;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  background: #f94c74;
+  transition: all 0.3s;
+  margin-left: 2.2em;
+  @media screen and (max-width: 414px) and (orientation: portrait),
+    screen and (max-width: 736px) and (orientation: landscape) {
+    margin-left: 2.6em;
+  }
+  &:hover {
+    background: #f94c74;
+    transition: all 0.3s;
+  }
+}

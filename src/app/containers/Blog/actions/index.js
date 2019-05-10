@@ -3,10 +3,10 @@ import ActionTypes from '../actionTypes';
 
 export const getPosts = params => ({
   type: ActionTypes.BLOG_REQUEST,
-  request: api.fetchPosts(params),
+  request: api.fetchPosts(params)
 });
 
-export const cleanTagFilter = () => ({
+export const cleanPosts = () => ({
   type: ActionTypes.CLEAN_TAG_FILTER
 });
 

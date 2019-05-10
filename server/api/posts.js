@@ -1,13 +1,19 @@
 import needle from 'needle';
-import { SiteConf, formatDate } from 'base';
+import { SiteConf } from 'base';
 
 export const postsApiHandler = (req, res) => {
-  needle('get', SiteConf.PostsApi)
+  let params;
+  const { filter } = req.params;
+  if (!filter || !filter.includes('tag')) params = `limit=${ SiteConf.numPosts }&${ filter }`;
+
+  needle(
+    'get',
+    `http://172.104.136.180:2369/ghost/api/v0.1/posts/?client_id=ghost-frontend&client_secret=113542417eed&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at%20desc&${ params }`
+  )
     .then(resp => {
       const data = resp.body;
       if (data.errors) res.status(404).json({ posts: [] });
       else {
-        const { filter } = req.params;
         const { pagination } = data.meta;
         const posts = PostList(data.posts, filter);
         const result = { posts, pagination };
@@ -16,13 +22,6 @@ export const postsApiHandler = (req, res) => {
       }
     })
     .catch(() => res.status(500).send());
-};
-
-const resolveUniqueImage = image => {
-  const imageName = image.split('/')[5];
-  const extension = image.split('.')[1];
-  const imageFile = imageName.split('-')[0];
-  return `${ SiteConf.uniqueImagePath }${ imageFile }.${ extension }`;
 };
 
 const generateOpening = html => {
@@ -50,16 +49,14 @@ const PostList = (posts, filter) => {
 
     post.html = null;
     post.markdown = null;
-    // post.published_at = formatDate(post.published_at);
-    /* if (SiteConf.uniqueImagePath) {
-    const image = post.feature_image || post.image;
-      post.image = resolveUniqueImage(image);
-    } */
 
     if (filter) {
-      const tagName = filter.split(':')[1];
-      if (post.tags[0] && arrTags(post).includes(tagName)) return post;
-      return false;
-    } return post;
+      const [filterName, filterValue] = filter.split('=');
+      if (filterName === 'tag') {
+        if (post.tags[0] && arrTags(post).includes(filterValue)) return post;
+        return false;
+      }
+    }
+    return post;
   });
 };

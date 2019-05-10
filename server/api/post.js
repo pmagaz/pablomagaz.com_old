@@ -1,5 +1,5 @@
 import needle from 'needle';
-import { SiteConf, formatDate } from '../../src/base';
+import { SiteConf } from '../../src/base';
 
 export const postApiHandler = (req, res) => {
   const { slug } = req.params;

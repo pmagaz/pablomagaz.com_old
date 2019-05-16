@@ -8,7 +8,7 @@ class SnackBars extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      permisionDelay: 10000,
+      permisionDelay: 8000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
@@ -21,21 +21,27 @@ class SnackBars extends Component {
   }
 
   eventHandler = e => {
+    if('PushManager' in window){
     const { permission } = Notification;
     this.acceptAndRequest(permission);
+    } else {
+    this.acceptAndRequest('granted');
+   }
   };
 
   componentDidMount() {
     if (!getCookie(this.aceptedCookies)) this.showCookieMsg();
-    const { permission } = Notification;
-    if (permission === 'granted') this.regenerateSubscription();
     window.addEventListener('click', this.eventHandler);
     window.addEventListener('scroll', this.eventHandler);
+    if('PushManager' in window){
+    const { permission } = Notification;
+    if (permission === 'granted') this.regenerateSubscription();
+    }
   }
 
   acceptAndRequest(permission) {
     if (!getCookie(this.aceptedCookies)) this.aceptCookies();
-    if (permission === 'default') this.showNoticationBar();
+    if (permission === 'default') this.showNoticationBar(permission);
     window.removeEventListener('click', this.eventHandler);
     window.removeEventListener('scroll', this.eventHandler);
   }
@@ -66,9 +72,9 @@ class SnackBars extends Component {
     this.setState({ hideSnackNotificationBar: true });
   }
 
-  async showNoticationBar() {
+  async showNoticationBar(permission) {
     setTimeout(() => {
-      const { permission } = Notification;
+      //const { permission } = Notification;
       if (!getCookie(this.denyNotifications) && permission !== 'granted') {
         this.setState({ showSnackNotificationBar: true });
       }

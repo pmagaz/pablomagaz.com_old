@@ -44,10 +44,6 @@ class Blog extends Component {
     }
   }
 
-  componentWillUnmount() {
-    // if (this.isTagFilter()) this.actions.cleanPosts();
-  }
-
   isTagFilter() {
     return this.props.location.pathname.includes('tag');
   }
@@ -74,7 +70,7 @@ class Blog extends Component {
     if (posts.size > 0) {
       content = (
         <div>
-          <PostList posts={ posts } />
+          <PostList onLeave={ this.actions.cleanPosts } posts={ posts } />
           { MorePostsButton }
         </div>
       );

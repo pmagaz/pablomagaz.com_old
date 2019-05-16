@@ -5,6 +5,6 @@
 }
 
 .fadeIn {
-  animation: fadeIn 800ms ease-in-out both;
-  animation-delay: 400ms;
+  animation: fadeIn 120ms ease-in-out both;
+  animation-delay: 200ms;
 }

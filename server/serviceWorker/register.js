@@ -27,11 +27,13 @@ const saveSubscription = async subscription => {
 };
 
 const askPermission = async () => {
-  const { permission } = Notification;
-  if (permission !== 'granted') {
-    const requestPermission = await Notification.requestPermission();
-    if (requestPermission === 'granted') return true;
-    return false;
+  if ('PushManager' in window) {
+    const { permission } = Notification;
+    if (permission !== 'granted') {
+      const requestPermission = await Notification.requestPermission();
+      if (requestPermission === 'granted') return true;
+      return false;
+    }
   }
 };
 
@@ -46,7 +48,6 @@ const generateSubscription = async () => {
 
 const registerServiceWorker = async () => {
   const swRegistration = await navigator.serviceWorker.register(serviceWorkerUrl);
-  window.swRegistration = swRegistration;
   return swRegistration;
 };
 

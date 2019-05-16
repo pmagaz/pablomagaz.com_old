@@ -1,41 +1,46 @@
-@import '../../../../styles/variables/variables.css';
-@import '../../../../styles/mixins/mixins.css';
+@import "../../../../styles/variables/variables.css";
+@import "../../../../styles/anims.css";
+@import "../../../../styles/mixins/mixins.css";
 
-.post{
-    h1 {
-        @mixin postTitle;
-        font-size: 2.3em;
-        color: $dark-gray;
-        
-    }
+.post {
+  h1 {
+    @mixin postTitle;
+    font-size: 2.3em;
+    color: $dark-gray;
+  }
 
-    h2 {
-        font-weight: 200;
-        font-size: 1.47em;
-        line-height: 1.4em;
-        margin: 1em 0 2em;
-    }
-    h3,
-    h4{
-        font-family: $fontFamilyMedium;
-        color: $cl-postSumaryOpening;
-        text-transform: uppercase;
-        display: block;
-        line-height: 1;
-    }
-    h3 {
-        margin: 40px 0 20px;
-        letter-spacing: 0.1em;
-        font-size: 1em;
-    }
-    h4{
-        margin: 35px 0 10px;
-        letter-spacing: 0.09em;
-        font-size: 0.9em;
-    }
+  h2 {
+    font-weight: 200;
+    font-size: 1.47em;
+    line-height: 1.4em;
+    margin: 1em 0 2em;
+  }
+  h3,
+  h4 {
+    font-family: $fontFamilyMedium;
+    color: $cl-postSumaryOpening;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1;
+  }
+  h3 {
+    margin: 40px 0 20px;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+  }
+  h4 {
+    margin: 35px 0 10px;
+    letter-spacing: 0.09em;
+    font-size: 0.9em;
+  }
 
-    .divider{
-        margin-top: 40px;
-        display: block;
-    }
+  .divider {
+    margin-top: 40px;
+    display: block;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 120ms ease-in-out both;
+  animation-delay: 200ms;
 }

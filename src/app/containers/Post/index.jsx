@@ -25,6 +25,10 @@ class Post extends Component {
     this.blogActions = bindActionCreators(BlogActions, props.dispatch);
   }
 
+  componentWillUnmount() {
+    this.actions.cleanPost();
+  }
+
   cleanPosts = () => {
     this.blogActions.cleanPosts();
   };

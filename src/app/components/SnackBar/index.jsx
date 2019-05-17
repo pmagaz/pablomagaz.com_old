@@ -49,7 +49,7 @@ class SnackBar extends Component {
       );
     }
 
-    const logoUrl = `${ SiteConf.SiteUrl }/${ SiteConf.blogImage }`;
+    const logoUrl = `${ SiteConf.blogImage }`;
     const snackBar = (
       <div className={ snackBarStyle }>
         <div className={ styles.content }>

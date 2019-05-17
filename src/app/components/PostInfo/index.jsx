@@ -1,7 +1,14 @@
 /* eslint-disable indent */
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { FacebookShareButton, FacebookIcon, LinkedinShareButton, LinkedinIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon } from 'react-share';
+import { FacebookShareButton,
+  FacebookIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon } from 'react-share';
 import { formatDate, SiteConf } from 'base';
 
 import PostDate from 'components/PostDate';
@@ -9,45 +16,49 @@ import PostTag from 'components/PostTag';
 import styles from './styles.css';
 
 const propTypes = {
-  post: PropTypes.object
+  post: PropTypes.object,
+  handler: PropTypes.func
 };
 
-const PostInfo = ({ post }) => {
-
-  let share; 
+const PostInfo = ({ post, handler }) => {
+  let share;
   if (post.html) {
     const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
-    const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }`; 
-    
+    const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }`;
+
     share = (
       <div className={ styles.socialBoxWrapLinks }>
-      <TwitterShareButton title={ post.title } via={ SiteConf.BlogTitle } description={ post.meta_description } url={ postUrl } > 
-        <TwitterIcon round={ true } size={ 26 } />
-      </TwitterShareButton>
-      <WhatsappShareButton title={ shareTitle } url={ postUrl } > 
-        <WhatsappIcon round={ true } size={ 26 } />
-      </WhatsappShareButton>
-      <LinkedinShareButton title={ shareTitle } description={ post.meta_description } url={ postUrl } > 
-        <LinkedinIcon round={ true } size={ 26 } />
-      </LinkedinShareButton>
-      <FacebookShareButton url={ postUrl } quote={ shareTitle } >
-      <FacebookIcon round={ true } size={ 26 }/>
-      </FacebookShareButton>
+        <TwitterShareButton
+          title={ post.title }
+          via={ SiteConf.BlogTitle }
+          description={ post.meta_description }
+          url={ postUrl }
+        >
+          <TwitterIcon round={ true } size={ 26 } />
+        </TwitterShareButton>
+        <WhatsappShareButton title={ shareTitle } url={ postUrl }>
+          <WhatsappIcon round={ true } size={ 26 } />
+        </WhatsappShareButton>
+        <LinkedinShareButton title={ shareTitle } description={ post.meta_description } url={ postUrl }>
+          <LinkedinIcon round={ true } size={ 26 } />
+        </LinkedinShareButton>
+        <FacebookShareButton url={ postUrl } quote={ shareTitle }>
+          <FacebookIcon round={ true } size={ 26 } />
+        </FacebookShareButton>
       </div>
     );
   }
-  
-  return ( 
+
+  return (
     <div>
-    <div className={ styles.postInfo }>
-      <span className={ styles.author } >
-        { post.author }
-      </span> 
-      <PostDate date={ formatDate(post.published_at) } />
-      <PostTag tags={ post.tags } />
+      <div className={ styles.postInfo }>
+        <span className={ styles.author }>{ post.author }</span>
+        <PostDate date={ formatDate(post.published_at) } />
+        <PostTag tags={ post.tags } handler={ handler } />
       </div>
-       { share }
-    </div>);
+      { share }
+    </div>
+  );
 };
 
 PostInfo.propTypes = propTypes;

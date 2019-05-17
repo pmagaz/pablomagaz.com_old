@@ -6,15 +6,18 @@ import styles from './styles.css';
 
 class PostTag extends Component {
   static propTypes = {
-    tags: PropTypes.array.isRequired
+    tags: PropTypes.array.isRequired,
+    handler: PropTypes.func
   };
 
   render() {
     const tagList = this.props.tags.map(tag => {
       return (
-        <Link key={ tag.id } to={ `/blog/tag/${ tag.slug }` }>
-          <mark key={ tag.id }> { tag.name } </mark>
-        </Link>
+        <div key={ tag.id } onClick={ () => this.props.handler() }>
+          <Link to={ `/blog/tag/${ tag.slug }` }>
+            <mark key={ tag.id }> { tag.name } </mark>
+          </Link>
+        </div>
       );
     });
 

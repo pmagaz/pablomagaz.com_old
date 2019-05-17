@@ -6,7 +6,7 @@ import { responseBlogModel } from '../models';
 export default {
   fetchPosts(params) {
     let reqParams = '';
-    const { tag, page } = params;
+    const { tag, page } = params || {};
     if (tag) reqParams += `tag=${ tag }`;
     if (page) reqParams += `page=${ page }`;
     return fetch(`${ SiteConf.PostsApiUrl }${ reqParams }`)

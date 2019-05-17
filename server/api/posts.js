@@ -4,7 +4,8 @@ import { SiteConf } from 'base';
 export const postsApiHandler = (req, res) => {
   let params;
   const { filter } = req.params;
-  if (!filter || !filter.includes('tag')) params = `limit=${ SiteConf.numPosts }&${ filter }`;
+  const limit = filter && filter.includes('limit') ? filter : `limit=${ SiteConf.numPosts }`;
+  if (!filter || !filter.includes('tag')) params = `${ limit }&${ filter }`;
 
   needle('get', `${ SiteConf.PostsApi }&${ params }`)
     .then(resp => {

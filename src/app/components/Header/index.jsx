@@ -6,14 +6,13 @@ import Logo from 'components/Logo';
 import styles from './styles.css';
 
 class Header extends PureComponent {
-  
   static propTypes = {
-    location: PropTypes.object,
-  }
+    location: PropTypes.object
+  };
 
   constructor(props) {
     super(props);
-    this.state = { collapsed: false, scrollTop: 0 }; 
+    this.state = { collapsed: false, scrollTop: 0 };
   }
 
   componentDidMount() {
@@ -43,9 +42,9 @@ class Header extends PureComponent {
     });
     return (
       <header className={ headerStyle }>
-        <span className={ styles.mainHeaderSheet }></span>
+        <span className={ styles.mainHeaderSheet } />
         <div className={ styles.mainHeaderWrapper }>
-          <Logo location= { this.props.location } />
+          <Logo location={ this.props.location } show={ this.state.collapsed } />
           <Menu collapsed={ this.state.collapsed } />
         </div>
       </header>

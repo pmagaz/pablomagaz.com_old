@@ -6,7 +6,7 @@ export const postsApiHandler = (req, res) => {
   const { filter } = req.params;
   if (!filter || !filter.includes('tag')) params = `limit=${ SiteConf.numPosts }&${ filter }`;
 
-  needle('get', `SiteConf.PostsApi&${ params }`)
+  needle('get', `${ SiteConf.PostsApi }&${ params }`)
     .then(resp => {
       const data = resp.body;
       if (data.errors) res.status(404).json({ posts: [] });

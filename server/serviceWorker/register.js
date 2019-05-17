@@ -48,6 +48,7 @@ const generateSubscription = async () => {
 
 const registerServiceWorker = async () => {
   const swRegistration = await navigator.serviceWorker.register(serviceWorkerUrl);
+  window.swRegistration = swRegistration;
   return swRegistration;
 };
 

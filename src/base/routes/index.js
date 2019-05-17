@@ -13,7 +13,6 @@ const routes = (
     <Route path="/blog" component={ Blog } />
     <Route path="/tag/:tag" component={ Blog } />
     <Route path="/blog/:slug" component={ Post } />
-    <Route path="/blog/tag/:tag" component={ Blog } />
     <Route path="/blog/page/:page" component={ Blog } />
   </Route>
 );

@@ -14,7 +14,7 @@ class PostTag extends Component {
     const tagList = this.props.tags.map(tag => {
       return (
         <div key={ tag.id } onClick={ () => this.props.handler() }>
-          <Link to={ `/blog/tag/${ tag.slug }` }>
+          <Link to={ `/tag/${ tag.slug }` }>
             <mark key={ tag.id }> { tag.name } </mark>
           </Link>
         </div>

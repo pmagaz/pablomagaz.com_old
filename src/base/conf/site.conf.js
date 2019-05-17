@@ -53,7 +53,7 @@ if (env === 'development') {
   ContentPath = '/Users/Pablo/js/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = 'https://pablomagaz.com/api/post/';
-  PostsApiUrl = `${ Protocol }${ HostName }/api/posts/`;
+  PostsApiUrl = 'https://pablomagaz.com/api/posts/';
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc&limt=${ numPosts }`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags`;
   GoogleAnaliticsId = 'UA-104300440-3';

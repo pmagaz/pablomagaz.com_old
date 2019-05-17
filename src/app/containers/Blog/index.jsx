@@ -36,6 +36,10 @@ class Blog extends Component {
     fetchRequiredActions(Blog.requiredActions, this.props, postsLoaded);
   }
 
+  componentWillMount() {
+    this.actions.getPosts();
+  }
+
   componentWillReceiveProps(nextProps) {
     const prevParams = this.props.params;
     const nextParams = nextProps.params;
@@ -63,7 +67,7 @@ class Blog extends Component {
       tagTitle = <TagTitle tag={ this.props.params.tag } posts={ posts.size } />;
     }
 
-    if (pagination.hasMorePosts) {
+    if (!this.isTagFilter() && pagination.hasMorePosts) {
       MorePostsButton = <MorePosts url={ url } click={ this.loadMorePosts } />;
     }
 

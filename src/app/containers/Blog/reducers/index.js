@@ -21,7 +21,7 @@ const actionHandlers = {
   [ActionTypes.BLOG_REQUEST]: blogRequest,
   [ActionTypes.BLOG_SUCCESS]: blogSuccess,
   [ActionTypes.BLOG_ERROR]: blogError,
-  [ActionTypes.CLEAN_TAG_FILTER]: cleanPosts
+  [ActionTypes.CLEAN_POSTS]: cleanPosts
 };
 
 export default createReducer(actionHandlers, new BlogModel());

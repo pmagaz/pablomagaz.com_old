@@ -70,6 +70,7 @@ class Blog extends Component {
     if (posts.size > 0) {
       content = (
         <div>
+          { tagTitle }
           <PostList onLeave={ this.actions.cleanPosts } posts={ posts } />
           { MorePostsButton }
         </div>
@@ -81,7 +82,7 @@ class Blog extends Component {
         <div className={ styles.content }>
           <BlogHeader image={ SiteConf.blogImage } title={ SiteConf.BlogTitle } />
           <span className={ styles.shape } />
-          { tagTitle }
+
           { content }
         </div>
       </div>

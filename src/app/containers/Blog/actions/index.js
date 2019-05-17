@@ -7,7 +7,7 @@ export const getPosts = params => ({
 });
 
 export const cleanPosts = () => ({
-  type: ActionTypes.CLEAN_TAG_FILTER
+  type: ActionTypes.CLEAN_POSTS
 });
 
 export const cleanPost = () => ({

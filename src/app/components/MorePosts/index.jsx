@@ -11,7 +11,7 @@ const propTypes = {
 const MorePosts = ({ url, click }) => (
   <div className={ styles.container }>
     <Link to={ url } onClick={ () => click() }>
-      <button className={ styles.morePosts }>Más posts</button>
+      <button className={ styles.morePosts }>Posts anteriores</button>
     </Link>
   </div>
 );

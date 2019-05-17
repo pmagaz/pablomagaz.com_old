@@ -8,7 +8,7 @@ import { bindActionCreators } from 'redux';
 import { SiteConf } from 'base';
 import PostInfo from 'components/PostInfo';
 import PostImage from 'components/PostImage';
-import * as PostActions from '../../../Post/actions';
+import * as PostActions from 'containers/Post/actions';
 import * as Actions from '../../actions';
 import styles from './styles.css';
 
@@ -28,8 +28,7 @@ class PostSummary extends Component {
     this.props.dispatch(PostActions.getPost(post));
   }
 
-  clearPosts(post) {
-    console.log(1111111, this.props);
+  clearPosts() {
     this.actions.cleanPosts();
   }
 

@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 
 import { SiteConf } from 'base';
 import BlogHeader from 'components/BlogHeader';
+import * as BlogActions from 'containers/Blog/actions';
 import PostContent from './components/PostContent';
 import * as Actions from './actions';
 import styles from './styles.css';
@@ -21,11 +22,16 @@ class Post extends Component {
   constructor(props) {
     super(props);
     this.actions = bindActionCreators(Actions, props.dispatch);
+    this.blogActions = bindActionCreators(BlogActions, props.dispatch);
   }
 
   componentWillUnmount() {
     this.actions.cleanPost();
   }
+
+  cleanPosts = () => {
+    this.blogActions.cleanPosts();
+  };
 
   render() {
     const post = this.props.Post;
@@ -37,7 +43,7 @@ class Post extends Component {
         <div className={ styles.content }>
           <BlogHeader image={ postImage } title={ SiteConf.BlogTitle } />
           <span className={ styles.shape } />
-          <PostContent post={ post } />
+          <PostContent post={ post } handler={ this.cleanPosts } />
         </div>
       </div>
     );

@@ -71,7 +71,7 @@ class Blog extends Component {
       content = (
         <div>
           { tagTitle }
-          <PostList onLeave={ this.actions.cleanPosts } posts={ posts } />
+          <PostList posts={ posts } />
           { MorePostsButton }
         </div>
       );

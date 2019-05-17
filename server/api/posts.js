@@ -6,10 +6,7 @@ export const postsApiHandler = (req, res) => {
   const { filter } = req.params;
   if (!filter || !filter.includes('tag')) params = `limit=${ SiteConf.numPosts }&${ filter }`;
 
-  needle(
-    'get',
-    `http://172.104.136.180:2369/ghost/api/v0.1/posts/?client_id=ghost-frontend&client_secret=113542417eed&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at%20desc&${ params }`
-  )
+  needle('get', `SiteConf.PostsApi&${ params }`)
     .then(resp => {
       const data = resp.body;
       if (data.errors) res.status(404).json({ posts: [] });

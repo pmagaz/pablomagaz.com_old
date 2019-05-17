@@ -15,7 +15,8 @@ import styles from './styles.css';
 
 class PostContent extends Component {
   static propTypes = {
-    post: PropTypes.object.isRequired
+    post: PropTypes.object.isRequired,
+    handler: PropTypes.func
   };
 
   componentDidMount() {
@@ -45,7 +46,7 @@ class PostContent extends Component {
       <div className={ styles.post }>
         <div className={ postContentStyle }>
           <h1>{ post.title }</h1>
-          <PostInfo post={ post } />
+          <PostInfo post={ post } handler={ this.props.handler } />
           <div className={ styles.postText }>
             { Content }
             <span className={ styles.divider } />

@@ -1,3 +1,5 @@
+@import "../../styles/variables/variables.css";
+
 .container {
   width: 100%;
   bottom: 0;
@@ -20,7 +22,7 @@
   white-space: nowrap;
   border: none;
   cursor: pointer;
-  background: #f94c74;
+  background: $secondary-color;
   transition: all 0.3s;
   margin-left: 2.2em;
   @media screen and (max-width: 414px) and (orientation: portrait),
@@ -28,7 +30,7 @@
     margin-left: 2.6em;
   }
   &:hover {
-    background: #f94c74;
+    background: $primary-color;
     transition: all 0.3s;
   }
 }

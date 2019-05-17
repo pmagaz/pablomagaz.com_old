@@ -5,6 +5,7 @@ import { responseBlogModel } from '../models';
 
 export default {
   fetchPosts(params) {
+    console.log(33333, params);
     let reqParams = '';
     const { tag, page } = params || {};
     if (tag) reqParams += `tag=${ tag }`;

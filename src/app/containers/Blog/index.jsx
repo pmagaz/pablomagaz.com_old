@@ -8,9 +8,11 @@ import Loading from 'components/Loading';
 
 import { fetchRequiredActions, SiteConf } from 'base';
 import BlogHeader from 'components/BlogHeader';
+import * as PostActions from 'containers/Post/actions';
 import PostList from './components/PostList';
 import TagTitle from './components/TagTitle';
 import * as Actions from './actions';
+
 import styles from './styles.css';
 
 class Blog extends Component {
@@ -29,6 +31,7 @@ class Blog extends Component {
   constructor(props) {
     super(props);
     this.actions = bindActionCreators(Actions, props.dispatch);
+    this.postActions = bindActionCreators(PostActions, props.dispatch);
   }
 
   componentDidMount() {
@@ -37,7 +40,12 @@ class Blog extends Component {
   }
 
   componentWillMount() {
-    this.actions.getPosts();
+    if (this.isTagFilter()) {
+      this.actions.getPosts();
+    } else {
+      const { params } = this.props;
+      Promise.all([this.actions.getPosts(params), this.postActions.cleanPost()]);
+    }
   }
 
   componentWillReceiveProps(nextProps) {

@@ -66,7 +66,6 @@ export default function post(params) {
           "publisher": {
               "@type": "Organization",
               "name": "${ SiteConf.Author }",
-              "name": "${ post.meta_description }",
               "logo": "${ SiteConf.ServerUrl }/${ SiteConf.blogTitleImage }"
           },
           "author": {

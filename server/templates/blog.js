@@ -65,7 +65,7 @@ export default function blog(params) {
             "@id": "${ SiteConf.BlogUrl }"
         },
         "description": "${ SiteConf.BlogDescription }",
-        "keywords": "${ SiteConf.KeyWords }",
+        "keywords": "${ SiteConf.KeyWords }"
       }
     </script>
 

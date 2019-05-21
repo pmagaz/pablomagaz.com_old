@@ -75,7 +75,7 @@ export default function post(params) {
               "sameAs": [
                   "${ SiteConf.SiteUrl }",
                   "${ SiteConf.socialLinks.twitter }",
-                  "${ SiteConf.socialLinks.linkedIn }",
+                  "${ SiteConf.socialLinks.linkedIn }"
               ]
           },
           "headline": "${ post.title }",

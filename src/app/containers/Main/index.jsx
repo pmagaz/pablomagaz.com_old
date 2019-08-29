@@ -133,6 +133,9 @@ class Main extends Component {
                 </a>
                 ]
               </li>
+              <li>
+                Commit 20019: Rust & WebAssembly para JavaScripters (Soon)
+              </li>
             </ul>
 
             <ul className={ styles.photos }>
@@ -248,7 +251,7 @@ class Main extends Component {
                   type="text/html"
                   width="560"
                   height="349"
-                  src="https://www.youtube.com/embed/pHPzU32y8lo?autoplay=0&origin=http://pablomagaz.com"
+                  src="https://www.youtube.com/embed/wnfrfTxJz58?autoplay=0&origin=http://pablomagaz.com"
                   frameBorder="0"
                 />
               </div>

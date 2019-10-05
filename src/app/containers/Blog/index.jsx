@@ -40,10 +40,10 @@ class Blog extends Component {
   }
 
   componentWillMount() {
+    const { params } = this.props;
     if (this.isTagFilter()) {
-      this.actions.getPosts();
+      this.actions.getPosts(params);
     } else {
-      const { params } = this.props;
       Promise.all([this.actions.getPosts(params), this.postActions.cleanPost()]);
     }
   }

@@ -50,92 +50,97 @@ class Main extends Component {
             <a href="../assets/images/about/pablo_magaz@codemotion_2018_3.jpg">
               <img src="../assets/images/about/Pablo_Magaz.jpg" alt="Pablo Magaz" />
             </a>
-            <h1>Sobre mí</h1>
+            <h1>About me</h1>
             <p>
-              Soy { SiteConf.Author } y llevo trabajando como desarrollador en diferentes tecnologías más de 17 años:
-              Desde JavaScript, Php o Python pasando por Android, Pl/Sql, administración de Unix, etc., hasta llegar al
-              lenguaje en el que más me he centrado en los últimos tiempos: JavaScript.
+              I'm { SiteConf.Author } and I've working in the software world for more than 17 years. During that time,
+              I've been working with different technologies and programming languages: From Php, Python, Android,
+              Pl/Sql, to JavaScript, Rust, WebAssembly in latest years.
               <br />
               <br />
-              Actualmente trabajo como Lead del área de JavaScript y a lo largo de mi carrera he desarrollado proyectos
-              con NodeJs,{ ' ' }
-              <a href="https://github.com/atSistemas/vue-base" target="_blank" rel="noopener noreferrer">
-                Vue
+              Right now I work as Development / Engineering Manager of the JavaScript area in Cognizant and as
+              JavaScript enthusiastic that I am, I really enjoy developing Front-End, Back-End and Mobile applications
+              using:&nbsp;
+              <a href="https://github.com/pmagaz/webpush-notification-server" target="_blank" rel="noopener noreferrer">
+                NodeJs
               </a>
               ,{ ' ' }
               <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">
-                React
+                React & React Native
+              </a>
+              ,{ ' ' }
+              <a href="https://github.com/pmagaz/redux-req-middleware" target="_blank" rel="noopener noreferrer">
+                Redux
               </a>
               ,{ ' ' }
               <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">
                 Angular
               </a>
-              , Redux,{ ' ' }
+              ,{ ' ' }
+              <a href="https://pablomagaz.com/blog/empezando-con-webassembly" target="_blank" rel="noopener noreferrer">
+                WebAssembly
+              </a>
+              ,{ ' ' }
               <a href="https://github.com/pmagaz/rextore" target="_blank" rel="noopener noreferrer">
                 RxJs
               </a>
               ,{ ' ' }
-              <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">
-                @ngRxStore
+              <a href="https://github.com/atSistemas/vue-base" target="_blank" rel="noopener noreferrer">
+                Vue
               </a>
-              , etc. En fin que no me caso con nada y me gusta todo, aunque lógicamente tengo mis preferencias, como
-              podrás comprobar en mi{ ' ' }
+              , etc. Check my{ ' ' }
               <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">
                 github
-              </a>
-              , donde además se encuentra todo el{ ' ' }
-              <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">
-                código
               </a>{ ' ' }
-              de este blog.
+              for more resources, including the{ ' ' }
+              <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">
+                source code
+              </a>{ ' ' }
+              of this isomorphic blog . <br />
               <br />
-              <br />
-              Aparte del desarrollo y supervisión técnica de proyectos, he realizado talleres técnicos, formación a
-              equipos y charlas en distintos eventos.
+              Aside from software development, technical supervision and teams leading I also do technical workshops,
+              team trainings and I'm speaker in different events around my country.
             </p>
             <a id="talks" />
             <h2>Talks</h2>
             <ul>
               <li>Open Expo 2016: Presentación base.</li>
-              <li>Codemotion 2016: Aplicaciones Isormoficas con React & Redux.</li>
+              <li>Codemotion 2016: Isomorphic apps with React & Redux.</li>
               <li>
-                Codemotion 2017: Programación Reactiva con RxJs. [
+                Codemotion 2017: Reactive programming with RxJs. [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">
                   Slides
                 </a>
                 ]
               </li>
               <li>
-                Meetup En mi local funciona 2018: Introducción a la Programación Reactiva con RxJs. [
+                Meetup En mi local funciona 2018: Introduction to Reactive programming with RxJs. [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">
                   Slides
                 </a>
                 ]
               </li>
               <li>
-                JSDayES 2018: Escribiendo Serviceworkers con Workbox. [
+                JSDayES 2018: Writing Serviceworkers with Workbox. [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_EscribiendoServicesWorkersConWorkbox_JSDayES2018.pdf">
                   Slides
                 </a>
                 ]
               </li>
               <li>
-                Commit Conf 2018: ECMAScript 2018 y más allá. [
+                Commit Conf 2018: ECMAScript 2018 and beyond. [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ECMAScript2018YMasAlla_CommitConf2018.pdf">
                   Slides
                 </a>
                 ]
               </li>
               <li>
-                Codemotion 2018: ECMAScript 2018 y más allá. [
+                Codemotion 2018: ECMAScript 2018 and beyond. [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ECMAScript2018YMasAlla_Codemotion2018.pdf">
                   Slides
                 </a>
                 ]
               </li>
-              <li>
-                Commit 20019: Rust & WebAssembly para JavaScripters (Soon)
-              </li>
+              <li>Commit 20019: Rust & WebAssembly for JavaScripters (Soon)</li>
             </ul>
 
             <ul className={ styles.photos }>
@@ -256,14 +261,8 @@ class Main extends Component {
                 />
               </div>
             </div>
-            <h2>Mis otras aficiones</h2>
-            <p>
-              A parte de la programación, me encanta la música electrónica: Techno, Bass, D&B... Dispongo de un pequeño
-              estudio y cuando tengo tiempo, que no suele ser muy a menudo, me meto de lleno en el mundo de la
-              producción musical.
-            </p>
-            <h2>Contacto</h2>
-            <p>Puedes contactar conmigo en cualquiera de los siguientes canales:</p>
+            <h2>Contact</h2>
+            <p>You can contact me in the following channels:</p>
             <br />
             <span>
               <Social />

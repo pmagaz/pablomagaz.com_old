@@ -2,6 +2,7 @@ import prism from 'prismjs';
 import { PropTypes } from 'prop-types';
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
+import 'prismjs/components/prism-rust.min';
 import 'prismjs/components/prism-jsx.min';
 import ReactHtmlParser from 'html-react-parser';
 

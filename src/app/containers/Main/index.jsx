@@ -140,7 +140,13 @@ class Main extends Component {
                 </a>
                 ]
               </li>
-              <li>Commit 20019: Rust & WebAssembly for JavaScripters (Soon)</li>
+              <li>
+                Commit 20019: Rust & WebAssembly for JavaScripters. [
+                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_RustYWebAssemblyParaJavaScripters_CommitConf2019.pdf">
+                  Slides
+                </a>
+                ]
+              </li>
             </ul>
 
             <ul className={ styles.photos }>

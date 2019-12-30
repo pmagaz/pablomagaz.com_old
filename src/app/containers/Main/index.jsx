@@ -130,7 +130,7 @@ class Main extends Component {
                   <a href="#EscribiendoServiceWorkersConWorkBox">
                   Video
                 </a>
-                ][
+                ] [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_EscribiendoServicesWorkersConWorkbox_JSDayES2018.pdf">
                   Slides
                 </a>
@@ -149,7 +149,7 @@ class Main extends Component {
                   <a href="#ECMAScript2018YMasAlla">
                   Video
                 </a>
-                ][
+                ] [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ECMAScript2018YMasAlla_Codemotion2018.pdf">
                   Slides
                 </a>
@@ -161,7 +161,7 @@ class Main extends Component {
                   <a href="#RustYWebassemblyParaJavaScripters">
                   Video
                 </a>
-                ][
+                ] [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_RustYWebAssemblyParaJavaScripters_CommitConf2019.pdf">
                   Slides
                 </a>

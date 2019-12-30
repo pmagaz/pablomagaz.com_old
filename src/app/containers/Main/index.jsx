@@ -187,6 +187,14 @@ class Main extends Component {
                 </a>
               </li>
               <li>
+                <a href="../assets/images/about/pablo_magaz@commit_conf_2019_3.png">
+                  <img
+                    src="../assets/images/about/pablo_magaz@commit_conf_2019_3.png"
+                    alt="Rust y WebAssembly para JavaScripters"
+                  />
+                </a>
+              </li>
+              <li>
                 <a href="../assets/images/about/pablo_magaz@codemotion_2018_2.jpg">
                   <img
                     src="../assets/images/about/pablo_magaz@codemotion_2018_2.jpg"
@@ -195,10 +203,10 @@ class Main extends Component {
                 </a>
               </li>
               <li>
-                <a href="../assets/images/about/pablo_magaz@meetupRxJs22018.jpg">
+                <a href="../assets/images/about/pablo_magaz@commit_conf_2019.png">
                   <img
-                    src="../assets/images/about/pablo_magaz@meetupRxJs22018.jpg"
-                    alt="Introducción a la programación Reactiva@ Meetup En mi Local funciona 2017"
+                    src="../assets/images/about/pablo_magaz@commit_conf_2019.png"
+                    alt="Rust y WebAssembly para JavaScripters"
                   />
                 </a>
               </li>
@@ -219,10 +227,18 @@ class Main extends Component {
                 </a>
               </li>
               <li>
-                <a href="../assets/images/about/pablo_magaz@react-redux-techday.jpg">
+                <a href="../assets/images/about/pablo_magaz@commit_conf_2019_2.png">
                   <img
-                    src="../assets/images/about/pablo_magaz@react-redux-techday.jpg"
-                    alt="React/Redux Techday @ atSistemas 2017"
+                    src="../assets/images/about/pablo_magaz@commit_conf_2019_2.png"
+                    alt="Rust y WebAssembly para JavaScripters"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="../assets/images/pablo_magaz@commit_conf_2019.png">
+                  <img
+                    src="../assets/images/about/pablo_magaz@meetupRxJs22018.jpg"
+                    alt="Rust y WebAssembly para JavaScripters"
                   />
                 </a>
               </li>

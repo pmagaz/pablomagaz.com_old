@@ -98,7 +98,7 @@ class Main extends Component {
               of this isomorphic blog . <br />
               <br />
               Aside from software development, technical supervision and teams leading I also do technical workshops,
-              team trainings and I'm speaker in different events around my country.
+              team trainings and I'm speaker in different events around my country. Check out my talks!
             </p>
             <a id="talks" />
             <h2>Talks</h2>
@@ -106,7 +106,12 @@ class Main extends Component {
               <li>Open Expo 2016: Presentación base.</li>
               <li>Codemotion 2016: Isomorphic apps with React & Redux.</li>
               <li>
-                Codemotion 2017: Reactive programming with RxJs. [
+                Codemotion 2017: Reactive programming with RxJs.
+                [
+                  <a href="#ProgramacionReactivaRxJs">
+                  Video
+                </a>
+                ] [
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">
                   Slides
                 </a>
@@ -120,7 +125,12 @@ class Main extends Component {
                 ]
               </li>
               <li>
-                JSDayES 2018: Writing Serviceworkers with Workbox. [
+                JSDayES 2018: Writing Serviceworkers with Workbox.
+                [
+                  <a href="#EscribiendoServiceWorkersConWorkBox">
+                  Video
+                </a>
+                ][
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_EscribiendoServicesWorkersConWorkbox_JSDayES2018.pdf">
                   Slides
                 </a>
@@ -134,14 +144,24 @@ class Main extends Component {
                 ]
               </li>
               <li>
-                Codemotion 2018: ECMAScript 2018 and beyond. [
+                Codemotion 2018: ECMAScript 2018 and beyond.
+                [
+                  <a href="#ECMAScript2018YMasAlla">
+                  Video
+                </a>
+                ][
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ECMAScript2018YMasAlla_Codemotion2018.pdf">
                   Slides
                 </a>
                 ]
               </li>
               <li>
-                Commit 20019: Rust & WebAssembly for JavaScripters. [
+                Commit 20019: Rust & WebAssembly for JavaScripters. 
+                [
+                  <a href="#RustYWebassemblyParaJavaScripters">
+                  Video
+                </a>
+                ][
                 <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_RustYWebAssemblyParaJavaScripters_CommitConf2019.pdf">
                   Slides
                 </a>
@@ -215,7 +235,8 @@ class Main extends Component {
                 </a>
               </li>
             </ul>
-            <h2>ECMASCript 2018 y más allá @ Codemotion 2018</h2>
+            <a id="ECMAScript2018YMasAlla" />
+            <h2>ECMASCript 2018 y más allá @ Codemotion</h2>
             <div className={ styles.videoWrapper }>
               <div className={ styles.video }>
                 <iframe
@@ -228,7 +249,21 @@ class Main extends Component {
                 />
               </div>
             </div>
-            <h2>Entrevista JSDayES 2018</h2>
+            <a id="RustYWebassemblyParaJavaScripters" />
+            <h2>Rust y WebAssembly for JavaScripters @ Commit Conf</h2>
+            <div className={ styles.videoWrapper }>
+              <div className={ styles.video }>
+                <iframe
+                  id="ytplayer"
+                  type="text/html"
+                  width="560"
+                  height="349"
+                  src="https://www.youtube.com/embed/mfu2syVX8fU?autoplay=0&origin=http://pablomagaz.com"
+                  frameBorder="0"
+                />
+              </div>
+            </div>
+            <h2>Entrevista @ JSDayES</h2>
             <div className={ styles.videoWrapper }>
               <div className={ styles.video }>
                 <iframe
@@ -241,6 +276,7 @@ class Main extends Component {
                 />
               </div>
             </div>
+            <a id="EscribiendoServiceWorkersConWorkBox" />
             <h2>Escribiendo Service Workers con Workbox @ JSDayES</h2>
             <div className={ styles.videoWrapper }>
               <div className={ styles.video }>
@@ -254,6 +290,7 @@ class Main extends Component {
                 />
               </div>
             </div>
+            <a id="ProgramacionReactivaRxJs" />
             <h2>Programación Reactiva con RxJs @ Codemotion</h2>
             <div className={ styles.videoWrapper }>
               <div className={ styles.video }>

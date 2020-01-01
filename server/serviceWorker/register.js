@@ -47,7 +47,9 @@ const generateSubscription = async () => {
 };
 
 const registerServiceWorker = async () => {
-  const swRegistration = await navigator.serviceWorker.register(serviceWorkerUrl);
+  const swRegistration = await navigator.serviceWorker.register(serviceWorkerUrl, {
+    scope: '/',
+  });
   window.swRegistration = swRegistration;
   return swRegistration;
 };

@@ -15,7 +15,7 @@ const commonStatics = () => [
     dir: path.join(__dirname, '../serviceWorker/serviceWorker.js'),
     cache: { maxage: 'no-cache' }
   },
-  { route: '/manifest.json', dir: path.join(__dirname, '../manifest.json'), cache: { maxage: 'no-cache' } },
+  { route: '/manifest.webmanifest', dir: path.join(__dirname, '../manifest.webmanifest'), cache: { maxage: 'no-cache' } },
   { route: '/offline.html', dir: path.join(__dirname, '../templates/offline.html') }
 ];
 

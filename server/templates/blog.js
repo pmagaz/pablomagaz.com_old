@@ -22,7 +22,7 @@ export default function blog(params) {
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/123e14d6ac1a03bab285de7db/bb3992eaa21516654114beff3.js");</script>
 
     ${ params.style }
-    <link rel="manifest" href="${ SiteConf.SiteUrl }/manifest.json" />
+    <link rel="manifest" href="${ SiteConf.SiteUrl }/manifest.webmanifest" />
     <meta name="theme-color" content="#f72354">
     <link rel="icon" href="${ SiteConf.SiteUrl }/assets/images/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="${ SiteConf.SiteUrl }/assets/images/icons/apple-touch-icon.png">
@@ -77,7 +77,6 @@ export default function blog(params) {
       <script>window.$REACTBASE_STATE = ${ state }</script>
       ${ params.appScript }
       ${ serviceWorkerTemplate }
-
     </body>
   </html>
   `;

@@ -90,7 +90,7 @@ class SnackBars extends Component {
 
     const snackNotificationBar = (
       <SnackBar buttons={ true } position="top" exit={ this.state.hideSnackNotificationBar }>
-        ¿Quieres recibir notificaciones de los nuevos posts?. También puedes seguir el blog en
+        ¿Quieres recibir notificaciones de los nuevos posts?. Nunca recibir&aacute;s m&aacute;s de una al mes. También puedes seguir el blog en
         <a
           aria-label="Pablo Magaz Twitter"
           role="button"
@@ -100,6 +100,16 @@ class SnackBars extends Component {
           rel="noopener noreferrer"
         >
           Twitter
+        </a> y 
+        <a
+          aria-label="Pablo Magaz Linkedin"
+          role="button"
+          tabIndex="0"
+          href="https://www.linkedin.com/in/pablo-magaz-05b46763/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
         </a>
         .
         <div className={ styles.content }>

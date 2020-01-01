@@ -13,12 +13,12 @@ const Social = () => (
       </a>
     </li>
     <li>
-      <a href={ SiteConf.socialLinks.linkedIn } target="_blank" rel="noopener noreferrer">
+      <a href={ SiteConf.socialLinks.github } target="_blank" rel="noopener noreferrer">
         <SocialIcon />
       </a>
     </li>
     <li>
-      <a href={ SiteConf.socialLinks.github } target="_blank" rel="noopener noreferrer">
+      <a href={ SiteConf.socialLinks.linkedIn } target="_blank" rel="noopener noreferrer">
         <SocialIcon />
       </a>
     </li>

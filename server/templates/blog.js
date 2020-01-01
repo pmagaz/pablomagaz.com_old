@@ -19,8 +19,6 @@ export default function blog(params) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="${ SiteConf.KeyWords }"> 
     <link rel="canonical" href="${ SiteConf.BlogUrl }" />
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/123e14d6ac1a03bab285de7db/bb3992eaa21516654114beff3.js");</script>
-
     ${ params.style }
     <link rel="manifest" href="${ SiteConf.SiteUrl }/manifest.webmanifest" />
     <meta name="theme-color" content="#f72354">

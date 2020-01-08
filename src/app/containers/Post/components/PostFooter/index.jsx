@@ -13,7 +13,7 @@ const PostFooter = ({ post }) => {
   return (
     <div>
       <SharePost post={ post } />
-      <RenderOnScroll scroll={ 2500 } >
+      <RenderOnScroll scroll={ 3000 } >
         <RelatedPost related={ post.related } />
         <PostComments post={ post } />
       </RenderOnScroll>

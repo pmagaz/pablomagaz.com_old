@@ -38,7 +38,7 @@ const askPermission = async () => {
 };
 
 const generateSubscription = async () => {
-  const subscription = await swRegistration.pushManager.subscribe({
+  const subscription = await window.swRegistration.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
   });

@@ -31,25 +31,31 @@ export const relatedPostApiHandler = async (req, res) => {
   if (body.errors) res.status(404).json({ posts: [] });
   else {
     const { posts } = body;
-    let key = 0;
-    const ran = Math.floor(Math.random() * posts.length-2);
-    let related = posts.filter(post => {
-      key += 1;
+    const min = 0; 
+    const max = posts.length-2;
+    let related = [];
+
+    const tagRelated = posts.filter(post => {
       if ((post.tags[0].slug === tag || (post.tags[1] && post.tags[1].slug === tag)) && post.slug !== slug) return true;
-    }).map(post => {
-      const { slug, feature_image, title } = post;
-      return { slug, feature_image, title };
-    });
-    
-    if (related.length === 0) {
-      const { slug, feature_image, title } = posts[ran];
-      related = [{ slug, feature_image, title }];
-    }
+    }).map(post => getRelated(post));
+
+    if (tagRelated.length === 0) {
+      posts.forEach(post => {
+        const ran = Math.floor(Math.random() * (max - min)) + min;
+        if (posts[ran].slug !== slug && related.length < 3) related.push(posts[ran]);
+      });
+      related = related.map(post => getRelated(post));
+    } else related = tagRelated;
     
     if (related.length > 0) res.json(related);
     else res.status(404).json([]);
   }
 };
+
+const getRelated = post => {
+  const { slug, feature_image, title } = post;
+  return { slug, feature_image, title }; 
+}
 
 const generateOpening = html => {
   let i = 0;

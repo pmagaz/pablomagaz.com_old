@@ -48,12 +48,12 @@ if (env === 'development') {
   SiteUrl = `${ ServerUrl }`;
   clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = 'http://pablomagaz.com/'; // 'http://172.104.136.180:2369/';
+  GhostUrl =  'http://172.104.136.180:2369/';
   ImageUrl = GhostUrl;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
-  PostApiUrl = 'https://pablomagaz.com/api/post/'; // `${ Protocol }${ HostName }/api/post/`;
-  PostsApiUrl = 'https://pablomagaz.com/api/posts/'; // `${ Protocol }${ HostName }/api/posts/`;
-  RelatedApiUrl = 'https://pablomagaz.com/api/related/'; // `${ Protocol }${ HostName }/api/related/`;
+  PostApiUrl =  `${ Protocol }${ HostName }/api/post/`;
+  PostsApiUrl = `${ Protocol }${ HostName }/api/posts/`;
+  RelatedApiUrl = `${ Protocol }${ HostName }/api/related/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags`;
   GoogleAnaliticsId = 'UA-104300440-3';

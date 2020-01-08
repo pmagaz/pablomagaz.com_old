@@ -6,7 +6,7 @@ import base, { SiteConf } from 'base';
 const commonStatics = () => [
   { route: '/dist', dir: path.join(__dirname, '../../dist') },
   {
-    route: '/registerSwV2.js',
+    route: '/registerSwV3.js',
     dir: path.join(__dirname, '../serviceWorker/register.js'),
     cache: { maxage: 'no-cache' }
   },

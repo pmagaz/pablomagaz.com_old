@@ -64,5 +64,13 @@
   padding: 40px 0 30px 0;
   letter-spacing: -1px;
   font-weight: bold;
+  @media (min-width: 340px){
+    font-size: 1.2em;
+    letter-spacing: -1px;
+
+  }
+  @media (min-width:$sm){
+    font-size: 1.3em;
+  }
 
 }

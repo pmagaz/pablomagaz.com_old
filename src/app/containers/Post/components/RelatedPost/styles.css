@@ -1,0 +1,62 @@
+@import '../../../../styles/mixins/mixins.css';
+@import '../../../../styles/variables/variables.css';
+
+.RelatedBoxWrap{   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.RelatedBox {
+  margin-bottom: 52px;
+  width: 90%;
+  > div{
+    margin-left: 10px;
+    @media (min-width: $sm){
+      margin-left: 0;
+    }
+  }
+}
+
+.linkImage{
+  @mixin linkImage;
+  clip-path: polygon(1% 14px, 6% -1px, 33% 3px, 48% 6px, 73.1% 1px, 85% -13px, 100% 14px, 99% 78px, 93% 110px, 46% 104px, 9% 110px, 0% 93px);
+  @media (min-width: 290px){
+    clip-path: polygon(0% 20px, 4% -1px, 33% 3px, 48% 1px, 72.1% 1px, 96% 0px, 100% 20px, 99% 68px, 96% 91px, 46% 87px, 5% 91px, 1% 68px);
+  }
+  color: $white;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.title {
+  font-size: 1.6em;
+  position: absolute;
+  top: -4px;
+  z-index: 90;
+  left: 10px;
+  bottom: 0;
+  margin: 0 6px 0 0;
+  display: flex;
+  align-items: center;
+  @media (min-width: 340px){
+    top: -7px;
+  }
+  @media (min-width:$sm){
+    font-size: 1.9em;
+    left: 30px;
+  }
+}
+
+.txt {
+  font-family: $fontFamilyLight;
+  color: $primary-color;
+  font-size: 1.4em;
+  margin-bottom: .3em;
+  font-weight: 200;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0 30px 0;
+}

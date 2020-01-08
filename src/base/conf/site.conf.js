@@ -29,11 +29,11 @@ let GhostUrl;
 let ImageUrl;
 let BaseApiUrl;
 let PostsApiUrl;
+let RelatedApiUrl;
 let clientSecret;
 let PostApiUrl;
 let PostsApi;
 let PostApi;
-let ContentPath;
 let Ssl;
 let Protocol;
 let uniqueImagePath;
@@ -46,14 +46,14 @@ if (env === 'development') {
   HostName = 'localhost:8000';
   ServerUrl = `http://${ HostName }`;
   SiteUrl = `${ ServerUrl }`;
-  clientSecret = '285ee4eda6c3';
+  clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = 'http://pablomagaz.com/';
+  GhostUrl = 'http://pablomagaz.com/'; // 'http://172.104.136.180:2369/';
   ImageUrl = GhostUrl;
-  ContentPath = '/Users/Pablo/js/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
-  PostApiUrl = 'https://pablomagaz.com/api/post/';
-  PostsApiUrl = 'https://pablomagaz.com/api/posts/';
+  PostApiUrl = 'https://pablomagaz.com/api/post/'; // `${ Protocol }${ HostName }/api/post/`;
+  PostsApiUrl = 'https://pablomagaz.com/api/posts/'; // `${ Protocol }${ HostName }/api/posts/`;
+  RelatedApiUrl = 'https://pablomagaz.com/api/related/'; // `${ Protocol }${ HostName }/api/related/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags`;
   GoogleAnaliticsId = 'UA-104300440-3';
@@ -71,10 +71,10 @@ if (env === 'development') {
   BlogUrl = `${ SiteUrl }/blog`;
   GhostUrl = 'http://localhost:2369';
   ImageUrl = `${ Protocol }${ HostName }`;
-  ContentPath = '/var/www/ghost/content';
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = `${ Protocol }${ HostName }/api/post/`;
   PostsApiUrl = `${ Protocol }${ HostName }/api/posts/`;
+  RelatedApiUrl = `${ Protocol }${ HostName }/api/related/`;
   PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags`;
   uniqueImagePath = '/assets/images/postcovers';
@@ -100,10 +100,10 @@ export const SiteConf = {
   brandTitleImage,
   SiteDescription,
   ImageUrl,
-  ContentPath,
   PostApi,
   PostsApi,
   PostApiUrl,
+  RelatedApiUrl,
   PostsApiUrl,
   postOpeningChars,
   postOpeningSplitChar,

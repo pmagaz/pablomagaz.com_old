@@ -22,7 +22,6 @@ const commonStatics = () => [
 const devStatics = () => [
   { route: '/', dir: path.join(__dirname, '../../src/app') },
   { route: '/dlls', dir: path.join(__dirname, '../../dist/') },
-  { route: '/content', dir: path.resolve(SiteConf.ContentPath), cache: { maxage: 31557600 } }
 ];
 
 const prodStatics = () => [

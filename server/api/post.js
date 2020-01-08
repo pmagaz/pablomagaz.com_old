@@ -1,17 +1,18 @@
 import needle from 'needle';
 import { SiteConf } from '../../src/base';
 
-export const postApiHandler = (req, res) => {
+export const postApiHandler = async (req, res) => {
   const { slug } = req.params;
   const url = `${ SiteConf.PostApi.replace(':slug', slug) }`;
-  needle('get', url)
-    .then(resp => {
-      const data = resp.body;
-      if (data.errors) res.status(404).json({});
-      else {
-        const post = data.posts[0];
-        res.json(post);
-      }
-    })
-    .catch(() => res.status(500).send());
+  const postDetail = await needle('get', url);
+  const { body } = postDetail;
+  if (body.errors) res.status(404).json({});
+  else {
+    const post = body.posts[0];
+    const tag = post.tags[0].slug;
+    const relatedPost = await needle('get', `${ SiteConf.RelatedApiUrl }${ post.slug }/${ tag }`);
+    const related = relatedPost.body;
+    post['related'] = related;
+    res.json(post); 
+  }
 };

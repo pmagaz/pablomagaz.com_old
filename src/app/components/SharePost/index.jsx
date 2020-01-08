@@ -24,7 +24,6 @@ const SharePost = ({ post }) => {
   
   return (
     <article className={ styles.socialBoxWrap }>
-      <h4>¿Te gustaría compartir este post?</h4>
       <span className={ styles.socialBoxWrapLinks }>
         <TwitterShareButton title={ post.title } via={ SiteConf.BlogTitle } description={ post.meta_description } url={ postUrl } > 
           <TwitterIcon round={ false } size={ 44 } />

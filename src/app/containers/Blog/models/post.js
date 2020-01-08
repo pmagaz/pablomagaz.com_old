@@ -12,7 +12,7 @@ const PostModel = Record({
   opening: '',
   published_at: '',
   feature_image: '',
-  author: SiteConf.Author
+  author: SiteConf.Author,
 });
 
 export default PostModel;

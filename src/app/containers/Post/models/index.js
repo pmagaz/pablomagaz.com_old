@@ -9,6 +9,7 @@ export const PostModel = Record({
   tags: [],
   title: '',
   image: '',
+  related: [],
   updated_at: '',
   published_at: '',
   feature_image: '',

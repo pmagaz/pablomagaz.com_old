@@ -10,8 +10,7 @@ import ReactHtmlParser from 'html-react-parser';
 import { SiteConf, context } from 'base';
 import Loading from 'components/Loading';
 import PostInfo from 'components/PostInfo';
-import SharePost from '../SharePost';
-import PostComments from '../PostComments';
+import PostFooter from '../PostFooter';
 
 import styles from './styles.css';
 
@@ -52,8 +51,7 @@ class PostContent extends Component {
           <div className={ styles.postText }>
             { Content }
             <span className={ styles.divider } />
-            <SharePost post={ post } />
-            <PostComments post={ post } />
+            <PostFooter post={ post } />
           </div>
         </div>
       </div>

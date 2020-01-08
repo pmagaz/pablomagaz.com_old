@@ -2,7 +2,6 @@
 @import "../../styles/anims.css";
 
 .snackBarBottom {
-  z-index:999999999 !important;
   color: rgb(255, 255, 255);
   background-color: #282c38;
   max-width: 32em;

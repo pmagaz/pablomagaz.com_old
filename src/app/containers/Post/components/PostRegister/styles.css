@@ -1,0 +1,102 @@
+@import '../../../../styles/mixins/mixins.css';
+@import '../../../../styles/variables/variables.css';
+
+.RegisterBoxWrap{ 
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $secondary-color;
+  border-bottom: 1px solid #ccc;
+  height: 6em;
+  @media (min-width:$sm){
+  height: 5em;
+  }
+}
+
+.txt {
+  display: flex;
+  font-family: $fontFamilyLight;
+  color: $white;
+  margin: 0px 10px;
+  font-size: 1.3em;
+  font-weight: 200;
+  width: 100%;
+  letter-spacing: -1px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+ 
+  @media (min-width:$sm){
+    font-size: 1.4em;
+    width:60%;
+  }
+
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  height:100%;
+  @media (min-width:$sm){
+    font-size: 1.2em;
+    letter-spacing: -1px;
+  }
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+form {
+  width: 100%;
+  @media (min-width:$sm){
+    width: 35%;
+    }
+}
+button, input {
+  overflow: visible;
+}
+
+.inputField {
+  font-family: $fontFamilyLight;
+  font-size: 12px;
+  margin: 0 10px 0 0;
+  padding: 6px 6px 6px 6px;
+  width: 150px;
+  font-size: 0.7em;
+  height: 26px;
+  @media (min-width:$sm){
+    height: 36px;
+  }
+}
+
+.inputButton {
+  font-family: $fontFamilyLight;
+  font-size: 12px;
+  margin: 0 10px 0 0;
+  display: block;
+  color: #fff;
+  height: 26px;
+  padding: 0.2em 0.8em;
+  font-size: 0.7em;
+  font-weight: 700;
+  border-style: solid;
+  margin: 0.3rem;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  background: #f72354;
+  transition: all 0.3s;
+  margin-left: 0.2em;
+  height: 26px;
+  @media (min-width:$sm){
+    height: 36px;
+  }
+}

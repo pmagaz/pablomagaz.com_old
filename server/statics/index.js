@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 
-import base, { SiteConf } from 'base';
+import base from 'base';
 
 const commonStatics = () => [
   { route: '/dist', dir: path.join(__dirname, '../../dist') },
@@ -30,6 +30,7 @@ const prodStatics = () => [
 ];
 
 const envStatics = base.env === 'development' ? commonStatics().concat(devStatics()) : commonStatics().concat(prodStatics());
+
 
 export default function applyStaticsPaths(app) {
   envStatics.map((staticPath) => {

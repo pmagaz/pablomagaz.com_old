@@ -20,7 +20,7 @@ const socialLinks = {
   gmail: 'magazpablo@gmail.com',
   github: 'https://github.com/pmagaz'
 };
-
+const mailListUrl = 'https://pablomagaz.us4.list-manage.com/subscribe/post?u=123e14d6ac1a03bab285de7db&amp;id=055bced07d';
 let HostName;
 let ServerUrl;
 let SiteUrl;
@@ -113,5 +113,6 @@ export const SiteConf = {
   uniqueImagePath,
   socialLinks,
   DisqusSettings,
-  addThisUrl
+  addThisUrl,
+  mailListUrl
 };

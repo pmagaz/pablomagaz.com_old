@@ -1,6 +1,6 @@
 import React from 'react';
 import jsonp from 'jsonp';
-import { setCookie, getCookie, SiteConf } from 'base';
+import { setCookie, SiteConf } from 'base';
 import styles from './styles.css';
 
 class PostRegister extends React.Component {
@@ -28,6 +28,7 @@ class PostRegister extends React.Component {
         this.setState({ status: 'error' });
       } else {
         this.setState({ status: 'success' });
+        setCookie(SiteConf.cookieMailSubscription, true, 60);
       }
     });
   }
@@ -44,8 +45,8 @@ class PostRegister extends React.Component {
           { status === 'duplicate' && <span>Ya esta dado de alta.</span> }
           { status === 'error' && <span>Se produjo un error.</span> }
         </div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <div className={ styles.form }>
+        <form onSubmit={this.handleSubmit.bind(this) } className={ styles.registerForm } >
+          <div className={ styles.registerFormContent }>
             <input
               placeholder="Introduce tu email"
               type="email"

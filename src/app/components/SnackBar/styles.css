@@ -35,7 +35,7 @@
     margin: -2.5em 0.5em;
     width: 60px;
     @media screen and (max-width: 414px) and (orientation: portrait) {
-      width: 45px;
+      width: 60px;
     }
   }
   .snackMessage {
@@ -55,8 +55,8 @@
   z-index:999999999 !important;
   color: rgb(255, 255, 255);
   background-color: #282c38;
-  max-width: 33em;
-  max-height: 14.5em;
+  width: 36em;
+  height: 15.6em;
   animation: SnackBarEnterDown 300ms both;
   flex-direction: column;
   right: 0.5em;
@@ -85,14 +85,16 @@
   .snackMessage {
     margin: 0.7em 0.5em 1em;
     display: block;
+    width: 100%;
   }
   .snackLogo {
     align-items: center;
     margin: 1em;
-    height: 70px;
-
+    height: 90px;
+    width: 90px;
     @media screen and (max-width: 414px) and (orientation: portrait) {
-      height: px;
+      height: 400px;
+    
     }
   }
   @media screen and (max-width: 414px) and (orientation: portrait),

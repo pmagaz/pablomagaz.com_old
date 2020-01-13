@@ -6,7 +6,7 @@
   color: #fff;
   height: 36px;
   padding: 0.2em 0.8em;
-  font-size: 0.9em;
+  font-size: 0.7em;
   font-weight: 700;
   border-style: solid;
   margin: 0.3rem;
@@ -32,7 +32,7 @@
   color: $primary-color;
   height: 40px;
   padding: 0.5em 0.4em;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 700;
   border-width: 2px;
   border-style: solid;
@@ -53,4 +53,221 @@
   display: flex;
   padding: 0.4rem;
   justify-content: flex-end;
+}
+
+
+.RegisterBoxWrap{ 
+  display: flex;
+  flex-wrap: wrap;
+  height: 6em;
+  @media (min-width:$sm){
+  height: 5em;
+  }
+}
+
+.txt {
+  display: flex;
+  font-family: $fontFamilyLight;
+  color: $white;
+  font-size: 1.3em;
+  font-weight: 200;
+  width: 100%;
+  letter-spacing: -1px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  align-items: center;
+  height: 30px;
+  @media (min-width:$sm){
+    height: 50px;
+  }
+}
+input {
+  outline: none;
+  border: none;
+}
+
+button, input {
+  overflow: visible;
+}
+
+.registerForm {
+  width:100%;
+}
+
+.registerFormContent{
+  width:100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media (min-width:$sm){
+    height: 70px;
+  }
+}
+
+.txtNotifycations {
+  font-size: 11px;
+  @media (min-width:$sm){
+    font-size: 12px;
+  }
+}
+
+.inputField {
+  font-family: $fontFamilyLight;
+  font-size: 12px;
+  margin: 0 10px 0 0;
+  padding: 6px 6px 6px 6px;
+  width: 160px;
+  font-size: 0.7em;
+  height: 26px;
+  @media (min-width:$sm){
+    height: 26px;
+    width: 185px;
+  }
+}
+
+.checkBoxNotifications {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.inputButton {
+  font-size: 12px;
+  margin: 0 10px 0 0;
+  display: block;
+  color: #fff;
+  height: 26px;
+  padding: 0.2em 0.8em;
+  font-size: 0.7em;
+  font-weight: 700;
+  border-style: solid;
+  margin: 0.3rem;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  background: #f72354;
+  transition: all 0.3s;
+  margin-left: 0.2em;
+  height: 26px;
+  @media (min-width:$sm){
+    height: 36px;
+  }
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 11px;
+  @media (min-width:$sm){
+    font-size: 12px;
+  }
+}
+  .control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+  }
+.controlIndicator {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background: #e6e6e6;
+  border: 0px solid #000000;
+  border-radius: 0px;
+}
+.control:hover input ~ .controlIndicator,
+.control input:focus ~ .controlIndicator {
+  background: #cccccc;
+}
+
+.control input:checked ~ .controlIndicator {
+  background: #F72353;
+}
+.control:hover input:not([disabled]):checked ~ .controlIndicator,
+.control input:checked:focus ~ .controlIndicator {
+  background: #F72353;
+}
+.control input:disabled ~ .controlIndicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.controlIndicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .controlIndicator:after {
+  display: block;
+}
+.controlCheckbox .controlIndicator:after {
+  left: 6px;
+  top: 2px;
+  width: 2px;
+  height: 7px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.controlCheckbox input:disabled ~ .controlIndicator:after {
+  border-color: #7b7b7b;
+}
+.controlCheckbox .controlIndicator::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  background: #2aa1c0;
+  border-radius: 3rem;
+  opacity: 0.6;
+  z-index: 99999;
+  transform: scale(0);
+}
+@keyframes s-ripple {
+  0% {
+      transform: scale(0);
+  }
+  20% {
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1);
+  }
+}
+@keyframes s-ripple-dup {
+ 0% {
+     transform: scale(0);
+  }
+ 30% {
+      transform: scale(1);
+  }
+  60% {
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1);
+  }
+}
+.controlCheckbox input + .controlIndicator::before {
+  animation: s-ripple 250ms ease-out;
+}
+.controlCheckbox input:checked + .controlIndicator::before {
+  animation-name: s-ripple-dup;
 }

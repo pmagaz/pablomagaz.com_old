@@ -7,16 +7,16 @@
   background-color: $secondary-color;
   border-bottom: 1px solid #ccc;
   height: 6em;
+  padding: 3px;
   @media (min-width:$sm){
   height: 5em;
+  align-items: center;
   }
 }
 
 .txt {
   display: flex;
-  font-family: $fontFamilyLight;
   color: $white;
-  margin: 0px 10px;
   font-size: 1.3em;
   font-weight: 200;
   width: 100%;
@@ -25,27 +25,14 @@
   letter-spacing: -1px;
   justify-content: center;
   text-align: center;
-  align-items: center;
- 
   @media (min-width:$sm){
     font-size: 1.4em;
     width:60%;
+    text-align: left;
+    justify-content: flex-start; 
+    padding-left: 60px;
   }
 
-}
-
-.form{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-  height:100%;
-  @media (min-width:$sm){
-    font-size: 1.2em;
-    letter-spacing: -1px;
-  }
 }
 
 input {
@@ -53,32 +40,44 @@ input {
   border: none;
 }
 
-form {
+.registerForm {
   width: 100%;
   @media (min-width:$sm){
-    width: 35%;
+    width:40%;
+    justify-content: flex-start; 
     }
 }
 button, input {
   overflow: visible;
 }
 
+.registerFormContent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  @media (min-width:$sm){
+    justify-content: flex-end;
+    padding-right: 60px;
+ 
+  } 
+}
+
 .inputField {
-  font-family: $fontFamilyLight;
   font-size: 12px;
   margin: 0 10px 0 0;
   padding: 6px 6px 6px 6px;
   width: 150px;
   font-size: 0.7em;
   height: 26px;
+  font-weight: 500;
   @media (min-width:$sm){
     height: 36px;
+    font-weight: 500;
   }
 }
 
 .inputButton {
-  font-family: $fontFamilyLight;
-  font-size: 12px;
   margin: 0 10px 0 0;
   display: block;
   color: #fff;

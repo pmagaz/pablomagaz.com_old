@@ -45,7 +45,7 @@
   transition: all 0.3s;
   &:hover {
     background: $tertiary-color;
-    transition: all 0.3s;
+    transition: all 0.4s;
   }
 }
 
@@ -237,37 +237,4 @@ button, input {
   opacity: 0.6;
   z-index: 99999;
   transform: scale(0);
-}
-@keyframes s-ripple {
-  0% {
-      transform: scale(0);
-  }
-  20% {
-      transform: scale(1);
-  }
-  100% {
-      opacity: 0;
-      transform: scale(1);
-  }
-}
-@keyframes s-ripple-dup {
- 0% {
-     transform: scale(0);
-  }
- 30% {
-      transform: scale(1);
-  }
-  60% {
-      transform: scale(1);
-  }
-  100% {
-      opacity: 0;
-      transform: scale(1);
-  }
-}
-.controlCheckbox input + .controlIndicator::before {
-  animation: s-ripple 250ms ease-out;
-}
-.controlCheckbox input:checked + .controlIndicator::before {
-  animation-name: s-ripple-dup;
 }

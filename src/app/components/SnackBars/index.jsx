@@ -1,10 +1,8 @@
 import { pure } from 'recompose';
 import jsonp from 'jsonp';
-
 import { setCookie, getCookie, SiteConf } from 'base';
 import React, { Component } from 'react';
 import SnackBar from 'components/SnackBar';
-import Register from 'components/Register';
 import classNames from 'classnames/bind';
 import styles from './styles.css';
 
@@ -13,6 +11,7 @@ class SnackBars extends Component {
     super(props);
     this.state = {
       status: 'register',
+      notifications: true,
       permisionDelay: 7000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
@@ -35,7 +34,6 @@ class SnackBars extends Component {
     const url = path.replace('/post?', '/post-json?');
     const regex = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/;
     (!regex.test(this.state.EMAIL)) ? this.setState({ status: "invalid" }) : this.sendData(url);
-    console.log(1111111);
   };
 
   sendData(url) {
@@ -53,7 +51,6 @@ class SnackBars extends Component {
         setTimeout(() => this.setState({ hideSnackNotificationBar: true }), 2000);
       }
     });
-    //this.notificationPermission();
   }
 
   eventHandler = e => {
@@ -65,6 +62,9 @@ class SnackBars extends Component {
     }
   };
 
+  checkBoxHandler = e => {
+    this.setState({ notifications: !this.state.notifications });
+  }
   componentDidMount() {
     if (!getCookie(SiteConf.cookieAceptCookies)) this.showCookieMsg();
     window.addEventListener('click', this.eventHandler);
@@ -154,12 +154,10 @@ class SnackBars extends Component {
                   name="notifications"
                   type="checkbox"
                   key="NOTIFICATIONS"
-                  checked={ true }
-                  onChange={ ({ target }) => this.setState({ NOTIFICATIONS: target.value }) }>
-                </input>
+                  checked={ this.state.notifications }
+                  onChange={ this.checkBoxHandler } />
                 <div className={ styles.controlIndicator }></div>
               </label>
-              
             </div>
               Sigue el blog en
             <a
@@ -192,7 +190,6 @@ class SnackBars extends Component {
             </div>
           </form>
         </div>
-
       </SnackBar>
     );
 

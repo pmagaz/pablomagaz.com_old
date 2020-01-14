@@ -14,10 +14,10 @@ class Register extends React.Component {
     const path = `${ SiteConf.mailListUrl }&EMAIL=${encodeURIComponent(this.state.EMAIL) }`;
     const url = path.replace('/post?', '/post-json?');
     const regex = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/;
-    (!regex.test(this.state.EMAIL)) ? this.setState({ status: "empty" }) : this.sendData(url);
+    (!regex.test(this.state.EMAIL)) ? this.setState({ status: "empty" }) : this.registerEmail(url);
   };
 
-  sendData(url) {
+  registerEmail(url) {
     this.setState({ status: 'sending' });
     jsonp(url, { param: 'c' }, (err, data) => {
       if (data.msg.includes('already subscribed')) {
@@ -54,6 +54,11 @@ class Register extends React.Component {
               required={ true }
               onChange={ ({ target }) => this.setState({ EMAIL: target.value }) }
               className={ styles.inputField }/>
+            <button
+              type="submit"
+              className={ styles.inputButton }
+            / >
+            Subscribirse
           </div>
         </form>
         ¿Quieres recibir notificaciones de los nuevos posts?. Nunca recibir&aacute;s m&aacute;s de una al mes. También puedes seguir el blog en

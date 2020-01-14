@@ -12,7 +12,7 @@ class SnackBars extends Component {
     this.state = {
       status: 'register',
       notifications: true,
-      permisionDelay: 7000,
+      permisionDelay: 2000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
@@ -20,7 +20,6 @@ class SnackBars extends Component {
     };
     this.aceptCookies.bind(this);
     this.notificationPermission.bind(this);
-    SiteConf.cookieDenyNotificationss = 'EBISODenyNotifications';
     const cx = classNames.bind(styles);
     this.checkboxStyles = cx({
       control: true,
@@ -30,13 +29,13 @@ class SnackBars extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault();
-    const path = `${ SiteConf.mailListUrl }&EMAIL=${encodeURIComponent(this.state.EMAIL) }`;
+    const path = `${ SiteConf.mailListUrl }&EMAIL=${encodeURIComponent(this.state.email) }`;
     const url = path.replace('/post?', '/post-json?');
     const regex = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/;
-    (!regex.test(this.state.EMAIL)) ? this.setState({ status: "invalid" }) : this.sendData(url);
+    (!regex.test(this.state.email)) ? this.setState({ status: "invalid" }) : this.registerEmail(url);
   };
 
-  sendData(url) {
+  registerEmail(url) {
     this.setState({ status: 'sending' });
     jsonp(url, { param: 'c' }, (err, data) => {
       if (data.msg.includes('already subscribed')) {
@@ -47,45 +46,44 @@ class SnackBars extends Component {
         this.setState({ status: 'error' });
       } else {
         this.setState({ status: 'success' });
-        setCookie(SiteConf.cookieMailSubscription, true, 300);
-        setTimeout(() => this.setState({ hideSnackNotificationBar: true }), 2000);
+        const { email } = this.state;
+        setCookie(SiteConf.cookieMailSubscription, email, 300);
+        setTimeout(() => { this.setState({ hideSnackNotificationBar: true }) }, 1800);
+        setTimeout(() => { this.notificationPermission() }, 2100);
       }
     });
   }
 
   eventHandler = e => {
-    if ('PushManager' in window) {
-      const { permission } = Notification;
-      this.acceptAndRequest(permission);
-    } else {
-      this.acceptAndRequest('granted');
-    }
+    if (!getCookie(SiteConf.cookieAceptCookies)) this.aceptCookies();
+    if (!getCookie(SiteConf.cookieMailSubscription)) this.showRegisterSnack();
+    window.removeEventListener('click', this.eventHandler);
+    window.removeEventListener('scroll', this.eventHandler);
   };
 
   checkBoxHandler = e => {
     this.setState({ notifications: !this.state.notifications });
   }
+  
   componentDidMount() {
-    if (!getCookie(SiteConf.cookieAceptCookies)) this.showCookieMsg();
+    if (!getCookie(SiteConf.cookieAceptCookies)) this.showCookiesSnack();
     window.addEventListener('click', this.eventHandler);
     window.addEventListener('scroll', this.eventHandler);
     if ('PushManager' in window) {
       const { permission } = Notification;
       if (permission === 'granted') this.regenerateSubscription();
     }
-    this.setState({ showSnackNotificationBar: true });
-
   }
 
   acceptAndRequest(permission) {
     if (!getCookie(SiteConf.cookieAceptCookies)) this.aceptCookies();
-    if (permission === 'default') this.showNoticationBar(permission);
+    if (!getCookie(SiteConf.cookieMailSubscription)) this.showNoticationBar(permission);
     window.removeEventListener('click', this.eventHandler);
     window.removeEventListener('scroll', this.eventHandler);
   }
 
   async regenerateSubscription() {
-    setTimeout(() => generateSubscription(), 2000);
+    setTimeout(() => generateSubscription(), 4000);
   }
 
   aceptCookies() {
@@ -94,11 +92,12 @@ class SnackBars extends Component {
   }
 
   denyPermision() {
-    setCookie(SiteConf.cookieDenyNotificationss, true, 600);
+    setCookie(SiteConf.cookieMailSubscription, false, 600);
+    setCookie(SiteConf.cookiePushNotifications, false, 600);
     this.setState({ hideSnackNotificationBar: true });
   }
 
-  showCookieMsg() {
+  showCookiesSnack() {
     setTimeout(() => {
       this.setState({ showSnackCookieBar: true });
     }, 800);
@@ -110,11 +109,9 @@ class SnackBars extends Component {
     this.setState({ hideSnackNotificationBar: true });
   }
 
-  async showNoticationBar(permission) {
+  async showRegisterSnack() {
     setTimeout(() => {
-      if (!getCookie(SiteConf.cookieDenyNotificationss) && permission !== 'granted') {
-        this.setState({ showSnackNotificationBar: true });
-      }
+      this.setState({ showSnackNotificationBar: true });
     }, this.state.permisionDelay);
   }
 
@@ -143,9 +140,9 @@ class SnackBars extends Component {
               <input
                 placeholder="Introduce tu email"
                 type="email"
-                key="EMAIL"
+                key="email"
                 required={ true }
-                onChange={ ({ target }) => this.setState({ EMAIL: target.value }) }
+                onChange={ ({ target }) => this.setState({ email: target.value }) }
                 className={ styles.inputField }/>
               <label className={ this.checkboxStyles }>
               Recibir notificaciones push
@@ -153,13 +150,13 @@ class SnackBars extends Component {
                   id="notifications"
                   name="notifications"
                   type="checkbox"
-                  key="NOTIFICATIONS"
-                  checked={ this.state.notifications }
+                  key="notifications"
+                  defaultChecked={ this.state.notifications }
                   onChange={ this.checkBoxHandler } />
                 <div className={ styles.controlIndicator }></div>
               </label>
             </div>
-              Sigue el blog en
+              También puedes seguir el blog en
             <a
               aria-label="Pablo Magaz Twitter"
               role="button"
@@ -169,17 +166,7 @@ class SnackBars extends Component {
               rel="noopener noreferrer"
             >
               Twitter
-            </a> y 
-            <a
-              aria-label="Pablo Magaz Linkedin"
-              role="button"
-              tabIndex="0"
-              href="https://www.linkedin.com/in/pablo-magaz-05b46763/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-            LinkedIn
-            </a>
+            </a>.
             <div className={ styles.content }>
               <button className={ styles.buttonKo } role="button" tabIndex="0" onClick={ () => this.denyPermision() }>
                 No gracias

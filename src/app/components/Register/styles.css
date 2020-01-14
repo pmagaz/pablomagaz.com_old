@@ -24,16 +24,6 @@
   align-items: center;
   height: 50px;
 }
-/*
-.form{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-}*/
-
 input {
   outline: none;
   border: none;

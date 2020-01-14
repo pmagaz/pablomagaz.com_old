@@ -31,15 +31,20 @@
     }
   }
   .snackLogo {
-    align-items: flex-end;
-    margin: -2.5em 0.5em;
-    width: 60px;
+    justify-content: center;
+    display: flex;
+    width: 20%;
+    margin-left: 16px;
+    margin-right: 10px;
     @media screen and (max-width: 414px) and (orientation: portrait) {
-      width: 60px;
+      width: 20%;
     }
   }
+  .snackLogo img {
+    width: 100%;
+  }
   .snackMessage {
-    margin: 2em 0.5em 1.5em;
+    margin: 1em 0.5em 1.5em;
     display: block;
   }
   @media screen and (max-width: 414px) and (orientation: portrait),
@@ -85,7 +90,7 @@
   .snackMessage {
     margin: 0.7em 0.5em 1em;
     display: block;
-    width: 100%;
+    width: 80%;
   }
   .snackLogo {
     align-items: center;
@@ -97,6 +102,9 @@
     
     }
   }
+  .snackLogo img {
+    width: 100%;
+  }
   @media screen and (max-width: 414px) and (orientation: portrait),
     screen and (max-width: 736px) and (orientation: landscape) {
     left: 0;
@@ -104,7 +112,7 @@
     bottom: 0;
     top: -0.4em;
     max-width: none;
-    max-height: 12em;
+    max-height: 14.8em;
   }
 }
 

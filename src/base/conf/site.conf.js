@@ -14,7 +14,7 @@ const postOpeningChars = 46;
 const codeHighlightDelay = 750;
 const postOpeningSplitChar = '</h2>';
 const cookieAceptCookies = 'EBISOAceptedCookies';
-const cookieDenyNotifications = 'EBISODenyNotifications';
+const cookiePushNotifications = 'EBISOPushNotifications';
 const cookieMailSubscription = 'EBISOMailSubscription';
 const addThisUrl = 'http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c0d1b1697ac737';
 const socialLinks = {
@@ -119,6 +119,6 @@ export const SiteConf = {
   addThisUrl,
   mailListUrl,
   cookieAceptCookies,
-  cookieDenyNotifications,
+  cookiePushNotifications,
   cookieMailSubscription
 };

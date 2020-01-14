@@ -53,8 +53,10 @@ class SnackBar extends Component {
     const snackBar = (
       <div className={ snackBarStyle }>
         <div className={ styles.content }>
-          <img className={ styles.snackLogo } src={ logoUrl } />
-          <span className={ styles.snackMessage }>{ this.props.children }</span>
+          <div className={ styles.snackLogo }>
+            <img src={ logoUrl } />
+          </div>
+          <div className={ styles.snackMessage }>{ this.props.children }</div>
         </div>
       </div>
     );

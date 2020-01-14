@@ -12,7 +12,7 @@ class SnackBars extends Component {
     this.state = {
       status: 'register',
       notifications: true,
-      permisionDelay: 2000,
+      permisionDelay: 7000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
@@ -48,8 +48,8 @@ class SnackBars extends Component {
         this.setState({ status: 'success' });
         const { email } = this.state;
         setCookie(SiteConf.cookieMailSubscription, email, 300);
-        setTimeout(() => { this.setState({ hideSnackNotificationBar: true }) }, 1800);
-        setTimeout(() => { this.notificationPermission() }, 2100);
+        setTimeout(() => { this.setState({ hideSnackNotificationBar: true }) }, 1600);
+        setTimeout(() => { this.notificationPermission() }, 1900);
       }
     });
   }
@@ -128,7 +128,7 @@ class SnackBars extends Component {
         <div className={ styles.RegisterBoxWrap }>
           <div className={ styles.txt }>
             { status === 'register' && <span>Subscribete a El Blog Isomórfico</span> }
-            { status === 'success' && <span>Gracias. Confirma la subscripción en tu correo.</span> }
+            { status === 'success' && <span>Gracias. Revisa tu correo en unos minutos.</span> }
             { status === 'sending' && <span>Enviando...</span> }
             { status === 'empty' && <span>Debes indicar tu email.</span> }
             { status === 'duplicate' && <span>Ya esta dado de alta.</span> }
@@ -139,7 +139,7 @@ class SnackBars extends Component {
             <div className={ styles.registerFormContent }>
               <input
                 placeholder="Introduce tu email"
-                type="email"
+                type="text"
                 key="email"
                 required={ true }
                 onChange={ ({ target }) => this.setState({ email: target.value }) }

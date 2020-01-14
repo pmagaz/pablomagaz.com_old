@@ -61,7 +61,7 @@
   color: rgb(255, 255, 255);
   background-color: #282c38;
   width: 36em;
-  height: 15.6em;
+  height: 14.6em;
   animation: SnackBarEnterDown 300ms both;
   flex-direction: column;
   right: 0.5em;
@@ -90,16 +90,17 @@
   .snackMessage {
     margin: 0.7em 0.5em 1em;
     display: block;
-    width: 80%;
+    width: 100%;
   }
   .snackLogo {
     align-items: center;
     margin: 1em;
     height: 90px;
-    width: 90px;
+    width: 20%;
     @media screen and (max-width: 414px) and (orientation: portrait) {
       height: 400px;
-    
+      width: 0px;
+ 
     }
   }
   .snackLogo img {

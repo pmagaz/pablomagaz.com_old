@@ -106,6 +106,7 @@ class SnackBars extends Component {
   }
 
   async notificationPermission() {
+    setCookie(SiteConf.cookiecookiePushNotifications, true, 1000);
     const permission = await askPermission();
     if (permission) generateSubscription();
     this.setState({ hideSnackNotificationBar: true });

@@ -115,7 +115,7 @@ button, input {
 }
 
 .inputField {
-  font-family: $fontFamilyLight;
+  font-family: $fontFamilyMedium;
   margin: 0 10px 0 0;
   padding: 6px 6px 6px 6px;
   width: 130px;
@@ -124,11 +124,11 @@ button, input {
   @media (min-width:$sm){
     height: 26px;
     width: 180px;
-    font-size:0.9em;
+    font-size: 0.9em;
   }
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
+  color: #333;
   opacity: 1; /* Firefox */
 }
 

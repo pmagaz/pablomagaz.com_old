@@ -129,10 +129,9 @@ class SnackBars extends Component {
       <SnackBar buttons={ true } position="top" exit={ this.state.hideSnackNotificationBar }>
         <div className={ styles.RegisterBoxWrap }>
           <div className={ styles.txt }>
-            { status === 'register' && <span>Subscribete a El Blog Isomórfico</span> }
+            { status === 'register' && <span>Subscríbete a El Blog Isomórfico</span> }
             { status === 'success' && <span>Gracias. Revisa tu correo en unos minutos.</span> }
             { status === 'sending' && <span>Enviando...</span> }
-            { status === 'empty' && <span>Debes indicar tu email.</span> }
             { status === 'duplicate' && <span>Ya esta dado de alta.</span> }
             { status === 'error' && <span>Se produjo un error.</span> }
             { status === 'invalid' && <span>El email no parece correcto.</span> }

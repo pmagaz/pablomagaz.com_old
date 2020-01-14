@@ -84,7 +84,7 @@
 @keyframes SnackBarEnterDown {
   0% {
     opacity: 0;
-    margin-bottom: -335px;
+    margin-bottom: -400px;
   }
   100% {
     opacity: 1;

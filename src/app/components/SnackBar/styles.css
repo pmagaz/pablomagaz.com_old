@@ -18,7 +18,8 @@
   flex-wrap: nowrap;
   z-index: 9999;
   opacity: 1;
-  transition: opacity 1s ease;
+  animation-delay: 80ms;
+  transition: opacity 1s ease-in-out;
   a {
     opacity: 0.8;
     display: inline-block;
@@ -62,7 +63,7 @@
   background-color: #282c38;
   width: 36em;
   height: 14.6em;
-  animation: SnackBarEnterDown 300ms both;
+  animation: SnackBarEnterDown 380ms both;
   flex-direction: column;
   right: 0.3em;
   top: 0em;
@@ -75,7 +76,8 @@
   flex-wrap: nowrap;
   z-index: 9999;
   opacity: 1;
-  transition: opacity 1s ease;
+  animation-delay: 80ms;
+  transition: opacity 1s ease-in-out;
   a {
     opacity: 0.8;
     display: inline-block;

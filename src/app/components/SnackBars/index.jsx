@@ -49,7 +49,9 @@ class SnackBars extends Component {
         const { email } = this.state;
         setCookie(SiteConf.cookieMailSubscription, email, 300);
         setTimeout(() => { this.setState({ hideSnackNotificationBar: true }) }, 1600);
-        setTimeout(() => { this.notificationPermission() }, 1900);
+        if (this.state.notifications) {
+          setTimeout(() => { this.notificationPermission() }, 1900);
+        }
       }
     });
   }

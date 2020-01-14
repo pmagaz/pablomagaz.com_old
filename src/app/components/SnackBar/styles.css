@@ -94,13 +94,13 @@
   }
   .snackLogo {
     align-items: center;
-    margin: 1em;
+    margin: 0.4em;
     height: 90px;
     width: 20%;
     @media screen and (max-width: 414px) and (orientation: portrait) {
       height: 400px;
       width: 0px;
- 
+      margin: 0.8em;
     }
   }
   .snackLogo img {

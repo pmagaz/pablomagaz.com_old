@@ -108,24 +108,29 @@ button, input {
 }
 
 .txtNotifycations {
-  font-size: 11px;
+  font-size: 14px;
   @media (min-width:$sm){
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 .inputField {
   font-family: $fontFamilyLight;
-  font-size: 12px;
   margin: 0 10px 0 0;
   padding: 6px 6px 6px 6px;
-  width: 120px;
-  font-size: 0.7em;
+  width: 130px;
+  font-size: 0.9em;
   height: 26px;
   @media (min-width:$sm){
     height: 26px;
-    width: 185px;
+    width: 180px;
+    color: green;
+    font-size:0.9em;
   }
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
 }
 
 .checkBoxNotifications {
@@ -166,9 +171,9 @@ button, input {
   margin-bottom: 5px;
   padding-top: 3px;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 12px;
   @media (min-width:$sm){
-    font-size: 12px;
+    font-size: 13px;
   }
 }
   .control input {

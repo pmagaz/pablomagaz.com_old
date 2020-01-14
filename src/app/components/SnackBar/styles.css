@@ -125,11 +125,11 @@
 }
 
 .exitDown {
-  animation: SnackBarExitUp 200ms ease-in both;
-  animation-delay: 50ms;
+  animation: SnackBarExitUp 250ms ease-in both;
+  animation-delay: 80ms;
 }
 
 .exitUp {
-  animation: SnackBarExitDown 200ms ease-in both;
-  animation-delay: 50ms;
+  animation: SnackBarExitDown 250ms ease-in both;
+  animation-delay: 80ms;
 }

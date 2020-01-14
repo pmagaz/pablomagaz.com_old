@@ -132,6 +132,6 @@
 }
 
 .exitUp {
-  animation: SnackBarExitDown 250ms ease-in both;
+  animation: SnackBarExitDown 320ms ease-in both;
   animation-delay: 80ms;
 }

@@ -124,7 +124,6 @@ button, input {
   @media (min-width:$sm){
     height: 26px;
     width: 180px;
-    color: green;
     font-size:0.9em;
   }
 }

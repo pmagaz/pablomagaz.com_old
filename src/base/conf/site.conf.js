@@ -13,9 +13,9 @@ const brandTitleImage = 'assets/images/share/PabloMagaz.png';
 const postOpeningChars = 46;
 const codeHighlightDelay = 750;
 const postOpeningSplitChar = '</h2>';
-const cookieAceptCookies = 'EBISOCookies';
-const cookiePushNotifications = 'EBISOPushNotifications';
-const cookieMailSubscription = 'EBISOMailSubscription';
+const cookieAceptCookies = 'EBICookies';
+const cookiePushNotifications = 'EBIPushNotifications';
+const cookieMailSubscription = 'EBIMailSubscription';
 const addThisUrl = 'http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c0d1b1697ac737';
 const socialLinks = {
   linkedIn: 'https://es.linkedin.com/in/pablo-magaz-05b46763',

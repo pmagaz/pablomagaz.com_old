@@ -147,7 +147,7 @@ class SnackBars extends Component {
                 onChange={ ({ target }) => this.setState({ email: target.value }) }
                 className={ styles.inputField }/>
               <label className={ this.checkboxStyles }>
-              Recibir notificaciones push
+              Recibir notificaciones
                 <input
                   id="notifications"
                   name="notifications"

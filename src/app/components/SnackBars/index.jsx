@@ -1,6 +1,6 @@
 import { pure } from 'recompose';
 import jsonp from 'jsonp';
-import { setCookie, getCookie, SiteConf } from 'base';
+import { setCookie, getCookie, isValidEmail, SiteConf } from 'base';
 import React, { Component } from 'react';
 import SnackBar from 'components/SnackBar';
 import classNames from 'classnames/bind';
@@ -27,12 +27,11 @@ class SnackBars extends Component {
     });
   }
 
-  handleSubmit(evt) {
-    evt.preventDefault();
+  handleSubmit(env) {
+    env.preventDefault();
     const path = `${ SiteConf.mailListUrl }&EMAIL=${encodeURIComponent(this.state.email) }`;
     const url = path.replace('/post?', '/post-json?');
-    const regex = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/;
-    (!regex.test(this.state.email)) ? this.setState({ status: "invalid" }) : this.registerEmail(url);
+    (!isValidEmail(this.state.email)) ? this.setState({ status: "invalid" }) : this.registerEmail(url);
   };
 
   registerEmail(url) {
@@ -47,7 +46,7 @@ class SnackBars extends Component {
       } else {
         this.setState({ status: 'success' });
         const { email } = this.state;
-        setCookie(SiteConf.cookieMailSubscription, email, 300);
+        setCookie(SiteConf.cookieMailSubscription, email, 200);
         setTimeout(() => { this.setState({ hideSnackNotificationBar: true }) }, 1600);
         if (this.state.notifications) {
           setTimeout(() => { this.notificationPermission() }, 2000);

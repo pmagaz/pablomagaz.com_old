@@ -14,5 +14,6 @@ export { generateMap, ListToArray } from './shared/ModelHelper';
 export { actionCreator } from './shared/ActionCreator';
 export { fetchRequiredActions } from './shared/FetchData';
 export { createActionType } from './shared/CreateActionType';
+export { isValidEmail } from './shared/Validation';
 export { getCookie, setCookie } from './shared/Cookie';
 export { generateImmutable, formatPostContent, RecordList } from './shared/ModelHelper';

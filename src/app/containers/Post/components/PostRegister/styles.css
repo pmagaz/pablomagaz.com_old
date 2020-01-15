@@ -17,7 +17,7 @@
 .txt {
   display: flex;
   color: $white;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: 200;
   width: 100%;
   letter-spacing: -1px;
@@ -27,12 +27,11 @@
   text-align: center;
   @media (min-width:$sm){
     font-size: 1.4em;
-    width:60%;
+    width:55%;
     text-align: left;
     justify-content: flex-start; 
     padding-left: 60px;
   }
-
 }
 
 input {
@@ -67,13 +66,14 @@ button, input {
   font-size: 12px;
   margin: 0 10px 0 0;
   padding: 6px 6px 6px 6px;
-  width: 150px;
+  width: 120px;
   font-size: 0.7em;
   height: 26px;
   font-weight: 500;
   @media (min-width:$sm){
     height: 36px;
     font-weight: 500;
+    width: 140px;
   }
 }
 

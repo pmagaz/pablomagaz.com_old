@@ -1,23 +1,21 @@
 import React from 'react';
 import jsonp from 'jsonp';
-import { setCookie, SiteConf } from 'base';
+import { setCookie, getCookie, isValidEmail, SiteConf, context } from 'base';
+
 import styles from './styles.css';
 
 class PostRegister extends React.Component {
   
-  state = {
-    status: 'register'
-  };
+  state = { status: 'register' };
 
-  handleSubmit(evt) {
-    evt.preventDefault();
-    const path = `${ SiteConf.mailListUrl }&EMAIL=${encodeURIComponent(this.state.EMAIL) }`;
+  handleSubmit(env) {
+    env.preventDefault();
+    const path = `${ SiteConf.mailListUrl }&EMAIL=${encodeURIComponent(this.state.email) }`;
     const url = path.replace('/post?', '/post-json?');
-    const regex = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/;
-    (!regex.test(this.state.EMAIL)) ? this.setState({ status: "empty" }) : this.sendData(url);
+    (!isValidEmail(this.state.email)) ? this.setState({ status: "invalid" }) : this.registerEmail(url);
   };
 
-  sendData(url) {
+  registerEmail(url) {
     this.setState({ status: 'sending' });
     jsonp(url, { param: 'c' }, (err, data) => {
       if (data.msg.includes('already subscribed')) {
@@ -27,44 +25,53 @@ class PostRegister extends React.Component {
       } else if (data.result !== 'success') {
         this.setState({ status: 'error' });
       } else {
+        const { email } = this.state;
         this.setState({ status: 'success' });
-        setCookie(SiteConf.cookieMailSubscription, true, 60);
+        setCookie(SiteConf.cookieMailSubscription, email, 200);
       }
     });
   }
 
   render() {
     const { status } = this.state;
+    // let content = <div></div>;
+    // let cookieMailSubscription;
+    // if (context.client) {
+    //   cookieMailSubscription = getCookie(SiteConf.cookieMailSubscription);
+    // } else {
+    //   cookieMailSubscription = '';
+    // }
     return (
       <div className={ styles.RegisterBoxWrap }>
         <div className={ styles.txt }>
-          { status === 'register' && <span>¿Quieres recibir más post como este en tu email?</span> }
-          { status === 'success' && <span>Gracias. Confirma la subscripción en tu correo.</span> }
+          { status === 'register' && <span>¿Quieres recibir posts como este en tu email?</span> }
+          { status === 'success' && <span>Gracias. Revisa tu correo en unos minutos.</span> }
           { status === 'sending' && <span>Enviando...</span> }
-          { status === 'empty' && <span>Debes indicar tu email.</span> }
           { status === 'duplicate' && <span>Ya esta dado de alta.</span> }
           { status === 'error' && <span>Se produjo un error.</span> }
+          { status === 'invalid' && <span>El email no parece correcto.</span> }
         </div>
-        <form onSubmit={this.handleSubmit.bind(this) } className={ styles.registerForm } >
+        <form className={ styles.registerForm } >
           <div className={ styles.registerFormContent }>
             <input
               placeholder="Introduce tu email"
               type="email"
-              key="EMAIL"
+              key="email"
               required={ true }
-              onChange={ ({ target }) => this.setState({ EMAIL: target.value }) }
+              onChange={ ({ target }) => this.setState({ email: target.value }) }
               className={ styles.inputField }/>
             <button
-              type="submit"
+              type="button"
+              role="button"
               className={ styles.inputButton }
+              onClick={ (env) => this.handleSubmit(env) }
             >
             Subscribirse
             </button>
           </div>
         </form>
-      </div>
-    );
-  };
-};
+   </div>);
+  }
+}
 
 export default PostRegister;

@@ -103,42 +103,14 @@ class Main extends Component {
             <a id="talks" />
             <h2>Talks</h2>
             <ul>
-              <li>Open Expo 2016: Presentación base.</li>
-              <li>Codemotion 2016: Isomorphic apps with React & Redux.</li>
               <li>
-                Codemotion 2017: Reactive programming with RxJs.
+                Commit 2019: Rust & WebAssembly for JavaScripters. 
                 [
-                  <a href="#ProgramacionReactivaRxJs">
+                  <a href="#RustYWebassemblyParaJavaScripters">
                   Video
                 </a>
                 ] [
-                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">
-                  Slides
-                </a>
-                ]
-              </li>
-              <li>
-                Meetup En mi local funciona 2018: Introduction to Reactive programming with RxJs. [
-                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">
-                  Slides
-                </a>
-                ]
-              </li>
-              <li>
-                JSDayES 2018: Writing Serviceworkers with Workbox.
-                [
-                  <a href="#EscribiendoServiceWorkersConWorkBox">
-                  Video
-                </a>
-                ] [
-                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_EscribiendoServicesWorkersConWorkbox_JSDayES2018.pdf">
-                  Slides
-                </a>
-                ]
-              </li>
-              <li>
-                Commit Conf 2018: ECMAScript 2018 and beyond. [
-                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ECMAScript2018YMasAlla_CommitConf2018.pdf">
+                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_RustYWebAssemblyParaJavaScripters_CommitConf2019.pdf">
                   Slides
                 </a>
                 ]
@@ -156,17 +128,45 @@ class Main extends Component {
                 ]
               </li>
               <li>
-                Commit 20019: Rust & WebAssembly for JavaScripters. 
-                [
-                  <a href="#RustYWebassemblyParaJavaScripters">
-                  Video
-                </a>
-                ] [
-                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_RustYWebAssemblyParaJavaScripters_CommitConf2019.pdf">
+                Commit Conf 2018: ECMAScript 2018 and beyond. [
+                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ECMAScript2018YMasAlla_CommitConf2018.pdf">
                   Slides
                 </a>
                 ]
               </li>
+              <li>
+                JSDayES 2018: Writing Serviceworkers with Workbox.
+                [
+                  <a href="#EscribiendoServiceWorkersConWorkBox">
+                  Video
+                </a>
+                ] [
+                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_EscribiendoServicesWorkersConWorkbox_JSDayES2018.pdf">
+                  Slides
+                </a>
+                ]
+              </li>
+              <li>
+                Meetup En mi local funciona 2018: Introduction to Reactive programming with RxJs. [
+                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">
+                  Slides
+                </a>
+                ]
+              </li>
+              <li>
+                Codemotion 2017: Reactive programming with RxJs.
+                [
+                  <a href="#ProgramacionReactivaRxJs">
+                  Video
+                </a>
+                ] [
+                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_ProgramacionReactivaConRxJs_Codemotion2017.pdf">
+                  Slides
+                </a>
+                ]
+              </li>
+              <li>Codemotion 2016: Isomorphic apps with React & Redux.</li>
+              <li>Open Expo 2016: Base showcase.</li>
             </ul>
 
             <ul className={ styles.photos }>

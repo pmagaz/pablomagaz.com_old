@@ -84,7 +84,7 @@ class SnackBars extends Component {
   }
 
   async regenerateSubscription() {
-    setTimeout(() => generateSubscription(), 4000);
+    setTimeout(() => generateSubscription(), 2000);
   }
 
   aceptCookies() {

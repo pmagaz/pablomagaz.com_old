@@ -12,11 +12,11 @@ class SnackBars extends Component {
     this.state = {
       status: 'register',
       notifications: true,
-      permisionDelay: 7000,
+      snackBarDelay: 6000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
-      hideSnackNotificationBar: false
+      hideSnackBar: false
     };
     this.aceptCookies.bind(this);
     this.notificationPermission.bind(this);
@@ -47,7 +47,7 @@ class SnackBars extends Component {
         this.setState({ status: 'success' });
         const { email } = this.state;
         setCookie(SiteConf.cookieMailSubscription, email, 200);
-        setTimeout(() => { this.setState({ hideSnackNotificationBar: true }) }, 1600);
+        setTimeout(() => { this.setState({ hideSnackBar: true }) }, 1600);
         if (this.state.notifications) {
           setTimeout(() => { this.notificationPermission() }, 2000);
         }
@@ -95,7 +95,7 @@ class SnackBars extends Component {
   denyPermision() {
     setCookie(SiteConf.cookieMailSubscription, false, 600);
     setCookie(SiteConf.cookiePushNotifications, false, 600);
-    this.setState({ hideSnackNotificationBar: true });
+    this.setState({ hideSnackBar: true });
   }
 
   showCookiesSnack() {
@@ -108,13 +108,13 @@ class SnackBars extends Component {
     setCookie(SiteConf.cookiePushNotifications, true, 1000);
     const permission = await askPermission();
     if (permission) generateSubscription();
-    this.setState({ hideSnackNotificationBar: true });
+    this.setState({ hideSnackBar: true });
   }
 
   async showRegisterSnack() {
     setTimeout(() => {
       this.setState({ showSnackNotificationBar: true });
-    }, this.state.permisionDelay);
+    }, this.state.snackBarDelay);
   }
 
   render() {
@@ -126,7 +126,7 @@ class SnackBars extends Component {
     );
 
     const snackNotificationBar = (
-      <SnackBar buttons={ true } position="top" exit={ this.state.hideSnackNotificationBar }>
+      <SnackBar buttons={ true } position="top" exit={ this.state.hideSnackBar }>
         <div className={ styles.RegisterBoxWrap }>
           <div className={ styles.txt }>
             { status === 'register' && <span>Subscríbete a El Blog Isomórfico</span> }

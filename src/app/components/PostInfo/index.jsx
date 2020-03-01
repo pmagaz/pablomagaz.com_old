@@ -24,13 +24,13 @@ const PostInfo = ({ post, handler }) => {
   let share;
   if (post.html) {
     const postUrl = `${ SiteConf.BlogUrl }/${ post.slug }`;
-    const shareTitle = `${ post.title } @ ${ SiteConf.BlogTitle }`;
+    const shareTitle = `${ post.title } | ${ SiteConf.BlogTitle }`;
 
     share = (
       <div className={ styles.socialBoxWrapLinks }>
         <TwitterShareButton
-          title={ post.title }
-          via={ SiteConf.BlogTitle }
+          title={ shareTitle }
+          via={ SiteConf.twitterUser }
           description={ post.meta_description }
           url={ postUrl }
         >

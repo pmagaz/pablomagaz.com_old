@@ -23,6 +23,7 @@ const socialLinks = {
   gmail: 'magazpablo@gmail.com',
   github: 'https://github.com/pmagaz'
 };
+const twitterUser = 'pablo_magaz';
 const mailListUrl = 'https://pablomagaz.us4.list-manage.com/subscribe/post?u=123e14d6ac1a03bab285de7db&amp;id=055bced07d';
 let HostName;
 let ServerUrl;
@@ -118,6 +119,7 @@ export const SiteConf = {
   DisqusSettings,
   addThisUrl,
   mailListUrl,
+  twitterUser,
   cookieAceptCookies,
   cookiePushNotifications,
   cookieMailSubscription

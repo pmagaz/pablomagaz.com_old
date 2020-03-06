@@ -5,16 +5,23 @@ import PostRegister from '../PostRegister';
 import PostComments from '../PostComments';
 import SharePost from '../SharePost';
 import RelatedPost from '../RelatedPost';
+import { setCookie, getCookie, SiteConf, context } from 'base';
 
 const propTypes = {
   post: PropTypes.object.isRequired
 };
 
 const PostFooter = ({ post }) => {
+  let postRegister;
+    if (context.client) {
+    let cookieMailSubscription = getCookie(SiteConf.cookieMailSubscription);
+    if(cookieMailSubscription.length <= 5) postRegister = <PostRegister />;
+    else postRegister = null; 
+  }
   return (
     <div>
       <SharePost post={ post } />
-      <PostRegister />
+      { postRegister }
       <RenderOnScroll scroll={ 3000 } >
         <RelatedPost related={ post.related } />
         <PostComments post={ post } />

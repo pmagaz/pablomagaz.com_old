@@ -1,6 +1,6 @@
 import React from 'react';
 import jsonp from 'jsonp';
-import { setCookie, getCookie, isValidEmail, SiteConf, context } from 'base';
+import { setCookie, isValidEmail, SiteConf } from 'base';
 
 import styles from './styles.css';
 
@@ -45,7 +45,7 @@ class PostRegister extends React.Component {
       <div className={ styles.RegisterBoxWrap }>
         <div className={ styles.txt }>
           { status === 'register' && <span>¿Quieres recibir posts como este en tu email?</span> }
-          { status === 'success' && <span>Gracias. Revisa tu correo en unos minutos.</span> }
+          { status === 'success' && <span>Gracias por registrate!.</span> }
           { status === 'sending' && <span>Enviando...</span> }
           { status === 'duplicate' && <span>Ya esta dado de alta.</span> }
           { status === 'error' && <span>Se produjo un error.</span> }

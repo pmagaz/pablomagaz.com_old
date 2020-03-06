@@ -12,7 +12,7 @@ class SnackBars extends Component {
     this.state = {
       status: 'register',
       notifications: true,
-      snackBarDelay: 5000,
+      snackBarDelay: 10000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
@@ -113,6 +113,7 @@ class SnackBars extends Component {
 
   async showRegisterSnack() {
     setTimeout(() => {
+      console.log(1);
       this.setState({ showSnackNotificationBar: true });
     }, this.state.snackBarDelay);
   }
@@ -129,7 +130,7 @@ class SnackBars extends Component {
       <SnackBar buttons={ true } position="top" exit={ this.state.hideSnackBar }>
         <div className={ styles.RegisterBoxWrap }>
           <div className={ styles.txt }>
-            { status === 'register' && <span>Subscríbete a El Blog Isomórfico</span> }
+            { status === 'register' && <span>Subscríbete a El Blog Isomórfico.</span> }
             { status === 'success' && <span>Gracias. Revisa tu correo en unos minutos.</span> }
             { status === 'sending' && <span>Enviando...</span> }
             { status === 'duplicate' && <span>Ya esta dado de alta.</span> }

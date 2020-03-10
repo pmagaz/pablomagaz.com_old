@@ -25,7 +25,7 @@ export const postsApiHandler = async (req, res) => {
 };
 
 export const relatedPostApiHandler = async (req, res) => {
-  const { slug, tag } = req.params;
+  const { slug, tag, tag2 } = req.params;
   const PostLists = await needle('get', `${ SiteConf.PostsApi }&limit=100`);
   const { body } = PostLists;
   if (body.errors) res.status(404).json({ posts: [] });
@@ -34,16 +34,21 @@ export const relatedPostApiHandler = async (req, res) => {
     const min = 0; 
     const max = posts.length-2;
     let related = [];
-
+    
     const tagRelated = posts.filter(post => {
-      if ((post.tags[0].slug === tag || (post.tags[1] && post.tags[1].slug === tag)) && post.slug !== slug) return true;
+      if ((post.tags[0].slug === tag 
+        || (tag2 && post.tags[0].slug === tag2) 
+        || (post.tags[1] && post.tags[1].slug === tag)
+        || (post.tags[1] && tag2 && post.tags[1].slug === tag2))
+        && post.slug !== slug) return true;
     }).map(post => getRelated(post));
-
+    
     if (tagRelated.length === 0) {
       posts.forEach(post => {
         const ran = Math.floor(Math.random() * (max - min)) + min;
         if (posts[ran].slug !== slug && related.length < 3) related.push(posts[ran]);
       });
+      
       related = related.map(post => getRelated(post));
     } else related = tagRelated;
     

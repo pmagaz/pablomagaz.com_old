@@ -7,7 +7,7 @@ import { postsApiHandler, relatedPostApiHandler } from './api/posts';
 const applyServerRouting = app => {
   app.route('/api/posts/:filter*?').get(postsApiHandler);
   
-  app.route('/api/related/:slug/:tag').get(relatedPostApiHandler);
+  app.route('/api/related/:slug/:tag/:tag2?').get(relatedPostApiHandler);
 
   app.route('/api/post/:slug').get(postApiHandler);
   

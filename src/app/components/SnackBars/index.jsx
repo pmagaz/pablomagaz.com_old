@@ -12,7 +12,7 @@ class SnackBars extends Component {
     this.state = {
       status: 'register',
       notifications: true,
-      snackBarDelay: 10000,
+      snackBarDelay: 20000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
@@ -113,7 +113,6 @@ class SnackBars extends Component {
 
   async showRegisterSnack() {
     setTimeout(() => {
-      console.log(1);
       this.setState({ showSnackNotificationBar: true });
     }, this.state.snackBarDelay);
   }

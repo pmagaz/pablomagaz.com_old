@@ -52,7 +52,7 @@ if (env === 'development') {
   SiteUrl = `${ ServerUrl }`;
   clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = 'http://pablomagaz.com/'; // 'http://172.104.136.180:2369/';
+  GhostUrl = 'http://pablomagaz.com/'; 
   ImageUrl = GhostUrl;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = 'https://pablomagaz.com/api/post/'; // `${ Protocol }${ HostName }/api/post/`;

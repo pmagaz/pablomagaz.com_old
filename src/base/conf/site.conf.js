@@ -80,7 +80,7 @@ if (env === 'development') {
   PostApiUrl = `${ Protocol }${ HostName }/api/post/`;
   PostsApiUrl = `${ Protocol }${ HostName }/api/posts/`;
   RelatedApiUrl = `${ Protocol }${ HostName }/api/related/`;
-  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc`;
+  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at,meta_description&order=published_at desc`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags`;
   uniqueImagePath = '/assets/images/postcovers';
   GoogleAnaliticsId = 'UA-104300440-2';

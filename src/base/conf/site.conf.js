@@ -5,7 +5,7 @@ const SiteTitle = Author;
 const SiteDescription = `Sitio web de ${ Author }`;
 const BlogTitle = 'El Blog Isomórfico';
 const BlogDescription = `${ BlogTitle }: JavaScript, JavaScript y más JavaScript.`;
-const KeyWords = 'javascript, react, redux, vue, rxjs, immutable, webassembly, wasm, microservicios, rust, angular, parcel, webpack, es6, observables, programación reactiva, blog, rxjs, serviceworker, ecma 2018, pwa, progressive web app, nodejs';
+const KeyWords = 'javascript, react, redux, vue, rxjs, immutable, webassembly, wasm, microservicios, rust, angular, parcel, webpack, es6, observables, programación reactiva, blog, rxjs, serviceworker, ecma 2018, pwa, progressive web app, nodejs, deno';
 const numPosts = 12;
 const blogImage = 'https://pablomagaz.com/assets/images/postcover/blog.svg';
 const blogTitleImage = 'assets/images/share/ElBlogIsomorfico.png';
@@ -43,7 +43,7 @@ let Protocol;
 let uniqueImagePath;
 let GoogleAnaliticsId;
 let DisqusSettings;
-
+let RssUrl;
 if (env === 'development') {
   Ssl = false;
   Protocol = Ssl ? 'https://' : 'http://';
@@ -52,15 +52,16 @@ if (env === 'development') {
   SiteUrl = `${ ServerUrl }`;
   clientSecret = '113542417eed';
   BlogUrl = `${ SiteUrl }/blog`;
-  GhostUrl = 'http://pablomagaz.com/'; 
+  GhostUrl = 'http://172.104.136.180:2369'; 
   ImageUrl = GhostUrl;
   BaseApiUrl = `${ GhostUrl }/ghost/api/v0.1/`;
   PostApiUrl = 'https://pablomagaz.com/api/post/'; // `${ Protocol }${ HostName }/api/post/`;
   PostsApiUrl = 'https://pablomagaz.com/api/posts/'; // `${ Protocol }${ HostName }/api/posts/`;
   RelatedApiUrl = 'https://pablomagaz.com/api/related/'; // `${ Protocol }${ HostName }/api/related/`;
-  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at&order=published_at desc`;
+  PostsApi = `${ BaseApiUrl }posts/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags&fields=id,uuid,title,slug,html,image,feature_image,tags,updated_at,updated_at,published_at,meta_description&order=published_at desc`;
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags`;
   GoogleAnaliticsId = 'UA-104300440-3';
+  RssUrl = `${ ServerUrl }/rss`;
   DisqusSettings = {
     shortName: 'el-blog-isomorfico',
     identifier: 'el-blog-isomofico-dev'
@@ -83,6 +84,7 @@ if (env === 'development') {
   PostApi = `${ BaseApiUrl }posts/slug/:slug/?client_id=ghost-frontend&client_secret=${ clientSecret }&include=tags`;
   uniqueImagePath = '/assets/images/postcovers';
   GoogleAnaliticsId = 'UA-104300440-2';
+  RssUrl = `${ ServerUrl }/rss`;
   DisqusSettings = {
     shortName: 'el-blog-isomorfico',
     identifier: 'el-blog-isomofico'
@@ -122,5 +124,6 @@ export const SiteConf = {
   twitterUser,
   cookieAceptCookies,
   cookiePushNotifications,
-  cookieMailSubscription
+  cookieMailSubscription,
+  RssUrl
 };

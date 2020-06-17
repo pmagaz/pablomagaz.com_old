@@ -23,7 +23,7 @@ const Social = () => (
       </a>
     </li>
     <li>
-      <a href={ `mailto:${ SiteConf.socialLinks.gmail }` } target="_blank" rel="noopener noreferrer">
+      <a href={ SiteConf.RssUrl } target="_blank" rel="noopener noreferrer">
         <SocialIcon />
       </a>
     </li>

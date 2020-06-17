@@ -1,6 +1,6 @@
 @keyframes titleBlog {
   0% {
-    opacity: 0.8;
+    opacity: 1;
     margin-top: -20px;
   }
   100% {
@@ -11,7 +11,7 @@
 
 @keyframes blogLogo-mobile {
   from {
-    opacity: 0.8;
+    opacity: 0.6;
     background-position-y: -80%;
   }
   to {
@@ -22,8 +22,8 @@
 
 @keyframes blogLogo-tablet {
   from {
-    opacity: 0.8;
-    background-position-y: -100px;
+    opacity: 0.6;
+    background-position-y: -110px;
   }
   to {
     opacity: 1;
@@ -32,8 +32,8 @@
 }
 @keyframes blogLogo-desktop {
   from {
-    opacity: 0.8;
-    background-position-y: -100px;
+    opacity: 0.6;
+    background-position-y: -110px;
   }
   to {
     opacity: 1;
@@ -43,7 +43,7 @@
 
 @keyframes brandText {
   0% {
-    opacity: 0.8;
+    opacity: 0.6;
     transform: translate(0px, -30px) skewY(-2deg) rotate(2deg);
   }
   100% {

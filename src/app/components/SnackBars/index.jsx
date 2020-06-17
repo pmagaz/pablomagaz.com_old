@@ -12,7 +12,7 @@ class SnackBars extends Component {
     this.state = {
       status: 'register',
       notifications: true,
-      snackBarDelay: 7500,
+      snackBarDelay: 7000,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,

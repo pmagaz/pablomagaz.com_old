@@ -47,18 +47,18 @@
       background-repeat: no-repeat;
       background-size: 156px;
       animation: blogLogo-mobile 280ms ease-in-out both;
-      animation-delay: 100ms;
+      animation-delay: 150ms;
       -webkit-backface-visibility: hidden;
       background-position-y: 50%;
       @media (min-width: $sm) {
         background-size: 221px;
         animation: blogLogo-tablet 280ms ease-in-out both;
-        animation-delay: 100ms;
+        animation-delay: 150ms;
       }
 
       @media (min-width: $lg) {
         animation: blogLogo-desktop 280ms ease-in-out both;
-        animation-delay: 100ms;
+        animation-delay: 150ms;
       }
       h1 {
         font-family: $fontFamilyMedium;
@@ -75,7 +75,7 @@
         }
         @media (min-width: $lg) {
           animation: titleBlog 100ms ease-in-out both;
-          animation-delay: 120ms;
+          animation-delay: 150ms;
         }
         + div {
           display: flex;

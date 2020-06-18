@@ -12,7 +12,7 @@ class SnackBars extends Component {
     this.state = {
       status: 'register',
       notifications: true,
-      snackBarDelay: 7000,
+      snackBarDelay: 200,
       showSnackCookieBar: false,
       hideSnackCookieBar: false,
       showSnackNotificationBar: false,
@@ -31,33 +31,43 @@ class SnackBars extends Component {
     env.preventDefault();
     const path = `${ SiteConf.mailListUrl }&EMAIL=${encodeURIComponent(this.state.email) }`;
     const url = path.replace('/post?', '/post-json?');
-    (!isValidEmail(this.state.email)) ? this.setState({ status: "invalid" }) : this.registerEmail(url);
+    let email = this.state.email;
+    (email && !isValidEmail(email)) ? this.setState({ status: "invalid" }) : this.registerEmail(url);
   };
 
   registerEmail(url) {
-    this.setState({ status: 'sending' });
-    jsonp(url, { param: 'c' }, (err, data) => {
-      if (data.msg.includes('already subscribed')) {
-        this.setState({ status: 'duplicate' });
-      } else if (err) {
-        this.setState({ status: 'error' });
-      } else if (data.result !== 'success') {
-        this.setState({ status: 'error' });
-      } else {
-        this.setState({ status: 'success' });
-        const { email } = this.state;
-        setCookie(SiteConf.cookieMailSubscription, email, 200);
-        setTimeout(() => { this.setState({ hideSnackBar: true }) }, 1600);
-        if (this.state.notifications) {
-          setTimeout(() => { this.notificationPermission() }, 2000);
+    if(this.state.email){
+      jsonp(url, { param: 'c' }, (err, data) => {
+        if (data.msg.includes('already subscribed')) {
+          this.setState({ status: 'duplicate' });
+        } else if (err) {
+          this.setState({ status: 'error' });
+        } else if (data.result !== 'success') {
+          this.setState({ status: 'error' });
+        } else {
+          this.setState({ status: 'success' });
+          const { email } = this.state;
+          setCookie(SiteConf.cookieMailSubscription, email, 200);
+          setTimeout(() => { this.setState({ hideSnackBar: true }) }, 1200);
+          if (this.state.notifications) {
+            setTimeout(() => { this.notificationPermission() }, 1800);
+          }
         }
+      });
+  } else {
+    this.setState({ status: 'success' });
+      setTimeout(() => { this.setState({ hideSnackBar: true }) }, 1200);
+      if (this.state.notifications) {
+        setTimeout(() => { this.notificationPermission() }, 1800);
       }
-    });
+  }
+
   }
 
   eventHandler = e => {
+    this.showRegisterSnack();
     if (!getCookie(SiteConf.cookieAceptCookies)) this.aceptCookies();
-    if (!getCookie(SiteConf.cookieMailSubscription)) this.showRegisterSnack();
+    //if (!getCookie(SiteConf.cookieMailSubscription)) this.showRegisterSnack();
     window.removeEventListener('click', this.eventHandler);
     window.removeEventListener('scroll', this.eventHandler);
   };
@@ -130,23 +140,29 @@ class SnackBars extends Component {
         <div className={ styles.RegisterBoxWrap }>
           <div className={ styles.txt }>
             { status === 'register' && <span>Subscríbete a El Blog Isomórfico.</span> }
-            { status === 'success' && <span>Gracias. Revisa tu correo en unos minutos.</span> }
+            { status === 'success' && <span>Gracias.</span> }
             { status === 'sending' && <span>Enviando...</span> }
             { status === 'duplicate' && <span>Ya esta dado de alta.</span> }
             { status === 'error' && <span>Se produjo un error.</span> }
             { status === 'invalid' && <span>El email no parece correcto.</span> }
           </div>
           <form className={ styles.registerForm } >
-            <div className={ styles.registerFormContent }>
-              <input
-                placeholder="Introduce tu email"
+            <span className={ styles.txt2 }>
+            Puedes subscribirte por varios canales. Nunca recibirás mas de una comunicación al mes.
+            </span>
+             <div className={ styles.registerFormContent }>
+                          <ul>
+
+             <li>Email:&nbsp;&nbsp;&nbsp;&nbsp;<input
                 type="text"
                 key="email"
                 required={ true }
                 onChange={ ({ target }) => this.setState({ email: target.value }) }
                 className={ styles.inputField }/>
-              <label className={ this.checkboxStyles }>
-              Recibir notificaciones
+             </li>
+            <li>
+             <label className={ this.checkboxStyles }>
+              Notificaciones: 
                 <input
                   id="notifications"
                   name="notifications"
@@ -154,10 +170,13 @@ class SnackBars extends Component {
                   key="notifications"
                   defaultChecked={ this.state.notifications }
                   onChange={ this.checkBoxHandler } />
+                  
                 <div className={ styles.controlIndicator }></div>
               </label>
-            </div>
-              También puedes seguir el blog en
+              </li>
+              <li><a href={ `${SiteConf.ServerUrl}/rss` }
+              target="_blank"
+              rel="noopener noreferrer">RSS</a> feed o através de
             <a
               aria-label="Pablo Magaz Twitter"
               role="button"
@@ -167,7 +186,9 @@ class SnackBars extends Component {
               rel="noopener noreferrer"
             >
               Twitter
-            </a>.
+            </a>.</li>
+            </ul>
+            </div>
             <div className={ styles.content }>
               <button className={ styles.buttonKo } role="button" tabIndex="0" onClick={ () => this.denyPermision() }>
                 No gracias

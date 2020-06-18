@@ -62,7 +62,7 @@
   color: rgb(255, 255, 255);
   background-color: #282c38;
   width: 36em;
-  height: 14.6em;
+  height: 19em;
   animation: SnackBarEnterDown 380ms both;
   flex-direction: column;
   right: 0.3em;
@@ -100,7 +100,6 @@
     height: 90px;
     width: 20%;
     @media screen and (max-width: 414px) and (orientation: portrait) {
-      height: 400px;
       width: 0px;
       margin: 0.8em;
     }
@@ -115,7 +114,8 @@
     bottom: 0;
     top: -0.4em;
     max-width: none;
-    max-height: 14.8em;
+         height: 22em;
+
   }
 }
 

@@ -42,8 +42,7 @@
   }
 }
 .socialBoxWrapLinks {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+  width: 100%;
   display: flex;
   flex: 3;
   text-align: right;
@@ -51,7 +50,7 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   &:hover div {
-    opacity: 0.5;
+    opacity: 0.8;
     transition: opacity 0.2s ease-in-out;
   }
   div {

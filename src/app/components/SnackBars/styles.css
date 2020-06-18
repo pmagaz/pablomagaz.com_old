@@ -63,6 +63,8 @@
   display: flex;
   flex-wrap: wrap;
   height: 6em;
+  width: 24em;
+  RegisterBoxWrap
   @media (min-width:$sm){
   height: 5em;
   }
@@ -83,6 +85,21 @@
   @media (min-width:$sm){
   }
 }
+.txt2 {
+  display: flex;
+  font-family: $fontFamilyLight;
+  color: $white;
+  font-size: 0.9em;
+  font-weight: 200;
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  align-items: center;
+  height: 40px;
+  @media (min-width:$sm){
+  }
+}
 input {
   outline: none;
   border: none;
@@ -93,17 +110,15 @@ button, input {
 }
 
 .registerForm {
-  width:100%;
+  width:98%;
 }
 
 .registerFormContent{
   width:100%;
-  height: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   @media (min-width:$sm){
-    height: 70px;
   }
 }
 
@@ -116,14 +131,14 @@ button, input {
 
 .inputField {
   font-family: $fontFamilyMedium;
-  margin: 0 10px 0 0;
+  margin: 0 10px 10px 0;
   padding: 6px 6px 6px 6px;
-  width: 130px;
+  width: 140px;
   font-size: 0.9em;
-  height: 26px;
+  height: 20px;
   @media (min-width:$sm){
-    height: 26px;
-    width: 180px;
+    height: 20px;
+    width: 150px;
     font-size: 0.9em;
   }
 }
@@ -166,13 +181,13 @@ button, input {
 .control {
   display: block;
   position: relative;
-  padding-left: 24px;
+  padding-left: 0px;
   margin-bottom: 5px;
   padding-top: 3px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   @media (min-width:$sm){
-    font-size: 13px;
+    font-size: 16px;
   }
 }
   .control input {
@@ -183,12 +198,15 @@ button, input {
 .controlIndicator {
   position: absolute;
   top: 7px;
-  left: 0;
+  left: 110px;
   height: 15px;
   width: 15px;
   background: #e6e6e6;
   border: 0px solid #000000;
   border-radius: 0px;
+    @media (min-width:$sm){
+      left: 125px;
+  }
 }
 .control:hover input ~ .controlIndicator,
 .control input:focus ~ .controlIndicator {

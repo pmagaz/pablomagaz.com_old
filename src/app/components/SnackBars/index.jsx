@@ -48,26 +48,29 @@ class SnackBars extends Component {
           this.setState({ status: 'success' });
           const { email } = this.state;
           setCookie(SiteConf.cookieMailSubscription, email, 200);
-          setTimeout(() => { this.setState({ hideSnackBar: true }) }, 1200);
+          setTimeout(() => { this.setState({ hideSnackBar: true }) }, 1000);
           if (this.state.notifications) {
             setTimeout(() => { this.notificationPermission() }, 1800);
           }
         }
       });
   } else {
+    if(!this.state.notifications) {
+     this.setState({ status: 'none' });
+    } else {
     this.setState({ status: 'success' });
-      setTimeout(() => { this.setState({ hideSnackBar: true }) }, 1200);
+      setTimeout(() => { this.setState({ hideSnackBar: true }) }, 1000);
       if (this.state.notifications) {
         setTimeout(() => { this.notificationPermission() }, 1800);
+        }
       }
-  }
-
+    }
   }
 
   eventHandler = e => {
-    this.showRegisterSnack();
+    //this.showRegisterSnack();
     if (!getCookie(SiteConf.cookieAceptCookies)) this.aceptCookies();
-    //if (!getCookie(SiteConf.cookieMailSubscription)) this.showRegisterSnack();
+    if (!getCookie(SiteConf.cookieMailSubscription)) this.showRegisterSnack();
     window.removeEventListener('click', this.eventHandler);
     window.removeEventListener('scroll', this.eventHandler);
   };
@@ -142,27 +145,27 @@ class SnackBars extends Component {
             { status === 'register' && <span>Subscríbete a El Blog Isomórfico.</span> }
             { status === 'success' && <span>Gracias.</span> }
             { status === 'sending' && <span>Enviando...</span> }
+            { status === 'none' && <span>Selecciona un canal de subscripción.</span> }
             { status === 'duplicate' && <span>Ya esta dado de alta.</span> }
             { status === 'error' && <span>Se produjo un error.</span> }
             { status === 'invalid' && <span>El email no parece correcto.</span> }
           </div>
           <form className={ styles.registerForm } >
             <span className={ styles.txt2 }>
-            Puedes subscribirte por varios canales. Nunca recibirás mas de una comunicación al mes.
+            Puedes subscribirte por varios canales. 
             </span>
              <div className={ styles.registerFormContent }>
-                          <ul>
-
-             <li>Email:&nbsp;&nbsp;&nbsp;&nbsp;<input
+              <ul className={ styles.Ul }>
+             <div>Email:&nbsp;&nbsp;&nbsp;&nbsp;<input
                 type="text"
                 key="email"
                 required={ true }
                 onChange={ ({ target }) => this.setState({ email: target.value }) }
                 className={ styles.inputField }/>
-             </li>
-            <li>
+             </div>
+            <div>
              <label className={ this.checkboxStyles }>
-              Notificaciones: 
+              Notificaciones Web: 
                 <input
                   id="notifications"
                   name="notifications"
@@ -173,10 +176,10 @@ class SnackBars extends Component {
                   
                 <div className={ styles.controlIndicator }></div>
               </label>
-              </li>
-              <li><a href={ `${SiteConf.ServerUrl}/rss` }
+              </div>
+              <div><a href={ `${SiteConf.ServerUrl}/rss` }
               target="_blank"
-              rel="noopener noreferrer">RSS</a> feed o através de
+              rel="noopener noreferrer">RSS</a> o a través de
             <a
               aria-label="Pablo Magaz Twitter"
               role="button"
@@ -186,7 +189,7 @@ class SnackBars extends Component {
               rel="noopener noreferrer"
             >
               Twitter
-            </a>.</li>
+            </a></div>
             </ul>
             </div>
             <div className={ styles.content }>

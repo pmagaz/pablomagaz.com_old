@@ -5,7 +5,7 @@
   display: block;
   color: #fff;
   height: 36px;
-  padding: 0.2em 0.8em;
+  padding: 0.2em 0.6em;
   font-size: 0.7em;
   font-weight: 700;
   border-style: solid;
@@ -51,7 +51,7 @@
 
 .content {
   display: flex;
-  padding: 0.4rem;
+  padding: 0.2rem;
     justify-content: center;
   @media (min-width:$sm){
     justify-content: flex-end;
@@ -63,7 +63,6 @@
   display: flex;
   flex-wrap: wrap;
   height: 6em;
-  width: 24em;
   RegisterBoxWrap
   @media (min-width:$sm){
   height: 5em;
@@ -89,15 +88,16 @@
   display: flex;
   font-family: $fontFamilyLight;
   color: $white;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 200;
-  width: 100%;
+  width: 74%;
   margin-top: 4px;
   margin-bottom: 10px;
   font-weight: bold;
   align-items: center;
-  height: 40px;
   @media (min-width:$sm){
+      width: 82%;
+      font-size: 0.9em;
   }
 }
 input {
@@ -118,7 +118,9 @@ button, input {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-size: 1em;
   @media (min-width:$sm){
+      font-size: 0.9em;
   }
 }
 
@@ -133,12 +135,12 @@ button, input {
   font-family: $fontFamilyMedium;
   margin: 0 10px 10px 0;
   padding: 6px 6px 6px 6px;
-  width: 140px;
+  width: 120px;
   font-size: 0.9em;
-  height: 20px;
+  height: 18px;
   @media (min-width:$sm){
-    height: 20px;
-    width: 150px;
+    height: 18px;
+    width: 125px;
     font-size: 0.9em;
   }
 }
@@ -152,6 +154,11 @@ button, input {
   display: flex;
   align-items: center;
   height: 40px;
+}
+
+.Ul{
+  margin: 10; /* To remove default bottom margin */ 
+  padding: 0;
 }
 
 .inputButton {
@@ -185,9 +192,10 @@ button, input {
   margin-bottom: 5px;
   padding-top: 3px;
   cursor: pointer;
-  font-size: 14px;
+      font-size: 1em;
+
   @media (min-width:$sm){
-    font-size: 16px;
+
   }
 }
   .control input {
@@ -198,27 +206,27 @@ button, input {
 .controlIndicator {
   position: absolute;
   top: 7px;
-  left: 110px;
+  left: 142px;
   height: 15px;
   width: 15px;
   background: #e6e6e6;
-  border: 0px solid #000000;
+  border: 0px solid #000;
   border-radius: 0px;
     @media (min-width:$sm){
-      left: 125px;
+      left: 150px;
   }
 }
 .control:hover input ~ .controlIndicator,
 .control input:focus ~ .controlIndicator {
-  background: #cccccc;
+  background: #fff;
 }
 
 .control input:checked ~ .controlIndicator {
-  background: #F72353;
+  background: #fff;
 }
 .control:hover input:not([disabled]):checked ~ .controlIndicator,
 .control input:checked:focus ~ .controlIndicator {
-  background: #F72353;
+  background: #fff;
 }
 .control input:disabled ~ .controlIndicator {
   background: #e6e6e6;
@@ -239,7 +247,7 @@ button, input {
   top: 2px;
   width: 2px;
   height: 7px;
-  border: solid #ffffff;
+  border: solid $primary-color;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }

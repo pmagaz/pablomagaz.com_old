@@ -61,8 +61,8 @@
   z-index:999999999 !important;
   color: rgb(255, 255, 255);
   background-color: #282c38;
-  width: 36em;
-  height: 19em;
+  width: 33em;
+  height: 17em;
   animation: SnackBarEnterDown 380ms both;
   flex-direction: column;
   right: 0.3em;
@@ -71,7 +71,6 @@
   overflow: hidden;
   box-sizing: border-box;
   font-size: 1em;
-  line-height: 1.5em;
   display: flex;
   flex-wrap: nowrap;
   z-index: 9999;
@@ -113,9 +112,8 @@
     right: 0;
     bottom: 0;
     top: -0.4em;
-    max-width: none;
-         height: 22em;
-
+    width: 38em;
+    height: 19em;
   }
 }
 

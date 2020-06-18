@@ -45,7 +45,7 @@ class PostRegister extends React.Component {
       <div className={ styles.RegisterBoxWrap }>
         <div className={ styles.txt }>
           { status === 'register' && <span>¿Quieres recibir posts como este en tu email?</span> }
-          { status === 'success' && <span>Gracias por registrate!.</span> }
+          { status === 'success' && <span>Gracias.</span> }
           { status === 'sending' && <span>Enviando...</span> }
           { status === 'duplicate' && <span>Ya esta dado de alta.</span> }
           { status === 'error' && <span>Se produjo un error.</span> }

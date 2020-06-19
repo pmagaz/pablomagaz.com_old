@@ -34,16 +34,16 @@ const PostInfo = ({ post, handler }) => {
           description={ post.meta_description }
           url={ postUrl }
         >
-          <TwitterIcon round={ true } size={ 26 } />
+          <TwitterIcon round={ true } size={ 30 } />
         </TwitterShareButton>
         <WhatsappShareButton title={ shareTitle } url={ postUrl }>
-          <WhatsappIcon round={ true } size={ 26 } />
+          <WhatsappIcon round={ true } size={ 30 } />
         </WhatsappShareButton>
         <LinkedinShareButton title={ shareTitle } description={ post.meta_description } url={ postUrl }>
-          <LinkedinIcon round={ true } size={ 26 } />
+          <LinkedinIcon round={ true } size={ 30 } />
         </LinkedinShareButton>
         <FacebookShareButton url={ postUrl } quote={ shareTitle }>
-          <FacebookIcon round={ true } size={ 26 } />
+          <FacebookIcon round={ true } size={ 30 } />
         </FacebookShareButton>
       </div>
     );

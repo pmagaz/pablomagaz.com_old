@@ -17,7 +17,7 @@ let feed = new rss({
 });
 
 export const rssHandler = async (req, res) => {
-  const resp = await needle("get", `${SiteConf.PostsApi}&limit=100`);
+  const resp = await needle("get", `${SiteConf.PostsApiUrl}&limit=100`);
   const { body } = resp;
   if (body.errors) res.status(404).json({ posts: [] });
   else {

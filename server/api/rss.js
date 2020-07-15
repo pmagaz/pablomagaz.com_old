@@ -28,7 +28,7 @@ export const rssHandler = async (req, res) => {
         description: post.opening,
         url: `${SiteConf.BlogUrl}/${post.slug}`,
         guid: post.id,
-        categories: post.tags,
+        categories: post.tags.map(tag => tag.name),
         author: post.Author,
         date: post.published_at,
       });

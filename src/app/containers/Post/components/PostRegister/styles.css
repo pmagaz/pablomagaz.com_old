@@ -26,8 +26,8 @@
   justify-content: center;
   text-align: center;
   @media (min-width:$sm){
-    font-size: 1.4em;
-    width:55%;
+    font-size: 1.3em;
+    width:56%;
     text-align: left;
     justify-content: flex-start; 
     padding-left: 60px;

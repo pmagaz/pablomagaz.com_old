@@ -1,21 +1,21 @@
-import { Link } from 'react-router';
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
-import classNames from 'classnames/bind';
-import React, { Component } from 'react';
-import ReactHtmlParser from 'html-react-parser';
-import { bindActionCreators } from 'redux';
-import { SiteConf } from 'base';
-import PostInfo from 'components/PostInfo';
-import PostImage from 'components/PostImage';
-import * as PostActions from 'containers/Post/actions';
-import * as Actions from '../../actions';
-import styles from './styles.css';
+import { Link } from "react-router";
+import { connect } from "react-redux";
+import { PropTypes } from "prop-types";
+import classNames from "classnames/bind";
+import React, { Component } from "react";
+import ReactHtmlParser from "html-react-parser";
+import { bindActionCreators } from "redux";
+import { SiteConf } from "base";
+import PostInfo from "components/PostInfo";
+import PostImage from "components/PostImage";
+import * as PostActions from "containers/Post/actions";
+import * as Actions from "../../actions";
+import styles from "./styles.css";
 
 class PostSummary extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
-    post: PropTypes.object.isRequired
+    post: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -34,24 +34,30 @@ class PostSummary extends Component {
 
   render() {
     const { post } = this.props;
-    const url = `/blog/${ post.slug }`;
-    const imageSrc = `${ SiteConf.ImageUrl }${ post.image || post.feature_image }`;
+    const url = `/blog/${post.slug}`;
+    const imageSrc = `${SiteConf.ImageUrl}${post.image || post.feature_image}`;
 
     const cx = classNames.bind(styles);
     const postSummaryStyle = cx({
-      PostSummary: true
+      PostSummary: true,
     });
 
     return (
-      <article className={ postSummaryStyle }>
-        <Link className={ styles.linkImage } to={ url } onClick={ () => this.getPost(post) }>
-          <h1>{ post.title }</h1>
-          <PostImage src={ imageSrc } alt={ post.slug } width="500" />
+      <article className={postSummaryStyle}>
+        <Link
+          className={styles.linkImage}
+          to={url}
+          onClick={() => this.getPost(post)}
+        >
+          <h1>{post.title}</h1>
+          <PostImage src={imageSrc} alt={post.slug} width="500" />
         </Link>
-        <PostInfo post={ post } handler={ this.actions.cleanPosts } />
-        <div className={ styles.postText }>{ ReactHtmlParser(post.opening) }</div>
-        <div className={ styles.readMore }>
-          <Link to={ url } onClick={ () => this.getPost(post) }>
+        <PostInfo post={post} handler={this.actions.cleanPosts} />
+        <div className={styles.postText}>
+          <h2>{ReactHtmlParser(post.opening)}</h2>
+        </div>
+        <div className={styles.readMore}>
+          <Link to={url} onClick={() => this.getPost(post)}>
             Continuar leyendo
           </Link>
         </div>

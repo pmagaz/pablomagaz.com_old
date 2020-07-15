@@ -70,7 +70,7 @@ class SnackBars extends Component {
   eventHandler = e => {
     //this.showRegisterSnack();
     if (!getCookie(SiteConf.cookieAceptCookies)) this.aceptCookies();
-    if (!getCookie(SiteConf.cookieMailSubscription)) this.showRegisterSnack();
+    if (!getCookie(SiteConf.cookieMailSubscription) && !getCookie(SiteConf.cookiePushNotifications)) this.showRegisterSnack();
     window.removeEventListener('click', this.eventHandler);
     window.removeEventListener('scroll', this.eventHandler);
   };
@@ -106,6 +106,7 @@ class SnackBars extends Component {
   }
 
   denyPermision() {
+    setCookie(SiteConf.cookieSubscribed, false, 600);
     setCookie(SiteConf.cookieMailSubscription, false, 600);
     setCookie(SiteConf.cookiePushNotifications, false, 600);
     this.setState({ hideSnackBar: true });

@@ -27,7 +27,7 @@ class Main extends Component {
   }
 
   scrollToHash(hash) {
-    const section = document.querySelector(`${ hash }`);
+    const section = document.querySelector(`${hash}`);
     if (section) setTimeout(() => (section.scrollIntoView({ behavior: 'smooth' }), 500));
   }
 
@@ -38,64 +38,64 @@ class Main extends Component {
     });
 
     return (
-      <div className={ styles.mainWrapper }>
-        <section className={ styles.home }>
-          <div className={ brandStyle }>
-            <h1>{ SiteConf.Author }</h1>
+      <div className={styles.mainWrapper}>
+        <section className={styles.home}>
+          <div className={brandStyle}>
+            <h1>{SiteConf.Author}</h1>
           </div>
         </section>
 
-        <section id="about" className={ styles.about }>
-          <article className={ styles.content }>
+        <section id="about" className={styles.about}>
+          <article className={styles.content}>
             <a href="../assets/images/about/pablo_magaz@codemotion_2018_3.jpg">
               <img src="../assets/images/about/Pablo_Magaz.jpg" alt="Pablo Magaz" />
             </a>
             <h1>About me</h1>
             <p>
-              I'm { SiteConf.Author } and I've working in the software world for more than 17 years. During that time,
-              I've been working with different technologies and programming languages: From Php, Python, Android,
-              Pl/Sql, to JavaScript, Rust, WebAssembly in latest years.
+              I'm {SiteConf.Author} and I've been working in the software world for more than 17 years. During that time,
+              I've worked with different technologies and programming languages: From Php, Python, Android,
+              Pl/Sql, to JavaScript, WebAssembly and Rust in latest years.
               <br />
               <br />
-              Right now I work as Development / Engineering Manager of the JavaScript area in Cognizant and as
+              Right now I work as Engineering Manager leading several teams and as
               JavaScript enthusiastic that I am, I really enjoy developing Front-End, Back-End and Mobile applications
               using:&nbsp;
               <a href="https://github.com/pmagaz/webpush-notification-server" target="_blank" rel="noopener noreferrer">
                 NodeJs
               </a>
-              ,{ ' ' }
+              ,{' '}
               <a href="https://github.com/atSistemas/react-base" target="_blank" rel="noopener noreferrer">
                 React & React Native
               </a>
-              ,{ ' ' }
+              ,{' '}
               <a href="https://github.com/pmagaz/redux-req-middleware" target="_blank" rel="noopener noreferrer">
                 Redux
               </a>
-              ,{ ' ' }
+              ,{' '}
               <a href="https://github.com/atSistemas/angular-base" target="_blank" rel="noopener noreferrer">
                 Angular
               </a>
-              ,{ ' ' }
+              ,{' '}
               <a href="https://pablomagaz.com/blog/empezando-con-webassembly" target="_blank" rel="noopener noreferrer">
                 WebAssembly
               </a>
-              ,{ ' ' }
+              ,{' '}
               <a href="https://github.com/pmagaz/rextore" target="_blank" rel="noopener noreferrer">
                 RxJs
               </a>
-              ,{ ' ' }
+              ,{' '}
               <a href="https://github.com/atSistemas/vue-base" target="_blank" rel="noopener noreferrer">
                 Vue
               </a>
-              , etc. Check my{ ' ' }
+              , etc. Check my{' '}
               <a href="https://github.com/pmagaz" target="_blank" rel="noopener noreferrer">
                 github
-              </a>{ ' ' }
-              for more resources, including the{ ' ' }
+              </a>{' '}
+              for more resources, including the{' '}
               <a href="https://github.com/pmagaz/pablomagaz.com" target="_blank" rel="noopener noreferrer">
                 source code
-              </a>{ ' ' }
-              of this isomorphic blog . <br />
+              </a>{' '}
+              of this isomorphic blog. <br />
               <br />
               Aside from software development, technical supervision and teams leading I also do technical workshops,
               team trainings and I'm speaker in different events around my country. Check out my talks!
@@ -104,7 +104,7 @@ class Main extends Component {
             <h2>Talks</h2>
             <ul>
               <li>
-                Commit 2019: Rust & WebAssembly for JavaScripters. 
+                Commit 2019: Rust & WebAssembly for JavaScripters.
                 [
                   <a href="#RustYWebassemblyParaJavaScripters">
                   Video
@@ -169,7 +169,7 @@ class Main extends Component {
               <li>Open Expo 2016: Base showcase.</li>
             </ul>
 
-            <ul className={ styles.photos }>
+            <ul className={styles.photos}>
               <li>
                 <a href="../assets/images/about/pablo_magaz@codemotion_2018.jpg">
                   <img
@@ -253,8 +253,8 @@ class Main extends Component {
             </ul>
             <a id="ECMAScript2018YMasAlla" />
             <h2>ECMASCript 2018 y más allá @ Codemotion</h2>
-            <div className={ styles.videoWrapper }>
-              <div className={ styles.video }>
+            <div className={styles.videoWrapper}>
+              <div className={styles.video}>
                 <iframe
                   id="ytplayer"
                   type="text/html"
@@ -267,8 +267,8 @@ class Main extends Component {
             </div>
             <a id="RustYWebassemblyParaJavaScripters" />
             <h2>Rust y WebAssembly for JavaScripters @ Commit Conf</h2>
-            <div className={ styles.videoWrapper }>
-              <div className={ styles.video }>
+            <div className={styles.videoWrapper}>
+              <div className={styles.video}>
                 <iframe
                   id="ytplayer"
                   type="text/html"
@@ -280,8 +280,8 @@ class Main extends Component {
               </div>
             </div>
             <h2>Entrevista @ JSDayES</h2>
-            <div className={ styles.videoWrapper }>
-              <div className={ styles.video }>
+            <div className={styles.videoWrapper}>
+              <div className={styles.video}>
                 <iframe
                   id="ytplayer"
                   type="text/html"
@@ -294,8 +294,8 @@ class Main extends Component {
             </div>
             <a id="EscribiendoServiceWorkersConWorkBox" />
             <h2>Escribiendo Service Workers con Workbox @ JSDayES</h2>
-            <div className={ styles.videoWrapper }>
-              <div className={ styles.video }>
+            <div className={styles.videoWrapper}>
+              <div className={styles.video}>
                 <iframe
                   id="ytplayer"
                   type="text/html"
@@ -308,8 +308,8 @@ class Main extends Component {
             </div>
             <a id="ProgramacionReactivaRxJs" />
             <h2>Programación Reactiva con RxJs @ Codemotion</h2>
-            <div className={ styles.videoWrapper }>
-              <div className={ styles.video }>
+            <div className={styles.videoWrapper}>
+              <div className={styles.video}>
                 <iframe
                   id="ytplayer"
                   type="text/html"

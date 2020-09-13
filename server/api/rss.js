@@ -4,16 +4,16 @@ import { SiteConf } from "../../src/base";
 
 let feed = new rss({
   title: SiteConf.BlogTitle,
-  description: "description",
+  description: SiteConf.BlogDescription,
   feed_url: `${SiteConf.ServerUrl}/rss`,
   site_url: SiteConf.ServerUrl,
-  image_url: SiteConf.blogTitleImage,
+  image_url: `${SiteConf.ServerUrl}/${SiteConf.blogTitleImage}`,
   managingEditor: SiteConf.Author,
   copyright: `2017 - 2020 ${SiteConf.Author}`,
   language: "es",
   categories: [SiteConf.KeyWords.split(", ")],
   pubDate: "Oct 01, 2017 00:00:00 GMT",
-  ttl: "60",
+  ttl: "120",
 });
 
 export const rssHandler = async (req, res) => {

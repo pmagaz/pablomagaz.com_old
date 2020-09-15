@@ -13,18 +13,19 @@ const propTypes = {
 
 const PostFooter = ({ post }) => {
   let postRegister;
-    if (context.client) {
+  if (context.client) {
+    let cookieMailSubscriptionOld = getCookie(SiteConf.cookieMailSubscriptionOld)
     let cookieMailSubscription = getCookie(SiteConf.cookieMailSubscription);
-    if(cookieMailSubscription.length <= 5) postRegister = <PostRegister />;
-    else postRegister = null; 
+    if (cookieMailSubscriptionOld.length <= 5 || cookieMailSubscription.length <= 5) postRegister = <PostRegister />;
+    else postRegister = null;
   }
   return (
     <div>
-      <SharePost post={ post } />
-      { postRegister }
-      <RenderOnScroll scroll={ 3000 } >
-        <RelatedPost related={ post.related } />
-        <PostComments post={ post } />
+      <SharePost post={post} />
+      { postRegister}
+      <RenderOnScroll scroll={3000} >
+        <RelatedPost related={post.related} />
+        <PostComments post={post} />
       </RenderOnScroll>
     </div>
   );

@@ -104,6 +104,14 @@ class Main extends Component {
             <h2>Talks</h2>
             <ul>
               <li>
+                JavaScript Exchange 2020: Creating REST APIS with Deno and Oak.
+                [
+                <a href="https://pablomagaz.com/static/slides/Pablo_Magaz_REST_API_Deno_Oak.pdf">
+                  Slides
+                </a>
+                ]
+              </li>
+              <li>
                 Commit 2019: Rust & WebAssembly for JavaScripters.
                 [
                   <a href="#RustYWebassemblyParaJavaScripters">
